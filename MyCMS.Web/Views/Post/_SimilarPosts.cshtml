@@ -1,0 +1,44 @@
+﻿@model IEnumerable<MyCMS.Model.AdminModel.PostDataTableModel>
+@{
+    var CountRelated = 0;
+}
+@if (Model.Any())
+{
+    <div class="fancy-title title-border">
+        <h3>مطالب مرتبط</h3>
+    </div>
+
+    <div class="row bottommargin-sm clearfix">
+
+        <div class="col-md-12 bottommargin" style="padding:0">
+
+            <div class="clear"></div>
+            @foreach (var post in Model)
+            {
+                if (CountRelated % 2 == 0)
+                {
+                    @:<div class="col_half nobottommargin" style="margin-left:2%">
+
+                }
+                CountRelated++;
+                <div class="spost clearfix">
+                    <div class="entry-image">
+                        <a href="@Url.RouteUrl("KBDetailRoute", new { action = MVC.Post.ActionNames.Index,controller = MVC.Post.Name, Id = post.Id})"><img src="@post.Picture" alt=""></a>
+                    </div>
+                    <div class="entry-c">
+                        <div class="entry-title">
+                            <h4><a href="@Url.RouteUrl("KBDetailRoute", new { action = MVC.Post.ActionNames.Index,controller = MVC.Post.Name, Id = post.Id})">@post.Title</a></h4>
+                        </div>
+                        <ul class="entry-meta">
+                            <li><i class="icon-calendar3 calc"></i>@Html.ConvertToPersianDateTime(post.PostedDate, "M")</li>
+                        </ul>
+                    </div>
+                </div>
+                if (CountRelated % 2 == 0)
+                {
+                   @:</div>
+                }
+            }
+        </div>
+    </div>
+}

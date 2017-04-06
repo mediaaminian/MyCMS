@@ -1,0 +1,84 @@
+﻿@model IList<MyCMS.Model.CurrencyModel>
+
+
+@*<section id="page-title" style="background-image:url(@ViewBag.FeatureImage)">
+
+    <div class="container clearfix">
+        <h1>@ViewBag.PageTitle</h1>
+        <span>@ViewBag.PageSubtitle</span>
+        <ol class="breadcrumb">
+            <li>
+                @Html.ActionLink("صفحه اصلی", MVC.Home.ActionNames.Index, MVC.Home.Name)
+            </li>
+            <li class="active">@ViewBag.PageTitle</li>
+        </ol>
+    </div>
+
+</section>*@
+@Html.Action(MVC.Home.ActionNames.Breadcrumb, MVC.Home.Name)
+
+
+   <section id="content">
+
+    <div class="content-wrap">
+
+        <div class="container clearfix">
+
+            <div class="postcontent nobottommargin col_last clearfix">
+
+                <div class="single-event">
+
+                    <div class="col-md-8">
+
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>واحد ارزی</th>
+                                        <th style="text-align:center">کلمه اختصاری ارز</th>
+                                        <th style="text-align:center;">نرخ ( تومان)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var currency in Model)
+                                    {
+                                        <tr>
+                                            <td>@currency.Title</td>
+                                            <td class="tcur-full">@currency.Keyword</td>
+                                            <td><span class="label label-danger">@currency.Price</span></td>
+                                        </tr>                                       
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                        <div style="height: 80px;"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <!--#include file="converter.aspx"-->
+
+                        @Html.Action(MVC.Currency.ActionNames.Exchange, MVC.Currency.Name)
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="sidebar nobottommargin clearfix">
+                <div class="sidebar-widgets-wrap">
+                    <div class="widget clearfix">
+                        <!--#include file="popular-post.aspx"-->
+                        @Html.Action(MVC.Post.ActionNames.SidePopularPost, MVC.Post.Name)
+                        <br />
+                        <!--#include file="latest-post.aspx"-->
+                        @Html.Action(MVC.Post.ActionNames.SideLatestPost, MVC.Post.Name)
+                        <br />
+                        <!--#include file="duty-b.aspx"-->
+                        @Html.Action(MVC.Currency.ActionNames.DutyCalculator, MVC.Currency.Name)
+                    </div>
+                    <div class="clearfix">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

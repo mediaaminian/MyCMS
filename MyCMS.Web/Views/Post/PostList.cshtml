@@ -1,0 +1,20 @@
+﻿@{
+    int currentPage = ViewBag.CurrentPage ?? 0 + 1;
+}
+@Html.Action(MVC.Home.ActionNames.Breadcrumb, MVC.Home.Name)
+
+<section id="content">
+
+    <div class="container clearfix">
+        <fieldset>
+            <legend style="text-align: right;">@ViewBag.Title</legend>
+            @Html.Action(MVC.Post.ActionNames.SimilarPostList, MVC.Post.Name, new { count = 10 })
+            <div id="MoreInfoDiv"></div>
+            <div style="text-align: center;">
+                <a id="moreInfoButton" href="@Url.Action(MVC.Post.ActionNames.SimilarPostList, MVC.Post.Name, new { page = currentPage, count = 10 })" style="width: 70%" class="button button-desc button-border button-rounded center" rel="nofollow">بیشتر</a>
+            </div>
+
+        </fieldset>
+
+    </div>
+</section>

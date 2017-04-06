@@ -1,0 +1,108 @@
+﻿@model MyCMS.Model.AdminModel.ProductModel
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Name)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Name)
+    @Html.ValidationMessageFor(model => model.Name)
+</div>
+<div class="editor-label">
+    @Html.LabelFor(model => model.ProductTypeGroupID)
+</div>
+<div class="editor-field">
+    @(Html.Kendo().DropDownListFor(q => q.ProductTypeGroupID)
+        .DataTextField("Name")
+        .DataValueField("Id")
+        .DataSource(ds => ds.Read("GetDropDown", "ProductTypeGroup"))
+
+    )
+    @Html.ValidationMessageFor(model => model.ProductTypeGroupID)
+
+    
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.ProductTypeID)
+</div>
+<div class="editor-field">
+    @(Html.Kendo().DropDownListFor(q => q.ProductTypeID)
+        .DataTextField("Name")
+        .DataValueField("Id")
+        .DataSource(ds => ds.Read("GetDropDown", "ProductType"))
+    )
+    @Html.ValidationMessageFor(model => model.ProductTypeID)
+
+
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.IsSpecial)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.IsSpecial)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.IsExtra)
+</div>
+<div class="editor-field">
+    @Html.CheckBoxFor(model => model.IsExtra)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.OrderDescription)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.OrderDescription)
+    @Html.ValidationMessageFor(model => model.OrderDescription)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Brief)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Brief)
+    @Html.ValidationMessageFor(model => model.Brief)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Picture)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Picture)
+    @Html.ValidationMessageFor(model => model.Picture)
+</div>
+
+
+
+
+
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Priority)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Priority)
+    @Html.ValidationMessageFor(model => model.Priority)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Status)
+</div>
+<div class="editor-field">
+    @(Html.Kendo().DropDownListFor(q => q.Status)
+    .BindTo(new List<SelectListItem>() {
+        new SelectListItem()  { Text = "فعال", Value = "1" },
+        new SelectListItem() { Text = "غیر فعال", Value = "0" } })
+    )
+    @Html.ValidationMessageFor(model => model.Status)
+</div>
+
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Description)
+</div>
+<div class="editor-field">
+    @Html.TextAreaFor(model => model.Description)
+</div>

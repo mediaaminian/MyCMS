@@ -1,0 +1,10 @@
+﻿@model MyCMS.DomainClasses.Entities.Message
+<br />
+<strong>عنوان:</strong>
+@Html.Raw(Model.Subject)
+<strong>متن پیام:</strong>
+<br />
+@Html.Raw(Model.Body)
+<br />
+<br />
+<input type="button" name="btn-colose" id="btn-close" value="بستن" class="btn btn-danger btn-close" onclick="$dialog.dialog('close');" />

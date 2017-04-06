@@ -1,0 +1,23 @@
+﻿
+@model IEnumerable<MyCMS.Model.AdminModel.PostDataTableModel>
+
+<div id="post-list-footer">
+    
+    @foreach (var post in Model)
+    {
+        <div class="spost clearfix">
+            <div class="entry-c">
+                <div class="entry-title">
+                    <h4>
+                    <a href="@Url.RouteUrl("KBDetailRoute", new { action = MVC.Post.ActionNames.Index,controller = MVC.Post.Name, Id = post.Id})">@post.Title</a>
+                    @*@Html.RouteLink(post.Title, "KBDetailRoute", new { Id = post.Id })*@  
+                    </h4>
+                </div>
+                <ul class="entry-meta">
+                    <li>@Html.ConvertToPersianDateTime(post.PostedDate, "M")</li>
+                </ul>
+            </div>
+        </div>
+    }
+
+</div>

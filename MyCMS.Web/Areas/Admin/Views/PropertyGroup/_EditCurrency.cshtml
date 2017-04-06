@@ -1,0 +1,87 @@
+﻿@model MyCMS.Model.AdminModel.EditCurrencyModel
+
+<div class="container-fluid" id="div-user-detail">
+    @using (Ajax.BeginForm(MVC.Admin.ProductTypeGroup.ActionNames.EditCurrency, MVC.Admin.ProductTypeGroup.Name, new AjaxOptions { UpdateTargetId = "add-result", InsertionMode = InsertionMode.Replace, HttpMethod = "POST", OnBegin = "showLoading", OnComplete = "hideLoading" }, new { @class = "form-horizontal", id = "add-user-form" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(currency => currency.CurrencyId)
+        <div class="control-group">
+            <label class="control-label" for="CurrencyTitle">عنوان ارز</label>
+            <div class="controls">
+                @Html.TextBoxFor(currency => currency.CurrencyTitle, new { placeholder = "عنوان ارز", @class = "form-control  input-xxlarge" })
+            </div>
+            @Html.ValidationMessageFor(currency => currency.CurrencyTitle)
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="CurrencyKeyword">نام اختصاری</label>
+            <div class="control">
+                @Html.TextBoxFor(currency => currency.CurrencyKeyword, new { placeholder = "نام اختصاری", @class = "form-control  input-xxlarge"})
+            </div>
+            @Html.ValidationMessageFor(currency => currency.CurrencyKeyword)
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="CurrencyIcon">تصویر نماد ارز</label>
+            <div class="controls">
+
+
+                <div class="fileinput-new thumbnail" style="width: 200px; height: 150px;">
+                    <img src="@Model.CurrencyIcon" alt="">
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <div class="input-group">
+                            @Html.TextBoxFor(currency => currency.CurrencyIcon, new { placeholder = "تصویر نماد ارز", @class = "form-control  input-xxlarge ltr", style = "margin-right: 15px;z-index:0;padding-left:25px;" })
+                            <span class="input-group-btn">
+                                <a data-toggle="modal" class="btn btn-primary" href="#" style="border-radius: 4px 0 0px 4px;margin-left: 15px !important;" data-target="#myModal">انتخاب فایل</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                @*@Html.TextBoxFor(currency => currency.CurrencyIcon, new { placeholder = "تصویر نماد ارز", @class = "form-control  input-xxlarge", data_i_redactor = "true" })*@
+            </div>
+            @Html.ValidationMessageFor(currency => currency.CurrencyIcon)
+        </div>       
+        <div class="control-group">
+            <label class="control-label" for="CurrencyPrice">نرخ ارز</label>
+            <div class="controls">
+                @Html.TextBoxFor(currency => currency.CurrencyPrice, new { placeholder = "نرخ ارز", @class = "form-control  input-xxlarge" })
+            </div>
+            @Html.ValidationMessageFor(currency => currency.CurrencyPrice)
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="CurrencyPriority">اولویت نمایش ارز</label>
+            <div class="control">
+                @Html.TextBoxFor(Currency => Currency.CurrencyPriority, new { placeholder = "اولویت نمایش ارز", @class = "form-control  input-xxlarge", title = "اولویت نمایش ارز" })
+            </div>
+            @Html.ValidationMessageFor(Currency => Currency.CurrencyPriority)
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="CurrencyStatus">وضعیت ارز</label>
+            <div class="controls">
+                @Html.DropDownListFor(currency => currency.CurrencyStatus, ViewBag.CurrencyStatus as SelectList)
+            </div>
+            @Html.ValidationMessageFor(currency => currency.CurrencyStatus)
+        </div>
+
+        <div id="add-result" style="padding: 10px;"></div>
+        <input type="button" id="btn-add" class="btn btn-success btn-submit" value="ویرایش ارز" />
+        @Ajax.ActionLink("بازگشت", MVC.Admin.ProductTypeGroup.ActionNames.Index, MVC.Admin.ProductTypeGroup.Name, new AjaxOptions { HttpMethod = "GET", InsertionMode = InsertionMode.Replace, UpdateTargetId = "main-content", OnSuccess = "loadAjaxComponents", OnComplete = "hideLoading", OnBegin = "showLoading" }, new { @class = "btn btn-danger" })
+
+    }
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">مدیریت فایل ها</h4>
+                </div>
+                <div class="modal-body">
+                    <iframe src="/filemanager/dialog.php?type=0&fldr=&field_id=CurrencyIcon" frameborder="0" style="overflow:hidden;min-height:600px; height:100%;width:100%" height="100%" width="100%"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        run(function () { loadRedactor('#CurrencyBody,#Book_Description'); bindChosen('#LabelsId'); initializeTooltip({ show: { effect: "blind", duration: 100 } }); $('#BookImage_Path').on('change', function () { loadImagePreview('#book_img', $('#BookImage_Path').val()); }); showDownloadLinks(); $('#BookImage_Path').trigger('change'); });
+    </script>

@@ -1,0 +1,31 @@
+﻿@Html.Action(MVC.Home.ActionNames.Breadcrumb, MVC.Home.Name)
+@{
+    int currentPage = ViewBag.CurrentPage;
+    int count = ViewBag.Count;
+}
+<div class="container clearfix">
+
+    <div class="fancy-title">
+        <h3></h3>
+    </div>
+
+    <div class="row bottommargin-sm clearfix">
+
+        @*Action LastPost*@
+        @Html.Action(MVC.Post.ActionNames.LastPost, MVC.Post.Name)
+
+        @*Action _SidePostWithSkip*@
+        @Html.Action(MVC.Post.ActionNames.SidePostsWithSkip, MVC.Post.Name, new {page = 0, count = 6, skip = 1 })
+
+    </div>
+
+    <div class="fancy-title title-border">
+        <h3></h3>
+    </div>
+
+   @*Action _FooterPostsWithSkip*@
+    @Html.Action(MVC.Post.ActionNames.FooterPostsWithSkip, MVC.Post.Name, new { page = currentPage, count = count, skip = 7 })
+
+
+</div>
+

@@ -1,0 +1,228 @@
+﻿@model IEnumerable<MyCMS.Model.LuceneModel.LucenePostModel>
+@{
+    ViewBag.Title = "جستجوی سایت";
+    int currentPage = ViewBag.CurrentPage;
+    int count = ViewBag.Count;
+    var LstColClass = "";
+    var totalPages = (int)Math.Ceiling((decimal)ViewBag.TotalRecords / (decimal)count);
+    var startPage = currentPage - 4;
+    var endPage = currentPage + 5;
+    if (startPage <= 0)
+    {
+        endPage -= (startPage - 1);
+        startPage = 1;
+    }
+    if (endPage > totalPages)
+    {
+        endPage = totalPages;
+        if (endPage > 10)
+        {
+            startPage = endPage - 9;
+        }
+    }
+
+}
+<div id="user-table">
+
+    @Html.Action(MVC.Home.ActionNames.Breadcrumb, MVC.Home.Name)
+
+    @if (!Model.Any())
+    {
+        <section id="content" style="font-size:19px;height:400px;font-weight:bold;">
+
+            <div class="content-wrap">
+
+                <div class="container clearfix">
+
+                    موردی پیدا نشد ! لطفا مجددا سعی کنید.
+                </div>
+
+            </div>
+
+        </section>
+    }
+    else
+    {
+        <section id="content">
+
+            <div class="content-wrap">
+
+                <div class="container clearfix">
+
+                    <h4>جستجو به دنبال عبارت "@ViewBag.Term"</h4>
+
+                    <div id="posts" class="events small-thumbs">
+
+                        @foreach (var post in Model)
+                        {
+                            <div class="entry clearfix">
+                                <div class="entry-image">
+                                    <a href="@Url.RouteUrl("KBDetailRoute", new { action = MVC.Post.ActionNames.Index, controller = MVC.Post.Name, Id = post.PostId })">
+                                        <img src="@post.Picture">
+                                    </a>
+                                </div>
+                                <div class="entry-c">
+                                    <div class="entry-title">
+                                        <h2><a href="@Url.RouteUrl("KBDetailRoute", new { action = MVC.Post.ActionNames.Index, controller = MVC.Post.Name, Id = post.PostId })">@Html.Raw(post.Title)</a></h2>
+                                    </div>
+                                    <ul class="entry-meta clearfix"></ul>
+                                    <div class="entry-content">
+                                        <p>
+                                            @Html.Raw(post.Description)
+                                        </p>
+                                        <a href="@Url.RouteUrl("KBDetailRoute", new { action = MVC.Post.ActionNames.Index, controller = MVC.Post.Name, Id = post.PostId })" class="button button-3d button-xlarge button-rounded button-amber">ادامه مطلـب</a>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
+                        <div id="loading" style="position: absolute; display: none;">
+                            <img src="@Links.Content.Images.loading1_gif" />
+                        </div>
+                        <div style="text-align:right">
+                            @if (endPage > 1)
+                            {
+                            <ul class="pagination">
+                                @if (currentPage > 1)
+                                    {
+                                    <li>@Ajax.ActionLink("«", MVC.Search.ActionNames.Index, MVC.Search.Name, new { term = ViewBag.Term, page = 0, count = 5 }, new AjaxOptions { HttpMethod = "Post", InsertionMode = InsertionMode.Replace, OnBegin = "showLoading", UpdateTargetId = "user-table", OnSuccess = "loadAjaxComponents", OnComplete = "hideLoading" }, null)</li>
+
+                                    @*<li>@Ajax.ActionLink("→", MVC.Search.ActionNames.Index, MVC.Search.Name, new { term = ViewBag.Term, page = currentPage - 2, count = 5 }, new AjaxOptions { HttpMethod = "Post", InsertionMode = InsertionMode.Replace, OnBegin = "showLoading", UpdateTargetId = "user-table", OnSuccess = "loadAjaxComponents", OnComplete = "hideLoading" }, null)</li>*@
+
+                                    }
+                                    else
+                                    {
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#" tabindex="-1" aria-label="First">
+                                            <span aria-hidden="true">«</span>
+                                            <span class="sr-only">First</span>
+                                        </a>
+                                    </li>
+                                    @*<li class="page-item disabled">
+                                            <a class="page-link" href="#" tabindex="-1" aria-label="Previous">
+                                                <span aria-hidden="true">→</span>
+                                                <span class="sr-only">Previous</span>
+                                            </a>
+                                        </li>*@
+                                    }
+                                @if (currentPage > 10)
+                                    {
+
+                                    <li>@Ajax.ActionLink("...", MVC.Search.ActionNames.Index, MVC.Search.Name, new { term = ViewBag.Term, page = currentPage - 11, count = 5 }, new AjaxOptions { HttpMethod = "Post", InsertionMode = InsertionMode.Replace, OnBegin = "showLoading", UpdateTargetId = "user-table", OnSuccess = "loadAjaxComponents", OnComplete = "hideLoading" }, null)</li>
+
+                                    }
+                                    else
+                                    {
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#" tabindex="-1" aria-label="Previous">
+                                            <span aria-hidden="true">...</span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                    </li>
+                                    @*<li>@Ajax.ActionLink("«", MVC.Search.ActionNames.Index, MVC.Search.Name, new { term = ViewBag.Term, page = 0, count = 5 }, new AjaxOptions { HttpMethod = "Post", InsertionMode = InsertionMode.Replace, OnBegin = "showLoading", UpdateTargetId = "user-table", OnSuccess = "loadAjaxComponents", OnComplete = "hideLoading" }, new { @class = "disabled" })</li>
+
+                                        <li>@Ajax.ActionLink("<", MVC.Search.ActionNames.Index, MVC.Search.Name, new { term = ViewBag.Term, page = 0, count = 5 }, new AjaxOptions { HttpMethod = "Post", InsertionMode = InsertionMode.Replace, OnBegin = "showLoading", UpdateTargetId = "user-table", OnSuccess = "loadAjaxComponents", OnComplete = "hideLoading" }, new { @class = "disabled" })</li>*@
+
+                                    }
+
+                                @for (var _page = startPage; _page <= endPage; _page++)
+                                    {
+                                    <li class="@(_page - 1 == currentPage ? "active" : "")">
+                                        @Ajax.ActionLink(Html.ConvertToPersianString(_page).ToString(), MVC.Search.ActionNames.Index, MVC.Search.Name, new { term = ViewBag.Term, page = _page - 1, count = 5 }, new AjaxOptions { HttpMethod = "Post", InsertionMode = InsertionMode.Replace, OnBegin = "showLoading", UpdateTargetId = "user-table", OnSuccess = "loadAjaxComponents", OnComplete = "hideLoading" }, null)
+                                    </li>
+                                    }
+
+                                @if (currentPage < totalPages - 9)
+                                    {
+                                    <li>
+                                        @Ajax.ActionLink("...", MVC.Search.ActionNames.Index, MVC.Search.Name, new { term = ViewBag.Term, page = currentPage + 9, count = 5 }, new AjaxOptions { HttpMethod = "Post", InsertionMode = InsertionMode.Replace, OnBegin = "showLoading", UpdateTargetId = "user-table", OnSuccess = "loadAjaxComponents", OnComplete = "hideLoading" }, null)
+                                    </li>
+                                    }
+                                    else
+                                    {
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#" tabindex="-1" aria-label="Next">
+                                            <span aria-hidden="true">...</span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                    </li>
+                                    }
+                                @if (currentPage < totalPages - 1)
+                                    {
+                                    @*<li>
+                                            @Ajax.ActionLink("←", MVC.Search.ActionNames.Index, MVC.Search.Name, new { term = ViewBag.Term, page = currentPage, count = 5 }, new AjaxOptions { HttpMethod = "Post", InsertionMode = InsertionMode.Replace, OnBegin = "showLoading", UpdateTargetId = "user-table", OnSuccess = "loadAjaxComponents", OnComplete = "hideLoading" }, null)
+                                        </li>*@
+                                    <li>@Ajax.ActionLink("»", MVC.Search.ActionNames.Index, MVC.Search.Name, new { term = ViewBag.Term, page = totalPages - 1, count = 5 }, new AjaxOptions { HttpMethod = "Post", InsertionMode = InsertionMode.Replace, OnBegin = "showLoading", UpdateTargetId = "user-table", OnSuccess = "loadAjaxComponents", OnComplete = "hideLoading" }, null)</li>
+                                    }
+                                    else
+                                    {
+                                    @*<li>
+                                            @Ajax.ActionLink(">", MVC.Search.ActionNames.Index, MVC.Search.Name, new { term = ViewBag.Term, page = totalPages - 1, count = 5 }, new AjaxOptions { HttpMethod = "Post", InsertionMode = InsertionMode.Replace, OnBegin = "showLoading", UpdateTargetId = "user-table", OnSuccess = "loadAjaxComponents", OnComplete = "hideLoading" }, new { @class = "disabled" })
+                                        </li>
+                                        <li>@Ajax.ActionLink("»", MVC.Search.ActionNames.Index, MVC.Search.Name, new { term = ViewBag.Term, page = totalPages - 1, count = 5 }, new AjaxOptions { HttpMethod = "Post", InsertionMode = InsertionMode.Replace, OnBegin = "showLoading", UpdateTargetId = "user-table", OnSuccess = "loadAjaxComponents", OnComplete = "hideLoading" }, new { @class = "disabled" })</li>*@
+
+                                    @*<li class="page-item disabled">
+                                            <a class="page-link" href="#" tabindex="-1" aria-label="Next">
+                                                <span aria-hidden="true">←</span>
+                                                <span class="sr-only">Next</span>
+                                            </a>
+                                        </li>*@
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#" tabindex="-1" aria-label="Last">
+                                            <span aria-hidden="true">»</span>
+                                            <span class="sr-only">Last</span>
+                                        </a>
+                                    </li>
+                                    }
+                            </ul>
+                            }
+
+                            @*<br />
+                                    <ul class="pagination">
+
+                                        <li>@Ajax.ActionLink("«", MVC.Search.ActionNames.Index, MVC.Search.Name, new { term = ViewBag.Term, page = 0, count = 5 }, new AjaxOptions { HttpMethod = "Post", InsertionMode = InsertionMode.Replace, OnBegin = "showLoading", UpdateTargetId = "user-table", OnSuccess = "loadAjaxComponents", OnComplete = "hideLoading" }, null)</li>
+                                        @for (int i = firstPage; i <= lastPage; i++)
+                                        {
+                                            if (i + 1 == currentPage)
+                                            {
+                                                <li class="active"><a href="#">@Html.ConvertToPersianString(i + 1)</a></li>
+                                    }
+                                    else
+                                    {
+                                                <li>
+                                                    @Ajax.ActionLink(Html.ConvertToPersianString(i + 1).ToString(), MVC.Search.ActionNames.Index, MVC.Search.Name, new { term = ViewBag.Term, page = i , count = 5 }, new AjaxOptions { HttpMethod = "Post", InsertionMode = InsertionMode.Replace, OnBegin = "showLoading", UpdateTargetId = "user-table", OnSuccess = "loadAjaxComponents", OnComplete = "hideLoading" }, null)
+                                                </li>
+                                    }
+                                }
+                                        <li>@Ajax.ActionLink("»", MVC.Search.ActionNames.Index, MVC.Search.Name, new { term = ViewBag.Term, page = max, count = 5 }, new AjaxOptions { HttpMethod = "Post", InsertionMode = InsertionMode.Replace, OnBegin = "showLoading", UpdateTargetId = "user-table", OnSuccess = "loadAjaxComponents", OnComplete = "hideLoading" }, null)</li>
+                                    </ul>*@
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section><!-- #content end -->
+    }
+    </div>
+    <script type="text/javascript">
+        $('.pagination .disabled a, .pagination .active a').on('click', function (e) {
+            e.preventDefault();
+        });
+        function showLoading() {
+
+            var top = ($(window).height() - $('div#loading').height()) / 2;
+
+            $('div#loading').css({ 'z-index': '2000', 'top': top + $(document).scrollTop() }).fadeIn('slow');
+        }
+
+        function hideLoading() {
+            $('div#loading').fadeOut('slow').css('z-index', '10');
+        }
+        function loadAjaxComponents() {
+        }
+    </script>
+

@@ -1,0 +1,6 @@
+﻿<div class="portlet-title">
+    <div class="caption">
+        @Ajax.ActionLink("افزودن صفحه جدید", MVC.Admin.Page.ActionNames.Add, MVC.Admin.Page.Name, null, new AjaxOptions { HttpMethod = "GET", InsertionMode = InsertionMode.Replace, UpdateTargetId = "main-content", OnSuccess = "loadAjaxComponents", OnComplete = "hideLoading", OnBegin = "showLoading" }, new { @class = "btn btn-primary" })
+    </div>
+</div>
+<br />

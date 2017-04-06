@@ -1,0 +1,138 @@
+﻿@model MyCMS.Model.AdminModel.AddPageModel
+
+<div class="container-fluid" id="div-user-detail">
+    @using (Ajax.BeginForm(MVC.Admin.Page.ActionNames.Add, MVC.Admin.Page.Name, new AjaxOptions { UpdateTargetId = "result", InsertionMode = InsertionMode.Replace, HttpMethod = "POST", OnBegin = "showLoading", OnComplete = "hideLoading" }, new { @class = "form-horizontal", id = "add-user-form" }))
+    {
+        @Html.AntiForgeryToken()
+        <div class="control-group">
+            <label class="control-label" for="Title">عنوان صفحه</label>
+            <div class="controls">
+                @Html.TextBoxFor(page => page.Title, new { placeholder = "عنوان صفحه", @class = "form-control  input-xxlarge" })
+            </div>
+            @Html.ValidationMessageFor(page => page.Title)
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="SubTitle">زیر عنوان صفحه</label>
+            <div class="controls">
+                @Html.TextBoxFor(page => page.SubTitle, new { placeholder = "زیر عنوان صفحه", @class = "form-control  input-xxlarge" })
+            </div>
+            @Html.ValidationMessageFor(page => page.SubTitle)
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="IconClass">کلاس تصویر منو</label>
+            <div class="controls">
+                @Html.TextBoxFor(page => page.IconClass, new { placeholder = "کلاس تصویر منو", @class = "form-control  input-xxlarge ltr" })
+            </div>
+            @Html.ValidationMessageFor(page => page.IconClass)
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="FeatureImage">تصویر اختصاصی صفحه</label>
+            <div class="controls">
+
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <div class="input-group">
+                            @Html.TextBoxFor(page => page.FeatureImage, new { placeholder = "تصویر اختصاصی صفحه", @class = "form-control  input-xxlarge ltr", style = "margin-right: 15px;z-index:0;padding-left:25px" })
+                            <span class="input-group-btn">
+                                <a data-toggle="modal" class="btn btn-primary" href="#" style="border-radius: 4px 0 0px 4px;margin-left: 15px !important;" data-target="#myModal">انتخاب فایل</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                @*@Html.TextBoxFor(page => page.FeatureImage, new { placeholder = "تصویر اختصاصی صفحه", @class = "form-control  input-xxlarge" })*@
+            </div>
+            @Html.ValidationMessageFor(page => page.FeatureImage)
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="ExternalLink">لینک نمایش در منو </label> 
+            (<input type="radio" name="rdLink" id="rdInternal" value="لینک داخلی" style="margin: 0 4px 0 4px;" /><label class="control-label" for="rdInternal">لینک داخلی</label> 
+            <input type="radio" name="rdLink" id="rdExternal" value="لینک خارجی" style="margin: 0 10px 0 4px;" /><label class="control-label" for="rdExternal">لینک خارجی</label> )
+            <div class="controls">
+                @Html.TextBoxFor(page => page.ExternalLink, new { placeholder = "لینک نمایش در منو", @class = "form-control  input-xxlarge ltr" })
+            </div>
+            @Html.ValidationMessageFor(page => page.ExternalLink)
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="Order">ترتیب</label>
+            <div class="controls">
+                @Html.TextBoxFor(page => page.Order, new { @class = "form-control input-xxlarge" })
+            </div>
+            @Html.ValidationMessageFor(page => page.Order)
+        </div>
+
+        <div class="control-group">
+            <label for="Body">متن صفحه</label>
+            <div class="controls" style="margin-right: 0px">
+                @Html.TextAreaFor(page => page.Body, new { style = "height: 300px;" })
+            </div>
+            @Html.ValidationMessageFor(page => page.Body)
+        </div>
+        
+        <div class="control-group">
+            <label class="control-label" for="Keyword">کلمات کلیدی</label>
+            <div class="control">
+                @Html.TextBoxFor(page => page.Keyword, new { placeholder = "کلمات کلیدی را با , از یکدیگر جدا کنید", @class = "form-control  input-xxlarge"})
+            </div>
+            @Html.ValidationMessageFor(page => page.Keyword)
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="Description">توضیحات</label>
+            <div class="controls">
+                @Html.TextAreaFor(page => page.Description, new { placeholder = "توضیحات", @class = "form-control  input-xxlarge" })
+            </div>
+            @Html.ValidationMessageFor(page => page.Description)
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="ParrentId">منوی اصلی</label>
+            <div class="controls">
+                @Html.DropDownListFor(page => page.ParentId, ViewBag.ParentPagesList as SelectList)
+            </div>
+            @Html.ValidationMessageFor(page => page.ParentId)
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="Status">وضعیت نمایش</label>
+            <div class="controls">
+                @Html.DropDownListFor(page => page.Status, ViewBag.PageStatus as IEnumerable<SelectListItem>)
+            </div>
+            @Html.ValidationMessageFor(page => page.Status)
+        </div>
+        @*<div class="control-group" style="display:none">
+            <label class="control-label" for="PostCommentStatus">وضعیت نظرات</label>
+            <div class="controls">
+                @Html.DropDownListFor(page => page.CommentStatus, ViewBag.CommentStatus as IEnumerable<SelectListItem>)
+            </div>
+            @Html.ValidationMessageFor(page => page.CommentStatus)
+        </div>*@
+        
+        <div id="result"></div>
+        <input type="button" name="btn-submit" value="افزودن" class="btn btn-success btn-submit" />
+        @*<input type="button" name="btn-colose" id="btn-close" value="انصراف" class="btn btn-danger" onclick="$dialog.dialog('close');" />*@
+        @Ajax.ActionLink("بازگشت", MVC.Admin.Page.ActionNames.Index, MVC.Admin.Page.Name, new AjaxOptions { HttpMethod = "GET", InsertionMode = InsertionMode.Replace, UpdateTargetId = "main-content", OnSuccess = "loadAjaxComponents", OnComplete = "hideLoading", OnBegin = "showLoading" } , new { @class = "btn btn-danger" })
+   }
+
+</div>
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">مدیریت فایل ها</h4>
+            </div>
+            <div class="modal-body">
+                <iframe src="/filemanager/dialog.php?type=0&fldr=&field_id=FeatureImage" frameborder="0" style="overflow:hidden;min-height:600px; height:100%;width:100%" height="100%" width="100%"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    run(function () {
+        loadFroala2('#Body');
+        $('input#rdInternal').click(function () {
+            $('input#ExternalLink').val('/PageName.tt');
+        });
+        $('input#rdExternal').click(function () {
+            $('input#ExternalLink').val('http://www.');
+        });
+    });
+</script>

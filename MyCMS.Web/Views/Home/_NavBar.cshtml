@@ -1,0 +1,49 @@
+﻿<nav id="primary-menu" class="style-2">
+    @*@Html.ActionLink("MyCMS", MVC.Home.ActionNames.Index, MVC.Home.Name, null, new { @class = "brand" })*@
+    <ul>
+        <li>
+            <a href="/"><div><i class="icon-home2" style="font-size: 14px !important;"></i>صفحه اصلی </div></a>
+
+        </li>
+        @Html.Action(MVC.Home.ActionNames.NavbarItems, MVC.Home.Name)
+        <li>
+            <a href="@Url.Action(MVC.Home.ActionNames.Index, MVC.ContactUs.Name )"><div><i class="icon-map-marker2" style="font-size: 14px !important;"></i>تماس با ما </div></a>
+        </li>
+        @if (!User.Identity.IsAuthenticated)
+            {
+            @*<li>
+                    <a href="@Url.Action(MVC.User.ActionNames.LogOn, MVC.User.Name , new { area = "", returnUrl = Html.ReturnUrl(Context, Url) })"><div><i class="icon-user" style="font-size: 14px !important;"></i>ورود</div></a>
+                </li>
+                   <li>
+                            @Ajax.ActionLink("ورود / ثبت نام", MVC.User.ActionNames.LogOn, MVC.User.Name, new { area = "", returnUrl = Html.ReturnUrl(Context, Url) }, new AjaxOptions { HttpMethod = "GET", InsertionMode = InsertionMode.Replace, UpdateTargetId = "logOnModal", LoadingElementDuration = 300, LoadingElementId = "loadingMessage", OnSuccess = "LogOnForm.onSuccess" }, new { role = "button", data_toggle = "modal", data_i_logon_link = "true", rel = "nofollow" })
+                        </li>*@
+        }
+    </ul>
+    <!-- Top Search
+    ============================================= -->
+    <div id="top-search">
+        <a href="#" id="top-search-trigger" style="float:left"><i class="icon-search3"></i><i class="icon-line-cross"></i></a>
+        <img src="/Content/images/material/callus.png" class="hidden-xs hidden-sm callus" style="margin-top: -3px;max-width: 80%;float: left;" alt="">
+
+        @*<form action="search.aspx" method="post">
+                <input type="text" name="q" class="form-control" value="" placeholder="جستجو ...">
+            </form>*@
+
+        @using (Html.BeginForm(MVC.Search.ActionNames.Index, MVC.Search.Name, new { page = 0, count = 5 }, FormMethod.Get, new { style = "margin-bottom:0", @class = "form-search" }))
+        {
+            <input type="text" data-i-search-input="true" class="form-control" name="term" value="@ViewBag.Term" data-autocomplete="true" data-autocomplete-url="@Url.Action(MVC.Search.ActionNames.AutoCompleteSearch, MVC.Search.Name)" placeholder="جستجو..." />
+                <button class="btn btn-primary" type="submit" style="display:none">جست و جو</button>
+        }
+
+
+
+    </div>
+    <!-- #top-search end -->
+    @*@using (Html.BeginForm(MVC.Search.ActionNames.Index, MVC.Search.Name, FormMethod.Get, new { style = "margin-bottom:0", @class = "form-search" }))
+        {
+            <div class="input-append pull-left visible-desktop" style="margin-top: 5px;">
+                <input type="text" data-i-search-input="true" class="search-query" name="term" value="@ViewBag.Term" data-autocomplete="true" data-autocomplete-url ="@Url.Action(MVC.Search.ActionNames.AutoCompleteSearch, MVC.Search.Name)" placeholder="عنوان،نویسنده،ناشر،ISBN" >
+                <button class="btn btn-primary" type="submit">جست و جو</button>
+            </div>
+        }*@
+</nav>

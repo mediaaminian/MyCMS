@@ -1,0 +1,175 @@
+﻿
+@Html.Action(MVC.Home.ActionNames.Breadcrumb, MVC.Home.Name)
+@{
+    ViewBag.Title = "محاسبه حقوق و عوارض گمرکی";
+ }
+<!-- #content Start -->
+@*<script src="~/Content/js/Controller/DuctyCurrencyCalculatorController.js"></script>*@
+
+
+<section id="content">
+
+    <div id="divDutyCalculator" class="content-wrap" ng-controller="DuctyCurrencyCalculatorController">
+
+        <div class="container clearfix">
+
+            <div class="postcontent nobottommargin col_last clearfix">
+
+                <div class="single-event">
+
+                    <div class="col-md-12">
+                        <div class="panel panel-default events-meta">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">محاسبه حقوق و عوارض گمرکی</h3>
+                            </div>
+                            <div class="panel-body">
+                                <form>
+
+                                    <div class="col_half">
+                                        <label for="template-contactform-phone">ارزش کالا</label>
+                                        <input type="text" class="sm-form-control" id="PartCost" placeholder="" ng-model="PartCost" />
+                                    </div>
+
+                                    <div class="col_half col_last">
+                                        <label for="template-contactform-phone">واحد ارزی</label>
+                                        <select class="sm-form-control" id="PartCurrency" ng-model="PartCurrency"  ng-options="item.Title for item in CurrencyList" ></select>
+                                    </div>
+
+                                    <div class="col_half">
+                                        <label for="template-contactform-phone">هزینه حمل</label>
+                                        <input type="text" class="sm-form-control" id="TransferCost" placeholder="" ng-model="TransferCost" />
+                                    </div>
+
+                                    <div class="col_half col_last">
+                                        <label for="template-contactform-phone">واحد ارزی</label>
+                                        <select class="sm-form-control" ng-model="TransferCurrency" id="TransferCurrency" ng-options="item.Title for item in CurrencyList" ></select>
+                                    </div>
+
+                                    <div class="col_half">
+                                        <label for="template-contactform-phone">درصد ماخذ گمرکی</label>
+                                        <input type="text" class="sm-form-control" placeholder="" id="SourcePercent" ng-model="SourcePercent" value="@ViewBag.SourcePercent" />
+                                    </div>
+
+                                    <div class="col_half col_last">
+                                        <label for="template-contactform-phone">درصد مالیات بر ارزش افزوده</label>
+                                        <input type="text" class="sm-form-control" placeholder="" id="VatPercent" ng-model="VatPercent" value="@ViewBag.VATPercent" />
+                                    </div>
+
+                                    <button class="button button-mini button-dark button-rounded currn" ng-click="DuctyCurrencyCalculator()"> محاسبه عوارض گمرکی </button>
+                                </form>
+
+                                <div class="table-responsive">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>اطلاعات</th>
+                                                <th style="text-align:left;">مبلغ ( ریال )</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>درصد ماخذ گمرکی (4%)</td>
+                                                <td><span class="label label-danger">{{CustomSourceCost}}</span></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>درصد مالیات بر ارزش افزوده (9%)</td>
+                                                <td><span class="label label-danger">{{VATCost}}</span></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="color:red;">مبلغ کل عوارض گمرکی</td>
+                                                <td><span class="label label-money">{{ResultCalculation}} ریال</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar nobottommargin clearfix">
+                <div class="sidebar-widgets-wrap">
+
+                    <div class="widget clearfix">
+                        @Html.Action(MVC.Post.ActionNames.SidePopularPost, MVC.Post.Name)
+
+                        <!--#include file="popular-post.aspx"-->
+                        <br />
+                        @Html.Action(MVC.Home.ActionNames.Telegram, MVC.Home.Name)
+
+                        <!--#include file="telegram-b.aspx"-->
+                        <br /><br />
+                    </div>
+
+                    <div class="clearfix">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<!-- #content end -->
+<!--#include file="footer.aspx"-->
+<script type="text/javascript">
+    app.controller('DuctyCurrencyCalculatorController', ["$scope", "serviceBaseAngular", "$compile", "$timeout", "$rootScope", function ($scope, serviceBaseAngular, $compile, timer, $rootScope) {
+
+        $scope.CurrencyList = [];
+        $scope.PartCurrency = "";
+        $scope.TransferCurrency = "";
+        $scope.SourcePercent = @ViewBag.SourcePercent;
+        $scope.VatPercent = @ViewBag.VATPercent;
+        $scope.ResultCalculation = "0";
+        $scope.PartCost = 1;
+        $scope.TransferCost = 1;
+        $scope.CustomSourceCost = 1;
+        $scope.VATCost = 1;
+        $scope.formatCurrency = function (number, unitName) {
+            var n = number.toString().split('').reverse().join("");
+            var n2 = n.replace(/\d\d\d(?!$)/g, "$&،");
+            return unitName + " " + n2.split('').reverse().join('');
+        }
+        $scope.GetCurrency = function () {
+            SuccessMessage = function (result) {
+                $scope.CurrencyList = result;;
+                if (result != null && result.length > 0) {
+                    $scope.PartCurrency = result[0];
+                    $scope.TransferCurrency = result[0]
+                }
+            }
+            ErrorMessage = function () {
+            }
+            var url = "/Currency/GetAllCurrencies"
+            serviceBaseAngular.AjaxCall(url, null, SuccessMessage, ErrorMessage);
+        }
+        $scope.GetCurrency();
+        $scope.DuctyCurrencyCalculator = function () {
+            var hasError = false;
+            if($scope.PartCost == "") {$('#PartCost').addClass('error'); hasError = true;} else { $('#PartCost').removeClass('error'); }
+            if($scope.PartCurrency == "") {$('#PartCurrency').addClass('error'); hasError = true;} else { $('#PartCurrency').removeClass('error'); }
+            if($scope.TransferCost == "") {$('#TransferCost').addClass('error'); hasError = true;} else { $('#TransferCost').removeClass('error'); }
+            if($scope.TransferCurrency == "") {$('#TransferCurrency').addClass('error'); hasError = true;} else { $('#TransferCurrency').removeClass('error'); }
+            if($scope.SourcePercent == "") {$('#SourcePercent').addClass('error'); hasError = true;} else { $('#SourcePercent').removeClass('error'); }
+            if($scope.VatPercent == "") {$('#VatPercent').addClass('error'); hasError = true;} else { $('#VatPercent').removeClass('error'); }
+            if(hasError) return;
+            var partCurrency = $scope.PartCurrency;
+            var transferCurrency = $scope.TransferCurrency;
+
+            var InsurancePart = Math.round(((partCurrency.Price * $scope.PartCost) + (transferCurrency.Price * $scope.TransferCost)) * 5 / 1000);
+            var SeifPart = (partCurrency.Price * $scope.PartCost) + (transferCurrency.Price * $scope.TransferCost) + InsurancePart;
+
+            $scope.CustomSourceCost = isNaN(Math.round((SeifPart * $scope.SourcePercent) / 100)) ? "غیر قابل محاسبه": Math.round((SeifPart * $scope.SourcePercent) / 100);
+            $scope.VATCost = isNaN(Math.round(((SeifPart + $scope.CustomSourceCost) * $scope.VatPercent) / 100)) ? "غیر قابل محاسبه": Math.round(((SeifPart + $scope.CustomSourceCost) * $scope.VatPercent) / 100);
+
+            $scope.ResultCalculation =isNaN(Math.round($scope.CustomSourceCost + $scope.VATCost)) ? "غیر قابل محاسبه به ":  $scope.formatCurrency(Math.round($scope.CustomSourceCost + $scope.VATCost), "");
+            $('html, body').animate({
+                scrollTop: $("#divDutyCalculator").offset().top - 20
+            }, 2000);
+        }
+    }]);
+
+</script>

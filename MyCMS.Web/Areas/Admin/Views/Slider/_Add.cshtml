@@ -1,0 +1,81 @@
+﻿@model MyCMS.Model.AdminModel.AddSliderModel
+
+<div class="container-fluid" id="div-user-detail">
+    @using (Ajax.BeginForm(MVC.Admin.Slider.ActionNames.AddSlider, MVC.Admin.Slider.Name, new AjaxOptions { UpdateTargetId = "add-result", InsertionMode = InsertionMode.Replace, HttpMethod = "POST", OnBegin = "showLoading", OnComplete = "hideLoading" }, new { @class = "form-horizontal", id = "add-user-form" }))
+    {
+        @Html.AntiForgeryToken()
+        <div class="control-group">
+            <label class="control-label" for="SliderTitle">عنوان اسلاید</label>
+            <div class="controls">
+                @Html.TextBoxFor(Slider => Slider.SliderTitle, new { placeholder = "عنوان اسلاید", @class = "form-control  input-xxlarge" })
+            </div>
+            @Html.ValidationMessageFor(Slider => Slider.SliderTitle)
+        </div>
+        
+        <div class="control-group">
+            <label class="control-label" for="SliderPicture">تصویر اسلاید</label>
+            <div class="control">
+
+
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <div class="input-group">
+                            @Html.TextBoxFor(Slider => Slider.SliderPicture, new { placeholder = "تصویر", @class = "form-control  input-xxlarge ltr", style = "margin-right: 15px;z-index:0;padding-left:25px" })
+                            <span class="input-group-btn">
+                                <a data-toggle="modal" class="btn btn-primary" href="#" style="border-radius: 4px 0 0px 4px;margin-left: 15px !important;" data-target="#myModal">انتخاب فایل</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                @*@Html.TextBoxFor(Slider => Slider.SliderPicture, new { placeholder = "تصویر", @class = "form-control  input-xxlarge", title = "نام اختصاری" })*@
+            </div>
+            @Html.ValidationMessageFor(Slider => Slider.SliderPicture)
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="SliderLink">لینک اسلاید</label>
+            <div class="control">
+                @Html.TextBoxFor(Slider => Slider.SliderLink, new { placeholder = "لینک اسلاید", @class = "form-control  input-xxlarge ltr", title = "تصویر نماد اسلاید" })
+            </div>
+            @Html.ValidationMessageFor(Slider => Slider.SliderLink)
+        </div>
+                
+
+        <div class="control-group">
+            <label class="control-label" for="SliderPriority">اولویت نمایش اسلاید</label>
+            <div class="control">
+                @Html.TextBoxFor(Slider => Slider.SliderPriority, new { placeholder = "اولویت نمایش اسلاید", @class = "form-control  input-xxlarge", title = "اولویت نمایش اسلاید" })
+            </div>
+            @Html.ValidationMessageFor(Slider => Slider.SliderPriority)
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="SliderStatus">وضعیت اسلاید</label>
+            <div class="controls">
+                @Html.DropDownListFor(Slider => Slider.SliderStatus, ViewBag.SliderStatus as IEnumerable<SelectListItem>)
+            </div>
+            @Html.ValidationMessageFor(Slider => Slider.SliderStatus)
+        </div>
+
+        
+        <div id="add-result" style="padding: 10px;"></div>
+        <input type="button" id="btn-add" class="btn btn-success btn-submit" value="افزودن اسلاید جدید" />
+        @Ajax.ActionLink("بازگشت", MVC.Admin.Slider.ActionNames.Index, MVC.Admin.Slider.Name, new AjaxOptions { HttpMethod = "GET", InsertionMode = InsertionMode.Replace, UpdateTargetId = "main-content", OnSuccess = "loadAjaxComponents", OnComplete = "hideLoading", OnBegin = "showLoading" }, new { @class = "btn btn-danger" })
+
+    }
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">مدیریت فایل ها</h4>
+                </div>
+                <div class="modal-body">
+                    <iframe src="/filemanager/dialog.php?type=0&fldr=&field_id=SliderPicture" frameborder="0" style="overflow:hidden;min-height:600px; height:100%;width:100%" height="100%" width="100%"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        run(function () { bindChosen('#LabelId'); initializeTooltip({ show: { effect: "blind", duration: 100 } });  });
+    </script>

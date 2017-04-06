@@ -1,0 +1,8 @@
+﻿<div class="portlet-title">
+    <div class="caption">
+        @*@Ajax.ButtonDialog(, Url.Action(MVC.Admin.User.ActionNames.Add, MVC.Admin.User.Name), "GET", null, "dialog", new DialogOptions { Height = "600", Width = "450", Title = "کاربر جدید", IsModal = "true", ShowEffect = "size", ShowDir = "down", HideEffect = "fold", HideDir = "right" }, "btn btn-info")*@
+        @Ajax.ActionLink("افزودن کاربر", MVC.Admin.User.ActionNames.Add, MVC.Admin.User.Name, null, new AjaxOptions { HttpMethod = "GET", InsertionMode = InsertionMode.Replace, UpdateTargetId = "main-content", OnSuccess = "loadAjaxComponents", OnComplete = "hideLoading", OnBegin = "showLoading" }, new { @class = "btn btn-info" })
+    </div>
+</div>
+<br />
+

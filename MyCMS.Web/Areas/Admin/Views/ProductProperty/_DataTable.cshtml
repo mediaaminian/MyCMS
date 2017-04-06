@@ -1,0 +1,43 @@
+﻿@model IEnumerable<MyCMS.Model.AdminModel.ProductTypeGroupModel>
+<h2>ویژگی محصول</h2>
+
+<div id="user-table" class="table-responsive">
+
+    @(Html.Kendo().Grid(Model)
+        .Name("ProductTypeGroupGrid")
+        .Columns(columns =>
+        {
+            columns.Bound(p => p.ID).Visible(false);
+            columns.Bound(p => p.Name).Filterable(true);
+            columns.Bound(p => p.Priority);
+            columns.Bound(p => p.Status);
+            columns.Command(command =>
+            {
+                command.Edit();
+                command.Destroy();
+            });
+        })
+    .ToolBar(toolbar =>
+    {
+        toolbar.Create();
+    })
+   .Editable(editable => editable.TemplateName("ProductTypeGroup").Mode(GridEditMode.PopUp).DisplayDeleteConfirmation(true))
+   .Filterable()
+   .Selectable(selectable => selectable.Mode(GridSelectionMode.Multiple)).Sortable().Pageable()
+   //.Events(ev=>ev.DataBound("GridDataBound"))
+   .DataSource(dataSource =>
+       dataSource.Ajax()
+           .PageSize(10)
+           .Model(model =>
+           {
+               model.Id(p => p.ID);
+               model.Field(q => q.ID);
+           })
+           .Create("Create", "ProductTypeGroup")
+           .Update("Update", "ProductTypeGroup")
+           .Destroy("Delete", "ProductTypeGroup")
+    )
+    .Resizable(resize => resize.Columns(true))
+    .Reorderable(reorder => reorder.Columns(true))
+    )
+</div>

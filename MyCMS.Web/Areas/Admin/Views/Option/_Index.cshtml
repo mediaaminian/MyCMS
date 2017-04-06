@@ -1,0 +1,157 @@
+﻿@model MyCMS.Model.SiteConfig
+@using (Ajax.BeginForm(MVC.Admin.Option.ActionNames.Index, MVC.Admin.Option.Name, new { area = "admin" }, new AjaxOptions { UpdateTargetId = "result", InsertionMode = InsertionMode.Replace, HttpMethod = "POST", OnBegin = "showLoading", OnComplete = "hideLoading" }, new { @class = "form-horizontal", id = "frm-update-options" }))
+{
+    @Html.AntiForgeryToken()
+    <fieldset>
+        <legend>اطلاعات سایت</legend>
+        <div class="control-group">
+            <label class="control-label" for="SiteUrl">آدرس سایت</label>
+            <div class="controls">
+                @Html.TextBoxFor(op => op.SiteUrl, new { @class = "form-control input-xxlarge ltr" })
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="BlogName">عنوان سایت</label>
+            <div class="controls">
+                @Html.TextBoxFor(op => op.BlogName, new { @class = "form-control input-xxlarge" })
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="BlogKeywords">کلمات کلیدی</label>
+            <div class="controls">
+                @Html.TextBoxFor(op => op.BlogKeywords, new { @class = "form-control input-xxlarge" })
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="BlogDescription">توضیحات</label>
+            <div class="controls">
+                @Html.TextBoxFor(op => op.BlogDescription, new { @class = "form-control input-xxlarge" })
+            </div>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>درصد عوارض و مالیات</legend>
+        <div class="control-group">
+            <label class="control-label" for="CustomSourcePercent">درصد ماخذ گمرکی</label>
+            <div class="controls">
+                @Html.TextBoxFor(op => op.CustomSourcePercent, new { @class = "form-control input-xxlarge" })
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="VATPercent">درصد مالیات بر ارزش افزوده</label>
+            <div class="controls">
+                @Html.TextBoxFor(op => op.VATPercent, new { @class = "form-control input-xxlarge" })
+            </div>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>تنظیمات راه های ارتباطی</legend>
+        <div class="control-group">
+            <label class="control-label" for="AboutDescription">توضیحات درباره ما</label>
+            <div class="controls">
+                @Html.TextBoxFor(op => op.AboutDescription, new { @class = "form-control input-xxlarge" })
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="CompanyAddress">آدرس شرکت</label>
+            <div class="controls">
+                @Html.TextBoxFor(op => op.CompanyAddress, new { @class = "form-control input-xxlarge" })
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="Phone">تلفن</label>
+            <div class="controls">
+                @Html.TextBoxFor(op => op.Phone, new { @class = "form-control input-xxlarge ltr" })
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="Fax">فکس</label>
+            <div class="controls">
+                @Html.TextBoxFor(op => op.Fax, new { @class = "form-control input-xxlarge ltr" })
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="eMail">ایمیل</label>
+            <div class="controls">
+                @Html.TextBoxFor(op => op.eMail, new { @class = "form-control input-xxlarge ltr" })
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="Facebook">Facebook</label>
+            <div class="controls">
+                @Html.TextBoxFor(op => op.Facebook, new { @class = "form-control input-xxlarge ltr" })
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="Linkedin">Linkedin</label>
+            <div class="controls">
+                @Html.TextBoxFor(op => op.Linkedin, new { @class = "form-control input-xxlarge ltr" })
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="GooglePlus">GooglePlus</label>
+            <div class="controls">
+                @Html.TextBoxFor(op => op.GooglePlus, new { @class = "form-control input-xxlarge ltr" })
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="Telegram">Telegram</label>
+            <div class="controls">
+                @Html.TextBoxFor(op => op.Telegram, new { @class = "form-control input-xxlarge ltr" })
+            </div>
+        </div>
+    </fieldset>
+    <fieldset style="display:none">
+        <legend>تنظیمات اطلاع رسانی</legend>
+        <div class="control-group">
+            <label class="control-label" for="AdminEmail">ایمیل برای اطلاع رسانی</label>
+            <div class="controls">
+                @Html.TextBoxFor(op => op.AdminEmail, new { @class = "form-control input-xxlarge" })
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="CommentsNotify">اطلاع رسانی دیدگاه ها</label>
+            <div class="controls">
+                @Html.CheckBoxFor(op => op.CommentsNotify, new { @class = "form-control input-xxlarge" })
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="CommentModeratingStatus">تایید نظرات پیش از نمایش</label>
+            <div class="controls">
+                @Html.CheckBoxFor(op => op.CommentModeratingStatus, new { @class = "form-control input-xxlarge" })
+            </div>
+        </div>
+    </fieldset>
+    <fieldset style="display:none">
+        <legend>سرور ارسال ایمیل</legend>
+        <div class="control-group">
+            <label class="control-label" for="MailServerUrl">سرویس دهنده ایمیل</label>
+            <div class="controls">
+                @Html.TextBoxFor(op => op.MailServerUrl, new { @class = "form-control input-xxlarge" })
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="MailServerPort">درگاه</label>
+            <div class="controls">
+                @Html.TextBoxFor(op => op.MailServerPort, new { @class = "form-control input-xxlarge" })
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="MailServerLogin">شناسه ورود</label>
+            <div class="controls">
+                @Html.TextBoxFor(op => op.MailServerLogin, new { @class = "form-control input-xxlarge" })
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="MailServerPass">رمز</label>
+            <div class="controls">
+                @Html.TextBoxFor(op => op.MailServerPass, new { @class = "form-control input-xxlarge" })
+            </div>
+        </div>
+    </fieldset>
+
+    <div id="result"></div>
+    <br />
+    <input type="button" name="btn-submit" value="ویرایش تنظیمات" class="btn btn-primary btn-submit" />
+    @Ajax.ActionLink("بازگشت", MVC.Admin.Home.ActionNames.Index, MVC.Admin.Home.Name, new AjaxOptions { HttpMethod = "GET", InsertionMode = InsertionMode.Replace, UpdateTargetId = "main-content", OnSuccess = "loadAjaxComponents", OnComplete = "hideLoading", OnBegin = "showLoading" }, new { @class = "btn btn-danger" })
+}

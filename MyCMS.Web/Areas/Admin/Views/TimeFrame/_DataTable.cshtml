@@ -1,0 +1,44 @@
+﻿@model IEnumerable<MyCMS.Model.AdminModel.TimeFrameModel>
+<h2>فریم زمانی</h2>
+
+<div id="user-table" class="table-responsive">
+
+    @(Html.Kendo().Grid(Model)
+        .Name("TimeFrameGrid")
+        .Columns(columns =>
+        {
+            columns.Bound(p => p.Id).Visible(false);
+            columns.Bound(p => p.Title).Filterable(true);
+            //columns.Bound(p => p.TimeFrameGroupName).Filterable(true);
+            columns.Bound(p => p.Priority);
+            columns.Bound(p => p.Status);
+            columns.Command(command =>
+            {
+                command.Edit();
+                command.Destroy();
+            });
+        })
+    .ToolBar(toolbar =>
+    {
+        toolbar.Create();
+    })
+   .Editable(editable => editable.TemplateName("TimeFrame").Mode(GridEditMode.PopUp).DisplayDeleteConfirmation(true))
+   .Filterable()
+   .Selectable(selectable => selectable.Mode(GridSelectionMode.Multiple)).Sortable().Pageable()
+   //.Events(ev=>ev.DataBound("GridDataBound"))
+   .DataSource(dataSource =>
+       dataSource.Ajax()
+           .PageSize(10)
+           .Model(model =>
+           {
+               model.Id(p => p.Id);
+               model.Field(q => q.Id);
+           })
+           .Create("Create", "TimeFrame")
+           .Update("Update", "TimeFrame")
+           .Destroy("Delete", "TimeFrame")
+    )
+    .Resizable(resize => resize.Columns(true))
+    .Reorderable(reorder => reorder.Columns(true))
+    )
+</div>

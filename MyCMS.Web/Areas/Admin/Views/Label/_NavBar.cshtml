@@ -1,0 +1,9 @@
+﻿<div class="portlet-title">
+    <div class="caption">
+        @*@Ajax.ButtonDialog("افزودن برچسب جدید", MVC.Admin.Label.ActionNames.Add, MVC.Admin.Label.Name, null, new AjaxOptions { HttpMethod = "GET", InsertionMode = InsertionMode.Replace, UpdateTargetId = "main-content", OnSuccess = "loadAjaxComponents", OnComplete = "hideLoading", OnBegin = "showLoading" }, new { @class = "btn btn-primary" })*@
+        @Ajax.ButtonDialog("افزودن برچسب جدید", Url.Action(MVC.Admin.Label.ActionNames.Add, MVC.Admin.Label.Name), "GET", null, "dialog", new DialogOptions { Height = "220", Width = "450", IsModal = "true", Title = "افزودن برچسب", ShowDir = "down", ShowEffect = "drop", HideEffect = "puff", HideDir = "up" }, "btn btn-primary")
+
+
+    </div>
+</div>
+<br />

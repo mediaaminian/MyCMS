@@ -1,0 +1,3007 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AmenitiesGroup.Description" xml:space="preserve">
+    <value>توضیحات</value>
+  </data>
+  <data name="AmenitiesGroup.Id" xml:space="preserve">
+    <value>کد</value>
+  </data>
+  <data name="AmenitiesGroup.IsMultiSelect" xml:space="preserve">
+    <value>قابلیت انتخاب چندگانه</value>
+  </data>
+  <data name="AmenitiesGroup.IsRequired" xml:space="preserve">
+    <value>مورد نیاز</value>
+  </data>
+  <data name="AmenitiesGroup.Name" xml:space="preserve">
+    <value>عنوان</value>
+  </data>
+  <data name="AmenitiesGroup.Priority" xml:space="preserve">
+    <value>اولویت</value>
+  </data>
+  <data name="AmenitiesGroup.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="AmenitiesInGroup.fk_AmenitiesGroupId" xml:space="preserve">
+    <value> گروه امکانات اضافه</value>
+  </data>
+  <data name="AmenitiesInGroup.fk_AmenitiesProductId" xml:space="preserve">
+    <value>محصول امکانات اضافه</value>
+  </data>
+  <data name="AmenitiesInGroup.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="AmenitiesToProduct.fk_AmenitiesProductId" xml:space="preserve">
+    <value>محصول امکانات اضافه</value>
+  </data>
+  <data name="AmenitiesToProduct.fk_ProductId" xml:space="preserve">
+    <value>محصول</value>
+  </data>
+  <data name="AmenitiesToProduct.Priority" xml:space="preserve">
+    <value>اولویت</value>
+  </data>
+  <data name="AmenitiesToProduct.Quantity" xml:space="preserve">
+    <value>مقدار</value>
+  </data>
+  <data name="AmenitiesToProduct.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="Amenity.AmenityGroupName" xml:space="preserve">
+    <value>عنوان</value>
+  </data>
+  <data name="Amenity.AvailableFrom" xml:space="preserve">
+    <value>قابل دسترسی از تاریخ</value>
+  </data>
+  <data name="Amenity.AvailableTo" xml:space="preserve">
+    <value>قابل دسترسی تا تاریخ</value>
+  </data>
+  <data name="Amenity.Brief" xml:space="preserve">
+    <value>خلاصه</value>
+  </data>
+  <data name="Amenity.Description" xml:space="preserve">
+    <value>توضیحات</value>
+  </data>
+  <data name="Amenity.fk_ClassId" xml:space="preserve">
+    <value>کلاس</value>
+  </data>
+  <data name="Amenity.fk_ProductTypeId" xml:space="preserve">
+    <value>نوع محصول</value>
+  </data>
+  <data name="Amenity.Id" xml:space="preserve">
+    <value>کد</value>
+  </data>
+  <data name="Amenity.IsAvailable" xml:space="preserve">
+    <value>قابل دسترسی </value>
+  </data>
+  <data name="Amenity.IsRecommended" xml:space="preserve">
+    <value>توصیه </value>
+  </data>
+  <data name="Amenity.IsSpecial" xml:space="preserve">
+    <value>ویژه </value>
+  </data>
+  <data name="Amenity.IsUpgradeable" xml:space="preserve">
+    <value>قابل ارتقاء </value>
+  </data>
+  <data name="Amenity.Logo" xml:space="preserve">
+    <value>آرم</value>
+  </data>
+  <data name="Amenity.Name" xml:space="preserve">
+    <value>عنوان</value>
+  </data>
+  <data name="Amenity.OrderDescription" xml:space="preserve">
+    <value>توضیحات سفارش</value>
+  </data>
+  <data name="Amenity.Priority" xml:space="preserve">
+    <value>اولویت</value>
+  </data>
+  <data name="Amenity.SelectedAmenitiesInGroup" xml:space="preserve">
+    <value>گروه امکانات اضافه</value>
+  </data>
+  <data name="Amenity.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="Bidet.Fees" xml:space="preserve">
+    <value>قیمت </value>
+  </data>
+  <data name="Bidet.fk_ProductId" xml:space="preserve">
+    <value>محصول</value>
+  </data>
+  <data name="Bidet.fk_TimeFrameId" xml:space="preserve">
+    <value>فریم زمانی</value>
+  </data>
+  <data name="Bidet.FrameName" xml:space="preserve">
+    <value>فریم زمانی</value>
+  </data>
+  <data name="Bidet.ProductName" xml:space="preserve">
+    <value>محصول</value>
+  </data>
+  <data name="Bidet.SetupFee" xml:space="preserve">
+    <value>هزینه راه اندازی</value>
+  </data>
+  <data name="Bidet.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="City.fk_ProvinceId" xml:space="preserve">
+    <value>استان</value>
+  </data>
+  <data name="City.Id" xml:space="preserve">
+    <value>کد</value>
+  </data>
+  <data name="City.Name" xml:space="preserve">
+    <value>نام</value>
+  </data>
+  <data name="City.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="Class.Description" xml:space="preserve">
+    <value>توضیحات</value>
+  </data>
+  <data name="Class.Id" xml:space="preserve">
+    <value>کد</value>
+  </data>
+  <data name="Class.Logo" xml:space="preserve">
+    <value>لوگو</value>
+  </data>
+  <data name="Class.Name" xml:space="preserve">
+    <value>عنوان</value>
+  </data>
+  <data name="Class.Priority" xml:space="preserve">
+    <value>اولویت</value>
+  </data>
+  <data name="Class.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="Country.Id" xml:space="preserve">
+    <value>کد</value>
+  </data>
+  <data name="Country.Name" xml:space="preserve">
+    <value>نام</value>
+  </data>
+  <data name="Country.NameP" xml:space="preserve">
+    <value>کشور</value>
+  </data>
+  <data name="Country.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="Discount.Amount" xml:space="preserve">
+    <value>مقدار تخفیف</value>
+  </data>
+  <data name="Discount.OwnerName" xml:space="preserve">
+    <value>مالک</value>
+  </data>
+  <data name="Discount.Description" xml:space="preserve">
+    <value>توضیحات</value>
+  </data>
+  <data name="Discount.CreatorName" xml:space="preserve">
+    <value>سازنده</value>
+  </data>
+  <data name="Discount.MinPercentOrder" xml:space="preserve">
+    <value>حداقل سفارش</value>
+  </data>
+  <data name="Discount.CreateDate" xml:space="preserve">
+    <value>تاریخ ایجاد</value>
+  </data>
+  <data name="Discount.MaxAmountDiscount" xml:space="preserve">
+    <value>حداکثر تخفیف</value>
+  </data>
+  <data name="Discount.Id" xml:space="preserve">
+    <value>کد</value>
+  </data>
+  <data name="Discount.IsPercent" xml:space="preserve">
+    <value>تخفیف درصدی</value>
+  </data>
+  <data name="Discount.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="Discount.StatusTitle" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="Discount.Title" xml:space="preserve">
+    <value>عنوان</value>
+  </data>
+  <data name="DiscountType.Id" xml:space="preserve">
+    <value>کد</value>
+  </data>
+  <data name="DiscountType.Name" xml:space="preserve">
+    <value>نوع تخفیف</value>
+  </data>
+  <data name="DiscountType.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="DiscountType.StatusTitle" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="Login.password" xml:space="preserve">
+    <value>کلمه عبور</value>
+  </data>
+  <data name="Login.rememberme" xml:space="preserve">
+    <value>مرا به یاد داشته باش</value>
+  </data>
+  <data name="Login.Username" xml:space="preserve">
+    <value>نام کاربری یا ایمیل</value>
+  </data>
+  <data name="Permission.fk_PermissionCategoryId" xml:space="preserve">
+    <value>گروه دسترسی</value>
+  </data>
+  <data name="Permission.Id" xml:space="preserve">
+    <value>کد </value>
+  </data>
+  <data name="Permission.Name" xml:space="preserve">
+    <value>عنوان</value>
+  </data>
+  <data name="Permission.PermissionCategoryName" xml:space="preserve">
+    <value>گروه دسترسی</value>
+  </data>
+  <data name="Permission.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="PermissionCategory.Id" xml:space="preserve">
+    <value>کد</value>
+  </data>
+  <data name="PermissionCategory.Name" xml:space="preserve">
+    <value>نام</value>
+  </data>
+  <data name="PermissionCategory.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="Poll.Description" xml:space="preserve">
+    <value>توضیحات</value>
+  </data>
+  <data name="Poll.fk_PollTypeId" xml:space="preserve">
+    <value>نوع نظرسنجی</value>
+  </data>
+  <data name="Poll.Id" xml:space="preserve">
+    <value>کد</value>
+  </data>
+  <data name="Poll.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="Poll.Title" xml:space="preserve">
+    <value>عنوان</value>
+  </data>
+  <data name="PollType.Id" xml:space="preserve">
+    <value>کد</value>
+  </data>
+  <data name="PollType.Name" xml:space="preserve">
+    <value>نام</value>
+  </data>
+  <data name="PollType.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="Product.AvailableFrom" xml:space="preserve">
+    <value>قابل دسترسی از تاریخ</value>
+  </data>
+  <data name="Product.AvailableTo" xml:space="preserve">
+    <value>قابل دسترسی تا تاریخ</value>
+  </data>
+  <data name="Product.Brief" xml:space="preserve">
+    <value>شرح خلاصه محصول</value>
+  </data>
+  <data name="Product.Description" xml:space="preserve">
+    <value>توضیحات</value>
+  </data>
+  <data name="Product.fk_ClassId" xml:space="preserve">
+    <value>کلاس</value>
+  </data>
+  <data name="Product.fk_ProductTypeId" xml:space="preserve">
+    <value>نوع محصول</value>
+  </data>
+  <data name="Product.Id" xml:space="preserve">
+    <value>کد</value>
+  </data>
+  <data name="Product.IsAvailable" xml:space="preserve">
+    <value>قابل دسترس</value>
+  </data>
+  <data name="Product.IsExtra" xml:space="preserve">
+    <value>اضافی</value>
+  </data>
+  <data name="Product.IsRecommended" xml:space="preserve">
+    <value>توصیه شده</value>
+  </data>
+  <data name="Product.IsSpecial" xml:space="preserve">
+    <value>ویژه</value>
+  </data>
+  <data name="Product.IsUpgradeable" xml:space="preserve">
+    <value>قابل ارتقاء </value>
+  </data>
+  <data name="Product.Logo" xml:space="preserve">
+    <value>آرم</value>
+  </data>
+  <data name="Product.Name" xml:space="preserve">
+    <value>نام</value>
+  </data>
+  <data name="Product.OrderDescription" xml:space="preserve">
+    <value>توضیحات سفارش</value>
+  </data>
+  <data name="Product.Priority" xml:space="preserve">
+    <value>اولویت</value>
+  </data>
+  <data name="Product.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="Product.TypeName" xml:space="preserve">
+    <value>نوع محصول</value>
+  </data>
+  <data name="ProductClass.fk_ClassId" xml:space="preserve">
+    <value>کلاس</value>
+  </data>
+  <data name="ProductClass.fk_ProductId" xml:space="preserve">
+    <value>محصول</value>
+  </data>
+  <data name="ProductClass.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="ProductProperty.fk_ProductId" xml:space="preserve">
+    <value>کد محصول</value>
+  </data>
+  <data name="ProductProperty.fk_PropertyId" xml:space="preserve">
+    <value>کد ویژگی</value>
+  </data>
+  <data name="ProductProperty.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="ProductProperty.Value" xml:space="preserve">
+    <value>مقدار</value>
+  </data>
+  <data name="ProductType.Brief" xml:space="preserve">
+    <value>شرح خلاصه نوع محصول</value>
+  </data>
+  <data name="ProductType.Description" xml:space="preserve">
+    <value>توضیحات</value>
+  </data>
+  <data name="ProductType.Id" xml:space="preserve">
+    <value>کد</value>
+  </data>
+  <data name="ProductType.Logo" xml:space="preserve">
+    <value>آرم</value>
+  </data>
+  <data name="ProductType.Name" xml:space="preserve">
+    <value>نام</value>
+  </data>
+  <data name="ProductType.Priority" xml:space="preserve">
+    <value>اولویت</value>
+  </data>
+  <data name="ProductType.SelectedProperty" xml:space="preserve">
+    <value>ویژگی های منتخب</value>
+  </data>
+  <data name="ProductType.SelectedTaxes" xml:space="preserve">
+    <value>مالیات های منتخب</value>
+  </data>
+  <data name="ProductType.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="ProductTypeProperty.fk_ProductTypeId" xml:space="preserve">
+    <value>نوع محصول</value>
+  </data>
+  <data name="ProductTypeProperty.fk_PropertyId" xml:space="preserve">
+    <value>ویژگی</value>
+  </data>
+  <data name="ProductTypeProperty.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="ProductTypeTax.fk_ProductTypeId" xml:space="preserve">
+    <value>نوع محصول</value>
+  </data>
+  <data name="ProductTypeTax.fk_TaxId" xml:space="preserve">
+    <value>مالیات</value>
+  </data>
+  <data name="ProductTypeTax.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="Property.Description" xml:space="preserve">
+    <value>توضیحات</value>
+  </data>
+  <data name="Property.fk_PropertyGroupId" xml:space="preserve">
+    <value>گروه ویژگی</value>
+  </data>
+  <data name="Property.fk_PropertyTypeId" xml:space="preserve">
+    <value>نوع ویژگی</value>
+  </data>
+  <data name="Property.Id" xml:space="preserve">
+    <value>کد</value>
+  </data>
+  <data name="Property.IsVisible" xml:space="preserve">
+    <value>قابل رویت می باشد</value>
+  </data>
+  <data name="Property.Name" xml:space="preserve">
+    <value>نام</value>
+  </data>
+  <data name="Property.Priority" xml:space="preserve">
+    <value>اولویت</value>
+  </data>
+  <data name="Property.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="PropertyGroup.Id" xml:space="preserve">
+    <value>کد</value>
+  </data>
+  <data name="PropertyGroup.Name" xml:space="preserve">
+    <value>عنوان گروه</value>
+  </data>
+  <data name="PropertyGroup.Priority" xml:space="preserve">
+    <value>اولویت</value>
+  </data>
+  <data name="PropertyGroup.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="PropertyType.Id" xml:space="preserve">
+    <value>کد</value>
+  </data>
+  <data name="PropertyType.Name" xml:space="preserve">
+    <value>نوع ویژگی</value>
+  </data>
+  <data name="PropertyType.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="Province.fk_CountryId" xml:space="preserve">
+    <value>کشور</value>
+  </data>
+  <data name="Province.Id" xml:space="preserve">
+    <value>کد</value>
+  </data>
+  <data name="Province.Name" xml:space="preserve">
+    <value>نام</value>
+  </data>
+  <data name="Province.NameP" xml:space="preserve">
+    <value>استان</value>
+  </data>
+  <data name="Province.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="Role.FirstOrdersLimit" xml:space="preserve">
+    <value>محدودیت در اولین سفارش</value>
+  </data>
+  <data name="Role.Id" xml:space="preserve">
+    <value>کد</value>
+  </data>
+  <data name="Role.MinAcceptableCredit" xml:space="preserve">
+    <value>حداقل اعتبار قابل قبول</value>
+  </data>
+  <data name="Role.MinOrderCrdeit" xml:space="preserve">
+    <value>حداقل اعتبار سفارش</value>
+  </data>
+  <data name="Role.Name" xml:space="preserve">
+    <value>عنوان</value>
+  </data>
+  <data name="Role.SelectedPermission" xml:space="preserve">
+    <value>دسترسی ها</value>
+  </data>
+  <data name="Role.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="RoleAccess.fk_PermissionId" xml:space="preserve">
+    <value>دسترسی</value>
+  </data>
+  <data name="RoleAccess.fk_RoleId" xml:space="preserve">
+    <value>نقش</value>
+  </data>
+  <data name="RoleAccess.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="RoleOfUser.fk_RoleId" xml:space="preserve">
+    <value>نقش </value>
+  </data>
+  <data name="RoleOfUser.fk_UserId" xml:space="preserve">
+    <value>کاربر</value>
+  </data>
+  <data name="RoleOfUser.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="SmartUserName" xml:space="preserve">
+    <value>نام کاربری اسمارتر</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>وضیعت</value>
+  </data>
+  <data name="Tax.Id" xml:space="preserve">
+    <value>کد</value>
+  </data>
+  <data name="Tax.IsActive" xml:space="preserve">
+    <value>پیش فرض می باشد</value>
+  </data>
+  <data name="Tax.Name" xml:space="preserve">
+    <value>عنوان</value>
+  </data>
+  <data name="Tax.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="Tax.TaxPercent" xml:space="preserve">
+    <value>درصد مالیات</value>
+  </data>
+  <data name="TimeFrame.DeleteDays" xml:space="preserve">
+    <value>هشدار قبل از حذف</value>
+  </data>
+  <data name="TimeFrame.ExpireAlertDays" xml:space="preserve">
+    <value>هشدار قبل از انقضا</value>
+  </data>
+  <data name="TimeFrame.Id" xml:space="preserve">
+    <value>کد</value>
+  </data>
+  <data name="TimeFrame.Months" xml:space="preserve">
+    <value>تعداد ماه ها</value>
+  </data>
+  <data name="TimeFrame.Name" xml:space="preserve">
+    <value>نام</value>
+  </data>
+  <data name="TimeFrame.Priority" xml:space="preserve">
+    <value>اولویت</value>
+  </data>
+  <data name="TimeFrame.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="User.Address" xml:space="preserve">
+    <value>آدرس</value>
+  </data>
+  <data name="User.AltEmail" xml:space="preserve">
+    <value>ایمیل دوم</value>
+  </data>
+  <data name="User.BirthDate" xml:space="preserve">
+    <value>تاریخ تولد</value>
+  </data>
+  <data name="User.Datestamp" xml:space="preserve">
+    <value>تاریخ</value>
+  </data>
+  <data name="User.Defined" xml:space="preserve">
+    <value>معرف</value>
+  </data>
+  <data name="User.Email" xml:space="preserve">
+    <value>ایمیل</value>
+  </data>
+  <data name="User.EmailConfirmationTimeOut" xml:space="preserve">
+    <value>زمان تایید ایمیل</value>
+  </data>
+  <data name="User.EmailConfirmed" xml:space="preserve">
+    <value>ایمیل تایید شده است</value>
+  </data>
+  <data name="User.Fax" xml:space="preserve">
+    <value>فاکس</value>
+  </data>
+  <data name="User.FirstName" xml:space="preserve">
+    <value>نام</value>
+  </data>
+  <data name="User.fk_CityId" xml:space="preserve">
+    <value>شهر</value>
+  </data>
+  <data name="User.fk_CountryId" xml:space="preserve">
+    <value>کشور</value>
+  </data>
+  <data name="User.fk_ProvinceId" xml:space="preserve">
+    <value>استان</value>
+  </data>
+  <data name="User.fk_UserTypeId" xml:space="preserve">
+    <value>نوع کاربر</value>
+  </data>
+  <data name="User.Id" xml:space="preserve">
+    <value>کد</value>
+  </data>
+  <data name="User.LastName" xml:space="preserve">
+    <value>نام خانوادگی</value>
+  </data>
+  <data name="User.Mobile" xml:space="preserve">
+    <value>تلفن همراه</value>
+  </data>
+  <data name="User.Password" xml:space="preserve">
+    <value>کلمه عبور</value>
+  </data>
+  <data name="User.PasswordConfirmation" xml:space="preserve">
+    <value>تکرار کلمه عبور</value>
+  </data>
+  <data name="User.Phone" xml:space="preserve">
+    <value>تلفن</value>
+  </data>
+  <data name="User.PostalCode" xml:space="preserve">
+    <value>کد پستی</value>
+  </data>
+  <data name="User.SelectedRole" xml:space="preserve">
+    <value>نقش ها</value>
+  </data>
+  <data name="User.Sex" xml:space="preserve">
+    <value>جنسیت</value>
+  </data>
+  <data name="User.SmsconfirmationTimeOut" xml:space="preserve">
+    <value>زمان تایید پیام کوتاه</value>
+  </data>
+  <data name="User.Smsconfirmed" xml:space="preserve">
+    <value>پیام کوتاه تایید شده است</value>
+  </data>
+  <data name="User.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="User.UserName" xml:space="preserve">
+    <value>نام کاربری</value>
+  </data>
+  <data name="UserType.Id" xml:space="preserve">
+    <value>کد</value>
+  </data>
+  <data name="UserType.Name" xml:space="preserve">
+    <value>عنوان</value>
+  </data>
+  <data name="UserType.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="Whois.Datestamp" xml:space="preserve">
+    <value>تاریخ</value>
+  </data>
+  <data name="Whois.Domian" xml:space="preserve">
+    <value>دامنه</value>
+  </data>
+  <data name="Whois.Id" xml:space="preserve">
+    <value>کد whois</value>
+  </data>
+  <data name="Whois.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="Whois.Zone" xml:space="preserve">
+    <value>منطقه</value>
+  </data>
+  <data name="ERP.UI.Web.Controllers.ProductController.Index.AddTopBasket" xml:space="preserve">
+    <value>سفارش</value>
+  </data>
+  <data name="ERP.UI.Web.Controllers.ProductController.Index.Fee" xml:space="preserve">
+    <value>هزینه سالیانه :</value>
+  </data>
+  <data name="ERP.UI.Web.Controllers.ProductController.Index.MoreDetails" xml:space="preserve">
+    <value>جزئیات بیشتر</value>
+  </data>
+  <data name="ERP.UI.Web.Controllers.ProductController.Index.SetupFee" xml:space="preserve">
+    <value>هزینه راهاندازی : </value>
+  </data>
+  <data name="ERP.UI.Web.Account.AccountController.forgetpss" xml:space="preserve">
+    <value>رمز خود را فراموش کرده اید؟</value>
+  </data>
+  <data name="ERP.UI.Web.Account.AccountController.Login.new" xml:space="preserve">
+    <value>کاربر جدید هستید؟</value>
+  </data>
+  <data name="ERP.UI.Web.Account.AccountController.RegButton" xml:space="preserve">
+    <value>ثبت نام</value>
+  </data>
+  <data name="ERP.UI.Web.Account.AccountController.Register.legal" xml:space="preserve">
+    <value>حقوقی</value>
+  </data>
+  <data name="ERP.UI.Web.Account.AccountController.Register.orginal" xml:space="preserve">
+    <value>حقیقی</value>
+  </data>
+  <data name="ERP.UI.Web.Account.AccountController.Regstep2.confirmation" xml:space="preserve">
+    <value>تاییدیه</value>
+  </data>
+  <data name="ERP.UI.Web.Account.AccountController.Regstep2.confirmationMessage" xml:space="preserve">
+    <value>یک پیام برای تایید آدرس پست الکترونیکی و شماره تلفن همراه شما ارسال شده است. لطفا آن را بررسی نموده و در صورت عدم دریافت پیام از لینک های زیر استفاده نمایید.</value>
+  </data>
+  <data name="ERP.UI.Web.Account.AccountController.Regstep2.resendEmail" xml:space="preserve">
+    <value>ارسال مجدد ایمیل تایید</value>
+  </data>
+  <data name="ERP.UI.Web.Account.AccountController.Regstep2.resendSMS" xml:space="preserve">
+    <value>ارسال مجدد پیامک تایید</value>
+  </data>
+  <data name="ERP.UI.Web.Account.AccountController.Regstep2.successMessage" xml:space="preserve">
+    <value>حساب کاربری شما با موفقیت ایجاد گردید.</value>
+  </data>
+  <data name="Z.basket" xml:space="preserve">
+    <value>سبد خرید</value>
+  </data>
+  <data name="Z.ChooseCity" xml:space="preserve">
+    <value>شهرستان خود را انتخاب کنید</value>
+  </data>
+  <data name="Z.ChooseCountry" xml:space="preserve">
+    <value>کشور خود را انتخاب کنید</value>
+  </data>
+  <data name="Z.ChooseProvince" xml:space="preserve">
+    <value>استان خود را انتخاب کنید</value>
+  </data>
+  <data name="Z.CreateButton" xml:space="preserve">
+    <value>ذخیره</value>
+  </data>
+  <data name="Z.female" xml:space="preserve">
+    <value>مونث</value>
+  </data>
+  <data name="Z.LoginButton" xml:space="preserve">
+    <value>ورود</value>
+  </data>
+  <data name="Z.male" xml:space="preserve">
+    <value>مذکر</value>
+  </data>
+  <data name="Z.sex" xml:space="preserve">
+    <value>جنسیت</value>
+  </data>
+  <data name="Z.tour" xml:space="preserve">
+    <value>تور</value>
+  </data>
+  <data name="ERP.UI.Web.UserProfileController.UserDetails.Advance" xml:space="preserve">
+    <value>تنظیمات پیشرفته</value>
+  </data>
+  <data name="ERP.UI.Web.UserProfileController.UserDetails.Details" xml:space="preserve">
+    <value>مشخصات فردی</value>
+  </data>
+  <data name="UserDetails.LastPass" xml:space="preserve">
+    <value>کلمه عبور جاری</value>
+  </data>
+  <data name="UserDetails.NewPass" xml:space="preserve">
+    <value>کلمه عبور جدید</value>
+  </data>
+  <data name="UserDetails.NewPassConfirmation" xml:space="preserve">
+    <value>تکرار کلمه عبور جدید</value>
+  </data>
+  <data name="ERP.UI.Web.Client.Profile.AdvanceSettings" xml:space="preserve">
+    <value>تنظیمات پیشرفته</value>
+  </data>
+  <data name="ERP.UI.Web.Client.Profile.ChangePass" xml:space="preserve">
+    <value>تغییر رمز عبور</value>
+  </data>
+  <data name="ERP.UI.Web.Client.Profile.personalityDetails" xml:space="preserve">
+    <value>مشخصات فردی</value>
+  </data>
+  <data name="AdvanceSetting.AcivateLogin" xml:space="preserve">
+    <value>فعال کردن قابلیت ورود به پنل کاربری از طریق حساب کاربری سایت های دیگر</value>
+  </data>
+  <data name="AdvanceSetting.AlertSettings" xml:space="preserve">
+    <value>تنظیمات اطلاع رسانی</value>
+  </data>
+  <data name="AdvanceSetting.OtherSettings" xml:space="preserve">
+    <value>سایر تنظیمات</value>
+  </data>
+  <data name="AdvanceSetting.RecAlertSms" xml:space="preserve">
+    <value>دریافت هشدارهای جدید از طریق پیامک</value>
+  </data>
+  <data name="AdvanceSetting.RecFeeSms" xml:space="preserve">
+    <value>دریافت پیامک قیمت های دیگران</value>
+  </data>
+  <data name="AdvanceSetting.RecNewDomainSms" xml:space="preserve">
+    <value>دریافت پیامک اضافه شده دامنه های ویژه حراچی</value>
+  </data>
+  <data name="AdvanceSetting.RecNewsEmail" xml:space="preserve">
+    <value>دریافت خبرنامه از طریق ایمیل</value>
+  </data>
+  <data name="AdvanceSetting.RecNewsSms" xml:space="preserve">
+    <value>دریافت پیامک اخبار جدید</value>
+  </data>
+  <data name="AdvanceSetting.RecSaleSms" xml:space="preserve">
+    <value>دریافت پیامک حراجی</value>
+  </data>
+  <data name="AdvanceSetting.RecServiceEmail" xml:space="preserve">
+    <value>دریافت ایمیل سرویس ها</value>
+  </data>
+  <data name="AdvanceSetting.RecServiceSms" xml:space="preserve">
+    <value>دریافت پیامک سرویس ها</value>
+  </data>
+  <data name="AdvanceSetting.SaleSettings" xml:space="preserve">
+    <value>تنظیمات مخصوص حراجی</value>
+  </data>
+  <data name="AdvanceSetting.AcivateLogo" xml:space="preserve">
+    <value>نمایش لوگوی من در میان مشتریان ایران هاست</value>
+  </data>
+  <data name="ERP.UI.Web.Client.Profile.sentDocs" xml:space="preserve">
+    <value>مدارک ارسالی</value>
+  </data>
+  <data name="AdvanceSetting.SentDocsList" xml:space="preserve">
+    <value>لیست مدارک ارسالی</value>
+  </data>
+  <data name="SentDocs.AccountantCard" xml:space="preserve">
+    <value>اسکن کارت ملی کاربر حسابدار</value>
+  </data>
+  <data name="SentDocs.AgentCompanyCard" xml:space="preserve">
+    <value>اسکن کارت ملی نماینده شرکت</value>
+  </data>
+  <data name="SentDocs.CompanyNews" xml:space="preserve">
+    <value>اسکن روزنامه رسمی شرکت</value>
+  </data>
+  <data name="SentDocs.ManagerCard" xml:space="preserve">
+    <value>اسکن کارت ملی مدیر عامل شرکت</value>
+  </data>
+  <data name="UserProfile.EditMainAccount" xml:space="preserve">
+    <value>ویرایش نمایه حساب اصلی</value>
+  </data>
+  <data name="User.NicHandleId" xml:space="preserve">
+    <value>NicHandleId</value>
+  </data>
+  <data name="User.Role" xml:space="preserve">
+    <value>نقش</value>
+  </data>
+  <data name="UserProfile.ViewDomains" xml:space="preserve">
+    <value>مشاهده دامنه ها</value>
+  </data>
+  <data name="UserProfile.ViewPayment" xml:space="preserve">
+    <value>مشاهده و پرداخت صورتحساب ها</value>
+  </data>
+  <data name="UserProfile.ViewServicProduct" xml:space="preserve">
+    <value>مشاهده محصولات و سرویس ها</value>
+  </data>
+  <data name="ERP.UI.Web.Client.Profile.userprofiles" xml:space="preserve">
+    <value>پروفایل ها</value>
+  </data>
+  <data name="UserProfile.AccountAlertEmail" xml:space="preserve">
+    <value>ایمیل های صورتحساب-یاد آوری های صورتحساب</value>
+  </data>
+  <data name="UserProfile.AllowLoginMain" xml:space="preserve">
+    <value>تنظیم به عنوان حساب فرعی با اجازه ورود به پنل کاربری</value>
+  </data>
+  <data name="UserProfile.ChangeProductPass" xml:space="preserve">
+    <value>مشاهده و تغییر رمز عبور محصولات</value>
+  </data>
+  <data name="UserProfile.ManageCalls" xml:space="preserve">
+    <value>مشاهده و مدیریت تماس ها</value>
+  </data>
+  <data name="UserProfile.MangementDomains" xml:space="preserve">
+    <value>مدیریت تنظیمات دامنه</value>
+  </data>
+  <data name="UserProfile.NewOrder" xml:space="preserve">
+    <value>سفارش جدید/ارتقاها/انصراف ها</value>
+  </data>
+  <data name="UserProfile.RegistrationEmail" xml:space="preserve">
+    <value>ایمیل های دامین-اطلاعات بروز شده، تاییدات ثبت نام ها و غیره</value>
+  </data>
+  <data name="UserProfile.RememberPassEmail" xml:space="preserve">
+    <value>ایمیل ها کلی-اعلانات کلی و یادآوری های کلمه عبور</value>
+  </data>
+  <data name="UserProfile.supportingEmail" xml:space="preserve">
+    <value>ایمیل های پشتیبان-اعلانات درخواست های پشتیبانی</value>
+  </data>
+  <data name="UserProfile.ViewAccount" xml:space="preserve">
+    <value>مشاهده و مدیریت حساب ها</value>
+  </data>
+  <data name="UserProfile.ViewEmails" xml:space="preserve">
+    <value>مشاهده ایمیل ها</value>
+  </data>
+  <data name="UserProfile.ViewSupportRequest" xml:space="preserve">
+    <value>مشاهده و باز نمودن درخواست پشتیبانی</value>
+  </data>
+  <data name="UserProfile.WelcomeEmail" xml:space="preserve">
+    <value>ایمیل های کالا-جزئیات سفارش، ایمیل خوش آمد گویی و غیره</value>
+  </data>
+  <data name="ERP.UI.Web.Client.Profile.profilesGrid" xml:space="preserve">
+    <value>حساب های کاربری/ پروفایل ها</value>
+  </data>
+  <data name="ERP.UI.Web.Client.Profile.profilesNew" xml:space="preserve">
+    <value>ایجاد حساب کاربری جدید</value>
+  </data>
+  <data name="Z.SaveChange" xml:space="preserve">
+    <value>ذخیره تغییرات</value>
+  </data>
+  <data name="Domain.ActivateDate" xml:space="preserve">
+    <value>تاریخ ثبت</value>
+  </data>
+  <data name="Domain.AutoRenew" xml:space="preserve">
+    <value>تمدید خودکار</value>
+  </data>
+  <data name="Domain.DomainId" xml:space="preserve">
+    <value>شناسه دامنه</value>
+  </data>
+  <data name="Domain.DomainName" xml:space="preserve">
+    <value>نام دامنه</value>
+  </data>
+  <data name="Domain.ExpiredDate" xml:space="preserve">
+    <value>تاریخ انقضا</value>
+  </data>
+  <data name="Domain.FactorNumber" xml:space="preserve">
+    <value>شماره فاکتور</value>
+  </data>
+  <data name="Domain.Leftdays" xml:space="preserve">
+    <value>روزهای باقیمانده</value>
+  </data>
+  <data name="Domain.PaymentId" xml:space="preserve">
+    <value>نحوه پرداخت</value>
+  </data>
+  <data name="Domain.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="Domain.TitleRenew" xml:space="preserve">
+    <value>مدت و هزینه ثبت دامنه</value>
+  </data>
+  <data name="ERP.UI.Web.Domain.DomainRenwals.Renewal" xml:space="preserve">
+    <value>تمدید دامنه های انتخابی</value>
+  </data>
+  <data name="Domain.TimeFrameTitle" xml:space="preserve">
+    <value>بازه زمانی</value>
+  </data>
+  <data name="Domain.Actions" xml:space="preserve">
+    <value>عملیات</value>
+  </data>
+  <data name="Domain.FactorId" xml:space="preserve">
+    <value>شماره فاکتور</value>
+  </data>
+  <data name="ERP.UI.Web.Domain.DomainsList.ChoosActions" xml:space="preserve">
+    <value>عملیات مورد نظر خود را انتخاب کنید</value>
+  </data>
+  <data name="ERP.UI.Web.Domain.DomainsList.DomainRenew" xml:space="preserve">
+    <value>تمدید دامنه</value>
+  </data>
+  <data name="ProductTypeGroup.Brief" xml:space="preserve">
+    <value>شرح خلاصه</value>
+  </data>
+  <data name="ProductTypeGroup.Description" xml:space="preserve">
+    <value>توضیحات</value>
+  </data>
+  <data name="ProductTypeGroup.Logo" xml:space="preserve">
+    <value>لوگو</value>
+  </data>
+  <data name="ProductTypeGroup.Name" xml:space="preserve">
+    <value>نام</value>
+  </data>
+  <data name="ProductTypeGroup.Priority" xml:space="preserve">
+    <value>اولویت</value>
+  </data>
+  <data name="ProductTypeGroup.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="Receipt.AccountNumber" xml:space="preserve">
+    <value>شماره حساب واریزی</value>
+  </data>
+  <data name="Receipt.Bank" xml:space="preserve">
+    <value>نام بانک</value>
+  </data>
+  <data name="Receipt.BranchCode" xml:space="preserve">
+    <value>کد شعبه</value>
+  </data>
+  <data name="Receipt.Email" xml:space="preserve">
+    <value>ایمیل</value>
+  </data>
+  <data name="Receipt.Family" xml:space="preserve">
+    <value>نام خانوادگی</value>
+  </data>
+  <data name="Receipt.Name" xml:space="preserve">
+    <value>نام</value>
+  </data>
+  <data name="Receipt.PhonNumber" xml:space="preserve">
+    <value>تلفن تماس</value>
+  </data>
+  <data name="Receipt.Price" xml:space="preserve">
+    <value>مبلغ پرداختی</value>
+  </data>
+  <data name="Receipt.ReciptNumber" xml:space="preserve">
+    <value>شماره فیش</value>
+  </data>
+  <data name="Receipt.SubmitReceipt" xml:space="preserve">
+    <value>ثبت فیش بانکی</value>
+  </data>
+  <data name="Z.search" xml:space="preserve">
+    <value>جستجو</value>
+  </data>
+  <data name="Service.Actions" xml:space="preserve">
+    <value>عملیات</value>
+  </data>
+  <data name="Service.ExpiredDate" xml:space="preserve">
+    <value>تاریخ انقضا</value>
+  </data>
+  <data name="Service.PlaneService" xml:space="preserve">
+    <value>پلان</value>
+  </data>
+  <data name="Service.Price" xml:space="preserve">
+    <value>قیمت</value>
+  </data>
+  <data name="Service.ServiceName" xml:space="preserve">
+    <value>نام سرویس</value>
+  </data>
+  <data name="Service.ServiceType" xml:space="preserve">
+    <value>نوع سرویس</value>
+  </data>
+  <data name="Service.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="Service.TimeFrame" xml:space="preserve">
+    <value>بازه زمانی</value>
+  </data>
+  <data name="Z.Renew" xml:space="preserve">
+    <value>تمدید</value>
+  </data>
+  <data name="Domain.Payment" xml:space="preserve">
+    <value>نحوه پرداخت</value>
+  </data>
+  <data name="Service.AutoRenew" xml:space="preserve">
+    <value>وضعیت تمدید خودار</value>
+  </data>
+  <data name="Service.DateNextRenew" xml:space="preserve">
+    <value>تاریخ تمدید بعدی</value>
+  </data>
+  <data name="Service.DiscountPercent" xml:space="preserve">
+    <value>درصد تخفیف</value>
+  </data>
+  <data name="Service.FactorId" xml:space="preserve">
+    <value>شماره فاکتور</value>
+  </data>
+  <data name="Service.FirstActivateDate" xml:space="preserve">
+    <value>تاریخ فعال سازی اولیه</value>
+  </data>
+  <data name="Service.PriceFirstOrderNoDiscount" xml:space="preserve">
+    <value>هزینه اولین سفارش بدون تخفیف</value>
+  </data>
+  <data name="Service.PriceRenew" xml:space="preserve">
+    <value>هزینه تمدید دوره ای</value>
+  </data>
+  <data name="Service.ProductId" xml:space="preserve">
+    <value>شناسه سرویس</value>
+  </data>
+  <data name="Service.TimeFrameEachRound" xml:space="preserve">
+    <value>بازه زمانی هر دوره فعالیت</value>
+  </data>
+  <data name="Z.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="Message.Attachment" xml:space="preserve">
+    <value>ضمیمه</value>
+  </data>
+  <data name="Message.LastAplplyDate" xml:space="preserve">
+    <value>تاریخ آخرین پاسخ</value>
+  </data>
+  <data name="Message.Name" xml:space="preserve">
+    <value>عنوان</value>
+  </data>
+  <data name="Message.Sender" xml:space="preserve">
+    <value>فرستنده</value>
+  </data>
+  <data name="Message.SentDate" xml:space="preserve">
+    <value>تاریخ ارسال</value>
+  </data>
+  <data name="Alert.Attachment" xml:space="preserve">
+    <value>ضمیمه</value>
+  </data>
+  <data name="Alert.EventDate" xml:space="preserve">
+    <value>تاریخ رویداد</value>
+  </data>
+  <data name="Alert.SentDate" xml:space="preserve">
+    <value>تاریخ ارسال</value>
+  </data>
+  <data name="Alert.Subject" xml:space="preserve">
+    <value>موضوع</value>
+  </data>
+  <data name="Alert.Title" xml:space="preserve">
+    <value>عنوان</value>
+  </data>
+  <data name="Alert.DisableService" xml:space="preserve">
+    <value>غیرفعال کردن سرویس اطلاع رسانی با ایمیل</value>
+  </data>
+  <data name="Alert.SettingEmail" xml:space="preserve">
+    <value>تنظیمات ایمیل</value>
+  </data>
+  <data name="Server.DownTime" xml:space="preserve">
+    <value>DownTime ماه قبل</value>
+  </data>
+  <data name="Server.ErrorControlCount" xml:space="preserve">
+    <value>تعداد کل خطا</value>
+  </data>
+  <data name="Server.ErrorCount" xml:space="preserve">
+    <value>تعداد خطا</value>
+  </data>
+  <data name="Server.LastCheck" xml:space="preserve">
+    <value>آخرین کنترل</value>
+  </data>
+  <data name="Server.LastMonthUpTime" xml:space="preserve">
+    <value>UpTime ماه قبل</value>
+  </data>
+  <data name="Server.MonthCount" xml:space="preserve">
+    <value>تعداد ماه</value>
+  </data>
+  <data name="Server.NextCheck" xml:space="preserve">
+    <value>کنترل بعدی</value>
+  </data>
+  <data name="Server.ServerName" xml:space="preserve">
+    <value>نام سرور</value>
+  </data>
+  <data name="Server.UpTime" xml:space="preserve">
+    <value>UpTime</value>
+  </data>
+  <data name="RegistrationNumber" xml:space="preserve">
+    <value>شماره ثبت</value>
+  </data>
+  <data name="User.CompanyTypeTitle" xml:space="preserve">
+    <value>نوع شرکت</value>
+  </data>
+  <data name="User.ManagerFamily" xml:space="preserve">
+    <value>فامیل مدیرعامل</value>
+  </data>
+  <data name="User.ManagerName" xml:space="preserve">
+    <value>نام مدیرعامل</value>
+  </data>
+  <data name="User.Rfk_CityId" xml:space="preserve">
+    <value>شهرستان محل ثبت</value>
+  </data>
+  <data name="User.Rfk_CountryId" xml:space="preserve">
+    <value>کشور محل ثبت</value>
+  </data>
+  <data name="User.Rfk_ProvinceId" xml:space="preserve">
+    <value>استان محل ثبت</value>
+  </data>
+  <data name="User.RegistrationNumber" xml:space="preserve">
+    <value>شماره ثبت شرکت</value>
+  </data>
+  <data name="User.Sfk_CityId" xml:space="preserve">
+    <value>شهرستان اقامتگاه</value>
+  </data>
+  <data name="User.Sfk_CountryId" xml:space="preserve">
+    <value>کشور اقامتگاه</value>
+  </data>
+  <data name="User.Sfk_ProvinceId" xml:space="preserve">
+    <value>استان اقامتگاه</value>
+  </data>
+  <data name="User.NationalCode" xml:space="preserve">
+    <value>کد ملی</value>
+  </data>
+  <data name="User.UserTypeId" xml:space="preserve">
+    <value>نوع کاربری</value>
+  </data>
+  <data name="Menu.Caption" xml:space="preserve">
+    <value>عنوان</value>
+  </data>
+  <data name="Menu.Datestamp" xml:space="preserve">
+    <value>تاریخ</value>
+  </data>
+  <data name="Menu.DefaultAction" xml:space="preserve">
+    <value>عملیات پیش فرض</value>
+  </data>
+  <data name="Menu.fk_MenuCategoryId" xml:space="preserve">
+    <value>گروه منو</value>
+  </data>
+  <data name="Menu.fk_MenuTypeId" xml:space="preserve">
+    <value>نوع منو</value>
+  </data>
+  <data name="Menu.NavigateUrl" xml:space="preserve">
+    <value>آدرس</value>
+  </data>
+  <data name="Menu.Priority" xml:space="preserve">
+    <value>اولویت</value>
+  </data>
+  <data name="MenuCategory.Class" xml:space="preserve">
+    <value>کلاس</value>
+  </data>
+  <data name="MenuCategory.Datestamp" xml:space="preserve">
+    <value>تاریخ</value>
+  </data>
+  <data name="MenuCategory.fk_MenuTypeId" xml:space="preserve">
+    <value>نوع منو</value>
+  </data>
+  <data name="MenuCategory.Name" xml:space="preserve">
+    <value>نام</value>
+  </data>
+  <data name="MenuCategory.Priority" xml:space="preserve">
+    <value>اولویت</value>
+  </data>
+  <data name="MenuCategory.StatusTitle" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="MenuType.Datestamp" xml:space="preserve">
+    <value>تاریخ</value>
+  </data>
+  <data name="MenuType.Name" xml:space="preserve">
+    <value>نام</value>
+  </data>
+  <data name="MenuType.StatusTitle" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="ProductType.fk_ProductTypeGroupId" xml:space="preserve">
+    <value>گروه نوع محصول</value>
+  </data>
+  <data name="Product.fk_AmenityId" xml:space="preserve">
+    <value>امکانات اضافی</value>
+  </data>
+  <data name="Tax.fk_ProductTypeGroupId" xml:space="preserve">
+    <value>گروه نوع محصولات</value>
+  </data>
+  <data name="Tax.fk_AmenitiesGroupId" xml:space="preserve">
+    <value>گروه امکانات اضافی</value>
+  </data>
+  <data name="Product.fk_ProductId" xml:space="preserve">
+    <value>محصولات</value>
+  </data>
+  <data name="Amenity.fk_ProductId" xml:space="preserve">
+    <value>محصول</value>
+  </data>
+  <data name="Z.AutoRenew" xml:space="preserve">
+    <value>فعالسازی تمدید خودکار</value>
+  </data>
+  <data name="Z.NextStep" xml:space="preserve">
+    <value>مرحله بعد</value>
+  </data>
+  <data name="Z.SeeBasket" xml:space="preserve">
+    <value>مشاهده سبد</value>
+  </data>
+  <data name="Z.ViewDetails" xml:space="preserve">
+    <value>مشاهده جزئیات</value>
+  </data>
+  <data name="Domain.BidetFee" xml:space="preserve">
+    <value>هزینه محصول در بازه زمانی</value>
+  </data>
+  <data name="ProductTypeGroup.AppKey" xml:space="preserve">
+    <value>نام انگلیسی</value>
+  </data>
+  <data name="Tax.IsNew" xml:space="preserve">
+    <value>جدید می باشد</value>
+  </data>
+  <data name="ProductTypeGroup.SelectedTaxes" xml:space="preserve">
+    <value>مالیات</value>
+  </data>
+  <data name="ProductType.fk_ProductTypeGroup" xml:space="preserve">
+    <value>گروه نوع محصول</value>
+  </data>
+  <data name="AmenitiesGroup.SelectedTaxes" xml:space="preserve">
+    <value>مالیات</value>
+  </data>
+  <data name="PropertyType.DataType" xml:space="preserve">
+    <value>نوع داده</value>
+  </data>
+  <data name="MenuCategory.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="MenuType.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="Smstemplate.Body" xml:space="preserve">
+    <value>بدنه پیام</value>
+  </data>
+  <data name="Alert.fk_AlertTypeId" xml:space="preserve">
+    <value>نوع هشدار</value>
+  </data>
+  <data name="Alert.fk_CallTemplateId" xml:space="preserve">
+    <value>قالب مکالمه تلفنی</value>
+  </data>
+  <data name="Alert.fk_FaxTemplateId" xml:space="preserve">
+    <value>قالب فکس</value>
+  </data>
+  <data name="Alert.fk_MailTemplateId" xml:space="preserve">
+    <value>قالب ایمیل</value>
+  </data>
+  <data name="Alert.fk_SmstemplateId" xml:space="preserve">
+    <value>قالب پیام کوتاه</value>
+  </data>
+  <data name="Alert.Name" xml:space="preserve">
+    <value>عنوان</value>
+  </data>
+  <data name="Alert.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="Alert.UseCall" xml:space="preserve">
+    <value>از قالب مکالمه تلفنی استفاده گردد</value>
+  </data>
+  <data name="Alert.UseEmail" xml:space="preserve">
+    <value>از قالب ایمیل استفاده گردد</value>
+  </data>
+  <data name="Alert.UseFax" xml:space="preserve">
+    <value>از قالب فکس استفاده گردد</value>
+  </data>
+  <data name="Alert.UseSms" xml:space="preserve">
+    <value>از قالب پیام کوتاه استفاده گردد</value>
+  </data>
+  <data name="AlertType.Name" xml:space="preserve">
+    <value>عنوان</value>
+  </data>
+  <data name="AlertType.Priority" xml:space="preserve">
+    <value>اولویت</value>
+  </data>
+  <data name="AlertType.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="AlertType.Description" xml:space="preserve">
+    <value>توضیحات</value>
+  </data>
+  <data name="TemplateStatic.DataType" xml:space="preserve">
+    <value>نوع داده</value>
+  </data>
+  <data name="TemplateStatic.Name" xml:space="preserve">
+    <value>عنوان</value>
+  </data>
+  <data name="TemplateStatic.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="TemplateStatic.TemplateKey" xml:space="preserve">
+    <value>کلید قالب</value>
+  </data>
+  <data name="TemplateStatic.TemplateValue" xml:space="preserve">
+    <value>مقدار کلید</value>
+  </data>
+  <data name="TemplateStatic.UseInCall" xml:space="preserve">
+    <value>برای مکالمات تلفنی استفاده گردد</value>
+  </data>
+  <data name="TemplateStatic.UseInFax" xml:space="preserve">
+    <value>برای فکس استفاده گردد</value>
+  </data>
+  <data name="TemplateStatic.UseInMail" xml:space="preserve">
+    <value>برای ایمیل استفاده گردد</value>
+  </data>
+  <data name="TemplateStatic.UseInMessage" xml:space="preserve">
+    <value>در پیام استفاده گردد</value>
+  </data>
+  <data name="TemplateStatic.UseInSms" xml:space="preserve">
+    <value>در پیام کوتاه استفاده گردد</value>
+  </data>
+  <data name="TemplateVariable.DataType" xml:space="preserve">
+    <value>نوع داده</value>
+  </data>
+  <data name="TemplateVariable.Name" xml:space="preserve">
+    <value>عنوان</value>
+  </data>
+  <data name="TemplateVariable.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="TemplateVariable.TemplateKey" xml:space="preserve">
+    <value>کلید قالب</value>
+  </data>
+  <data name="TemplateVariable.UseInCall" xml:space="preserve">
+    <value>برای مکالمات تلفنی استفاده گردد</value>
+  </data>
+  <data name="TemplateVariable.UseInFax" xml:space="preserve">
+    <value>برای فکس استفاده گردد</value>
+  </data>
+  <data name="TemplateVariable.UseInMail" xml:space="preserve">
+    <value>برای ایمیل استفاده گردد</value>
+  </data>
+  <data name="TemplateVariable.UseInMessage" xml:space="preserve">
+    <value>در پیام استفاده گردد</value>
+  </data>
+  <data name="TemplateVariable.UseInSms" xml:space="preserve">
+    <value>در پیام کوتاه استفاده گردد</value>
+  </data>
+  <data name="ERP.UI.Web.Areas.Admin.AmenityView" xml:space="preserve">
+    <value>امکان اضافی</value>
+  </data>
+  <data name="ERP.UI.Web.Areas.Admin.BidetView" xml:space="preserve">
+    <value>هزینه محصول در بازه زمانی</value>
+  </data>
+  <data name="ERP.UI.Web.Areas.Admin.CityView" xml:space="preserve">
+    <value>شهر</value>
+  </data>
+  <data name="ERP.UI.Web.Areas.Admin.ClassView" xml:space="preserve">
+    <value>کلاس</value>
+  </data>
+  <data name="ERP.UI.Web.Areas.Admin.CountryView" xml:space="preserve">
+    <value>کشور</value>
+  </data>
+  <data name="ERP.UI.Web.Areas.Admin.PollTypeView" xml:space="preserve">
+    <value>نوع نظر سنجی</value>
+  </data>
+  <data name="ERP.UI.Web.Areas.Admin.PollView" xml:space="preserve">
+    <value>نظرسنجی</value>
+  </data>
+  <data name="ERP.UI.Web.Areas.Admin.ProductTypeGroupView" xml:space="preserve">
+    <value>گروه نوع محصول</value>
+  </data>
+  <data name="ERP.UI.Web.Areas.Admin.ProductTypeView" xml:space="preserve">
+    <value>نوع محصول</value>
+  </data>
+  <data name="ERP.UI.Web.Areas.Admin.ProductView" xml:space="preserve">
+    <value>محصول</value>
+  </data>
+  <data name="ERP.UI.Web.Areas.Admin.PropertyGroupView" xml:space="preserve">
+    <value>گروه ویژگی</value>
+  </data>
+  <data name="ERP.UI.Web.Areas.Admin.PropertyTypeView" xml:space="preserve">
+    <value>نوع ویژگی</value>
+  </data>
+  <data name="ERP.UI.Web.Areas.Admin.PropertyView" xml:space="preserve">
+    <value>ویژگی</value>
+  </data>
+  <data name="ERP.UI.Web.Areas.Admin.ProvinceView" xml:space="preserve">
+    <value>استان</value>
+  </data>
+  <data name="ERP.UI.Web.Areas.Admin.TaxView" xml:space="preserve">
+    <value>مالیات</value>
+  </data>
+  <data name="ERP.UI.Web.Areas.Admin.AmenitiesGroupVieERP.UI.Web.Areas.Admin.AmenitiesGroupViERP.UI.Web.Areas.Admin.AmenitiesGroupView" xml:space="preserve">
+    <value>گروه امکانات اضافی</value>
+  </data>
+  <data name="ERP.UI.Web.Areas.Admin.DiscountTypeView" xml:space="preserve">
+    <value>نوع تخفیف</value>
+  </data>
+  <data name="ERP.UI.Web.Areas.Admin.DiscountView" xml:space="preserve">
+    <value>تخفیف</value>
+  </data>
+  <data name="ERP.UI.Web.Areas.Admin.MenuCategoryView" xml:space="preserve">
+    <value>گروه منو</value>
+  </data>
+  <data name="ERP.UI.Web.Areas.Admin.MenuTypeView" xml:space="preserve">
+    <value>نوع منو</value>
+  </data>
+  <data name="ERP.UI.Web.Areas.Admin.MenuView" xml:space="preserve">
+    <value>منو</value>
+  </data>
+  <data name="ERP.UI.Web.Areas.Admin.PermissionCategoryView" xml:space="preserve">
+    <value>گروه مجوز</value>
+  </data>
+  <data name="ERP.UI.Web.Areas.Admin.PermissionView" xml:space="preserve">
+    <value>مجوز</value>
+  </data>
+  <data name="ERP.UI.Web.Areas.Admin.ProductClassView" xml:space="preserve">
+    <value>کلاس محصول</value>
+  </data>
+  <data name="ERP.UI.Web.Areas.Admin.RoleView" xml:space="preserve">
+    <value>نقش</value>
+  </data>
+  <data name="ERP.UI.Web.Areas.Admin.TemplateStaticView" xml:space="preserve">
+    <value>ثابت قالب</value>
+  </data>
+  <data name="ERP.UI.Web.Areas.Admin.TimeFrameView" xml:space="preserve">
+    <value>بازه زمانی</value>
+  </data>
+  <data name="Setting.DataType" xml:space="preserve">
+    <value>نوع داده</value>
+  </data>
+  <data name="Setting.Datestamp" xml:space="preserve">
+    <value>تاریخ</value>
+  </data>
+  <data name="Setting.Id" xml:space="preserve">
+    <value>کد</value>
+  </data>
+  <data name="Setting.KeyValue" xml:space="preserve">
+    <value>عنوان</value>
+  </data>
+  <data name="Setting.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="Setting.Value" xml:space="preserve">
+    <value>مقدار</value>
+  </data>
+  <data name="ERP.UI.Web.Areas.Admin.SettingView" xml:space="preserve">
+    <value>تنظیمات</value>
+  </data>
+  <data name="Menu.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="AmenitiesGroup.Datestamp" xml:space="preserve">
+    <value>تاریخ</value>
+  </data>
+  <data name="Bidet.Datestamp" xml:space="preserve">
+    <value>تاریخ</value>
+  </data>
+  <data name="City.Datestamp" xml:space="preserve">
+    <value>تاریخ</value>
+  </data>
+  <data name="Class.Datestamp" xml:space="preserve">
+    <value>تاریخ</value>
+  </data>
+  <data name="Country.Datestamp" xml:space="preserve">
+    <value>تاریخ</value>
+  </data>
+  <data name="Discount.Datestamp" xml:space="preserve">
+    <value>تاریخ</value>
+  </data>
+  <data name="DiscountType.Datestamp" xml:space="preserve">
+    <value>تاریخ</value>
+  </data>
+  <data name="Permission.Datestamp" xml:space="preserve">
+    <value>تاریخ</value>
+  </data>
+  <data name="PermissionCategory.Datestamp" xml:space="preserve">
+    <value>تاریخ</value>
+  </data>
+  <data name="Poll.Datestamp" xml:space="preserve">
+    <value>تاریخ</value>
+  </data>
+  <data name="PollType.Datestamp" xml:space="preserve">
+    <value>تاریخ</value>
+  </data>
+  <data name="Product.Datestamp" xml:space="preserve">
+    <value>تاریخ</value>
+  </data>
+  <data name="Property.Datestamp" xml:space="preserve">
+    <value>تاریخ</value>
+  </data>
+  <data name="PropertyGroup.Datestamp" xml:space="preserve">
+    <value>تاریخ</value>
+  </data>
+  <data name="PropertyType.Datestamp" xml:space="preserve">
+    <value>تاریخ</value>
+  </data>
+  <data name="Province.Datestamp" xml:space="preserve">
+    <value>تاریخ</value>
+  </data>
+  <data name="Tax.Datestamp" xml:space="preserve">
+    <value>تاریخ</value>
+  </data>
+  <data name="TemplateStatic.Datestamp" xml:space="preserve">
+    <value>تاریخ</value>
+  </data>
+  <data name="TemplateStatic.Id" xml:space="preserve">
+    <value>کد</value>
+  </data>
+  <data name="Scale.Datestamp" xml:space="preserve">
+    <value>تاریخ</value>
+  </data>
+  <data name="Scale.fk_ScaleGroupId" xml:space="preserve">
+    <value>گروه واحد اندازه گیری</value>
+  </data>
+  <data name="Scale.Id" xml:space="preserve">
+    <value>کد</value>
+  </data>
+  <data name="Scale.Name" xml:space="preserve">
+    <value>نام</value>
+  </data>
+  <data name="Scale.Priority" xml:space="preserve">
+    <value>اولویت</value>
+  </data>
+  <data name="Scale.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="ScaleGroup.Datestamp" xml:space="preserve">
+    <value>تاریخ</value>
+  </data>
+  <data name="ScaleGroup.Id" xml:space="preserve">
+    <value>کد</value>
+  </data>
+  <data name="ScaleGroup.Name" xml:space="preserve">
+    <value>نام</value>
+  </data>
+  <data name="ScaleGroup.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="ERP.UI.Web.Areas.Admin.ScaleGroupView" xml:space="preserve">
+    <value>گروه واحد اندازه گیری</value>
+  </data>
+  <data name="ERP.UI.Web.Areas.Admin.ScaleView" xml:space="preserve">
+    <value>واحد اندازه گیری</value>
+  </data>
+  <data name="Z.ChooseStatus" xml:space="preserve">
+    <value>وضعیت را انتخاب نمایید</value>
+  </data>
+  <data name="Property.fk_ScaleId" xml:space="preserve">
+    <value>واحد اندازه گیری</value>
+  </data>
+  <data name="Amenity.ChooseAmenitiesGroup" xml:space="preserve">
+    <value>گروه ها ...</value>
+  </data>
+  <data name="Amenity.ChooseProductType" xml:space="preserve">
+    <value>نوع محصول را انتخاب نمایید</value>
+  </data>
+  <data name="Amenity.ChooseTax" xml:space="preserve">
+    <value>مالیات ها...</value>
+  </data>
+  <data name="Bidet.ChooseProduct" xml:space="preserve">
+    <value>محصول را انتخاب نمایید</value>
+  </data>
+  <data name="Bidet.ChooseTimeFrame" xml:space="preserve">
+    <value>فریم زمانی را انتخاب نمایید</value>
+  </data>
+  <data name="City.ChooseProvince" xml:space="preserve">
+    <value>استان را انتخاب نمایید</value>
+  </data>
+  <data name="Menu.ChooseMenuCategory" xml:space="preserve">
+    <value>گروه منو را انتخاب نمایید</value>
+  </data>
+  <data name="Menu.ChooseMenuType" xml:space="preserve">
+    <value>نوع منو را انتخاب نمایید</value>
+  </data>
+  <data name="MenuCategory.ChooseClass" xml:space="preserve">
+    <value>آیکن مورد نظر را انتخاب نمایید</value>
+  </data>
+  <data name="MenuCategory.ChooseMenuType" xml:space="preserve">
+    <value>نوع منو را انتخاب نمایید</value>
+  </data>
+  <data name="ProductType.ChooseProperty" xml:space="preserve">
+    <value>ویژگی ها ...</value>
+  </data>
+  <data name="ProductType.ProductTypeGroup" xml:space="preserve">
+    <value>گروه نوع محصول را انتخاب نمایید</value>
+  </data>
+  <data name="PropertyType.ChooseDataType" xml:space="preserve">
+    <value>نوع داده را انتخاب نمایید</value>
+  </data>
+  <data name="Province.ChooseCountry" xml:space="preserve">
+    <value>کشور مورد نظر را انتخاب کنید</value>
+  </data>
+  <data name="Scale.ChooseScaleGroup" xml:space="preserve">
+    <value>گروه واحد اندازه گیری را انتخاب نمایید</value>
+  </data>
+  <data name="Setting.ChooseDataType" xml:space="preserve">
+    <value>نوع داده را انتخاب نمایید</value>
+  </data>
+  <data name="Tax.ChooseProductTypeGroup" xml:space="preserve">
+    <value>گروه ها ...</value>
+  </data>
+  <data name="TemplateStatic.ChooseDataType" xml:space="preserve">
+    <value>نوع داده را انتخاب نمایید</value>
+  </data>
+  <data name="Z.FileHasBeenSent" xml:space="preserve">
+    <value>فایل مورد نظر ارسال شد</value>
+  </data>
+  <data name="AlertType.UnitPrice" xml:space="preserve">
+    <value>قیمت واحد</value>
+  </data>
+  <data name="AlertType.Id" xml:space="preserve">
+    <value>کد</value>
+  </data>
+  <data name="ERP.UI.Web.Areas.Admin.TemplateView" xml:space="preserve">
+    <value>قالب</value>
+  </data>
+  <data name="Template.ChooseAlertType" xml:space="preserve">
+    <value>نوع هشدار را انتخاب نمایید</value>
+  </data>
+  <data name="Template.Datestamp" xml:space="preserve">
+    <value>تاریخ</value>
+  </data>
+  <data name="Template.fk_AlertTypeId" xml:space="preserve">
+    <value>نوع هشدار</value>
+  </data>
+  <data name="Template.Id" xml:space="preserve">
+    <value>کد</value>
+  </data>
+  <data name="Template.Name" xml:space="preserve">
+    <value>نام</value>
+  </data>
+  <data name="Template.Sender" xml:space="preserve">
+    <value>فرستنده</value>
+  </data>
+  <data name="Template.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="Template.Subject" xml:space="preserve">
+    <value>موضوع</value>
+  </data>
+  <data name="Template.TemplateContent" xml:space="preserve">
+    <value>محتوا</value>
+  </data>
+  <data name="Event.Datestamp" xml:space="preserve">
+    <value>تاریخ</value>
+  </data>
+  <data name="Event.Id" xml:space="preserve">
+    <value>کد</value>
+  </data>
+  <data name="Event.Name" xml:space="preserve">
+    <value>نام</value>
+  </data>
+  <data name="Event.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="ERP.UI.Web.Areas.Admin.EventView" xml:space="preserve">
+    <value>رویداد</value>
+  </data>
+  <data name="AlertJob.Datestamp" xml:space="preserve">
+    <value>تاریخ</value>
+  </data>
+  <data name="AlertJob.EndDate" xml:space="preserve">
+    <value>تاریخ پایان</value>
+  </data>
+  <data name="AlertJob.FailNo" xml:space="preserve">
+    <value>شماره شکست</value>
+  </data>
+  <data name="AlertJob.fk_EventAlertActionSettingID" xml:space="preserve">
+    <value>هشدار</value>
+  </data>
+  <data name="AlertJob.fk_AlertTypeId" xml:space="preserve">
+    <value>نوع هشدار</value>
+  </data>
+  <data name="AlertJob.fk_UserId" xml:space="preserve">
+    <value>کاربر</value>
+  </data>
+  <data name="AlertJob.GeneratedContent" xml:space="preserve">
+    <value>محتوای تولید شده</value>
+  </data>
+  <data name="AlertJob.Id" xml:space="preserve">
+    <value>کد</value>
+  </data>
+  <data name="AlertJob.MaxFailNo" xml:space="preserve">
+    <value>حداکثر تعداد شکست</value>
+  </data>
+  <data name="AlertJob.Name" xml:space="preserve">
+    <value>نام</value>
+  </data>
+  <data name="AlertJob.Priority" xml:space="preserve">
+    <value>اولویت</value>
+  </data>
+  <data name="AlertJob.Receiver" xml:space="preserve">
+    <value>گیرنده</value>
+  </data>
+  <data name="AlertJob.SendDate" xml:space="preserve">
+    <value>تاریخ ارسال</value>
+  </data>
+  <data name="AlertJob.Sender" xml:space="preserve">
+    <value>فرستنده</value>
+  </data>
+  <data name="AlertJob.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="AlertJob.Subject" xml:space="preserve">
+    <value>موضوع</value>
+  </data>
+  <data name="Alert.Datestamp" xml:space="preserve">
+    <value>تاریخ</value>
+  </data>
+  <data name="Alert.EndDate" xml:space="preserve">
+    <value>تاریخ پایان</value>
+  </data>
+  <data name="Alert.fk_EventId" xml:space="preserve">
+    <value>رویداد</value>
+  </data>
+  <data name="Alert.fk_TemplateId" xml:space="preserve">
+    <value>قالب</value>
+  </data>
+  <data name="Alert.Id" xml:space="preserve">
+    <value>کد</value>
+  </data>
+  <data name="Alert.MaxFailNo" xml:space="preserve">
+    <value>حداکثر تعداد شکست</value>
+  </data>
+  <data name="Alert.StartDate" xml:space="preserve">
+    <value>تاریخ شروع</value>
+  </data>
+  <data name="AlertJob.ChooseAlert" xml:space="preserve">
+    <value>نام هشدار را انتخاب نمایید</value>
+  </data>
+  <data name="AlertJob.ChooseAlertType" xml:space="preserve">
+    <value>نوع هشدار را انتخاب نمایید</value>
+  </data>
+  <data name="Alert.ChooseAlertType" xml:space="preserve">
+    <value>نوع هشدار را انتخاب نمایید</value>
+  </data>
+  <data name="Alert.ChooseEvent" xml:space="preserve">
+    <value>رویداد را انتخاب نمایید</value>
+  </data>
+  <data name="Alert.ChooseTemplate" xml:space="preserve">
+    <value>قالب را انتخاب نمایید</value>
+  </data>
+  <data name="ERP.UI.Web.Areas.Admin.AlertJobView" xml:space="preserve">
+    <value>وظیفه هشدار</value>
+  </data>
+  <data name="ERP.UI.Web.Areas.Admin.AlertTypeView" xml:space="preserve">
+    <value>نوع هشدار</value>
+  </data>
+  <data name="ERP.UI.Web.Areas.Admin.AlertView" xml:space="preserve">
+    <value>هشدار</value>
+  </data>
+  <data name="Z.ChooseTitle" xml:space="preserve">
+    <value>عنوان را انتخاب نمایید</value>
+  </data>
+  <data name="ProductTypeGroup.fk_TaxTitle" xml:space="preserve">
+    <value>مالیات</value>
+  </data>
+  <data name="City.fk_CountryId" xml:space="preserve">
+    <value>کشور</value>
+  </data>
+  <data name="City.CityCode" xml:space="preserve">
+    <value>کد شهر</value>
+  </data>
+  <data name="City.EnName" xml:space="preserve">
+    <value>نام لاتین</value>
+  </data>
+  <data name="Country.CountryCode" xml:space="preserve">
+    <value>کد کشور</value>
+  </data>
+  <data name="Country.EnName" xml:space="preserve">
+    <value>نام لاتین</value>
+  </data>
+  <data name="Province.EnName" xml:space="preserve">
+    <value>نام لاتین</value>
+  </data>
+  <data name="Province.ProvinceCode" xml:space="preserve">
+    <value>کد استان</value>
+  </data>
+  <data name="EventCondition.Datestamp" xml:space="preserve">
+    <value>تاریخ</value>
+  </data>
+  <data name="EventCondition.EventVariableKey" xml:space="preserve">
+    <value>کلید متغیر</value>
+  </data>
+  <data name="EventCondition.fk_EventId" xml:space="preserve">
+    <value>رویداد</value>
+  </data>
+  <data name="EventCondition.Id" xml:space="preserve">
+    <value>شناسه</value>
+  </data>
+  <data name="EventCondition.Operator" xml:space="preserve">
+    <value>عملگر</value>
+  </data>
+  <data name="EventCondition.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="EventCondition.TypeOperator" xml:space="preserve">
+    <value>نوع عملگر</value>
+  </data>
+  <data name="EventCondition.Value" xml:space="preserve">
+    <value>مقدار</value>
+  </data>
+  <data name="Application.ApplicationId" xml:space="preserve">
+    <value>شناسه</value>
+  </data>
+  <data name="Application.ApplicationName" xml:space="preserve">
+    <value>نام </value>
+  </data>
+  <data name="Application.Description" xml:space="preserve">
+    <value>توضیحات</value>
+  </data>
+  <data name="Application.LoweredApplicationName" xml:space="preserve">
+    <value>نام با حروف کوچک</value>
+  </data>
+  <data name="ApplicationCode" xml:space="preserve">
+    <value>کد App</value>
+  </data>
+  <data name="Roles.Description" xml:space="preserve">
+    <value>توضیحات</value>
+  </data>
+  <data name="Roles.fk_ApplicationId" xml:space="preserve">
+    <value>سیستم</value>
+  </data>
+  <data name="Roles.LoweredRoleName" xml:space="preserve">
+    <value>نام به حروف کوچک</value>
+  </data>
+  <data name="Roles.RoleCode" xml:space="preserve">
+    <value>کد نقش</value>
+  </data>
+  <data name="Roles.RoleId" xml:space="preserve">
+    <value>شناسه نقش</value>
+  </data>
+  <data name="Roles.RoleName" xml:space="preserve">
+    <value>نام</value>
+  </data>
+  <data name="Roles.ApplicationCode" xml:space="preserve">
+    <value>کد  سیستم</value>
+  </data>
+  <data name="Membership.ApplicationId" xml:space="preserve">
+    <value>شناسه کاربرد</value>
+  </data>
+  <data name="Membership.Comment" xml:space="preserve">
+    <value>توضیحات</value>
+  </data>
+  <data name="Membership.CreateDate" xml:space="preserve">
+    <value>تاریخ ایجاد</value>
+  </data>
+  <data name="Membership.Email" xml:space="preserve">
+    <value>ایمیل</value>
+  </data>
+  <data name="Membership.FailedPasswordAnswerAttemptCount" xml:space="preserve">
+    <value>تعداد پاسخ های اشتباه</value>
+  </data>
+  <data name="Membership.FailedPasswordAnswerAttemptWindowStart" xml:space="preserve">
+    <value>Membership.FailedPasswordAnswerAttemptWindowStart</value>
+  </data>
+  <data name="Membership.FailedPasswordAttemptCount" xml:space="preserve">
+    <value>تعداد ورود کلمه عبور اشتباه</value>
+  </data>
+  <data name="Membership.FailedPasswordAttemptWindowStart" xml:space="preserve">
+    <value>Membership.FailedPasswordAttemptWindowStart</value>
+  </data>
+  <data name="Membership.FirstName" xml:space="preserve">
+    <value>نام</value>
+  </data>
+  <data name="Membership.IsApproved" xml:space="preserve">
+    <value>تایید شده می باشد</value>
+  </data>
+  <data name="Membership.IsLockedOut" xml:space="preserve">
+    <value>قفل می باشد</value>
+  </data>
+  <data name="Membership.LastLockoutDate" xml:space="preserve">
+    <value>تاریخ باز کردن قفل</value>
+  </data>
+  <data name="Membership.LastLoginDate" xml:space="preserve">
+    <value>آخرین تاریخ ورود</value>
+  </data>
+  <data name="Membership.LastName" xml:space="preserve">
+    <value>نام خانوادگی</value>
+  </data>
+  <data name="Membership.LastPasswordChangedDate" xml:space="preserve">
+    <value>آخرین تاریخ تغییر کلمه عبور</value>
+  </data>
+  <data name="Membership.LoweredEmail" xml:space="preserve">
+    <value>ایمیل با حروف کوچک</value>
+  </data>
+  <data name="Membership.MobilePIN" xml:space="preserve">
+    <value>ک فعالسازی تلفن همراه</value>
+  </data>
+  <data name="Membership.Password" xml:space="preserve">
+    <value>کلمه عبور</value>
+  </data>
+  <data name="Membership.PasswordAnswer" xml:space="preserve">
+    <value>پاسخ امنیتی</value>
+  </data>
+  <data name="Membership.PasswordFormat" xml:space="preserve">
+    <value>فرمت کلمه عبور</value>
+  </data>
+  <data name="Membership.PasswordQuestion" xml:space="preserve">
+    <value>سوال امنیتی</value>
+  </data>
+  <data name="Membership.PasswordSalt" xml:space="preserve">
+    <value>کد بازیابی کلمه عبور</value>
+  </data>
+  <data name="Membership.UserId" xml:space="preserve">
+    <value>شناسه کاربر</value>
+  </data>
+  <data name="User.ApplicationId" xml:space="preserve">
+    <value>سیستم</value>
+  </data>
+  <data name="User.IsAnonymous" xml:space="preserve">
+    <value>بدون نام می باشد</value>
+  </data>
+  <data name="User.LastActivityDate" xml:space="preserve">
+    <value>تاریخ آخرین فعالیت</value>
+  </data>
+  <data name="User.LoweredUserName" xml:space="preserve">
+    <value>نام کاربری با حروف کوچک</value>
+  </data>
+  <data name="User.MobileAlias" xml:space="preserve">
+    <value>موبایل</value>
+  </data>
+  <data name="User.UserId" xml:space="preserve">
+    <value>کاربر</value>
+  </data>
+  <data name="ERP.UI.Web.Areas.Admin.UserView" xml:space="preserve">
+    <value>کاربر</value>
+  </data>
+  <data name="ERP.UI.Web.Areas.Admin.ApplicationView" xml:space="preserve">
+    <value>کاربرد</value>
+  </data>
+  <data name="Right.ApplicationCode" xml:space="preserve">
+    <value>کد  سیستم</value>
+  </data>
+  <data name="Right.RightCode" xml:space="preserve">
+    <value>کد</value>
+  </data>
+  <data name="Right.RightCodename" xml:space="preserve">
+    <value>نام کد</value>
+  </data>
+  <data name="Right.RightId" xml:space="preserve">
+    <value>شناسه</value>
+  </data>
+  <data name="Right.RightName" xml:space="preserve">
+    <value>عنوان</value>
+  </data>
+  <data name="User.ChooseRole" xml:space="preserve">
+    <value>نقش ها ...</value>
+  </data>
+  <data name="User.fk_RoleId" xml:space="preserve">
+    <value>نقش ها</value>
+  </data>
+  <data name="Membership.PasswordConfirmation" xml:space="preserve">
+    <value>تکرار کلمه عبور</value>
+  </data>
+  <data name="UserProfile.Address" xml:space="preserve">
+    <value>آدرس</value>
+  </data>
+  <data name="UserProfile.AltEmail" xml:space="preserve">
+    <value>ایمیل دوم</value>
+  </data>
+  <data name="UserProfile.BirthDate" xml:space="preserve">
+    <value>تاریخ تولد</value>
+  </data>
+  <data name="UserProfile.Defined" xml:space="preserve">
+    <value>معرف</value>
+  </data>
+  <data name="UserProfile.Email" xml:space="preserve">
+    <value>ایمیل</value>
+  </data>
+  <data name="UserProfile.Fax" xml:space="preserve">
+    <value>فکس</value>
+  </data>
+  <data name="UserProfile.FirstName" xml:space="preserve">
+    <value>نام </value>
+  </data>
+  <data name="UserProfile.fk_CityId" xml:space="preserve">
+    <value>شهر</value>
+  </data>
+  <data name="UserProfile.fk_CountryId" xml:space="preserve">
+    <value>کشور</value>
+  </data>
+  <data name="UserProfile.fk_ProvinceId" xml:space="preserve">
+    <value>استان</value>
+  </data>
+  <data name="UserProfile.fk_UserTypeId" xml:space="preserve">
+    <value>نوع کاربر</value>
+  </data>
+  <data name="UserProfile.LastName" xml:space="preserve">
+    <value>نام خانوادگی</value>
+  </data>
+  <data name="UserProfile.Mobile" xml:space="preserve">
+    <value>موبایل</value>
+  </data>
+  <data name="UserProfile.NationalCode" xml:space="preserve">
+    <value>کد ملی</value>
+  </data>
+  <data name="UserProfile.NicHandler" xml:space="preserve">
+    <value>NicHandler</value>
+  </data>
+  <data name="UserProfile.Phone" xml:space="preserve">
+    <value>تلفن</value>
+  </data>
+  <data name="UserProfile.PostalCode" xml:space="preserve">
+    <value>کد پستی</value>
+  </data>
+  <data name="UserProfile.Sex" xml:space="preserve">
+    <value>جنسیت</value>
+  </data>
+  <data name="UserProfile.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="UserProfile.UserName" xml:space="preserve">
+    <value>نام کاربری</value>
+  </data>
+  <data name="Membership.fkUserTypeID" xml:space="preserve">
+    <value>نوع کاربر</value>
+  </data>
+  <data name="UserProfile.SmartPassword" xml:space="preserve">
+    <value>رمز عبور در smarterTrack</value>
+  </data>
+  <data name="UserProfile.SmartPasswordConfirmation" xml:space="preserve">
+    <value>تکرار رمز عبور در smarterTrack</value>
+  </data>
+  <data name="UserProfile.SmartUserName" xml:space="preserve">
+    <value>نام کاربری در smarterTrack</value>
+  </data>
+  <data name="UserProfile.AltEmailConfirmed" xml:space="preserve">
+    <value>تایید شده </value>
+  </data>
+  <data name="UserProfile.EmailConfirmed" xml:space="preserve">
+    <value>تایید شده</value>
+  </data>
+  <data name="UserProfile.Smsconfirmed" xml:space="preserve">
+    <value>تایید شده</value>
+  </data>
+  <data name="ProductTypeGroup.SelectedPropertyGroups" xml:space="preserve">
+    <value>گروه های ویژگی</value>
+  </data>
+  <data name="Property.fk_ScaleGroupID" xml:space="preserve">
+    <value>گروه واحد</value>
+  </data>
+  <data name="Property.IsDefault" xml:space="preserve">
+    <value>پیش فرض می باشد</value>
+  </data>
+  <data name="Property.IsFilterable" xml:space="preserve">
+    <value>قابل فیلترکردن می باشد</value>
+  </data>
+  <data name="Property.DefaultValue" xml:space="preserve">
+    <value>مقدار پیش فرض ویژگی</value>
+  </data>
+  <data name="Property.DataType" xml:space="preserve">
+    <value>نوع داده ای </value>
+  </data>
+  <data name="ERP.UI.Web.Admin.CityView" xml:space="preserve">
+    <value>شهر</value>
+  </data>
+  <data name="ProductType.fk_TimeFrameId" xml:space="preserve">
+    <value>فریم زمانی پیش فرض</value>
+  </data>
+  <data name="ProductTypeGroup.SelectedTimeFrames" xml:space="preserve">
+    <value>سایر تایم فریم های مجاز</value>
+  </data>
+  <data name="Bidet.IsTrial" xml:space="preserve">
+    <value>آزمایشی می باشد</value>
+  </data>
+  <data name="Bidet.Id" xml:space="preserve">
+    <value>شناسه</value>
+  </data>
+  <data name="ProductTypeGroup.fk_TimeFrameId" xml:space="preserve">
+    <value>تایم فریم پیش فرض</value>
+  </data>
+  <data name="Scale.fk_ParentID" xml:space="preserve">
+    <value>واحد پدر</value>
+  </data>
+  <data name="Scale.RateFromParent" xml:space="preserve">
+    <value>نسبت پدر</value>
+  </data>
+  <data name="Product.fk_TaxId" xml:space="preserve">
+    <value>مالیات</value>
+  </data>
+  <data name="PropertyGroup.fk_ProductTypeGroupID" xml:space="preserve">
+    <value>گروه نوع محصول</value>
+  </data>
+  <data name="Menu.Title" xml:space="preserve">
+    <value>عنوان</value>
+  </data>
+  <data name="Class.fk_RecommandedProduct" xml:space="preserve">
+    <value>محصول توصیه شده</value>
+  </data>
+  <data name="Class.SelectedProduct" xml:space="preserve">
+    <value>محصولات</value>
+  </data>
+  <data name="Menu.Area" xml:space="preserve">
+    <value>ناحیه</value>
+  </data>
+  <data name="Menu.Type" xml:space="preserve">
+    <value> منو</value>
+  </data>
+  <data name="Menu.ViewType" xml:space="preserve">
+    <value>نوع نمایش</value>
+  </data>
+  <data name="Menu.Description" xml:space="preserve">
+    <value>توضیحات</value>
+  </data>
+  <data name="Menu.fk_DynamicRouteID" xml:space="preserve">
+    <value>مسیر پویا</value>
+  </data>
+  <data name="Menu.fk_MenuParentID" xml:space="preserve">
+    <value>والد</value>
+  </data>
+  <data name="Menu.IconClass" xml:space="preserve">
+    <value>کلاس آیکن</value>
+  </data>
+  <data name="Menu.TargetType" xml:space="preserve">
+    <value>نوع مقصد</value>
+  </data>
+  <data name="ProductType.fk_DefaultModuleId" xml:space="preserve">
+    <value>ماژول پیش فرض</value>
+  </data>
+  <data name="ProductType.SelectedModules" xml:space="preserve">
+    <value>ماژول ها</value>
+  </data>
+  <data name="Product.fk_ModuleID" xml:space="preserve">
+    <value>ماژول پیش فرض</value>
+  </data>
+  <data name="User.Cellphone" xml:space="preserve">
+    <value>تلفن همراه</value>
+  </data>
+  <data name="ERP.UI.Web.Admin.ProducTypeView" xml:space="preserve">
+    <value>نوع محصول</value>
+  </data>
+  <data name="ERP.UI.Web.Admin.PropertyGroupView" xml:space="preserve">
+    <value>گروه ویژگی</value>
+  </data>
+  <data name="UserProfile.FkCityId" xml:space="preserve">
+    <value>شهر</value>
+  </data>
+  <data name="UserProfile.FkCountryId" xml:space="preserve">
+    <value>کشور</value>
+  </data>
+  <data name="UserProfile.FkProvinceId" xml:space="preserve">
+    <value>استان</value>
+  </data>
+  <data name="UserProfile.Password" xml:space="preserve">
+    <value>کلمه عبور</value>
+  </data>
+  <data name="UserProfile.PasswordConfirmation" xml:space="preserve">
+    <value>تکرار کلمه عبور</value>
+  </data>
+  <data name="Slider.AvailableFrom" xml:space="preserve">
+    <value>قابل دسترس از تاریخ</value>
+  </data>
+  <data name="Slider.AvailableTo" xml:space="preserve">
+    <value>قابل دسترس تا تاریخ</value>
+  </data>
+  <data name="Slider.ID" xml:space="preserve">
+    <value>شناسه</value>
+  </data>
+  <data name="Slider.Name" xml:space="preserve">
+    <value>نام</value>
+  </data>
+  <data name="Slider.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="Slide.AvailableFrom" xml:space="preserve">
+    <value>قابل دسترس از تاریخ</value>
+  </data>
+  <data name="Slide.AvailableTo" xml:space="preserve">
+    <value>قابل دسترس تا تاریخ</value>
+  </data>
+  <data name="Slide.Delay" xml:space="preserve">
+    <value>تاخیر</value>
+  </data>
+  <data name="Slide.fk_SliderID" xml:space="preserve">
+    <value>اسلایدر</value>
+  </data>
+  <data name="Slide.HtmlContent" xml:space="preserve">
+    <value>محتوا</value>
+  </data>
+  <data name="Slide.MasterSpeed" xml:space="preserve">
+    <value>سرعت</value>
+  </data>
+  <data name="Slide.Name" xml:space="preserve">
+    <value>نام</value>
+  </data>
+  <data name="Slide.SlotAmount" xml:space="preserve">
+    <value>زمان</value>
+  </data>
+  <data name="Slide.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="Slide.Style" xml:space="preserve">
+    <value>استایل</value>
+  </data>
+  <data name="Slide.Thumb" xml:space="preserve">
+    <value>تصویر</value>
+  </data>
+  <data name="Slide.TransitionType" xml:space="preserve">
+    <value>افکت</value>
+  </data>
+  <data name="FinancialStatement.CreditAmount" xml:space="preserve">
+    <value>بستانکار</value>
+  </data>
+  <data name="FinancialStatement.DebtAmount" xml:space="preserve">
+    <value>بدهکار</value>
+  </data>
+  <data name="FinancialStatement.Description" xml:space="preserve">
+    <value>توضیحات</value>
+  </data>
+  <data name="FinancialStatement.ProductName" xml:space="preserve">
+    <value>پلان</value>
+  </data>
+  <data name="FinancialStatement.ServiceName" xml:space="preserve">
+    <value>نام سرویس</value>
+  </data>
+  <data name="FinancialStatement.ServiceType" xml:space="preserve">
+    <value>نوع سرویس</value>
+  </data>
+  <data name="FinancialStatement.TransactionDate" xml:space="preserve">
+    <value>تاریخ</value>
+  </data>
+  <data name="ERP.UI.Web.Areas.Admin.FinancialStatementView" xml:space="preserve">
+    <value>صورت حساب مالی</value>
+  </data>
+  <data name="FinancialStatement.ServiceOwner" xml:space="preserve">
+    <value>مالک سرویس</value>
+  </data>
+  <data name="ERP.UI.Web.Areas.Admin.PaymentView" xml:space="preserve">
+    <value>پرداخت</value>
+  </data>
+  <data name="Payment.Amount" xml:space="preserve">
+    <value>مبلغ</value>
+  </data>
+  <data name="Payment.Datestamp" xml:space="preserve">
+    <value>تاریخ</value>
+  </data>
+  <data name="Payment.ModuleName" xml:space="preserve">
+    <value>نحوه پرداخت</value>
+  </data>
+  <data name="Payment.PayerName" xml:space="preserve">
+    <value>پرداخت کننده</value>
+  </data>
+  <data name="Payment.PaymentAmount" xml:space="preserve">
+    <value>مبلغ پرداختی</value>
+  </data>
+  <data name="Payment.PaymentDate" xml:space="preserve">
+    <value>تاریخ</value>
+  </data>
+  <data name="Payment.ReferenceNumber" xml:space="preserve">
+    <value>شماره حواله</value>
+  </data>
+  <data name="Payment.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="Factor.Datestamp" xml:space="preserve">
+    <value>تاریخ</value>
+  </data>
+  <data name="Factor.FactorOwner" xml:space="preserve">
+    <value>مالک فاکتور</value>
+  </data>
+  <data name="Factor.ModuleName" xml:space="preserve">
+    <value>نحوه پرداخت</value>
+  </data>
+  <data name="Factor.Paid" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="Factor.PayableAmount" xml:space="preserve">
+    <value>مبلغ قابل پرداخت</value>
+  </data>
+  <data name="Factor.RequestID" xml:space="preserve">
+    <value>شماره فاکتور</value>
+  </data>
+  <data name="Factor.TotalAmount" xml:space="preserve">
+    <value>مبلغ کل</value>
+  </data>
+  <data name="OrderDetail.Datestamp" xml:space="preserve">
+    <value>تاریخ</value>
+  </data>
+  <data name="OrderDetail.Description" xml:space="preserve">
+    <value>توضیح</value>
+  </data>
+  <data name="OrderDetail.Fees" xml:space="preserve">
+    <value>هزینه دوره</value>
+  </data>
+  <data name="OrderDetail.ProductName" xml:space="preserve">
+    <value>نام محصول</value>
+  </data>
+  <data name="OrderDetail.ProductTypeGroupName" xml:space="preserve">
+    <value>نوع سرویس</value>
+  </data>
+  <data name="OrderDetail.ServiceName" xml:space="preserve">
+    <value>نام سرویس</value>
+  </data>
+  <data name="OrderDetail.SetupFee" xml:space="preserve">
+    <value>هزینه راه اندازی</value>
+  </data>
+  <data name="OrderDetail.TimeFrameMonths" xml:space="preserve">
+    <value>دوره زمانی</value>
+  </data>
+  <data name="UserProfile.UserType" xml:space="preserve">
+    <value>نوع پروفایل</value>
+  </data>
+  <data name="UserProfile.Datestamp" xml:space="preserve">
+    <value>تاریخ ایجاد</value>
+  </data>
+  <data name="UserProfile.ServiceId" xml:space="preserve">
+    <value>سرویس</value>
+  </data>
+  <data name="Service.EndDate" xml:space="preserve">
+    <value>تاریخ انقضا</value>
+  </data>
+  <data name="Service.fk_ProductTitle" xml:space="preserve">
+    <value>پلان</value>
+  </data>
+  <data name="Service.fk_ProductTypeGroupTitle" xml:space="preserve">
+    <value>نوع سرویس</value>
+  </data>
+  <data name="Service.fk_ProductTypeTitle" xml:space="preserve">
+    <value>نوع محصول</value>
+  </data>
+  <data name="Service.Name" xml:space="preserve">
+    <value>سرویس</value>
+  </data>
+  <data name="Service.StartDate" xml:space="preserve">
+    <value>تاریخ شروع</value>
+  </data>
+  <data name="ERP.UI.Web.Areas.Client.ToDoListView" xml:space="preserve">
+    <value>برنامه کاری</value>
+  </data>
+  <data name="ToDoList.Automatic" xml:space="preserve">
+    <value>وضعیت عملکرد</value>
+  </data>
+  <data name="ToDoList.Datestamp" xml:space="preserve">
+    <value>تاریخ</value>
+  </data>
+  <data name="ToDoList.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="ToDoList.UserName" xml:space="preserve">
+    <value>نام کاربر</value>
+  </data>
+  <data name="Service.ActionsString" xml:space="preserve">
+    <value>عملیات مجاز</value>
+  </data>
+  <data name="ModulePrameter.ColumnName" xml:space="preserve">
+    <value>نام ستون</value>
+  </data>
+  <data name="ModulePrameter.DataType" xml:space="preserve">
+    <value>نوع داده</value>
+  </data>
+  <data name="ModulePrameter.FillByUser" xml:space="preserve">
+    <value>به وسیله کاربر پر شود</value>
+  </data>
+  <data name="ModulePrameter.Id" xml:space="preserve">
+    <value>شناسه</value>
+  </data>
+  <data name="ModulePrameter.ParameterKey" xml:space="preserve">
+    <value>کلید پارامتر</value>
+  </data>
+  <data name="ModulePrameter.StaticValue" xml:space="preserve">
+    <value>متغیر ثابت</value>
+  </data>
+  <data name="ModulePrameter.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="ModulePrameter.TableName" xml:space="preserve">
+    <value>نام جدول</value>
+  </data>
+  <data name="ModulePrameter.Title" xml:space="preserve">
+    <value>عنوان</value>
+  </data>
+  <data name="FilledByUser" xml:space="preserve">
+    <value>به وسیله کاربر پر شود</value>
+  </data>
+  <data name="ModulePrameterValue.fk_ModuleParameterID" xml:space="preserve">
+    <value>پارامتر</value>
+  </data>
+  <data name="ModulePrameterValue.fk_UserID" xml:space="preserve">
+    <value>شناسه کاربر</value>
+  </data>
+  <data name="ModulePrameterValue.Id" xml:space="preserve">
+    <value>شناسه</value>
+  </data>
+  <data name="ModulePrameterValue.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="ModulePrameterValue.Value" xml:space="preserve">
+    <value>مقدار</value>
+  </data>
+  <data name="RegisterViewModel.CompanyEconomicCode" xml:space="preserve">
+    <value>کد اقتصادی شرکت</value>
+  </data>
+  <data name="RegisterViewModel.CompanyName" xml:space="preserve">
+    <value>نام شرکت</value>
+  </data>
+  <data name="RegisterViewModel.CompanyNationalCode" xml:space="preserve">
+    <value>کد ملی شرکت</value>
+  </data>
+  <data name="RegisterViewModel.CompanyRegisterCode" xml:space="preserve">
+    <value>کد ثبت شرکت</value>
+  </data>
+  <data name="ERP.UI.Web.Admin.ProductTypeGroupView" xml:space="preserve">
+    <value>گروه نوع محصول</value>
+  </data>
+  <data name="ERP.UI.Web.Admin.PropertyView" xml:space="preserve">
+    <value>ویژگی</value>
+  </data>
+  <data name="Form.Datestamp" xml:space="preserve">
+    <value>تاریخ</value>
+  </data>
+  <data name="Form.Description" xml:space="preserve">
+    <value>توضیحات</value>
+  </data>
+  <data name="Form.FormName" xml:space="preserve">
+    <value>نام فرم</value>
+  </data>
+  <data name="Form.HtmlContent" xml:space="preserve">
+    <value>محتوا</value>
+  </data>
+  <data name="Form.IsStandAlone" xml:space="preserve">
+    <value>قابلیت نمایش در فرم  دیگر</value>
+  </data>
+  <data name="Form.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="Form.UserName" xml:space="preserve">
+    <value>نام کاربر</value>
+  </data>
+  <data name="NewsInfo.Datestamp" xml:space="preserve">
+    <value>تاریخ</value>
+  </data>
+  <data name="NewsInfo.Description" xml:space="preserve">
+    <value>توضیحات</value>
+  </data>
+  <data name="NewsInfo.ImageUrl" xml:space="preserve">
+    <value>مسیر عکس</value>
+  </data>
+  <data name="NewsInfo.PublishDate" xml:space="preserve">
+    <value>تاریخ انتشار</value>
+  </data>
+  <data name="NewsInfo.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="NewsInfo.Title" xml:space="preserve">
+    <value>عنوان</value>
+  </data>
+  <data name="NewsInfo.Brief" xml:space="preserve">
+    <value>خلاصه</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Property.fk_ProductTypeGroupID" xml:space="preserve">
+    <value>گروه نوع محصول</value>
+  </data>
+  <data name="ERP.UI.Web.Areas.Client.PendingExpireServiceDashboardView" xml:space="preserve">
+    <value>سرویس های در حال انقضا</value>
+  </data>
+  <data name="ERP.UI.Web.Areas.Client.UnpaidOrderDashboardView" xml:space="preserve">
+    <value>صورت حساب های پرداخت نشده</value>
+  </data>
+  <data name="Order.AmountAfterDiscount" xml:space="preserve">
+    <value>مبلغ پس از اعمال تخفیف</value>
+  </data>
+  <data name="Order.Datestamp" xml:space="preserve">
+    <value>تاریخ</value>
+  </data>
+  <data name="Order.ExpireDate" xml:space="preserve">
+    <value>تاریخ انقضا</value>
+  </data>
+  <data name="Order.Id" xml:space="preserve">
+    <value>شماره</value>
+  </data>
+  <data name="Order.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="Order.TotalAmount" xml:space="preserve">
+    <value>مبلغ کل</value>
+  </data>
+  <data name="UserProfile.AccountType" xml:space="preserve">
+    <value>نوع کاربری</value>
+  </data>
+  <data name="UserProfile.Credit" xml:space="preserve">
+    <value>میزان اعتبار</value>
+  </data>
+  <data name="UserProfile.DomainCount" xml:space="preserve">
+    <value>تعداد دامنه</value>
+  </data>
+  <data name="UserProfile.NewAlertCount" xml:space="preserve">
+    <value>تعداد هشدارهای جدید</value>
+  </data>
+  <data name="UserProfile.RequestSupportCount" xml:space="preserve">
+    <value>تعداد درخواست های پشتیبانی</value>
+  </data>
+  <data name="UserProfile.ServiceCount" xml:space="preserve">
+    <value>تعداد محصولات و سرویس ها</value>
+  </data>
+  <data name="UserProfile.UserDefinedCount" xml:space="preserve">
+    <value>تعداد اعضای معرفی شده توسط شما</value>
+  </data>
+  <data name="ERP.UI.Web.Areas.Admin.OrderDetailView" xml:space="preserve">
+    <value>جزئیات سفارش</value>
+  </data>
+  <data name="ProductType.CancelAmount" xml:space="preserve">
+    <value>هزینه کنسلی</value>
+  </data>
+  <data name="ProductType.MoneyBackDay" xml:space="preserve">
+    <value>تعداد روزهای بازگشت پول</value>
+  </data>
+  <data name="ProductType.TrialDay" xml:space="preserve">
+    <value>تعداد روزهای آزمایشی</value>
+  </data>
+  <data name="Product.CancelAmount" xml:space="preserve">
+    <value>هزینه لغو</value>
+  </data>
+  <data name="Product.IsCancelable" xml:space="preserve">
+    <value>قابل لغو</value>
+  </data>
+  <data name="Product.MoneyBackDay" xml:space="preserve">
+    <value>تعداد روزهای بازگشت پول</value>
+  </data>
+  <data name="Product.TrialDay" xml:space="preserve">
+    <value>تعداد روزهای آزمایشی</value>
+  </data>
+  <data name="Product.IsBreakable" xml:space="preserve">
+    <value>قابل شکستن</value>
+  </data>
+  <data name="Product.TransferAmount" xml:space="preserve">
+    <value>هزینه انتقال</value>
+  </data>
+  <data name="ProductTypeGroup.IsExtra" xml:space="preserve">
+    <value>امکان اضافی می باشد</value>
+  </data>
+  <data name="GroupVariable.Datestamp" xml:space="preserve">
+    <value>تاریخ</value>
+  </data>
+  <data name="GroupVariable.Id" xml:space="preserve">
+    <value>کد</value>
+  </data>
+  <data name="GroupVariable.Name" xml:space="preserve">
+    <value>نام</value>
+  </data>
+  <data name="GroupVariable.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="ProductType.Max" xml:space="preserve">
+    <value>حداکثر تعداد محصولات</value>
+  </data>
+  <data name="ProductType.Min" xml:space="preserve">
+    <value>حداقل تعداد محصولات</value>
+  </data>
+  <data name="EventAction.ActionType" xml:space="preserve">
+    <value>نوع</value>
+  </data>
+  <data name="EventAction.Datestamp" xml:space="preserve">
+    <value>تاریخ</value>
+  </data>
+  <data name="EventAction.fk_EventAlertActionSettingID" xml:space="preserve">
+    <value>تنظیمات</value>
+  </data>
+  <data name="EventAction.fk_EventCaseActionSettingID" xml:space="preserve">
+    <value>تنظیمات</value>
+  </data>
+  <data name="EventAction.fk_EventID" xml:space="preserve">
+    <value>رویداد</value>
+  </data>
+  <data name="EventAction.fk_EventModuleActionSettingID" xml:space="preserve">
+    <value>تنظیمات ماژول</value>
+  </data>
+  <data name="EventAction.ID" xml:space="preserve">
+    <value>کد EventAction</value>
+  </data>
+  <data name="EventAction.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="EventAlertActionSetting.AlertType" xml:space="preserve">
+    <value>نوع</value>
+  </data>
+  <data name="EventAlertActionSetting.Datestamp" xml:space="preserve">
+    <value>تاریخ</value>
+  </data>
+  <data name="EventAlertActionSetting.EndDate" xml:space="preserve">
+    <value>تاریخ پایان</value>
+  </data>
+  <data name="EventAlertActionSetting.fk_TemplateID" xml:space="preserve">
+    <value>کد الگوی متنی</value>
+  </data>
+  <data name="EventAlertActionSetting.Id" xml:space="preserve">
+    <value>کد EventAlertActionSetting</value>
+  </data>
+  <data name="EventAlertActionSetting.MaxFailNo" xml:space="preserve">
+    <value>بیشترین تعداد تلاش</value>
+  </data>
+  <data name="EventAlertActionSetting.Name" xml:space="preserve">
+    <value>نام</value>
+  </data>
+  <data name="EventAlertActionSetting.StartDate" xml:space="preserve">
+    <value>تاریخ شروع</value>
+  </data>
+  <data name="EventAlertActionSetting.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="UserProfile.EnglishFirstName" xml:space="preserve">
+    <value>نام انگلیسی</value>
+  </data>
+  <data name="UserProfile.EnglishLastName" xml:space="preserve">
+    <value>نام خانوادگی انگلیسی</value>
+  </data>
+  <data name="ERP.UI.Web.Admin.Event" xml:space="preserve">
+    <value>رویداد</value>
+  </data>
+  <data name="ERP.UI.Web.Admin.EventAction" xml:space="preserve">
+    <value>عملیات رویداد</value>
+  </data>
+  <data name="ERP.UI.Web.Admin.EventCondition" xml:space="preserve">
+    <value>شرایط رویداد</value>
+  </data>
+  <data name="DomainNameServer.fk_ModuleID" xml:space="preserve">
+    <value>ماژول</value>
+  </data>
+  <data name="DomainNameServer.fk_ProductTypeID" xml:space="preserve">
+    <value>نوع محصول</value>
+  </data>
+  <data name="DomainNameServer.fk_ServiceID" xml:space="preserve">
+    <value>سرویس</value>
+  </data>
+  <data name="DomainNameServer.fk_UserID" xml:space="preserve">
+    <value>کاربر</value>
+  </data>
+  <data name="DomainNameServer.NS1" xml:space="preserve">
+    <value>نام سرور1</value>
+  </data>
+  <data name="DomainNameServer.NS2" xml:space="preserve">
+    <value>نام سرور2</value>
+  </data>
+  <data name="DomainNameServer.NS3" xml:space="preserve">
+    <value>نام سرور3</value>
+  </data>
+  <data name="DomainNameServer.NS4" xml:space="preserve">
+    <value>نام سرور4</value>
+  </data>
+  <data name="DomainNameServer.NS5" xml:space="preserve">
+    <value>نام سرور5</value>
+  </data>
+  <data name="DomainNameServer.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="Product.IsLegal" xml:space="preserve">
+    <value>برای کاربران حقوقی می باشد</value>
+  </data>
+  <data name="Order.PayableAmount" xml:space="preserve">
+    <value>مبلغ قابل پرداخت</value>
+  </data>
+  <data name="User.CompanyEconomicCode" xml:space="preserve">
+    <value>شماره اقتصادی شرکت</value>
+  </data>
+  <data name="User.CompanyName" xml:space="preserve">
+    <value>نام شرکت</value>
+  </data>
+  <data name="User.CompanyNationalCode" xml:space="preserve">
+    <value>کد ملی</value>
+  </data>
+  <data name="ERP.UI.Web.Areas.Admin.ModuleView" xml:space="preserve">
+    <value>ماژول</value>
+  </data>
+  <data name="Module.Datestamp" xml:space="preserve">
+    <value>تاریخ</value>
+  </data>
+  <data name="Module.Description" xml:space="preserve">
+    <value>توضیحات</value>
+  </data>
+  <data name="Module.fk_ProductTypeGroupID" xml:space="preserve">
+    <value>نوع محصول</value>
+  </data>
+  <data name="Module.Id" xml:space="preserve">
+    <value>شناسه</value>
+  </data>
+  <data name="Module.ModuleKey" xml:space="preserve">
+    <value>کلید</value>
+  </data>
+  <data name="Module.Name" xml:space="preserve">
+    <value>نام</value>
+  </data>
+  <data name="Module.Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="Module.Type" xml:space="preserve">
+    <value>نوع</value>
+  </data>
+  <data name="Module.IsDefault" xml:space="preserve">
+    <value>پیش فرض</value>
+  </data>
+  <data name="Role.NewName" xml:space="preserve">
+    <value>عنوان</value>
+  </data>
+  <data name="ERP.UI.Web.Areas.Admin.UserManagmentView" xml:space="preserve">
+    <value>کاربران</value>
+  </data>
+  <data name="OfflinePayTransaction.CardNumber" xml:space="preserve">
+    <value>شماره کارت</value>
+  </data>
+  <data name="OfflinePayTransaction.FishNumber" xml:space="preserve">
+    <value>شماره حواله</value>
+  </data>
+  <data name="Payment.Description" xml:space="preserve">
+    <value>توضیحات</value>
+  </data>
+  <data name="OfflinePayTransaction.BankAccountId" xml:space="preserve">
+    <value>حساب مقصد</value>
+  </data>
+  <data name="OfflinePayTransaction.PayTypeId" xml:space="preserve">
+    <value>نوع پرداخت</value>
+  </data>
+  <data name="OfflinePayTransaction.Time" xml:space="preserve">
+    <value>ساعت واریز</value>
+  </data>
+  <data name="OfflinePayTransaction.Date" xml:space="preserve">
+    <value>تاریخ واریز</value>
+  </data>
+  <data name="UserProfile.ActiveServiceCount" xml:space="preserve">
+    <value>تعداد سرویس های فعال</value>
+  </data>
+  <data name="UserProfile.AuthenticationLevel" xml:space="preserve">
+    <value>سطح دسترسی</value>
+  </data>
+  <data name="UserProfile.UserLevel" xml:space="preserve">
+    <value>سطح کاربری</value>
+  </data>
+  <data name="OfflinePayTransaction.AccountNumber" xml:space="preserve">
+    <value>شماره حساب</value>
+  </data>
+  <data name="OfflinePayTransaction.Amount" xml:space="preserve">
+    <value>مبلغ</value>
+  </data>
+  <data name="OfflinePayTransaction.BankName" xml:space="preserve">
+    <value>بانک</value>
+  </data>
+  <data name="OfflinePayTransaction.fk_OrderId" xml:space="preserve">
+    <value>کد سفارش</value>
+  </data>
+  <data name="User.Access" xml:space="preserve">
+    <value>دسترسی</value>
+  </data>
+  <data name="User.Name" xml:space="preserve">
+    <value>نام</value>
+    <comment>User.Access</comment>
+  </data>
+  <data name="ERP.UI.Web.Admin.ProductType.ModuleConfigurationTab" xml:space="preserve">
+    <value>تنظیمات ماژول</value>
+  </data>
+  <data name="ERP.UI.Web.Admin.ProductType.ProductTypeTab" xml:space="preserve">
+    <value>نوع محصول</value>
+  </data>
+  <data name="Note.Creator" xml:space="preserve">
+    <value>سازنده</value>
+  </data>
+  <data name="Note.Description" xml:space="preserve">
+    <value>یادداشت</value>
+  </data>
+  <data name="Note.Editor" xml:space="preserve">
+    <value>ویراستار</value>
+  </data>
+  <data name="Note.Id" xml:space="preserve">
+    <value>کد</value>
+  </data>
+  <data name="Member.AuthorizationType" xml:space="preserve">
+    <value>نوع دسترسی</value>
+  </data>
+  <data name="Member.Name" xml:space="preserve">
+    <value>نام کاربری</value>
+  </data>
+  <data name="Member.Owner" xml:space="preserve">
+    <value>مالک</value>
+  </data>
+  <data name="Member.SID" xml:space="preserve">
+    <value>کد</value>
+  </data>
+  <data name="Member.ValidFrom" xml:space="preserve">
+    <value>معتبر از</value>
+  </data>
+  <data name="Member.ValidTo" xml:space="preserve">
+    <value>معتبر تا</value>
+  </data>
+  <data name="Member.WhereDefined" xml:space="preserve">
+    <value>محل تعریف</value>
+  </data>
+  <data name="ApplicationGroup.Access" xml:space="preserve">
+    <value>دسترسی</value>
+  </data>
+  <data name="ApplicationGroup.GroupType" xml:space="preserve">
+    <value>نوع گروه</value>
+  </data>
+  <data name="ApplicationGroup.Name" xml:space="preserve">
+    <value>عنوان</value>
+  </data>
+  <data name="DomainNameServer.IP1" xml:space="preserve">
+    <value>آدرس سرور 1</value>
+  </data>
+  <data name="DomainNameServer.IP2" xml:space="preserve">
+    <value>آدرس سرور 2</value>
+  </data>
+  <data name="DomainNameServer.IP3" xml:space="preserve">
+    <value>آدرس سرور 3</value>
+  </data>
+  <data name="DomainNameServer.IP4" xml:space="preserve">
+    <value>آدرس سرور 4</value>
+  </data>
+  <data name="DomainNameServer.IP5" xml:space="preserve">
+    <value>آدرس سرور 5</value>
+  </data>
+  <data name="Note.LastUpdateDate" xml:space="preserve">
+    <value>تاریخ آخرین ویرایش</value>
+  </data>
+  <data name="Alert.FailNo" xml:space="preserve">
+    <value>تعداد شکست</value>
+  </data>
+  <data name="NewsLetter.Body" xml:space="preserve">
+    <value>متن خبرنامه</value>
+  </data>
+  <data name="NewsLetter.fk_AlertTypeId" xml:space="preserve">
+    <value>نوع</value>
+  </data>
+  <data name="NewsLetter.From" xml:space="preserve">
+    <value>از طرف</value>
+  </data>
+  <data name="NewsLetter.NewsLetterTitle" xml:space="preserve">
+    <value>عنوان</value>
+  </data>
+  <data name="NewsLetter.SendDate" xml:space="preserve">
+    <value>تاریخ شروع ارسال</value>
+  </data>
+  <data name="NewsLetter.SendTime" xml:space="preserve">
+    <value>ساعت ارسال</value>
+  </data>
+  <data name="NewsLetter.UserRoleIds" xml:space="preserve">
+    <value>نقش های کاربر</value>
+  </data>
+  <data name="NewsLetter.UserServiceIds" xml:space="preserve">
+    <value>سرویس های کاربر</value>
+  </data>
+  <data name="Template.IsNewsLetter" xml:space="preserve">
+    <value>خبرنامه</value>
+  </data>
+  <data name="NewsLetter.EndTime" xml:space="preserve">
+    <value>تا</value>
+  </data>
+  <data name="NewsLetter.StartTime" xml:space="preserve">
+    <value>زمان ارسال از</value>
+  </data>
+  <data name="Product.ProductAmenitiesToProduct" xml:space="preserve">
+    <value>امکانات جانبی محصول</value>
+  </data>
+  <data name="Product.ProductBidet" xml:space="preserve">
+    <value>قیمت محصول</value>
+  </data>
+  <data name="Product.ProductClass" xml:space="preserve">
+    <value>کلاس محصول</value>
+  </data>
+  <data name="Product.ProductName" xml:space="preserve">
+    <value>نام محصول</value>
+  </data>
+  <data name="Product.ProductProperty" xml:space="preserve">
+    <value>ویژگی های محصول</value>
+  </data>
+  <data name="Product.ProductTax" xml:space="preserve">
+    <value>مالیات محصول</value>
+  </data>
+  <data name="ProductType.CopyType" xml:space="preserve">
+    <value>طریقه نام گزاری محصولات زیرمجموعه</value>
+  </data>
+  <data name="ProductType.DeleteChar" xml:space="preserve">
+    <value>واژه های حذف کردنی</value>
+  </data>
+  <data name="ProductType.AddChar" xml:space="preserve">
+    <value>واژه های افزودنی</value>
+  </data>
+  <data name="ProductType.SourceChar" xml:space="preserve">
+    <value>واژه های فعلی</value>
+  </data>
+  <data name="ProductType.Destination" xml:space="preserve">
+    <value>واژه های جایگزین</value>
+  </data>
+  <data name="Order.UserId" xml:space="preserve">
+    <value>کاربر</value>
+  </data>
+  <data name="Order.Address" xml:space="preserve">
+    <value>آدرس</value>
+  </data>
+  <data name="Order.PostalCode" xml:space="preserve">
+    <value>کدپستی</value>
+  </data>
+  <data name="OrderDetail.OperationType" xml:space="preserve">
+    <value>نوع عملیات</value>
+  </data>
+  <data name="NewsLetter.ProductIds" xml:space="preserve">
+    <value>محصولات کاربر</value>
+  </data>
+  <data name="NewsLetter.Usernames" xml:space="preserve">
+    <value>کاربران</value>
+  </data>
+  <data name="AlertJob.Groups" xml:space="preserve">
+    <value>گروه دریافت کننده</value>
+  </data>
+  <data name="AlertJob.Receivers" xml:space="preserve">
+    <value>دریافت کنندگان</value>
+  </data>
+</root>

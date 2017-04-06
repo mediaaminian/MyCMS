@@ -1,0 +1,170 @@
+﻿<error errorId="e907141d-3bdf-4058-8c1a-53d4c4b2d231" application="/LM/W3SVC/2/ROOT" host="DESKTOP-NVBKUVG" type="System.MissingMethodException" message="No parameterless constructor defined for this object." source="mscorlib" detail="System.InvalidOperationException: An error occurred when trying to create a controller of type 'MyCMS.Web.Areas.Admin.Controllers.PropertyController'. Make sure that the controller has a parameterless public constructor. ---&gt; System.MissingMethodException: No parameterless constructor defined for this object.&#xD;&#xA;   at System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean&amp; canBeCached, RuntimeMethodHandleInternal&amp; ctor, Boolean&amp; bNeedSecurityCheck)&#xD;&#xA;   at System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark&amp; stackMark)&#xD;&#xA;   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark&amp; stackMark)&#xD;&#xA;   at System.Activator.CreateInstance(Type type, Boolean nonPublic)&#xD;&#xA;   at System.Activator.CreateInstance(Type type)&#xD;&#xA;   at System.Web.Mvc.DefaultControllerFactory.DefaultControllerActivator.Create(RequestContext requestContext, Type controllerType)&#xD;&#xA;   --- End of inner exception stack trace ---&#xD;&#xA;   at System.Web.Mvc.DefaultControllerFactory.DefaultControllerActivator.Create(RequestContext requestContext, Type controllerType)&#xD;&#xA;   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)&#xD;&#xA;   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController&amp; controller, IControllerFactory&amp; factory)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)&#xD;&#xA;   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" user="admin" time="2017-03-26T21:02:47.6615184Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate, sdch, br&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:en-US,en;q=0.8&#xD;&#xA;HTTP_COOKIE:i1r2i4s6b7l8u9e=21D16EF0641470EED0BE5F9755ACBF515805D97729FD2419E38CFE71892CC68D5A862C347258082F80D5B2A219A599B1B3F18A369B9AFD82E44CF4597A3C1580E1BFA21F1909A4972B317DCEDAC56B777304C168F692EC065A38CF312780A04CC54EF162FB1B5F23E93754A19C5B5389CD520A2E304F9204F555BBDB4AF7C097C71068D17FBF6C3F1B3E38E050034BFF1CFD9EC0A2F1271B5991B41358C725C6DE0ED9DD9024854454A75045E18E20C883C985BC7D501C6C9D6C6B0B679838ABC5FA003740FF110DA749F819C33AF3FB; __RequestVerificationToken=mpuDgU-wlmTQdo9bZqQYruaDKL8Qkv5n4W-N1Q5bpmqCKx3JOZJTbsuXdudcdp3yni9Z1O2m1ltQdKPqA5BYCNG0-IPKlVyvmToXC0QZARA1&#xD;&#xA;HTTP_HOST:localhost:18600&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.110 Safari/537.36&#xD;&#xA;HTTP_UPGRADE_INSECURE_REQUESTS:1&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Connection: keep-alive&#xD;&#xA;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8&#xD;&#xA;Accept-Encoding: gzip, deflate, sdch, br&#xD;&#xA;Accept-Language: en-US,en;q=0.8&#xD;&#xA;Cookie: i1r2i4s6b7l8u9e=21D16EF0641470EED0BE5F9755ACBF515805D97729FD2419E38CFE71892CC68D5A862C347258082F80D5B2A219A599B1B3F18A369B9AFD82E44CF4597A3C1580E1BFA21F1909A4972B317DCEDAC56B777304C168F692EC065A38CF312780A04CC54EF162FB1B5F23E93754A19C5B5389CD520A2E304F9204F555BBDB4AF7C097C71068D17FBF6C3F1B3E38E050034BFF1CFD9EC0A2F1271B5991B41358C725C6DE0ED9DD9024854454A75045E18E20C883C985BC7D501C6C9D6C6B0B679838ABC5FA003740FF110DA749F819C33AF3FB; __RequestVerificationToken=mpuDgU-wlmTQdo9bZqQYruaDKL8Qkv5n4W-N1Q5bpmqCKx3JOZJTbsuXdudcdp3yni9Z1O2m1ltQdKPqA5BYCNG0-IPKlVyvmToXC0QZARA1&#xD;&#xA;Host: localhost:18600&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.110 Safari/537.36&#xD;&#xA;Upgrade-Insecure-Requests: 1&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/2/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="H:\Main_Source_Code\MyCms-master\MyCMS.Web\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="MyCMSForms" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="admin" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="*****" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="admin" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="2" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/2" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/admin/property" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="H:\Main_Source_Code\MyCms-master\MyCMS.Web\admin\property" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="X-Requested-With=XMLHttpRequest" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="5738" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="GET" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/admin/property" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="18600" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/10.0" />
+    </item>
+    <item name="URL">
+      <value string="/admin/property" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate, sdch, br" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="en-US,en;q=0.8" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="i1r2i4s6b7l8u9e=21D16EF0641470EED0BE5F9755ACBF515805D97729FD2419E38CFE71892CC68D5A862C347258082F80D5B2A219A599B1B3F18A369B9AFD82E44CF4597A3C1580E1BFA21F1909A4972B317DCEDAC56B777304C168F692EC065A38CF312780A04CC54EF162FB1B5F23E93754A19C5B5389CD520A2E304F9204F555BBDB4AF7C097C71068D17FBF6C3F1B3E38E050034BFF1CFD9EC0A2F1271B5991B41358C725C6DE0ED9DD9024854454A75045E18E20C883C985BC7D501C6C9D6C6B0B679838ABC5FA003740FF110DA749F819C33AF3FB; __RequestVerificationToken=mpuDgU-wlmTQdo9bZqQYruaDKL8Qkv5n4W-N1Q5bpmqCKx3JOZJTbsuXdudcdp3yni9Z1O2m1ltQdKPqA5BYCNG0-IPKlVyvmToXC0QZARA1" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:18600" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.110 Safari/537.36" />
+    </item>
+    <item name="HTTP_UPGRADE_INSECURE_REQUESTS">
+      <value string="1" />
+    </item>
+  </serverVariables>
+  <queryString>
+    <item name="X-Requested-With">
+      <value string="XMLHttpRequest" />
+    </item>
+  </queryString>
+  <cookies>
+    <item name="i1r2i4s6b7l8u9e">
+      <value string="21D16EF0641470EED0BE5F9755ACBF515805D97729FD2419E38CFE71892CC68D5A862C347258082F80D5B2A219A599B1B3F18A369B9AFD82E44CF4597A3C1580E1BFA21F1909A4972B317DCEDAC56B777304C168F692EC065A38CF312780A04CC54EF162FB1B5F23E93754A19C5B5389CD520A2E304F9204F555BBDB4AF7C097C71068D17FBF6C3F1B3E38E050034BFF1CFD9EC0A2F1271B5991B41358C725C6DE0ED9DD9024854454A75045E18E20C883C985BC7D501C6C9D6C6B0B679838ABC5FA003740FF110DA749F819C33AF3FB" />
+    </item>
+    <item name="__RequestVerificationToken">
+      <value string="mpuDgU-wlmTQdo9bZqQYruaDKL8Qkv5n4W-N1Q5bpmqCKx3JOZJTbsuXdudcdp3yni9Z1O2m1ltQdKPqA5BYCNG0-IPKlVyvmToXC0QZARA1" />
+    </item>
+  </cookies>
+</error>

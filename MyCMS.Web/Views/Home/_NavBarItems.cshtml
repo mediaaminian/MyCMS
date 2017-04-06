@@ -1,0 +1,54 @@
+﻿@model IEnumerable<MyCMS.DomainClasses.Entities.Page>
+@helper ShowNavBar(IEnumerable<MyCMS.DomainClasses.Entities.Page> pages,int? parentID)
+{
+
+foreach (var page in pages.Where(x=>x.ParentId == parentID).OrderBy(x => x.Order))
+{
+    if (page != null)
+    {
+        var liClass = "";
+        if (page.Children.Count > 0)
+        {
+            liClass = "class='sub-menu'";
+        }
+        if (string.IsNullOrEmpty(page.ExternalLink))
+        {
+            if (page.Body != null && page.Body.Trim() != "")
+            {
+                <text><li @liClass><a href="@Url.Action(MVC.Page.ActionNames.Index, MVC.Page.Name, new { id = page.Id, title = Html.ResolveTitleForUrl(page.Title) })"><div><i class="@page.IconClass" style="font-size: 14px !important;"></i>@page.Title</div></a></li></text>
+            }
+            else
+            {
+                if (page.Children.Count == 0)
+                {
+                <text><li @liClass><a href="#"><div><i class="@page.IconClass" style="font-size: 14px !important;"></i>@page.Title</div></a></li></text>
+                }
+                else
+                {
+                    <text><li @liClass><a href="#"><div><i class="@page.IconClass" style="font-size: 14px !important;"></i>@page.Title</div></a></text>
+                        @:<ul style="display: none;">
+                            @ShowNavBar(page.Children,page.Id)
+                        @:</ul></li>
+
+                    }
+                }
+        }
+        else
+        {
+            if (page.Children.Count == 0)
+            {
+                <text><li @liClass><a href="@page.ExternalLink"><div><i class="@page.IconClass" style="font-size: 14px !important;"></i>@page.Title</div></a></li></text>
+            }
+            else
+            {
+                <text><li @liClass><a href="@page.ExternalLink"><div><i class="@page.IconClass" style="font-size: 14px !important;"></i>@page.Title</div></a></text>
+                @:<ul style="display: none;">
+                    @ShowNavBar(page.Children, page.Id)
+                    @:</ul></li>
+            }
+        }
+     }
+  }
+}
+
+@ShowNavBar(Model,null)

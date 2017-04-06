@@ -1,0 +1,38 @@
+﻿
+@model IEnumerable<MyCMS.Model.AdminModel.PostDataTableModel>
+
+
+<div class="container clear-bottommargin clearfix">
+    <div class="row">
+        
+        @foreach (var post in Model)
+        {
+            <div class="col-md-4 col-sm-4 bottommargin">
+                <div class="ipost clearfix">
+                    <div class="entry-image">
+                        <a href="@Url.RouteUrl("KBDetailRoute", new { action = MVC.Post.ActionNames.Index,controller = MVC.Post.Name, Id = post.Id})"><img class="image_fade kbborder" src="@post.Picture" alt="Image"></a>
+                    </div>
+                    <div class="entry-title">
+                        <h3 class="homewikititle"><a href="@Url.RouteUrl("KBDetailRoute", new { action = MVC.Post.ActionNames.Index,controller = MVC.Post.Name, Id = post.Id})">@post.Title</a></h3>
+                    </div>
+                    <ul class="entry-meta clearfix">
+                        <li><i class="icon-calendar3 calc"></i>@Html.ConvertToPersianDateTime(post.PostedDate, "M")</li>
+                    </ul>
+                    <div class="entry-content homewikip">
+                        <p>
+                            @post.Description
+                        </p>
+                        <br />
+                        <br />
+                        <a class="kbcon" href="@Url.RouteUrl("KBDetailRoute", new { action = MVC.Post.ActionNames.Index,controller = MVC.Post.Name, Id = post.Id})" target="">ادامه ...</a>
+                           @*@Html.RouteLink("ادامه ...", "KBDetailRoute", new { Id = post.Id }, new { @class = "kbcon" })*@                           
+                    </div>
+                </div>
+            </div>
+
+        }
+
+
+    </div>
+</div>
+

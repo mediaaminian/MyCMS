@@ -1,0 +1,51 @@
+﻿<#@ template debug="true" hostspecific="false" language="C#" #>
+<#@ output extension=".cs" #>
+<# 
+string[] faults=new[] {
+	"DataBase",
+	"InvalidFormat",
+	"DuplicateName",
+	"InvalidOperation",
+	"NotFound",
+	"AccessDenied",
+	"InvalidArgument",
+	"InvalidName"
+};
+
+#>
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Runtime.Serialization;
+using System.ServiceModel;
+using System.Diagnostics;
+
+namespace ERP.Common.Exceptions
+{
+<#
+foreach(var fault in faults){
+#>
+    
+	[DataContract]
+    public partial class <#= fault #> : Fault
+    {
+        public <#= fault #> (string description = null, Fault innerFault = null, int code = 0): base(description, innerFault, code) { }
+        [DebuggerHidden]
+        new public static void ThrowException(string description = null, Fault innerFault = null, int code = 0)
+        {
+            throw Exception(description, innerFault, code);
+        }
+        new public static FaultException< <#= fault #> > Exception(string description = null, Fault innerFault = null, int code = 0)
+        {
+            return new FaultException< <#= fault #> >(new <#= fault #> (description, innerFault, code), description);
+        }
+		new public static FaultException< <#= fault #> > Exception(string description, params object[] args)
+        {
+            return new FaultException< <#= fault #> >(new <#= fault #> (string.Format(description,args),null,0), string.Format(description,args));
+        }
+
+    }
+<# } #>
+
+}

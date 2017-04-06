@@ -1,0 +1,39 @@
+﻿@model IEnumerable<MyCMS.DomainClasses.Entities.Message>
+
+@if (Model.Count() < 1)
+{
+    <div class="msg">موردی برای نمایش وجود ندارد</div>
+}
+else
+{
+    <div id="user-table" class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    @*<td></td>*@
+                    <td>عنوان</td>
+                    @*<td>ارسال کننده</td>
+                        <td>ایمیل</td>*@
+                    <td style="text-align: center;width:200px">عملیات</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var message in Model)
+                {
+                    <tr>
+                        @*<td>
+                                <input type="checkbox" name="PostsId" value="@message.Id" />
+                            </td>*@
+                        <td>@message.Subject</td>
+                        @*<td>@message.User.UserName</td>
+                            <td>@message.User.Email</td>*@
+                        <td>
+                            @Ajax.ButtonDialog("مشاهده", Url.Action(MVC.Admin.ContactUs.ActionNames.Detail, MVC.Admin.ContactUs.Name), "GET", "id=" + message.Id, "dialog", new DialogOptions { Height = "600", Width = "800", IsModal = "true", Title = "مشاهده جزئیات", ShowDir = "down", ShowEffect = "drop", HideEffect = "puff", HideDir = "up" }, "btn btn-primary")
+                            @Ajax.ButtonDialog("حذف", Url.Action(MVC.Admin.ContactUs.ActionNames.ConfirmDelete, MVC.Admin.ContactUs.Name), "GET", "id=" + message.Id, "dialog", new DialogOptions { Height = "200", Width = "450", IsModal = "true", Title = "حذف اسلاید", ShowDir = "down", ShowEffect = "explode", HideEffect = "explode" }, "btn btn-danger")
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}

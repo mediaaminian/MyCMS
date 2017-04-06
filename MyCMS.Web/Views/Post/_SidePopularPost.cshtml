@@ -1,0 +1,27 @@
+﻿
+@model IEnumerable<MyCMS.Model.AdminModel.PostDataTableModel>
+
+<h4>پر بیننده ترین مطالب</h4>
+<div id="post-list-footer">
+
+   @foreach (var post in Model)
+   {
+
+    <div class="spost clearfix">
+        <div class="entry-image">
+            <a href="@Url.RouteUrl("KBDetailRoute", new { action = MVC.Post.ActionNames.Index,controller = MVC.Post.Name, Id = post.Id})" class="nobg"><img src="@post.Picture" alt="@post.Title" ></a>
+        </div>
+        <div class="entry-c">
+            <div class="entry-title">
+                <h4><a href="@Url.RouteUrl("KBDetailRoute", new { action = MVC.Post.ActionNames.Index,controller = MVC.Post.Name, Id = post.Id})">@post.Title</a></h4>
+            </div>
+            <ul class="entry-meta">
+                <li><i class="icon-calendar3 calc"></i>@Html.ConvertToPersianDateTime(post.PostedDate, "M")</li>
+            </ul>
+        </div>
+    </div>
+
+   }
+
+
+</div>

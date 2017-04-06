@@ -1,0 +1,262 @@
+﻿@model MyCMS.Model.ContactUsModel
+@using CaptchaMvc.HtmlHelpers
+
+@{
+    ViewBag.Title = "تماس با ما";
+}
+@section styles
+{
+    @Styles.Render("~/Content/redactor/css")
+    <style>
+        div#contactUsDiv #CaptchaInputText {
+            margin-right: 80px;
+        }
+#CaptchaInputText {
+            display: block;
+            width: 180px;
+            height: 51px;
+            padding: 7px 7px;
+            font-size: 13px;
+            line-height: 1.42857143;
+            color: #555555;
+            background-color: #ffffff;
+            background-image: none;
+            border: 2px solid #DDD;
+            border-radius: 0 !important;
+            -webkit-transition: border-color ease-in-out .15s;
+            -o-transition: border-color ease-in-out .15s;
+            transition: border-color ease-in-out .15s;
+            font-family: Yekan;
+            /*margin: -15px -6px 0 20px;*/
+        }
+    .col_one_one button {float:left}
+        /*
+
+        .col_submit div {
+            float: right;
+            margin: -5px 0 0 20px;
+        }
+
+        .button.button-3d {
+            border-radius: 3px;
+            border-bottom: 3px solid rgba(0, 0, 0, 0.15);
+            -webkit-transition: none;
+            -o-transition: none;
+            transition: none;
+            height: 51px;
+            margin-top: -9px !important;
+            margin-right: -30px !important;
+        }*/
+    </style>
+}
+@Html.Action(MVC.Home.ActionNames.Breadcrumb, MVC.Home.Name)
+@*<section id="google-map" class="gmap slider-parallax"></section>
+
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript" src="/Content/js/jquery.gmap.js"></script>
+
+    <script type="text/javascript">
+            $('#google-map').gMap({
+
+                address: 'Ferdows Blvd, Tehran',
+                maptype: 'ROADMAP',
+                zoom: 16,
+                markers: [{
+                    address: "Ferdows Blvd, Tehran",
+                    html: '<div style="width: 300px;float:left;text-align:left;">Ferdows Blvd, Tehran</div>',
+                    icon: {
+                        image: "images/icons/map-icon-red.png",
+                        iconsize: [32, 39],
+                        iconanchor: [13, 39]
+                    }
+                }],
+                doubleclickzoom: true,
+                controls: {
+                    panControl: true,
+                    zoomControl: true,
+                    mapTypeControl: true,
+                    scaleControl: false,
+                    streetViewControl: false,
+                    overviewMapControl: false
+                }
+
+            });
+    </script>*@
+<section id="content">
+
+    <div class="content-wrap">
+
+        <div class="container clearfix">
+
+            <!-- Postcontent
+                ============================================= -->
+            <div class="postcontent nobottommargin">
+
+                <div id="contact-form-result" data-notify-type="success" data-notify-msg="<i class=icon-ok-sign></i> پیام با موفقیت ارسال شد"></div>
+
+                @using (Ajax.BeginForm(MVC.ContactUs.ActionNames.Submit, MVC.ContactUs.Name, null, new AjaxOptions { HttpMethod = "Post", UpdateTargetId = "sendResult", LoadingElementDuration = 300, LoadingElementId = "loadingMessage" }, new { @class = "nobottommargin", id = "template-contactform" }))
+            {
+                    @Html.AntiForgeryToken()
+                    <div class="form-process"></div>
+
+                    <div class="col_one_third">
+                        <label for="Name">نام <small>*</small></label>
+                        @Html.TextBoxFor(c => c.Name, new { placeholder = "نام", @class = "sm-form-control required" })
+                    </div>
+
+                    <div class="col_one_third">
+                        <label for="Email">ایمیل <small>*</small></label>
+                        @Html.TextBoxFor(c => c.Email, new { placeholder = "ایمیل", @class = "required email sm-form-control" })
+                    </div>
+
+                    <div class="col_one_third col_last">
+                        <label for="Phone">تلفن</label>
+                        @Html.TextBoxFor(c => c.Phone, new { placeholder = "تلفن", @class = "sm-form-control" })
+                    </div>
+
+                    <div class="clear"></div>
+
+                    <div class="col_one_third">
+                        <label for="Subject">موضوع <small>*</small></label>
+                        @Html.TextBoxFor(c => c.Subject, new { placeholder = "موضوع", @class = "required sm-form-control" })
+                    </div>
+                    <div class="col_one_third">
+                        <label for="CompanyName">نام شرکت <small>*</small></label>
+                        @Html.TextBoxFor(c => c.CompanyName, new { placeholder = "نام شرکت", @class = "required sm-form-control" })
+                    </div>
+
+                    <div class="col_one_third col_last">
+                        <label for="Unit">بخش</label>
+                        <select id="Unit" name="Unit" class="sm-form-control">
+                            <option value="روابط عمومی">روابط عمومی</option>
+                            <option value="مدیر عامل">مدیر عامل</option>
+                        </select>
+                    </div>
+
+                    <div class="clear"></div>
+
+                    <div class="col_full">
+                        <label for="Body">متن پیام<small>*</small></label>
+                        @Html.TextAreaFor(c => c.Body, new { id = "messageBody", placeholder = "متن پیام", @class = "required sm-form-control", rows = "10", cols = "30", @style = "height:140px" })
+                    </div>
+
+                    <div class="col_full hidden">
+                        <input type="text" id="template-contactform-botcheck" name="template-contactform-botcheck" value="" class="sm-form-control" />
+                    </div>
+
+                    <div class="col_full col_submit">
+                        <div class="col_one_third" >
+                            @Html.Captcha(5, MVC.Shared.Views.DefaultCaptcha)
+                        </div>
+                        <div class="col_one_one" >
+                            <button class="button button-3d nomargin" type="submit" id="template-contactform-submit" name="template-contactform-submit" value="submit">ارسـال پیـام</button>
+                        </div>
+                    </div>
+                    <div id="sendResult" style="padding: 10px; margin: 5px;">@Html.ValidationSummary()</div>
+
+                }
+
+                <script type="text/javascript">
+                    $("#template-contactform").validate({
+                        submitHandler: function (form) {
+                            $('.form-process').fadeIn();
+                            $(form).ajaxSubmit({
+                                target: '#contact-form-result',
+                                success: function () {
+                                    $('.form-process').fadeOut();
+                                    $(form).find('.sm-form-control').val('');
+                                    $('#contact-form-result').attr('data-notify-msg', $('#contact-form-result').html()).html('');
+                                    SEMICOLON.widget.notifications($('#contact-form-result'));
+                                }
+                            });
+                        }
+                    });
+                </script>
+
+            </div>
+
+            <!-- .postcontent end -->
+            <!-- Sidebar
+                ============================================= -->
+            <div class="sidebar col_last nobottommargin">
+
+                <address>
+                    @Html.Raw(ViewBag.CompanyAddress)
+
+                </address>
+                <abbr title="Phone Number"><strong>تلفن :</strong></abbr>@ViewBag.Phone<br>
+                <abbr title="Email Address"><strong>ایمیل :</strong>@ViewBag.eMail</abbr>
+
+                <div class="widget noborder notoppadding">
+
+
+                </div>
+
+                <div class="widget noborder notoppadding">
+
+                    <a href="@ViewBag.Facebook" target="_blank" class="social-icon si-small si-dark si-facebook">
+                        <i class="icon-facebook"></i>
+                        <i class="icon-facebook"></i>
+                    </a>
+
+                    <a href="@ViewBag.Linkedin" target="_blank" class="social-icon si-small si-dark si-linkedin">
+                        <i class="icon-linkedin"></i>
+                        <i class="icon-linkedin"></i>
+                    </a>
+
+                    <a href="@ViewBag.GooglePlus" target="_blank" class="social-icon si-small si-dark si-gplus">
+                        <i class="icon-gplus"></i>
+                        <i class="icon-gplus"></i>
+                    </a>
+
+                </div>
+
+            </div>
+            <!-- .sidebar end -->
+
+        </div>
+
+    </div>
+
+</section>
+@*@if (User.Identity.IsAuthenticated)
+    {
+        <div style="padding: 10px;" id="contactUsDiv">
+            <fieldset>
+                <legend>تماس با ما</legend>
+                @using (Ajax.BeginForm(MVC.ContactUs.ActionNames.Submit, MVC.ContactUs.Name, null, new AjaxOptions { HttpMethod = "Post", UpdateTargetId = "sendResult", LoadingElementDuration = 300, LoadingElementId = "loadingMessage" }, new { @class = "form-horizontal", id = "frmContactUs" }))
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="control-group">
+                        <label class="control-label" for="Subject">موضوع</label>
+                        <div class="controls">
+                            @Html.TextBoxFor(c => c.Subject, new { placeholder = "موضوع", @class = "input-xlarge" })
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label for="Body">متن</label>
+                        <div class="controls" style="margin-right: 0;">
+                            @Html.TextAreaFor(c => c.Body, new { id = "messageBody" })
+                        </div>
+                    </div>
+                    <div>
+                        <input type="submit" name="btnSubmit" class="btn btn-success" value="ارسال" />
+                    </div>
+                    <div id="sendResult" style="padding: 10px; margin: 5px;">@Html.ValidationSummary()</div>
+                }
+            </fieldset>
+        </div>
+    }
+    else
+    {
+        <div id="alert" class="alert alert-error">
+            <button type="button" class="close" data-dismiss="alert">×</button>برای ارتباط با ما باید عضو سایت شده باشید.
+        </div>
+    }
+    @section scripts
+    {
+        @Scripts.Render("~/bundles/redactor")
+        <script type="text/javascript">
+            $('#messageBody').redactor({ direction: 'rtl', minHeight: 200 });
+        </script>
+    }*@

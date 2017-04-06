@@ -1,0 +1,307 @@
+﻿@model IEnumerable<MyCMS.Model.BooksListModel>
+@section Slider{
+    @Html.Action(MVC.Home.ActionNames.Slider, MVC.Home.Name)
+}
+
+
+
+<div class="container clearfix">
+    <div class="row clearfix">
+
+        <div class="col-lg-5">
+            <div class="heading-block topmargin">
+                <h1 class="hometitle1">محاســبه آنلایـن<br>حقــوق و عـوارض گمـرکــی</h1>
+            </div>
+            <p class="lead" style="text-align: justify;">
+                بازرگانان عزیز از این پس میتوانند با استفاده از فرم محاسبه حقوق و عوارض گمرکی و تنها چند کلیک به سرعت حقوق و عوارض گمرکی کالاهای خود را محاسبه نمایند. استفاده از این فرم کاملا رایگان بوده و بر روی تمای دستگاهها کاملا قابل اجراست.
+            </p>
+            @*@Html.ActionLink("شــروع محــاسبه", MVC.Currency.ActionNames.DutyCurrencyCalculator, MVC.Currency.Name, null, new { @class = "button button-desc button-border button-rounded center", @style = "margin-top:25px;font-size:16px;float:left;font-size: 17px;padding-bottom: 16px;" })*@
+            <a href="@Url.RouteUrl("DutyCalculatorRoute", new { action = MVC.Currency.ActionNames.DutyCurrencyCalculator, controller = MVC.Currency.Name })" class="button button-desc button-border button-rounded center" style="margin-top:25px;font-size:16px;float:left;font-size: 17px;padding-bottom: 16px;">شــروع محــاسبه</a>
+
+        </div>
+
+        <div class="col-lg-7">
+
+            <div style="position: relative; margin-bottom: -60px;" class="ohidden" data-height-lg="426" data-height-md="567" data-height-sm="470" data-height-xs="287" data-height-xxs="183">
+                <img src="/Content/images/services/main-fbrowser.png" style="position: absolute; top: 0; left: 0;" data-animate="fadeInUp" data-delay="100" alt="Chrome">
+                <img src="/Content/images/services/main-fmobile.png" style="position: absolute; top: 0; left: 0;" data-animate="fadeInUp" data-delay="400" alt="iPad">
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<div class="section nobottommargin" style="background-color: #fbfbfb;background-image:url('/Content/images/material/tavan-worldmap.png');background-position:center center;background-repeat:no-repeat;border-bottom: 1px solid #e6e6e6;">
+    <div class="container clear-bottommargin clearfix">
+
+        <div class="row topmargin-sm clearfix" style="margin-top:50px !important;">
+            <div class="row bottommargin-lg">
+
+                <div class="heading-block center">
+                    <h2 style="font-size: 32px !important;letter-spacing: -0.6px !important;word-spacing: -5px !important;">مسیـــر  را برای شمــا همــوار میکنــیم</h2>
+                    <span class="divcenter" style="font-size: 17px !important;font-family: Yekan2 !important;line-height: 32px !important;letter-spacing: -0.40px !important;color:#3e3e3e !important;">
+                        همکـــاران مـا  در توان ترخیــص بی وفــقه در تلا شــــند تا بدون اتـــلاف وقت و با بهره گیـــری از ربع قـــرن ســـابقه ، کالاهای مشتریان
+                        خود را در اســـرع وقت و با بهترین شــــرایط  قـــانونی و اقتصــادی  به صاحبین کالا تحــــویل نمــایند
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row common-heights">
+
+    <div class="col-md-6 center col-padding" style="min-height:686px;background: url('/Content/images/material/main-bg.jpg') center center no-repeat; background-size: cover;">
+        <div>&nbsp;</div>
+    </div>
+
+    <div class="col-md-6 center col-padding" style="min-height:686px;background-color: #F5F5F5;">
+
+        <div style="text-align:right;">
+
+            <div class="heading-block slctus topmargin">
+                <h1 class="hometitle3">توان ترخیـص<br />مشــاور و مجـری امور گمرکـی</h1>
+            </div>
+            <p class="lead" style="text-align: justify ;">
+                مشاوره در امور ترخیص و واردات بازرگانان عزیز از این پس میتوانند با استفاده از فرم محاسبه حقوق و عوارض گمرکی و تنها چند کلیک به سرعت حقوق و عوارض گمرکی کالاهای خود را محاسبه نمایند. استفاده از این فرم کاملا رایگان بوده و بر روی تمای دستگاهها کاملا قابل
+                اجراست.
+            </p>
+            <br /><br />
+
+            <div class="col_half nobottommargin home-list">
+                <ul class="iconlist iconlist-color" style="line-height:2;">
+                    <li><i class="icon-ok orange"></i> مشاوره در امور ترخیص و واردات</li>
+                    <li><i class="icon-ok orange"></i>انجام حواله ارزی</li>
+                    <li><i class="icon-ok orange"></i>دارای انبار استریپ در بندر عباس</li>
+                    <li><i class="icon-ok orange"></i>ترخیص تخصصی تجهیزات پزشکی</li>
+                </ul>
+            </div>
+
+            <div class="col_half nobottommargin home-list col_last" style="line-height:2;">
+                <ul class="iconlist iconlist-color">
+                    <li><i class="icon-ok orange"></i>ترخیص کالا در کمترین زمان ممکن</li>
+                    <li><i class="icon-ok orange"></i>حمل از مبدا و تحویل تا مقصد</li>
+                    <li><i class="icon-ok orange"></i>ترخیص تخصصی ماشین الات چاپ - کاغذ - مرکب و ملزومات چاپی</li>
+                </ul>
+            </div>
+            @*@Html.ActionLink("درباره ما بیشتر بدانید", MVC.Page.ActionNames.Index, MVC.Page.Name,new { id = 1, title=}, new { @class = "button button-desc button-border button-rounded center", @style = "margin-top:25px;font-size:16px;float:left;font-size: 17px;padding-bottom: 16px;" })*@
+            
+            <a href="@Url.RouteUrl("PageKeywordRoute", new { keyword = "About" })"  class="button button-desc button-border button-rounded center" style="margin-top:25px;font-size: 16px;" >درباره ما بیشتر بدانید</a>
+            @*@Html.RouteLink("ادامه ...", "KBDetailRoute", new { Id = post.Id }, new { @class = "kbcon" })*@
+
+
+            @*<a href="about.aspx" class="button button-desc button-border button-rounded center" style="margin-top:25px;font-size: 16px;">
+                <div>درباره ما بیشتر بدانید</div>
+            </a>*@
+
+        </div>
+    </div>
+</div>
+
+<div class="section dark nobottommargin hidden-xs hidden-sm" style="background-image: url('/Content/images/material/tavan-telegram.jpg');height:418px;margin:0px;padding:0px;background-position: center center;background-color: white;background-size:;">
+    <div class="content-wrap" style="background-color:transparent;">
+        <div class="container clearfix">
+            <div class="col-lg-5">
+                <div class="heading-block" style="margin:19px 0px -5px 0px !important;">
+                    <h1 class="hometitle2">هـم اکنون  به  کانال اختصاصی<br />توان ترخیص<br />در تلگـرام  بپیوندید</h1>
+                </div>
+                <p class="lead" style="text-align: justify;">
+                    آخرین اخبار تجاری ، اقتصادی ، قوانین گمرکی و ترخیص کالا را در کانال اختصاصی
+                    <br />توان ترخیص دنبـال کنید
+                </p>
+                <a target="_blank" href="http://telegram.me/MyCMS" class="button button-desc button-telegram button-border button-rounded center" style="margin-top:11px;">
+                    <div>پیوستن به کانال</div>
+                </a>
+            </div>
+            <div class="col-lg-7">
+            </div>
+        </div>
+    </div>
+</div>
+
+@Html.Action(MVC.Currency.ActionNames.TopCurrency, MVC.Currency.Name, new { count = 4})
+
+<div class="container clearfix">
+    <div class="col_one_third bottommargin-sm center">
+        <img data-animate="fadeInLeft" src="/Content/images/services/iphone6.png" alt="Iphone">
+    </div>
+    <div class="col_two_third bottommargin-sm col_last">
+        <div class="heading-block topmargin-sm">
+            <h3>توان ترخیــص انتخـابی مطمـئن</h3>
+        </div>
+        <p>
+            توان ترخیص با دارا بودن شبکه گسترده در ایران و سرتاسر جهان سعی بر آن دارد تا با هزینه های متناسب با شرایط کلیه مشتریان خود بهترین سرویس را به هموطنان خود ارائه کند هزینه های بهینه و متناسب با کلیه نیازها یکی از بزرگترین دلایل متمایز بودن
+            این شرکت از سایر شرکت های فعال در این حوزه میباشد.
+        </p>
+        <p>
+            مشاوران و کارشناسان مجموعه توان ترخیص در کلیـه مراحل خرید در کنار شما خواهند بود و شما در هر ساعات از شبانه روز میتوانیداز طریق ناحیه کاربری اقدام به ثبت درخواست ، استعلام ، پیگیری کنید و تجربه خوبی از پیوستن به خانـواده بزرگ های توان ترخیص را داشته باشید
+            .
+        </p>
+        <a href="http://crm.MyCMS.ir" target="_blank" class="button button-border button-dark button-rounded button-large noleftmargin topmargin-sm">ورود به ناحیه کاربری</a>
+    </div>
+</div>
+<div class="section parallax dark nobottommargin" style="background-image: url('/Content/images/material/testimonial.jpg'); padding: 85px 0;margin-top: 30px;" data-stellar-background-ratio="0.4">
+    @*<div class="video-wrap">
+        <video id="slide-video" poster="/Content/images/videos/explore-poster.jpg" preload="auto" loop autoplay muted>
+            <source src='/Content/images/videos/deskwork.webm' type='video/webm' />
+            <source src='/Content/images/videos/deskwork.mp4' type='video/mp4' />
+        </video>
+        <div class="video-overlay" style="background-color: rgba(0,0,0,0.55);"></div>
+    </div>*@
+
+    <div class="heading-block center">
+        <h3 style="font-size:32px;">مشتریان ما درباره ما چه میگویند</h3>
+    </div>
+
+    <div class="fslider testimonial testimonial-full" data-animation="fade" data-arrows="false">
+        <div class="flexslider">
+            <div class="slider-wrap">
+                <div class="slide">
+                    <div class="testi-image c-white">
+                        <img src="/Content/images/testimonials/3.jpg">
+                    </div>
+
+                    <div class="testi-content c-white">
+                        <p>
+                            نظر به همکاری صمیمانه سه ساله شرکت اوژنگ با توان ترخیص تا کنون ، خالی از لطف نمی باشد که مراتب رضایت خود را به اطلاع آن شرکت محترم برسانیم.
+
+                        </p>
+                        <div class="testi-meta">
+                            ایمان صادقیان
+                            <span>رییس هیات مدیره اوژنگ</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="testi-image">
+                        <img src="/Content/images/testimonials/2.jpg">
+                    </div>
+                    <div class="testi-content c-white">
+                        <p>
+                            احتراماً بدینوسیله مراتب رضایتمندی خود را از عملکرد توان ترخیص در خصوص انجام امور گمرکی شرکت و نیز پشتیبانی و ارائه خدمات مربوطه اعلام میدارم.
+                        </p>
+                        <div class="testi-meta">
+                            پیمان فراهانی
+                            <span>جانشین مدیر عامل دیتالایف گیفت</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="testi-image">
+                        <img src="/Content/images/testimonials/1.jpg">
+                    </div>
+                    <div class="testi-content c-white">
+                        <p>
+                            بدینوسیله از همکاری صمیمانه و پیگیری مداوم شما در زمینه مشاوره امور گمرکی شرکت و خدمات مرتبط با آن قدردانی می‌نماییم.
+                        </p>
+                        <div class="testi-meta">
+                            محمد علی تبریزی
+                            <span>مدیر عامل شرکت ناروین کالا</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="section notopmargin notopborder" style="background-color:#fff !important;margin-bottom: 0;">
+    <div class="container clearfix">
+        <div class="heading-block center nomargin kbd">
+            <h3>آخرین مطــالب دانشـــنامه</h3>
+        </div>
+    </div>
+</div>
+@Html.Action(MVC.Post.ActionNames.LatestPost, MVC.Post.Name)
+
+<div class="section cstmrs" style="margin-bottom: 0;background-color: #fbfbfb !important;">
+    <div class="container clearfix">
+
+        <div class="heading-block center nomargin">
+            <h3>مشـتریان توان ترخـیص</h3>
+        </div>
+    </div>
+</div>
+
+<div class="" style="background-color: #fbfbfb !important;padding-bottom:70px;">
+    <div class="container clearfix" style="background-color: #fbfbfb !important;">
+        <div id="oc-clients" class="owl-carousel image-carousel">
+
+            <div class="oc-item">
+                <a href=""><img src="/Content/images/clients/1.png" alt=""></a>
+            </div>
+            <div class="oc-item">
+                <a href=""><img src="/Content/images/clients/2.png" alt=""></a>
+            </div>
+            <div class="oc-item">
+                <a href=""><img src="/Content/images/clients/3.png" alt=""></a>
+            </div>
+            <div class="oc-item">
+                <a href=""><img src="/Content/images/clients/4.png" alt=""></a>
+            </div>
+            <div class="oc-item">
+                <a href=""><img src="/Content/images/clients/5.png" alt=""></a>
+            </div>
+            <div class="oc-item">
+                <a href=""><img src="/Content/images/clients/6.png" alt=""></a>
+            </div>
+            <div class="oc-item">
+                <a href=""><img src="/Content/images/clients/7.png" alt=""></a>
+            </div>
+            <div class="oc-item">
+                <a href=""><img src="/Content/images/clients/8.png" alt=""></a>
+            </div>
+            <div class="oc-item">
+                <a href=""><img src="/Content/images/clients/9.png" alt=""></a>
+            </div>
+
+        </div>
+
+        <script type="text/javascript">
+                    jQuery(document).ready(function($) {
+
+                        var ocClients = $("#oc-clients");
+
+                        ocClients.owlCarousel({
+                            rtl: true,
+                            margin: 60,
+                            loop: true,
+                            nav: false,
+                            autoplay: true,
+                            dots: false,
+                            autoplayHoverPause: true,
+                            responsive: {
+                                0: {
+                                    items: 2
+                                },
+                                480: {
+                                    items: 3
+                                },
+                                768: {
+                                    items: 4
+                                },
+                                992: {
+                                    items: 5
+                                },
+                                1200: {
+                                    items: 6
+                                }
+                            }
+                        });
+
+                    });
+        </script>
+    </div>
+</div>
+@*<fieldset>
+    <legend style="text-align: right;">تازه ترین کتاب ها</legend>
+    @{ Html.RenderPartial(MVC.Home.Views._BooksList, Model);}
+    <div id="MoreInfoDiv"></div>
+    <!-- begin page navigation section -->
+    <div style="text-align: center;">
+        <span id="moreInfoButton" href="@Url.Action(MVC.Home.ActionNames.BooksList, MVC.Home.Name)" style="width: 70%" class="btn btn-success" rel="nofollow">بیشتر</span>
+    </div>
+    <!-- end page navigation section -->
+</fieldset>*@

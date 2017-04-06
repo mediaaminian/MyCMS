@@ -1,0 +1,171 @@
+﻿<error errorId="f2f6e803-c394-4ae1-bb87-b29e6b672af5" application="/LM/W3SVC/2/ROOT" host="DESKTOP-NVBKUVG" type="System.Data.SqlClient.SqlException" message="Introducing FOREIGN KEY constraint 'FK_dbo.ProductTypes_dbo.ProductTypeGroups_ProductTypeGroupID' on table 'ProductTypes' may cause cycles or multiple cascade paths. Specify ON DELETE NO ACTION or ON UPDATE NO ACTION, or modify other FOREIGN KEY constraints.&#xD;&#xA;Could not create constraint or index. See previous errors." source=".Net SqlClient Data Provider" detail="System.Data.SqlClient.SqlException (0x80131904): Introducing FOREIGN KEY constraint 'FK_dbo.ProductTypes_dbo.ProductTypeGroups_ProductTypeGroupID' on table 'ProductTypes' may cause cycles or multiple cascade paths. Specify ON DELETE NO ACTION or ON UPDATE NO ACTION, or modify other FOREIGN KEY constraints.&#xD;&#xA;Could not create constraint or index. See previous errors.&#xD;&#xA;   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)&#xD;&#xA;   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)&#xD;&#xA;   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)&#xD;&#xA;   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean&amp; dataReady)&#xD;&#xA;   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)&#xD;&#xA;   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean&amp; usedCache, Boolean asyncWrite, Boolean inRetry)&#xD;&#xA;   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()&#xD;&#xA;   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TInterceptionContext,TResult](Func`1 operation, TInterceptionContext interceptionContext, Action`1 executing, Action`1 executed)&#xD;&#xA;   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.NonQuery(DbCommand command, DbCommandInterceptionContext interceptionContext)&#xD;&#xA;   at System.Data.Entity.Internal.InterceptableDbCommand.ExecuteNonQuery()&#xD;&#xA;   at System.Data.Entity.Migrations.DbMigrator.ExecuteSql(DbTransaction transaction, MigrationStatement migrationStatement)&#xD;&#xA;   at System.Data.Entity.Migrations.DbMigrator.ExecuteStatementsInternal(IEnumerable`1 migrationStatements, DbConnection connection)&#xD;&#xA;   at System.Data.Entity.Migrations.DbMigrator.&lt;&gt;c__DisplayClass32.&lt;ExecuteStatements&gt;b__2e()&#xD;&#xA;   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.&lt;&gt;c__DisplayClass1.&lt;Execute&gt;b__0()&#xD;&#xA;   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)&#xD;&#xA;   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute(Action operation)&#xD;&#xA;   at System.Data.Entity.Migrations.DbMigrator.ExecuteStatements(IEnumerable`1 migrationStatements)&#xD;&#xA;   at System.Data.Entity.Migrations.DbMigrator.ExecuteOperations(String migrationId, XDocument targetModel, IEnumerable`1 operations, IEnumerable`1 systemOperations, Boolean downgrading, Boolean auto)&#xD;&#xA;   at System.Data.Entity.Migrations.DbMigrator.AutoMigrate(String migrationId, XDocument sourceModel, XDocument targetModel, Boolean downgrading)&#xD;&#xA;   at System.Data.Entity.Migrations.DbMigrator.Upgrade(IEnumerable`1 pendingMigrations, String targetMigrationId, String lastMigrationId)&#xD;&#xA;   at System.Data.Entity.Migrations.DbMigrator.UpdateInternal(String targetMigration)&#xD;&#xA;   at System.Data.Entity.Migrations.DbMigrator.&lt;&gt;c__DisplayClassc.&lt;Update&gt;b__b()&#xD;&#xA;   at System.Data.Entity.Migrations.DbMigrator.EnsureDatabaseExists(Action mustSucceedToKeepDatabase)&#xD;&#xA;   at System.Data.Entity.Migrations.DbMigrator.Update(String targetMigration)&#xD;&#xA;   at System.Data.Entity.MigrateDatabaseToLatestVersion`2.InitializeDatabase(TContext context)&#xD;&#xA;   at System.Data.Entity.Internal.InternalContext.&lt;&gt;c__DisplayClasse`1.&lt;CreateInitializationAction&gt;b__d()&#xD;&#xA;   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)&#xD;&#xA;   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()&#xD;&#xA;   at System.Data.Entity.Internal.LazyInternalContext.&lt;InitializeDatabase&gt;b__4(InternalContext c)&#xD;&#xA;   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)&#xD;&#xA;   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)&#xD;&#xA;   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()&#xD;&#xA;   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)&#xD;&#xA;   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()&#xD;&#xA;   at System.Data.Entity.Internal.Linq.InternalSet`1.AsNoTracking()&#xD;&#xA;   at System.Data.Entity.Infrastructure.DbQuery`1.AsNoTracking()&#xD;&#xA;   at System.Data.Entity.QueryableExtensions.AsNoTracking[T](IQueryable`1 source)&#xD;&#xA;   at MyCMS.Servicelayer.EFServices.UserService.GetStatus(String userName) in H:\Main_Source_Code\MyCms-master\MyCMS.Servicelayer\EFServices\UserService.cs:line 304&#xD;&#xA;   at Castle.Proxies.Invocations.IUserService_GetStatus.InvokeMethodOnTarget()&#xD;&#xA;   at Castle.DynamicProxy.AbstractInvocation.Proceed()&#xD;&#xA;   at MyCMS.Utilities.Caching.CacheInterceptor.cacheMethod(IInvocation invocation) in H:\Main_Source_Code\MyCms-master\MyCMS.Common\Caching\CacheInterceptor.cs:line 42&#xD;&#xA;   at MyCMS.Utilities.Caching.CacheInterceptor.Intercept(IInvocation invocation) in H:\Main_Source_Code\MyCms-master\MyCMS.Common\Caching\CacheInterceptor.cs:line 14&#xD;&#xA;   at Castle.DynamicProxy.AbstractInvocation.Proceed()&#xD;&#xA;   at Castle.Proxies.IUserServiceProxy.GetStatus(String userName)&#xD;&#xA;   at MyCMS.Web.MvcApplication.Application_AuthenticateRequest(Object sender, EventArgs e) in H:\Main_Source_Code\MyCms-master\MyCMS.Web\Global.asax.cs:line 79&#xD;&#xA;   at System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)&#xD;&#xA;ClientConnectionId:e75e695f-2fe1-4e5e-b076-3b3f45cc5028&#xD;&#xA;Error Number:1785,State:0,Class:16" user="admin" time="2017-04-06T08:33:27.7443544Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CACHE_CONTROL:no-cache&#xD;&#xA;HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_PRAGMA:no-cache&#xD;&#xA;HTTP_ACCEPT:image/webp,image/*,*/*;q=0.8&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate, sdch, br&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:en-US,en;q=0.8&#xD;&#xA;HTTP_COOKIE:i1r2i4s6b7l8u9e=21D16EF0641470EED0BE5F9755ACBF515805D97729FD2419E38CFE71892CC68D5A862C347258082F80D5B2A219A599B1B3F18A369B9AFD82E44CF4597A3C1580E1BFA21F1909A4972B317DCEDAC56B777304C168F692EC065A38CF312780A04CC54EF162FB1B5F23E93754A19C5B5389CD520A2E304F9204F555BBDB4AF7C097C71068D17FBF6C3F1B3E38E050034BFF1CFD9EC0A2F1271B5991B41358C725C6DE0ED9DD9024854454A75045E18E20C883C985BC7D501C6C9D6C6B0B679838ABC5FA003740FF110DA749F819C33AF3FB; __RequestVerificationToken=p7Dj4GXm2MZ59kY5Uuf-gjQWURgmDvG9bUXdOaG3FqefXGM2x9s8meANziLvepV0sDFXf1PCn-Pbfh6zz_d3Ol1bIwki0J77expzJPjFj_c1&#xD;&#xA;HTTP_HOST:localhost:18600&#xD;&#xA;HTTP_REFERER:http://localhost:18600/&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.110 Safari/537.36&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Cache-Control: no-cache&#xD;&#xA;Connection: keep-alive&#xD;&#xA;Pragma: no-cache&#xD;&#xA;Accept: image/webp,image/*,*/*;q=0.8&#xD;&#xA;Accept-Encoding: gzip, deflate, sdch, br&#xD;&#xA;Accept-Language: en-US,en;q=0.8&#xD;&#xA;Cookie: i1r2i4s6b7l8u9e=21D16EF0641470EED0BE5F9755ACBF515805D97729FD2419E38CFE71892CC68D5A862C347258082F80D5B2A219A599B1B3F18A369B9AFD82E44CF4597A3C1580E1BFA21F1909A4972B317DCEDAC56B777304C168F692EC065A38CF312780A04CC54EF162FB1B5F23E93754A19C5B5389CD520A2E304F9204F555BBDB4AF7C097C71068D17FBF6C3F1B3E38E050034BFF1CFD9EC0A2F1271B5991B41358C725C6DE0ED9DD9024854454A75045E18E20C883C985BC7D501C6C9D6C6B0B679838ABC5FA003740FF110DA749F819C33AF3FB; __RequestVerificationToken=p7Dj4GXm2MZ59kY5Uuf-gjQWURgmDvG9bUXdOaG3FqefXGM2x9s8meANziLvepV0sDFXf1PCn-Pbfh6zz_d3Ol1bIwki0J77expzJPjFj_c1&#xD;&#xA;Host: localhost:18600&#xD;&#xA;Referer: http://localhost:18600/&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.110 Safari/537.36&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/2/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="H:\Main_Source_Code\MyCms-master\MyCMS.Web\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="MyCMSForms" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="admin" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="*****" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="admin" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="admin" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="2" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/2" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/favicon.ico" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="H:\Main_Source_Code\MyCms-master\MyCMS.Web\favicon.ico" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="7280" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="GET" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/favicon.ico" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="18600" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/10.0" />
+    </item>
+    <item name="URL">
+      <value string="/favicon.ico" />
+    </item>
+    <item name="HTTP_CACHE_CONTROL">
+      <value string="no-cache" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_PRAGMA">
+      <value string="no-cache" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="image/webp,image/*,*/*;q=0.8" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate, sdch, br" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="en-US,en;q=0.8" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="i1r2i4s6b7l8u9e=21D16EF0641470EED0BE5F9755ACBF515805D97729FD2419E38CFE71892CC68D5A862C347258082F80D5B2A219A599B1B3F18A369B9AFD82E44CF4597A3C1580E1BFA21F1909A4972B317DCEDAC56B777304C168F692EC065A38CF312780A04CC54EF162FB1B5F23E93754A19C5B5389CD520A2E304F9204F555BBDB4AF7C097C71068D17FBF6C3F1B3E38E050034BFF1CFD9EC0A2F1271B5991B41358C725C6DE0ED9DD9024854454A75045E18E20C883C985BC7D501C6C9D6C6B0B679838ABC5FA003740FF110DA749F819C33AF3FB; __RequestVerificationToken=p7Dj4GXm2MZ59kY5Uuf-gjQWURgmDvG9bUXdOaG3FqefXGM2x9s8meANziLvepV0sDFXf1PCn-Pbfh6zz_d3Ol1bIwki0J77expzJPjFj_c1" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:18600" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://localhost:18600/" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.110 Safari/537.36" />
+    </item>
+  </serverVariables>
+  <cookies>
+    <item name="i1r2i4s6b7l8u9e">
+      <value string="21D16EF0641470EED0BE5F9755ACBF515805D97729FD2419E38CFE71892CC68D5A862C347258082F80D5B2A219A599B1B3F18A369B9AFD82E44CF4597A3C1580E1BFA21F1909A4972B317DCEDAC56B777304C168F692EC065A38CF312780A04CC54EF162FB1B5F23E93754A19C5B5389CD520A2E304F9204F555BBDB4AF7C097C71068D17FBF6C3F1B3E38E050034BFF1CFD9EC0A2F1271B5991B41358C725C6DE0ED9DD9024854454A75045E18E20C883C985BC7D501C6C9D6C6B0B679838ABC5FA003740FF110DA749F819C33AF3FB" />
+    </item>
+    <item name="__RequestVerificationToken">
+      <value string="p7Dj4GXm2MZ59kY5Uuf-gjQWURgmDvG9bUXdOaG3FqefXGM2x9s8meANziLvepV0sDFXf1PCn-Pbfh6zz_d3Ol1bIwki0J77expzJPjFj_c1" />
+    </item>
+  </cookies>
+</error>

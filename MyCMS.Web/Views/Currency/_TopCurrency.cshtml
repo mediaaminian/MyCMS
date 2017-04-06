@@ -1,0 +1,90 @@
+﻿
+@model IEnumerable<MyCMS.Model.AdminModel.CurrencyDataTableModel>
+    @{ 
+        var style1 = "background-color: rgb(115, 115, 115); border-top: 6px solid rgb(90, 90, 90); height: 398px;";
+        var style2 = "background-color: rgb(135, 135, 135); border-top: 6px solid rgb(111, 111, 111); height: 398px;";
+        var style3 = "background-color: rgb(155, 155, 155); border-top: 6px solid rgb(131, 131, 131); height: 398px;";
+        var style4 = "background-color: rgb(177, 177, 177); border-top: 6px solid rgb(161, 161, 161); height: 398px;";
+        var Counter = 0;
+        var style = "";
+
+    }
+
+<div class="row clearfix bottommargin-lg common-height" style="margin-bottom:0px !important;">
+
+@foreach (var currency in Model)
+{
+    Counter++;
+    switch (Counter)
+    {
+        case 1:
+            style = style1;
+            break;
+        case 2:
+            style = style2;
+            break;
+        case 3:
+            style = style3;
+            break;
+        case 4:
+            style = style4;
+            break;
+        default:
+            style = style1;
+            break;
+    }
+    <div class="col-md-3 col-sm-6 dark center col-padding cuboxx" style="@style">
+        <div>
+            <img src="@currency.Icon" />
+            <div class="counter counter-lined"><span data-from="@(currency.Price / 10)" data-to="@currency.Price" data-refresh-interval="50" data-speed="2000"></span></div>
+            <span class="cur-rial">تـومان</span>
+            <h5 class="currnc">@currency.Title</h5><br />
+        </div>
+    </div>
+}
+    
+</div>
+
+<script type="text/javascript">
+            jQuery(window).load(function() {
+
+                var $container = $('#portfolio');
+
+                $container.isotope({
+                    transitionDuration: '0.65s',
+                    masonry: {
+                        columnWidth: $container.find('.portfolio-item:not(.wide)')[0]
+                    }
+                });
+
+                $('#page-menu a').click(function() {
+                    $('#page-menu li').removeClass('current');
+                    $(this).parent('li').addClass('current');
+                    var selector = $(this).attr('data-filter');
+                    $container.isotope({
+                        filter: selector
+                    });
+                    return false;
+                });
+
+                $(window).resize(function() {
+                    $container.isotope('layout');
+                });
+
+            });
+</script>
+
+<div class="clear"></div>
+<div class="row morecurrencies">
+    <div class="container clearfix">
+        <div class="col-md-9 hidden-sm hidden-xs col-lg-9">
+            جهـت مشـاهده سایر واحــدهای ارزی و یا تبـــدیل ارز اینجــا را کلیک کنــید
+        </div>
+        <div class="col-md-3 col-sm-12 col-xs-12 col-lg-3">
+            @*@Html.ActionLink("سایر واحد های ارزی", MVC.Currency.ActionNames.Index, MVC.Currency.Name,null, new { @class = "button button-desc button-border button-rounded center" , @style="margin-top:25px;font-size:16px;float:left;font-size: 17px;padding-bottom: 16px;" })*@
+            <a href="@Url.RouteUrl("Currencies", new { action = MVC.Currency.ActionNames.Index, controller = MVC.Currency.Name })" class="button button-desc button-border button-rounded center" style="margin-top:25px;font-size:16px;float:left;font-size: 17px;padding-bottom: 16px;">سایر واحد های ارزی</a>
+
+        </div>
+    </div>
+</div>
+

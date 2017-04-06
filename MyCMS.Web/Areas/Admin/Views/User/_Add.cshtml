@@ -1,0 +1,89 @@
+﻿@model MyCMS.Model.AdminModel.AddUserModel
+
+<div class="container-fluid" id="div-user-detail">
+    @using (Ajax.BeginForm(MVC.Admin.User.ActionNames.AddUser, MVC.Admin.User.Name, new AjaxOptions { UpdateTargetId = "add-result", InsertionMode = InsertionMode.Replace, HttpMethod = "POST", OnBegin = "showLoading", OnComplete = "hideLoading" }, new { @class = "form-horizontal", id = "add-user-form" }))
+    {
+        @Html.AntiForgeryToken()
+        <div class="control-group">
+            <label class="control-label" for="UserName">نام کاربری</label>
+            <div class="controls">
+                @Html.TextBoxFor(x => x.UserName, new { placeholder = "نام کاربری" , @class = "form-control  input-large" })
+            </div>
+            @Html.ValidationMessageFor(x => x.UserName)
+        </div>
+        
+        <div class="control-group">
+            <label class="control-label" for="Password">کلمه عبور</label>
+            <div class="controls">
+                @Html.PasswordFor(x => x.Password, new { placeholder = "کلمه عبور", @class = "form-control  input-large", style = "direction:ltr;" })
+            </div>
+            @Html.ValidationMessageFor(x => x.Password)
+        </div>
+        
+        <div class="control-group">
+            <label class="control-label" for="ConfirmPassword">تکرار کلمه عبور</label>
+            <div class="controls">
+                @Html.PasswordFor(x => x.ConfirmPassword, new { placeholder = "تکرار کلمه عبور", @class = "form-control  input-large", style = "direction:ltr;" })
+            </div>
+            @Html.ValidationMessageFor(x => x.ConfirmPassword)
+        </div>
+        
+        <div class="control-group">
+            <label class="control-label" for="Email">ایمیل</label>
+            <div class="controls">
+                @Html.TextBoxFor(x => x.Email, new { placeholder = "ایمیل", @class = "form-control  input-large", style = "direction:ltr;" })
+            </div>
+            @Html.ValidationMessageFor(x => x.Email)
+        </div>
+        
+        <div class="control-group">
+            <label class="control-label" for="FirstName">نام</label>
+            <div class="controls">
+                @Html.TextBoxFor(x => x.FirstName, new { placeholder = "نام", @class = "form-control  input-large" })
+            </div>
+            @Html.ValidationMessageFor(x => x.FirstName)
+        </div>
+        
+        <div class="control-group">
+            <label class="control-label" for="LastName">نام خانوادگی</label>
+            <div class="controls">
+                @Html.TextBoxFor(x => x.LastName, new { placeholder = "نام خانوادگی", @class = "form-control  input-large" })
+            </div>
+            @Html.ValidationMessageFor(x => x.LastName)
+        </div>
+        <div style="display:none">
+            <div class="control-group">
+                <label class="control-label" for="Major">رشته</label>
+                <div class="controls">
+                    @Html.TextBoxFor(x => x.Major, new { placeholder = "رشته تحصیلی", @class = "form-control  input-large" })
+                </div>
+                @Html.ValidationMessageFor(x => x.Major)
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="Description">توضیحات</label>
+                <div class="controls">
+                    @Html.TextAreaFor(x => x.Description, new { placeholder = "توضیحات", @class = "form-control  input-large" })
+                </div>
+                @Html.ValidationMessageFor(x => x.Description)
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="BirtDay">تاریخ تولد</label>
+                <div class="controls">
+                    @Html.TextBoxFor(user => user.BirthDay, new { id = "date-picker", @class = "form-control  input-large", placeholder = "تاریخ تولد", style = "direction: ltr" })
+                </div>
+                @Html.ValidationMessageFor(x => x.BirthDay)
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="">نقش کاربر</label>
+                <div class="controls">
+                    @Html.DropDownListFor(x => x.RoleId, ViewBag.RolesList as IEnumerable<SelectListItem>)
+                </div>
+            </div>
+        </div>
+        <br />
+        <div id="add-result"></div>
+        <input type="button" class="btn btn-success btn-submit" name="btn-submit" value="افزودن کاربر" />
+        @Ajax.ActionLink("بازگشت", MVC.Admin.User.ActionNames.Index, MVC.Admin.User.Name, new AjaxOptions { HttpMethod = "GET", InsertionMode = InsertionMode.Replace, UpdateTargetId = "main-content", OnSuccess = "loadAjaxComponents", OnComplete = "hideLoading", OnBegin = "showLoading" }, new { @class = "btn btn-danger" })
+    }
+</div>

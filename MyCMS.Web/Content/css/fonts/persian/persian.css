@@ -1,0 +1,32 @@
+@font-face {
+    font-family: yekan;
+    src: url('yekan.eot'); /* IE9 Compatibility Modes */
+    src:local("?"),
+        url('yekan.eot?#') format('eot'),  /* IE6-IE8 */
+        url('yekan.woff') format('woff'), /* Modern Browsers */
+        url('yekan.ttf')  format('truetype'); /* Safari, Android, iOS */
+    font-weight: normal !important;
+    font-style: normal !important;
+}
+
+@font-face {
+    font-family: yekanbold;
+    src: url('yekanbold.eot'); /* IE9 Compatibility Modes */
+    src:local("?"),
+        url('yekanbold.eot?#') format('eot'),  /* IE6-IE8 */
+        url('yekanbold.woff') format('woff'), /* Modern Browsers */
+        url('yekanbold.ttf')  format('truetype'); /* Safari, Android, iOS */
+    font-weight: normal !important;
+    font-style: normal !important;
+}
+
+@font-face {
+    font-family: yekan2;
+    src: url('yekan2.eot'); /* IE9 Compatibility Modes */
+    src:local("?"),
+        url('yekan2.eot?#') format('eot'),  /* IE6-IE8 */
+        url('yekan2.woff') format('woff'), /* Modern Browsers */
+        url('yekan2.ttf')  format('truetype'); /* Safari, Android, iOS */
+    font-weight: normal !important;
+    font-style: normal !important;
+}

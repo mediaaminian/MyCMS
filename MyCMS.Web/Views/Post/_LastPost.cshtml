@@ -1,0 +1,31 @@
+﻿@model MyCMS.Model.AdminModel.PostDataTableModel
+
+<div class="col-md-8 ">
+
+    <div class="clearfix">
+        <!-- Entry Image
+                    ============================================= -->
+        <a href="@Url.RouteUrl("KBDetailRoute", new { action = MVC.Post.ActionNames.Index,controller = MVC.Post.Name, Id = Model.Id})">
+            <div class="entry-image">
+                <div class="wincaption hidden-xs"></div>
+                <span class="wincaptiontext">
+                    @Model.Title
+                    <br />
+                    <span class="wincaptiondate">
+                        <i class="icon-calendar3" style="margin-left: 4px;line-height:15px;vertical-align:middle;"> </i>
+                        @Html.ConvertToPersianDateTime(Model.PostedDate, "M")
+                    </span>
+
+                </span>
+                <img src="@Model.Picture">
+            </div>
+            <!-- .entry-image end -->
+        </a>
+        <!-- Entry Title
+                    ============================================= -->
+        <!-- Entry Content
+                    ============================================= -->
+    </div>
+    <!-- .entry end -->
+
+</div>

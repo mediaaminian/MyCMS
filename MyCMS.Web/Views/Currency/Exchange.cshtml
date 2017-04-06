@@ -1,0 +1,35 @@
+﻿@{
+    Layout = "" ;
+}
+
+<script src="~/Content/js/Controller/ExchangeController.js"></script>
+<div ng-controller="ExchangeController">
+    <div class="panel panel-default events-meta">
+        <div class="panel-heading">
+            <h3 class="panel-title">تبدیل نرخ ارز</h3>
+        </div>
+        <div class="panel-body">
+
+            <form>
+                <div class="col_full" style="margin-bottom: 10px;">
+                    <label for="template-contactform-message">ارز ورودی</label>
+                    <input type="text" class="sm-form-control" id="InputCurrency" placeholder="" ng-model="InputCurrency">
+                </div>
+
+                <div class="col_full" style="margin-bottom: 10px;">
+                    <label for="template-contactform-message">از واحد</label>
+                    <select class="sm-form-control" id="FromCurrency" ng-model="FromCurrency" ng-options="item.Title for item in CurrencyList"  ng-init="FromCurrency = CurrencyList[0]"></select>
+                </div>
+
+                <div class="col_full">
+                    <label for="template-contactform-message">به واحد</label>
+                    <select class="sm-form-control" id="ToCurrency" ng-model="ToCurrency" ng-options="item.Title for item in CurrencyList" ng-init="ToCurrency = CurrencyList[0]"></select>
+                </div>
+                <button class="button button-mini button-dark button-rounded currn" ng-click="Exchange()">محاسبه و تبدیل نرخ ارز</button>
+            </form>
+            <span class="label label-money" style="float:right;">{{ChangedCurrency}}</span>
+        </div>
+    </div>
+</div>
+
+

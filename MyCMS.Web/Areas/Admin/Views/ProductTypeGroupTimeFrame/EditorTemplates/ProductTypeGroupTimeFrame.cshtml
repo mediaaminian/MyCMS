@@ -1,0 +1,42 @@
+﻿
+
+
+@model MyCMS.Model.AdminModel.ProductTypeGroupTimeFrameModel
+
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.TimeFrameID)
+</div>
+<div class="editor-field">
+    @(Html.Kendo().DropDownListFor(q => q.TimeFrameID)
+        .DataTextField("Title")
+        .DataValueField("Id")
+        .DataSource(ds => ds.Read("GetDropDown", "TimeFrame"))
+
+    )
+    @Html.ValidationMessageFor(model => model.TimeFrameID)
+</div>
+
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.ProductTypeGroupID)
+</div>
+<div class="editor-field">
+    @(Html.Kendo().DropDownListFor(q => q.ProductTypeGroupID)
+        .DataTextField("Name")
+        .DataValueField("Id")
+        .DataSource(ds => ds.Read("GetDropDown", "ProductTypeGroup"))
+
+    )
+    @Html.ValidationMessageFor(model => model.ProductTypeGroupID)
+</div>
+
+
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Status)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Status)
+    @Html.ValidationMessageFor(model => model.Status)
+</div>

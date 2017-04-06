@@ -1,0 +1,42 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section metatags{
+    @RenderSection("metatags", false)
+}
+@Html.Action(MVC.Home.ActionNames.Breadcrumb, MVC.Home.Name)
+
+<div class="container clearfix">
+
+    <div class="fancy-title">
+        <h3></h3>
+    </div>
+
+    <div class="row bottommargin-sm clearfix">
+
+        <div class="col-md-9">
+            <div class="clearfix">
+                <!-- .entry end -->
+                @RenderBody()
+
+            </div>
+        </div>
+        <div class="col-md-3 bottommargin">
+
+            @Html.Action(MVC.Currency.ActionNames.Exchange, MVC.Currency.Name)
+
+            <!--#include file="converter.aspx"-->
+            <br />
+            @Html.Action(MVC.Post.ActionNames.SideLatestPost, MVC.Post.Name)
+            <!--#include file="latest-post.aspx"-->
+            <br />
+            @Html.Action(MVC.Home.ActionNames.Telegram, MVC.Home.Name)
+            <!--#include file="telegram-b.aspx"-->
+        </div>
+
+    </div>
+</div>
+
+
+
