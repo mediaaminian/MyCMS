@@ -9,7 +9,7 @@
                   $("#Picture").focus();
               }
           </script>
-@Html.HiddenFor(model => model.Picture)
+
 
 <div class="editor-label">
     @Html.LabelFor(model => model.Title)
@@ -38,6 +38,7 @@
             )
             
 )
+    @Html.HiddenFor(model => model.Picture)
 </div>
 
 <div class="editor-label">

@@ -1,0 +1,168 @@
+﻿<error errorId="6ae42b6b-8a26-4b1e-81c3-0d0c200d6878" application="/LM/W3SVC/2/ROOT" host="SAEIDPC" type="System.MissingMethodException" message="Method not found: 'System.String FluentValidation.Resources.IStringSource.GetString()'." source="FluentValidation.Mvc" detail="System.Web.HttpException (0x80004005): Error executing child request for handler 'System.Web.Mvc.HttpHandlerUtil+ServerExecuteHttpHandlerAsyncWrapper'. ---&gt; System.MissingMethodException: Method not found: 'System.String FluentValidation.Resources.IStringSource.GetString()'.&#xD;&#xA;   at FluentValidation.Mvc.RequiredFluentValidationPropertyValidator.&lt;GetClientValidationRules&gt;d__0.MoveNext()&#xD;&#xA;   at System.Linq.Enumerable.&lt;SelectManyIterator&gt;d__16`2.MoveNext()&#xD;&#xA;   at System.Web.Mvc.UnobtrusiveValidationAttributesGenerator.GetValidationAttributes(IEnumerable`1 clientRules, IDictionary`2 results)&#xD;&#xA;   at System.Web.Mvc.HtmlHelper.GetUnobtrusiveValidationAttributes(String name, ModelMetadata metadata)&#xD;&#xA;   at System.Web.Mvc.Html.InputExtensions.InputHelper(HtmlHelper htmlHelper, InputType inputType, ModelMetadata metadata, String name, Object value, Boolean useViewData, Boolean isChecked, Boolean setId, Boolean isExplicitValue, String format, IDictionary`2 htmlAttributes)&#xD;&#xA;   at System.Web.Mvc.Html.InputExtensions.TextBoxFor[TModel,TProperty](HtmlHelper`1 htmlHelper, Expression`1 expression, String format, IDictionary`2 htmlAttributes)&#xD;&#xA;   at System.Web.Mvc.Html.InputExtensions.TextBoxFor[TModel,TProperty](HtmlHelper`1 htmlHelper, Expression`1 expression, String format, Object htmlAttributes)&#xD;&#xA;   at System.Web.Mvc.Html.InputExtensions.TextBoxFor[TModel,TProperty](HtmlHelper`1 htmlHelper, Expression`1 expression, Object htmlAttributes)&#xD;&#xA;   at ASP._Page_Areas_Admin_Views_Shared_EditorTemplates_String_cshtml.Execute() in d:\Projects\MyCMS.git\MyCMS\MyCMS.Web\Areas\Admin\Views\Shared\EditorTemplates\String.cshtml:line 3&#xD;&#xA;   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy()&#xD;&#xA;   at System.Web.Mvc.WebViewPage.ExecutePageHierarchy()&#xD;&#xA;   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)&#xD;&#xA;   at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)&#xD;&#xA;   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)&#xD;&#xA;   at StackExchange.Profiling.MVCHelpers.WrappedView.Render(ViewContext viewContext, TextWriter writer) in c:\Code\github\SamSaffron\MiniProfiler\StackExchange.Profiling\MVCHelpers\WrappedView.cs:line 58&#xD;&#xA;   at System.Web.Mvc.Html.TemplateHelpers.ExecuteTemplate(HtmlHelper html, ViewDataDictionary viewData, String templateName, DataBoundControlMode mode, GetViewNamesDelegate getViewNames, GetDefaultActionsDelegate getDefaultActions)&#xD;&#xA;   at System.Web.Mvc.Html.TemplateHelpers.TemplateHelper(HtmlHelper html, ModelMetadata metadata, String htmlFieldName, String templateName, DataBoundControlMode mode, Object additionalViewData, ExecuteTemplateDelegate executeTemplate)&#xD;&#xA;   at System.Web.Mvc.Html.TemplateHelpers.TemplateHelper(HtmlHelper html, ModelMetadata metadata, String htmlFieldName, String templateName, DataBoundControlMode mode, Object additionalViewData)&#xD;&#xA;   at System.Web.Mvc.Html.TemplateHelpers.TemplateFor[TContainer,TValue](HtmlHelper`1 html, Expression`1 expression, String templateName, String htmlFieldName, DataBoundControlMode mode, Object additionalViewData, TemplateHelperDelegate templateHelper)&#xD;&#xA;   at System.Web.Mvc.Html.TemplateHelpers.TemplateFor[TContainer,TValue](HtmlHelper`1 html, Expression`1 expression, String templateName, String htmlFieldName, DataBoundControlMode mode, Object additionalViewData)&#xD;&#xA;   at System.Web.Mvc.Html.EditorExtensions.EditorFor[TModel,TValue](HtmlHelper`1 html, Expression`1 expression)&#xD;&#xA;   at ASP._Page_Areas_Admin_Views_ProductTypeGroup_EditorTemplates_ProductTypeGroup_cshtml.Execute() in d:\Projects\MyCMS.git\MyCMS\MyCMS.Web\Areas\Admin\Views\ProductTypeGroup\EditorTemplates\ProductTypeGroup.cshtml:line 10&#xD;&#xA;   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy()&#xD;&#xA;   at System.Web.Mvc.WebViewPage.ExecutePageHierarchy()&#xD;&#xA;   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)&#xD;&#xA;   at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)&#xD;&#xA;   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)&#xD;&#xA;   at StackExchange.Profiling.MVCHelpers.WrappedView.Render(ViewContext viewContext, TextWriter writer) in c:\Code\github\SamSaffron\MiniProfiler\StackExchange.Profiling\MVCHelpers\WrappedView.cs:line 58&#xD;&#xA;   at System.Web.Mvc.Html.TemplateHelpers.ExecuteTemplate(HtmlHelper html, ViewDataDictionary viewData, String templateName, DataBoundControlMode mode, GetViewNamesDelegate getViewNames, GetDefaultActionsDelegate getDefaultActions)&#xD;&#xA;   at System.Web.Mvc.Html.TemplateHelpers.TemplateHelper(HtmlHelper html, ModelMetadata metadata, String htmlFieldName, String templateName, DataBoundControlMode mode, Object additionalViewData, ExecuteTemplateDelegate executeTemplate)&#xD;&#xA;   at System.Web.Mvc.Html.TemplateHelpers.TemplateHelper(HtmlHelper html, ModelMetadata metadata, String htmlFieldName, String templateName, DataBoundControlMode mode, Object additionalViewData)&#xD;&#xA;   at System.Web.Mvc.Html.EditorExtensions.EditorForModel(HtmlHelper html, String templateName, Object additionalViewData)&#xD;&#xA;   at Kendo.Mvc.UI.Html.GridHtmlHelper`1.EditorForModel(Object dataItem, String templateName, IEnumerable`1 foreignKeyData, Object additionalViewData) in D:\Projects\MyCMS.git\MyCMS\MyCMS.Component\KendoUI\UI\Grid\Html\GridHtmlHelper.cs:line 58&#xD;&#xA;   at Kendo.Mvc.UI.Grid`1.InitializeEditors() in D:\Projects\MyCMS.git\MyCMS\MyCMS.Component\KendoUI\UI\Grid\Grid.cs:line 1326&#xD;&#xA;   at Kendo.Mvc.UI.Grid`1.WriteHtml(HtmlTextWriter writer) in D:\Projects\MyCMS.git\MyCMS\MyCMS.Component\KendoUI\UI\Grid\Grid.cs:line 840&#xD;&#xA;   at Kendo.Mvc.UI.WidgetBase.ToHtmlString() in D:\Projects\MyCMS.git\MyCMS\MyCMS.Component\KendoUI\UI\WidgetBase.cs:line 184&#xD;&#xA;   at Kendo.Mvc.UI.Fluent.WidgetBuilderBase`2.ToHtmlString() in D:\Projects\MyCMS.git\MyCMS\MyCMS.Component\KendoUI\UI\WidgetBuilderBase.cs:line 121&#xD;&#xA;   at System.Web.HttpUtility.HtmlEncode(Object value)&#xD;&#xA;   at System.Web.WebPages.WebPageBase.Write(Object value)&#xD;&#xA;   at ASP._Page_Areas_Admin_Views_ProductTypeGroup__DataTable_cshtml.Execute() in d:\Projects\MyCMS.git\MyCMS\MyCMS.Web\Areas\Admin\Views\ProductTypeGroup\_DataTable.cshtml:line 6&#xD;&#xA;   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy()&#xD;&#xA;   at System.Web.Mvc.WebViewPage.ExecutePageHierarchy()&#xD;&#xA;   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)&#xD;&#xA;   at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)&#xD;&#xA;   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)&#xD;&#xA;   at StackExchange.Profiling.MVCHelpers.WrappedView.Render(ViewContext viewContext, TextWriter writer) in c:\Code\github\SamSaffron\MiniProfiler\StackExchange.Profiling\MVCHelpers\WrappedView.cs:line 58&#xD;&#xA;   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass21.&lt;&gt;c__DisplayClass2b.&lt;BeginInvokeAction&gt;b__1c()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass21.&lt;BeginInvokeAction&gt;b__1e(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Controller.&lt;BeginExecuteCore&gt;b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Controller.&lt;BeginExecute&gt;b__15(IAsyncResult asyncResult, Controller controller)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.&lt;BeginProcessRequest&gt;b__5(IAsyncResult asyncResult, ProcessRequestState innerState)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)&#xD;&#xA;   at System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerAsyncWrapper.&lt;&gt;c__DisplayClassa.&lt;EndProcessRequest&gt;b__9()&#xD;&#xA;   at System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerWrapper.&lt;&gt;c__DisplayClass4.&lt;Wrap&gt;b__3()&#xD;&#xA;   at System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerWrapper.Wrap[TResult](Func`1 func)&#xD;&#xA;   at System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerWrapper.Wrap(Action action)&#xD;&#xA;   at System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerAsyncWrapper.EndProcessRequest(IAsyncResult result)&#xD;&#xA;   at System.Web.HttpServerUtility.ExecuteInternal(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage, VirtualPath path, VirtualPath filePath, String physPath, Exception error, String queryStringOverride)&#xD;&#xA;   at System.Web.HttpServerUtility.ExecuteInternal(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage, VirtualPath path, VirtualPath filePath, String physPath, Exception error, String queryStringOverride)&#xD;&#xA;   at System.Web.HttpServerUtility.Execute(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage)&#xD;&#xA;   at System.Web.HttpServerUtility.Execute(IHttpHandler handler, TextWriter writer, Boolean preserveForm)&#xD;&#xA;   at System.Web.HttpServerUtilityWrapper.Execute(IHttpHandler handler, TextWriter writer, Boolean preserveForm)&#xD;&#xA;   at System.Web.Mvc.Html.ChildActionExtensions.ActionHelper(HtmlHelper htmlHelper, String actionName, String controllerName, RouteValueDictionary routeValues, TextWriter textWriter)&#xD;&#xA;   at System.Web.Mvc.Html.ChildActionExtensions.Action(HtmlHelper htmlHelper, String actionName, String controllerName, RouteValueDictionary routeValues)&#xD;&#xA;   at System.Web.Mvc.Html.ChildActionExtensions.Action(HtmlHelper htmlHelper, String actionName, String controllerName)&#xD;&#xA;   at ASP._Page_Areas_Admin_Views_ProductTypeGroup__Index_cshtml.Execute() in d:\Projects\MyCMS.git\MyCMS\MyCMS.Web\Areas\Admin\Views\ProductTypeGroup\_Index.cshtml:line 3&#xD;&#xA;   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy()&#xD;&#xA;   at System.Web.Mvc.WebViewPage.ExecutePageHierarchy()&#xD;&#xA;   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)&#xD;&#xA;   at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)&#xD;&#xA;   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)&#xD;&#xA;   at StackExchange.Profiling.MVCHelpers.WrappedView.Render(ViewContext viewContext, TextWriter writer) in c:\Code\github\SamSaffron\MiniProfiler\StackExchange.Profiling\MVCHelpers\WrappedView.cs:line 58&#xD;&#xA;   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass21.&lt;&gt;c__DisplayClass2b.&lt;BeginInvokeAction&gt;b__1c()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass21.&lt;BeginInvokeAction&gt;b__1e(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Controller.&lt;BeginExecuteCore&gt;b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Controller.&lt;BeginExecute&gt;b__15(IAsyncResult asyncResult, Controller controller)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.&lt;BeginProcessRequest&gt;b__5(IAsyncResult asyncResult, ProcessRequestState innerState)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)&#xD;&#xA;   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" user="admin" time="2017-04-07T04:24:03.4587624Z" statusCode="500">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate, sdch, br&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:en-US,en;q=0.8,fa;q=0.6&#xD;&#xA;HTTP_COOKIE:ASP.NET_SessionId=5int1ucxabatugxpbhdpxvh5; __RequestVerificationToken=-I9RBxy_qiOjAnLEAlhfJr1NL-GDNepUaJNKFISLR8RVICOjbF6_aUA9a7CkKvFwz6R906rY2n04bb8d1ZYkVxLv-4JWgQrb-KSaM6WxnRY1; i1r2i4s6b7l8u9e=FE20E5924008B9B4B43ECE0047991713B15A5EF13F206BB173162425BC891D9219D61FE360C796A0C95F26B952C39D003B72EDC292E95C88F8785A1183B91F727E4736939FB3E78746C367A5C57DDBC9A5639A4B1811D09070BDA9EB714048F702336F6F9217D504EEA7640BDA36042CC849740FBA5D1828C013CD67204D7D7D6B9DB5153D9C5AF645839F654075D353E7376EEE2E78F3753BC0B08DDEFBF3CAB9A9BBA2A4A00D2FB94615E0BFB5D0D6723975467CA6E13E50E5467B1492D0FBD4D89BD776EFEC30F1553F05857EA4B2&#xD;&#xA;HTTP_HOST:localhost:18600&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36&#xD;&#xA;HTTP_UPGRADE_INSECURE_REQUESTS:1&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Connection: keep-alive&#xD;&#xA;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8&#xD;&#xA;Accept-Encoding: gzip, deflate, sdch, br&#xD;&#xA;Accept-Language: en-US,en;q=0.8,fa;q=0.6&#xD;&#xA;Cookie: ASP.NET_SessionId=5int1ucxabatugxpbhdpxvh5; __RequestVerificationToken=-I9RBxy_qiOjAnLEAlhfJr1NL-GDNepUaJNKFISLR8RVICOjbF6_aUA9a7CkKvFwz6R906rY2n04bb8d1ZYkVxLv-4JWgQrb-KSaM6WxnRY1; i1r2i4s6b7l8u9e=FE20E5924008B9B4B43ECE0047991713B15A5EF13F206BB173162425BC891D9219D61FE360C796A0C95F26B952C39D003B72EDC292E95C88F8785A1183B91F727E4736939FB3E78746C367A5C57DDBC9A5639A4B1811D09070BDA9EB714048F702336F6F9217D504EEA7640BDA36042CC849740FBA5D1828C013CD67204D7D7D6B9DB5153D9C5AF645839F654075D353E7376EEE2E78F3753BC0B08DDEFBF3CAB9A9BBA2A4A00D2FB94615E0BFB5D0D6723975467CA6E13E50E5467B1492D0FBD4D89BD776EFEC30F1553F05857EA4B2&#xD;&#xA;Host: localhost:18600&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36&#xD;&#xA;Upgrade-Insecure-Requests: 1&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/2/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="D:\Projects\MyCMS.git\MyCMS\MyCMS.Web\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="MyCMSForms" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="admin" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="*****" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="admin" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="2" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/2" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/admin/producttypegroup" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="D:\Projects\MyCMS.git\MyCMS\MyCMS.Web\admin\producttypegroup" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="59478" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="GET" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/admin/producttypegroup" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="18600" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/10.0" />
+    </item>
+    <item name="URL">
+      <value string="/admin/producttypegroup" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate, sdch, br" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="en-US,en;q=0.8,fa;q=0.6" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="ASP.NET_SessionId=5int1ucxabatugxpbhdpxvh5; __RequestVerificationToken=-I9RBxy_qiOjAnLEAlhfJr1NL-GDNepUaJNKFISLR8RVICOjbF6_aUA9a7CkKvFwz6R906rY2n04bb8d1ZYkVxLv-4JWgQrb-KSaM6WxnRY1; i1r2i4s6b7l8u9e=FE20E5924008B9B4B43ECE0047991713B15A5EF13F206BB173162425BC891D9219D61FE360C796A0C95F26B952C39D003B72EDC292E95C88F8785A1183B91F727E4736939FB3E78746C367A5C57DDBC9A5639A4B1811D09070BDA9EB714048F702336F6F9217D504EEA7640BDA36042CC849740FBA5D1828C013CD67204D7D7D6B9DB5153D9C5AF645839F654075D353E7376EEE2E78F3753BC0B08DDEFBF3CAB9A9BBA2A4A00D2FB94615E0BFB5D0D6723975467CA6E13E50E5467B1492D0FBD4D89BD776EFEC30F1553F05857EA4B2" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:18600" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36" />
+    </item>
+    <item name="HTTP_UPGRADE_INSECURE_REQUESTS">
+      <value string="1" />
+    </item>
+  </serverVariables>
+  <cookies>
+    <item name="ASP.NET_SessionId">
+      <value string="5int1ucxabatugxpbhdpxvh5" />
+    </item>
+    <item name="__RequestVerificationToken">
+      <value string="-I9RBxy_qiOjAnLEAlhfJr1NL-GDNepUaJNKFISLR8RVICOjbF6_aUA9a7CkKvFwz6R906rY2n04bb8d1ZYkVxLv-4JWgQrb-KSaM6WxnRY1" />
+    </item>
+    <item name="i1r2i4s6b7l8u9e">
+      <value string="FE20E5924008B9B4B43ECE0047991713B15A5EF13F206BB173162425BC891D9219D61FE360C796A0C95F26B952C39D003B72EDC292E95C88F8785A1183B91F727E4736939FB3E78746C367A5C57DDBC9A5639A4B1811D09070BDA9EB714048F702336F6F9217D504EEA7640BDA36042CC849740FBA5D1828C013CD67204D7D7D6B9DB5153D9C5AF645839F654075D353E7376EEE2E78F3753BC0B08DDEFBF3CAB9A9BBA2A4A00D2FB94615E0BFB5D0D6723975467CA6E13E50E5467B1492D0FBD4D89BD776EFEC30F1553F05857EA4B2" />
+    </item>
+  </cookies>
+</error>

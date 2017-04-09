@@ -95,6 +95,7 @@ namespace MyCMS.Web.Areas.Admin.Controllers
             public readonly string Create = "Create";
             public readonly string Update = "Update";
             public readonly string Delete = "Delete";
+            public readonly string GetDropDown = "GetDropDown";
         }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
@@ -105,6 +106,7 @@ namespace MyCMS.Web.Areas.Admin.Controllers
             public const string Create = "Create";
             public const string Update = "Update";
             public const string Delete = "Delete";
+            public const string GetDropDown = "GetDropDown";
         }
 
 
@@ -217,6 +219,17 @@ namespace MyCMS.Web.Areas.Admin.Controllers
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Delete);
             ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "model", model);
             DeleteOverride(callInfo, model);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void GetDropDownOverride(T4MVC_System_Web_Mvc_JsonResult callInfo);
+
+        [NonAction]
+        public override System.Web.Mvc.JsonResult GetDropDown()
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_JsonResult(Area, Name, ActionNames.GetDropDown);
+            GetDropDownOverride(callInfo);
             return callInfo;
         }
 

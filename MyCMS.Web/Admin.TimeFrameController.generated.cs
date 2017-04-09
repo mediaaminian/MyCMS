@@ -58,6 +58,12 @@ namespace MyCMS.Web.Areas.Admin.Controllers
 
         [NonAction]
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public virtual System.Web.Mvc.ActionResult uploadFile()
+        {
+            return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.uploadFile);
+        }
+        [NonAction]
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public virtual System.Web.Mvc.ActionResult Create()
         {
             return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Create);
@@ -93,6 +99,7 @@ namespace MyCMS.Web.Areas.Admin.Controllers
             public readonly string Index = "Index";
             public readonly string GetDataTable = "GetDataTable";
             public readonly string GetDropDown = "GetDropDown";
+            public readonly string uploadFile = "uploadFile";
             public readonly string Create = "Create";
             public readonly string Update = "Update";
             public readonly string Delete = "Delete";
@@ -104,12 +111,21 @@ namespace MyCMS.Web.Areas.Admin.Controllers
             public const string Index = "Index";
             public const string GetDataTable = "GetDataTable";
             public const string GetDropDown = "GetDropDown";
+            public const string uploadFile = "uploadFile";
             public const string Create = "Create";
             public const string Update = "Update";
             public const string Delete = "Delete";
         }
 
 
+        static readonly ActionParamsClass_uploadFile s_params_uploadFile = new ActionParamsClass_uploadFile();
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public ActionParamsClass_uploadFile uploadFileParams { get { return s_params_uploadFile; } }
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public class ActionParamsClass_uploadFile
+        {
+            public readonly string PictureFile = "PictureFile";
+        }
         static readonly ActionParamsClass_Create s_params_Create = new ActionParamsClass_Create();
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public ActionParamsClass_Create CreateParams { get { return s_params_Create; } }
@@ -194,6 +210,18 @@ namespace MyCMS.Web.Areas.Admin.Controllers
         {
             var callInfo = new T4MVC_System_Web_Mvc_JsonResult(Area, Name, ActionNames.GetDropDown);
             GetDropDownOverride(callInfo);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void uploadFileOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, System.Web.HttpPostedFileBase PictureFile);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult uploadFile(System.Web.HttpPostedFileBase PictureFile)
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.uploadFile);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "PictureFile", PictureFile);
+            uploadFileOverride(callInfo, PictureFile);
             return callInfo;
         }
 

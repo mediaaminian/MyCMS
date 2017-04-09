@@ -131,6 +131,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MyCMS.Abstraction\MyCMS.Abstraction.csproj">
+      <Project>{4b881f92-648a-496b-a00f-bb73986544a8}</Project>
+      <Name>MyCMS.Abstraction</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MyCMS.Common\MyCMS.Utilities.csproj">
       <Project>{d02df4da-245d-43bf-aabc-e0a600da92da}</Project>
       <Name>MyCMS.Utilities</Name>

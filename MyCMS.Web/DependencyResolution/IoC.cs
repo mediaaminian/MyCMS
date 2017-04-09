@@ -28,6 +28,11 @@ using MyCMS.Web.Infrastructure;
 using MyCMS.Web.MyCMSMembership;
 using StructureMap;
 
+using AutoMapper;
+using MyCMS.Web.DependencyResolution.Registries;
+using StructureMap;
+using StructureMap.Graph;
+
 namespace MyCMS.Web.DependencyResolution
 {
     public static class IoC
@@ -149,7 +154,24 @@ dynamicProxy.CreateInterfaceProxyWithTarget(myTypeInterface, new CacheIntercepto
 
 
             });
+            
+            configureAutoMapper(container);
+
             return ObjectFactory.Container;
+        }
+        private static void configureAutoMapper(IContainer container)
+        {
+            var configuration = container.TryGetInstance<IConfiguration>();
+            if (configuration == null) return;
+            //saying AutoMapper how to resolve services
+            configuration.ConstructServicesUsing(container.GetInstance);
+            foreach (var profile in container.GetAllInstances<Profile>())
+            {
+                configuration.AddProfile(profile);
+            }
+            container.GetInstance<IMappingEngine>().ConfigurationProvider.AssertConfigurationIsValid();
+            //<IMapper>().Use(ctx => ctx.GetInstance<MapperConfiguration>().CreateMapper(ctx.GetInstance));
+
         }
     }
 }
