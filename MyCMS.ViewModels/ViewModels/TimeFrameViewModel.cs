@@ -67,21 +67,21 @@ namespace MyCMS.ViewModels
 
         public void CreateMappings()
         {
-            Mapper.CreateMap<TimeFrame, TimeFrameViewModel>();
-            Mapper.CreateMap<TimeFrameViewModel, TimeFrame>();
+            Mapper.Initialize(cfg => cfg.CreateMap<TimeFrame, TimeFrameViewModel>());
+            Mapper.Initialize(cfg => cfg.CreateMap<TimeFrameViewModel, TimeFrame>());
         }
 
-        public static TimeFrame GetDomain(this TimeFrameViewModel viewmodel)
+        public  TimeFrame GetDomain(TimeFrameViewModel viewmodel)
         {
             var result = Mapper.Map<TimeFrameViewModel, TimeFrame>(viewmodel);
             return result;
         }
 
-        public static TimeFrameViewModel GetViewModel(this TimeFrame domain)
+        public TimeFrameViewModel GetViewModel(TimeFrame domain)
         {
             var result = Mapper.Map<TimeFrame, TimeFrameViewModel>(domain);
             return result;
         }
-
+        
     }
 }

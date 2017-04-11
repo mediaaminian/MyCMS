@@ -3,10 +3,8 @@ using AutoMapper.Configuration;
 
 namespace MyCMS.Abstraction
 {
-    public interface IHaveCustomMappings<T>
+    public interface IHaveCustomMappings
     {
         void CreateMappings();
-        T GetDomain(this T viewmodel)
-        T GetViewModel(this T domain)
     }
 }

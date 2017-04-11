@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Reflection;
 using AutoMapper;
-using AutoMapperContracts;
+using MyCMS.Abstraction;
 using MyCMS.Web.DependencyResolution;
 using MyCMS.Abstraction;
 
@@ -17,10 +17,10 @@ namespace MyCMS.Web
         {
             var types =
               Assembly
-   .GetExecutingAssembly()
-   .GetReferencedAssemblies()
-   .Select(Assembly.Load)
-   .SelectMany(x => x.GetExportedTypes()).ToList();
+             .GetExecutingAssembly()
+             .GetReferencedAssemblies()
+             .Select(Assembly.Load)
+             .SelectMany(x => x.GetExportedTypes()).ToList();
 
 
             LoadStandardMappings(types);
@@ -42,8 +42,7 @@ namespace MyCMS.Web
 
             foreach (var map in maps)
             {
-                Mapper.CreateMap(map.Source, map.Destination);
-                //IoC.Container.GetInstance<IMappingEngine>().CreateMapExpression(map.Source, map.Destination);
+                IoC.Container.GetInstance<IMappingEngine>().CreateMapExpression(map.Source, map.Destination);
             }
         }
 

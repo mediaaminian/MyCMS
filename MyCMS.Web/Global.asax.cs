@@ -21,6 +21,8 @@ using StructureMap;
 using MyCMS.Web.Searching;
 using MyCMS.Web.ViewEngine;
 using FluentValidation.Mvc;
+using StructureMap.Web.Pipeline;
+
 namespace MyCMS.Web
 {
     // Note: For instructions on enabling IIS6 or IIS7 classic mode, 
@@ -98,7 +100,8 @@ namespace MyCMS.Web
 
         private void Application_EndRequest(object sender, EventArgs e)
         {
-            ObjectFactory.ReleaseAndDisposeAllHttpScopedObjects();
+            //ObjectFactory.ReleaseAndDisposeAllHttpScopedObjects();
+            HttpContextLifecycle.DisposeAndClearAll();
         }
     }
 }
