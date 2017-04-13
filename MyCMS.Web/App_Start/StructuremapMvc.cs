@@ -21,18 +21,37 @@ using MyCMS.Web.App_Start;
 using MyCMS.Web.DependencyResolution;
 using StructureMap;
 using WebActivator;
+using Microsoft.Web.Infrastructure.DynamicModuleHelper;
+using MyCMS.Web;
 
 [assembly: PreApplicationStartMethod(typeof(StructuremapMvc), "Start")]
+[assembly: ApplicationShutdownMethod(typeof(StructuremapMvc), "End")]
 
-namespace MyCMS.Web.App_Start
+namespace MyCMS.Web
 {
+
     public static class StructuremapMvc
     {
+        #region Public Properties
+
+        public static StructureMapDependencyScope StructureMapDependencyScope { get; set; }
+
+        #endregion
+
+        #region Public Methods and Operators
+
+        public static void End()
+        {
+            StructureMapDependencyScope.Dispose();
+        }
+
         public static void Start()
         {
-            IContainer container = IoC.Initialize();
-            DependencyResolver.SetResolver(new StructureMapDependencyResolver(container));
-            GlobalConfiguration.Configuration.DependencyResolver = new StructureMapDependencyResolver(container);
+            StructureMapDependencyScope = new StructureMapDependencyScope(IoC.Container);
+            DependencyResolver.SetResolver(StructureMapDependencyScope);
+            DynamicModuleUtility.RegisterModule(typeof(StructureMapScopeModule));
         }
+
+        #endregion
     }
 }

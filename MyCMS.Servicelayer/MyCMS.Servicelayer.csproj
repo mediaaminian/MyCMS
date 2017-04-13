@@ -46,8 +46,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AutoMapper, Version=6.0.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
-      <HintPath>..\packages\AutoMapper.6.0.1\lib\net45\AutoMapper.dll</HintPath>
-      <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AutoMapper.4.1.1\lib\net45\AutoMapper.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -131,6 +131,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MyCMS.Abstraction\MyCMS.Abstraction.csproj">
+      <Project>{4b881f92-648a-496b-a00f-bb73986544a8}</Project>
+      <Name>MyCMS.Abstraction</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MyCMS.Common\MyCMS.Utilities.csproj">
       <Project>{d02df4da-245d-43bf-aabc-e0a600da92da}</Project>
       <Name>MyCMS.Utilities</Name>

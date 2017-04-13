@@ -15,6 +15,8 @@ namespace MyCMS.DomainClasses.Entities
 		public string Brief { get;set; }
         public string Description { get; set; }
 
+        //تست سعید
+
         //[System.ComponentModel.DataAnnotations.Schema.ForeignKey("TimeFrameID")]
         public virtual TimeFrame TimeFrame { get; set; }
         //public int  TimeFrameID { get; set; }

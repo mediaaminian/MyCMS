@@ -58,6 +58,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="AutoMapper, Version=6.0.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AutoMapper.4.1.1\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="CaptchaMvc, Version=2.5.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\CaptchaMvc.Mvc4.1.5.0\lib\net40-full\CaptchaMvc.dll</HintPath>
@@ -76,8 +80,13 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Bin\EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="FluentValidation.Mvc">
-      <HintPath>..\..\..\Sources\iranhost.com\Iranhost.com\packages\FluentValidation.MVC4.5.0.0.1\lib\Net40\FluentValidation.Mvc.dll</HintPath>
+    <Reference Include="FluentValidation, Version=6.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\FluentValidation.5.1.0.0\lib\Net40\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentValidation.Mvc, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentValidation.MVC4.5.0.0.0\lib\Net40\FluentValidation.Mvc.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="ICSharpCode.SharpZipLib">
       <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
@@ -177,8 +186,15 @@
     <Reference Include="PhpNetMbstring">
       <HintPath>..\Phalanger4\PhpNetMbstring.dll</HintPath>
     </Reference>
-    <Reference Include="StructureMap">
-      <HintPath>..\packages\structuremap.2.6.4.1\lib\net40\StructureMap.dll</HintPath>
+    <Reference Include="StructureMap, Version=4.4.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\structuremap.3.1.1.134\lib\net40\StructureMap.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureMap.Net4">
+      <HintPath>..\packages\structuremap.3.1.1.134\lib\net40\StructureMap.Net4.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureMap.Web">
+      <HintPath>..\packages\structuremap.web.3.1.0.133\lib\net40\StructureMap.Web.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -347,6 +363,7 @@
     </Compile>
     <Compile Include="Alert.cs" />
     <Compile Include="AlertMode.cs" />
+    <Compile Include="App_Start\AutoMapperConfig.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\MiniProfiler.cs" />
@@ -414,9 +431,13 @@
     <Compile Include="CurrencyController.generated.cs">
       <DependentUpon>T4MVC.tt</DependentUpon>
     </Compile>
+    <Compile Include="DependencyResolution\ControllerConvention.cs" />
+    <Compile Include="DependencyResolution\DefaultRegistry.cs" />
     <Compile Include="DependencyResolution\IoC.cs" />
+    <Compile Include="DependencyResolution\Registries\AutoMapperRegistry.cs" />
     <Compile Include="DependencyResolution\StructureMapDependencyResolver.cs" />
     <Compile Include="DependencyResolution\StructureMapDependencyScope.cs" />
+    <Compile Include="DependencyResolution\StructureMapScopeModule.cs" />
     <Compile Include="EmailTemplatesController.generated.cs">
       <DependentUpon>T4MVC.tt</DependentUpon>
     </Compile>
@@ -477,6 +498,9 @@
     <Compile Include="MetaTagController.generated.cs">
       <DependentUpon>T4MVC.tt</DependentUpon>
     </Compile>
+    <Compile Include="MyCMSController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
     <Compile Include="PageController.generated.cs">
       <DependentUpon>T4MVC.tt</DependentUpon>
     </Compile>
@@ -488,15 +512,6 @@
     </Compile>
     <Compile Include="Searching\LucenePageSearch.cs" />
     <Compile Include="Searching\LucenePostSearch.cs" />
-    <Compile Include="SharedController.generated.cs">
-      <DependentUpon>T4MVC.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SideBarController.generated.cs">
-      <DependentUpon>T4MVC.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MyCMSController.generated.cs">
-      <DependentUpon>T4MVC.tt</DependentUpon>
-    </Compile>
     <Compile Include="MyCMSMembership\FormsAuthenticationService.cs" />
     <Compile Include="MyCMSMembership\IFormsAuthenticationService.cs" />
     <Compile Include="MyCMSMembership\IPrincipalService.cs" />
@@ -511,6 +526,12 @@
     <Compile Include="RSS\FeedResult.cs" />
     <Compile Include="RSS\RtlHelper.cs" />
     <Compile Include="Searching\LuceneBookSearch.cs" />
+    <Compile Include="SharedController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SideBarController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
     <Compile Include="Sitemap\PostDetailsDynamicNodeProvider.cs" />
     <Compile Include="T4MVC.cs">
       <AutoGen>True</AutoGen>
@@ -583,10 +604,15 @@
     <Content Include="Content\admin\css\images\40px.png" />
     <Content Include="Content\admin\css\images\avatar3.jpg" />
     <Content Include="Content\admin\css\images\avatar3_small.jpg" />
+    <Content Include="Content\admin\css\images\bg-input-focus.png" />
+    <Content Include="Content\admin\css\images\bg-input.png" />
+    <Content Include="Content\admin\css\images\bg-opacity.png" />
     <Content Include="Content\admin\css\images\bg1.jpg" />
     <Content Include="Content\admin\css\images\bg2.jpg" />
     <Content Include="Content\admin\css\images\bg3.jpg" />
     <Content Include="Content\admin\css\images\bg4.jpg" />
+    <Content Include="Content\admin\css\images\checkbox.png" />
+    <Content Include="Content\admin\css\images\input-spinner.gif" />
     <Content Include="Content\admin\css\images\mainlogo.png" />
     <Content Include="Content\admin\css\images\menu-toggler.png" />
     <Content Include="Content\admin\css\images\portlet-collapse-icon-white.png" />
@@ -604,6 +630,8 @@
     <Content Include="Content\admin\css\images\profile.jpg" />
     <Content Include="Content\admin\css\images\profile_user.jpg" />
     <Content Include="Content\admin\css\images\remove-icon-small.png" />
+    <Content Include="Content\admin\css\images\select-caret.png" />
+    <Content Include="Content\admin\css\images\selectarrow1.png" />
     <Content Include="Content\admin\css\images\sidebar-toggler-inverse.png" />
     <Content Include="Content\admin\css\images\sidebar-toggler.png" />
     <Content Include="Content\admin\css\images\sidebar_inline_toggler_icon_blue.jpg" />
@@ -2636,6 +2664,42 @@
     <Content Include="Areas\Admin\Views\ProductProperty\_DataTable.cshtml" />
     <Content Include="Areas\Admin\Views\Product\_Index.cshtml" />
     <Content Include="Areas\Admin\Views\Product\_DataTable.cshtml" />
+    <Content Include="Content\fonts\mitra.eot" />
+    <Content Include="Content\fonts\mitra.ttf" />
+    <Content Include="Content\fonts\mitra.woff" />
+    <Content Include="Content\fonts\mitrabold.eot" />
+    <Content Include="Content\fonts\mitrabold.ttf" />
+    <Content Include="Content\fonts\mitrabold.woff" />
+    <Content Include="Content\fonts\nazanin.eot" />
+    <Content Include="Content\fonts\nazanin.ttf" />
+    <Content Include="Content\fonts\nazanin.woff" />
+    <Content Include="Content\fonts\roya.eot" />
+    <Content Include="Content\fonts\roya.ttf" />
+    <Content Include="Content\fonts\roya.woff" />
+    <Content Include="Content\fonts\sans.eot" />
+    <Content Include="Content\fonts\sans.ttf" />
+    <Content Include="Content\fonts\sans.woff" />
+    <Content Include="Content\fonts\yekan.eot" />
+    <Content Include="Content\fonts\yekan.ttf" />
+    <Content Include="Content\fonts\yekan.woff" />
+    <Content Include="Content\admin\fonts\mitra.eot" />
+    <Content Include="Content\admin\fonts\mitra.ttf" />
+    <Content Include="Content\admin\fonts\mitra.woff" />
+    <Content Include="Content\admin\fonts\mitrabold.eot" />
+    <Content Include="Content\admin\fonts\mitrabold.ttf" />
+    <Content Include="Content\admin\fonts\mitrabold.woff" />
+    <Content Include="Content\admin\fonts\nazanin.eot" />
+    <Content Include="Content\admin\fonts\nazanin.ttf" />
+    <Content Include="Content\admin\fonts\nazanin.woff" />
+    <Content Include="Content\admin\fonts\roya.eot" />
+    <Content Include="Content\admin\fonts\roya.ttf" />
+    <Content Include="Content\admin\fonts\roya.woff" />
+    <Content Include="Content\admin\fonts\sans.eot" />
+    <Content Include="Content\admin\fonts\sans.ttf" />
+    <Content Include="Content\admin\fonts\sans.woff" />
+    <Content Include="Content\admin\fonts\yekan.eot" />
+    <Content Include="Content\admin\fonts\yekan.ttf" />
+    <Content Include="Content\admin\fonts\yekan.woff" />
     <None Include="Mvc.Sitemap">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -3940,6 +4004,10 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MyCMS.Abstraction\MyCMS.Abstraction.csproj">
+      <Project>{4b881f92-648a-496b-a00f-bb73986544a8}</Project>
+      <Name>MyCMS.Abstraction</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MyCMS.Common\MyCMS.Utilities.csproj">
       <Project>{d02df4da-245d-43bf-aabc-e0a600da92da}</Project>
       <Name>MyCMS.Utilities</Name>
@@ -3963,6 +4031,10 @@
     <ProjectReference Include="..\MyCMS.Servicelayer\MyCMS.Servicelayer.csproj">
       <Project>{8d6411ac-8b18-4aab-bd3b-44b788b2f93c}</Project>
       <Name>MyCMS.Servicelayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyCMS.ViewModels\MyCMS.ViewModels.csproj">
+      <Project>{8ba635cc-09a2-45de-bbee-aecc140f7093}</Project>
+      <Name>MyCMS.ViewModels</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -2417,10 +2417,15 @@ namespace Links
                     public static readonly string _40px_png = Url("40px.png");
                     public static readonly string avatar3_jpg = Url("avatar3.jpg");
                     public static readonly string avatar3_small_jpg = Url("avatar3_small.jpg");
+                    public static readonly string bg_input_focus_png = Url("bg-input-focus.png");
+                    public static readonly string bg_input_png = Url("bg-input.png");
+                    public static readonly string bg_opacity_png = Url("bg-opacity.png");
                     public static readonly string bg1_jpg = Url("bg1.jpg");
                     public static readonly string bg2_jpg = Url("bg2.jpg");
                     public static readonly string bg3_jpg = Url("bg3.jpg");
                     public static readonly string bg4_jpg = Url("bg4.jpg");
+                    public static readonly string checkbox_png = Url("checkbox.png");
+                    public static readonly string input_spinner_gif = Url("input-spinner.gif");
                     public static readonly string mainlogo_png = Url("mainlogo.png");
                     public static readonly string menu_toggler_png = Url("menu-toggler.png");
                     public static readonly string portlet_collapse_icon_white_png = Url("portlet-collapse-icon-white.png");
@@ -2438,6 +2443,8 @@ namespace Links
                     public static readonly string profile_jpg = Url("profile.jpg");
                     public static readonly string profile_user_jpg = Url("profile_user.jpg");
                     public static readonly string remove_icon_small_png = Url("remove-icon-small.png");
+                    public static readonly string select_caret_png = Url("select-caret.png");
+                    public static readonly string selectarrow1_png = Url("selectarrow1.png");
                     public static readonly string sidebar_toggler_inverse_png = Url("sidebar-toggler-inverse.png");
                     public static readonly string sidebar_toggler_png = Url("sidebar-toggler.png");
                     public static readonly string sidebar_inline_toggler_icon_blue_jpg = Url("sidebar_inline_toggler_icon_blue.jpg");
@@ -2500,11 +2507,29 @@ namespace Links
                 public static readonly string IRANSans_Regular_eot = Url("IRANSans-Regular.eot");
                 public static readonly string IRANSans_Regular_ttf = Url("IRANSans-Regular.ttf");
                 public static readonly string IRANSans_Regular_woff = Url("IRANSans-Regular.woff");
+                public static readonly string mitra_eot = Url("mitra.eot");
+                public static readonly string mitra_ttf = Url("mitra.ttf");
+                public static readonly string mitra_woff = Url("mitra.woff");
+                public static readonly string mitrabold_eot = Url("mitrabold.eot");
+                public static readonly string mitrabold_ttf = Url("mitrabold.ttf");
+                public static readonly string mitrabold_woff = Url("mitrabold.woff");
+                public static readonly string nazanin_eot = Url("nazanin.eot");
+                public static readonly string nazanin_ttf = Url("nazanin.ttf");
+                public static readonly string nazanin_woff = Url("nazanin.woff");
+                public static readonly string roya_eot = Url("roya.eot");
+                public static readonly string roya_ttf = Url("roya.ttf");
+                public static readonly string roya_woff = Url("roya.woff");
+                public static readonly string sans_eot = Url("sans.eot");
+                public static readonly string sans_ttf = Url("sans.ttf");
+                public static readonly string sans_woff = Url("sans.woff");
                 public static readonly string Simple_Line_Icons_dev_svg = Url("Simple-Line-Icons.dev.svg");
                 public static readonly string Simple_Line_Icons_eot = Url("Simple-Line-Icons.eot");
                 public static readonly string Simple_Line_Icons_svg = Url("Simple-Line-Icons.svg");
                 public static readonly string Simple_Line_Icons_ttf = Url("Simple-Line-Icons.ttf");
                 public static readonly string Simple_Line_Icons_woff = Url("Simple-Line-Icons.woff");
+                public static readonly string yekan_eot = Url("yekan.eot");
+                public static readonly string yekan_ttf = Url("yekan.ttf");
+                public static readonly string yekan_woff = Url("yekan.woff");
             }
         
             [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
@@ -3325,6 +3350,24 @@ namespace Links
             public static readonly string fontawesome_webfont_ttf = Url("fontawesome-webfont.ttf");
             public static readonly string fontawesome_webfont_woff = Url("fontawesome-webfont.woff");
             public static readonly string FontAwesome_otf = Url("FontAwesome.otf");
+            public static readonly string mitra_eot = Url("mitra.eot");
+            public static readonly string mitra_ttf = Url("mitra.ttf");
+            public static readonly string mitra_woff = Url("mitra.woff");
+            public static readonly string mitrabold_eot = Url("mitrabold.eot");
+            public static readonly string mitrabold_ttf = Url("mitrabold.ttf");
+            public static readonly string mitrabold_woff = Url("mitrabold.woff");
+            public static readonly string nazanin_eot = Url("nazanin.eot");
+            public static readonly string nazanin_ttf = Url("nazanin.ttf");
+            public static readonly string nazanin_woff = Url("nazanin.woff");
+            public static readonly string roya_eot = Url("roya.eot");
+            public static readonly string roya_ttf = Url("roya.ttf");
+            public static readonly string roya_woff = Url("roya.woff");
+            public static readonly string sans_eot = Url("sans.eot");
+            public static readonly string sans_ttf = Url("sans.ttf");
+            public static readonly string sans_woff = Url("sans.woff");
+            public static readonly string yekan_eot = Url("yekan.eot");
+            public static readonly string yekan_ttf = Url("yekan.ttf");
+            public static readonly string yekan_woff = Url("yekan.woff");
         }
     
         public static readonly string froala_content_css = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/froala_content.min.css") ? Url("froala_content.min.css") : Url("froala_content.css");
