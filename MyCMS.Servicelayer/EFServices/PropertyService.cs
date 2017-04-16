@@ -17,9 +17,13 @@ namespace MyCMS.Servicelayer.EFServices
     {
 
         private readonly IDbSet<Property> _Property;
+        private readonly IMappingEngine _mappingEngine;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public PropertyService(IUnitOfWork uow)
+        public PropertyService(IUnitOfWork uow, IMappingEngine mappingEngine)
         {
+            _unitOfWork = uow;
+            _mappingEngine = mappingEngine;
             _Property = uow.Set<Property>();
         }
         public void AddProperty(PropertyModel PropertyModel)

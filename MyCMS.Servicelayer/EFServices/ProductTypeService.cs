@@ -16,9 +16,13 @@ namespace MyCMS.Servicelayer.EFServices
     public class ProductTypeService : IProductTypeService
     {
         private readonly IDbSet<ProductType> _ProductType;
+        private readonly IMappingEngine _mappingEngine;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public ProductTypeService(IUnitOfWork uow)
+        public ProductTypeService(IUnitOfWork uow, IMappingEngine mappingEngine)
         {
+            _unitOfWork = uow;
+            _mappingEngine = mappingEngine;
             _ProductType = uow.Set<ProductType>();
         }
         public void AddProductType(ProductTypeModel ProductTypeModel)

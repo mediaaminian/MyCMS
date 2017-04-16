@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Reflection;
+using Framework.UI.Web;
 
 namespace MyCMS.Utilities
 {
@@ -1921,13 +1922,13 @@ namespace MyCMS.Utilities
             get
             {
                 var UsesDiscountItems = new Dictionary<int, Tuple<string, string>>();
-                UsesDiscountItems.Add((int) ERP.UI.Web.UsesDiscountEnum.ProductTypeGroup,
+                UsesDiscountItems.Add((int) UsesDiscountEnum.ProductTypeGroup,
                     new Tuple<string, string>("ProductTypeGroup", "گروه نوع محصول"));
-                UsesDiscountItems.Add((int) ERP.UI.Web.UsesDiscountEnum.ProductType,
+                UsesDiscountItems.Add((int) UsesDiscountEnum.ProductType,
                     new Tuple<string, string>("ProductType", "نوع محصول"));
-                UsesDiscountItems.Add((int) ERP.UI.Web.UsesDiscountEnum.Product,
+                UsesDiscountItems.Add((int) UsesDiscountEnum.Product,
                     new Tuple<string, string>("Product", "محصول"));
-                UsesDiscountItems.Add((int) ERP.UI.Web.UsesDiscountEnum.Event,
+                UsesDiscountItems.Add((int) UsesDiscountEnum.Event,
                     new Tuple<string, string>("Event", "رویداد"));
                 return UsesDiscountItems;
             }

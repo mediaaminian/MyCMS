@@ -17,7 +17,7 @@
 
 using System.Web.Http;
 using System.Web.Mvc;
-using MyCMS.Web.App_Start;
+//using MyCMS.Web.App_Start;
 using MyCMS.Web.DependencyResolution;
 using StructureMap;
 using WebActivator;

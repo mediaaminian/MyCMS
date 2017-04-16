@@ -1,7 +1,12 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.Collections.Generic;
+using System.Data.Entity;
+using System.Threading.Tasks;
 using MyCMS.DomainClasses;
 using MyCMS.DomainClasses.Entities;
 using MyCMS.DomainClasses.EntityConfiguration;
+using EFSecondLevelCache;
+using System.Linq;
 
 namespace MyCMS.Datalayer.Context
 {
@@ -77,6 +82,70 @@ namespace MyCMS.Datalayer.Context
         {
             return base.Set<TEntity>();
         }
+
+
+        public int SaveAllChanges(bool invalidateCacheDependencies)
+        {
+            return SaveChanges(invalidateCacheDependencies);
+        }
+
+        public async Task<int> SaveAllChangesAsync(bool invalidateCacheDependencies)
+        {
+            return await SaveChangesAsync(invalidateCacheDependencies);
+        }
+
+        public int SaveChanges(bool invalidateCacheDependencies)
+        {
+            var changedEntityNames = this.GetChangedEntityNames();
+            var result = base.SaveChanges();
+            if (invalidateCacheDependencies)
+            {
+                new EFCacheServiceProvider().InvalidateCacheDependencies(changedEntityNames);
+            }
+            return result;
+        }
+
+        public async Task<int> SaveChangesAsync(bool invalidateCacheDependencies)
+        {
+            var changedEntityNames = this.GetChangedEntityNames();
+            var result = await base.SaveChangesAsync();
+            if (invalidateCacheDependencies)
+            {
+                new EFCacheServiceProvider().InvalidateCacheDependencies(changedEntityNames);
+            }
+            return result;
+        }
+
+
+        public void MarkAsAdded<TEntity>(TEntity entity) where TEntity : class
+        {
+            Entry(entity).State = EntityState.Added;
+        }
+        public void MarkAsDeleted<TEntity>(TEntity entity) where TEntity : class
+        {
+            Entry(entity).State = EntityState.Deleted;
+        }
+
+        public IEnumerable<TEntity> AddThisRange<TEntity>(IEnumerable<TEntity> entities) where TEntity : class
+        {
+            return ((DbSet<TEntity>)this.Set<TEntity>()).AddRange(entities);
+        }
+
+        public void MarkAsChanged<TEntity>(TEntity entity) where TEntity : class
+        {
+            Entry(entity).State = EntityState.Modified;
+        }
+
+        public IList<T> GetRows<T>(string sql, params object[] parameters) where T : class
+        {
+            return Database.SqlQuery<T>(sql, parameters).ToList();
+        }
+
+        public void ForceDatabaseInitialize()
+        {
+            this.Database.Initialize(force: true);
+        }
+
 
         #endregion
     }

@@ -111,6 +111,7 @@
     <Compile Include="Mail\EMail.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReadableInteger.cs" />
+    <Compile Include="ReflectionHelper.cs" />
     <Compile Include="Security\Encryption.cs" />
     <Compile Include="SerializableDictionary.cs" />
     <Compile Include="UserImpersonation.cs" />

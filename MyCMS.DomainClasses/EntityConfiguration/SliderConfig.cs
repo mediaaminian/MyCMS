@@ -9,7 +9,8 @@ namespace MyCMS.DomainClasses.EntityConfiguration
         {
             //one-to-one
             //this.HasOptional(x => x.Book).WithRequired(x => x.Slider).WillCascadeOnDelete();
-           
+            HasOptional(x => x.User).WithMany(x => x.Sliders).HasForeignKey(x => x.UserId).WillCascadeOnDelete(false);
+
             Property(x => x.Priority).IsRequired();
             Property(x => x.Picture).IsRequired();
             Property(x => x.Link).HasMaxLength(500);

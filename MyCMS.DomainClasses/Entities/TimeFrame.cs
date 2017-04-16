@@ -13,6 +13,8 @@ namespace MyCMS.DomainClasses.Entities
         public string Picture { get; set; }
         public string Link { get; set; }
         public virtual ICollection<ProductTypeGroupTimeFrame> ProductTypeGroupTimeFrames { get; set; }
+        public virtual ICollection<ProductTypeGroup> ProductTypeGroups { get; set; }
+        public virtual ICollection<UserOrderDetail> OrderDetails { get; set; }
         public virtual byte[] RowVersion { get; set; }
     }
 }
