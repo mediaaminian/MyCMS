@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MyCMS.DomainClasses.Entities
 {
@@ -32,8 +33,11 @@ namespace MyCMS.DomainClasses.Entities
         public virtual User User { get; set; }
         public virtual User EditedByUser { get; set; }
         public virtual ICollection<Comment> Comments { get; set; }
-        public virtual int? ParentId { get; set; }
+
+        [ForeignKey("ParentId")]
         public virtual Page Parent { get; set; }
+        public virtual int? ParentId { get; set; }
+
         public virtual ICollection<Page> Children { get; set; }
         public virtual ICollection<User> LikedUsers { get; set; }
     }

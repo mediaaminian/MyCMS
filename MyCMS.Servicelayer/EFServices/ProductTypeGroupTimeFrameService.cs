@@ -16,9 +16,13 @@ namespace MyCMS.Servicelayer.EFServices
     public class ProductTypeGroupTimeFrameService : IProductTypeGroupTimeFrameService
     {
         private readonly IDbSet<ProductTypeGroupTimeFrame> _ProductTypeGroupTimeFrame;
+        private readonly IMappingEngine _mappingEngine;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public ProductTypeGroupTimeFrameService(IUnitOfWork uow)
+        public ProductTypeGroupTimeFrameService(IUnitOfWork uow, IMappingEngine mappingEngine)
         {
+            _unitOfWork = uow;
+            _mappingEngine = mappingEngine;
             _ProductTypeGroupTimeFrame = uow.Set<ProductTypeGroupTimeFrame>();
         }
         public void AddProductTypeGroupTimeFrame(ProductTypeGroupTimeFrameModel ProductTypeGroupTimeFrameModel)

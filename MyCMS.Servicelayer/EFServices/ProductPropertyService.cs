@@ -16,9 +16,13 @@ namespace MyCMS.Servicelayer.EFServices
     public class ProductPropertyService : IProductPropertyService
     {
         private readonly IDbSet<ProductProperty> _ProductProperty;
+        private readonly IMappingEngine _mappingEngine;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public ProductPropertyService(IUnitOfWork uow)
+        public ProductPropertyService(IUnitOfWork uow, IMappingEngine mappingEngine)
         {
+            _unitOfWork = uow;
+            _mappingEngine = mappingEngine;
             _ProductProperty = uow.Set<ProductProperty>();
         }
         public void AddProductProperty(ProductPropertyModel ProductPropertyModel)

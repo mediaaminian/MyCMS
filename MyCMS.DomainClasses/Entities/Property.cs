@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MyCMS.DomainClasses.Entities
 {
@@ -18,7 +19,11 @@ namespace MyCMS.DomainClasses.Entities
         public string Description { get; set; }
 		public byte Status { get;set; }
         public virtual ICollection<ProductProperty> ProductProperties { get; set; }
+
+        [ForeignKey("PropertyGroupId")]
         public virtual PropertyGroup PropertyGroup { get; set; }
+        public int? PropertyGroupId { get; set; }
+
         public virtual byte[] RowVersion { get; set; }
     }
 }

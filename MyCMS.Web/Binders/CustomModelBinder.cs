@@ -9,8 +9,6 @@ namespace MyCMS.Web.Binders
 {
     public class CustomModelBinder : DefaultModelBinder
     {
-
-
         protected override void SetProperty(ControllerContext controllerContext, ModelBindingContext bindingContext, System.ComponentModel.PropertyDescriptor propertyDescriptor, object value)
         {
             if (value is List<SelectListItem>)

@@ -53,11 +53,6 @@ namespace MyCMS.Web.DependencyResolution
 
             #region RegisterDynamicProxy
 
-            Scan(scan =>
-            {
-                scan.TheCallingAssembly();
-                scan.WithDefaultConventions();
-            });
             For<HttpContextBase>().Use(() => new HttpContextWrapper(HttpContext.Current));
 
             For<IPrincipalService>().Use<MyCMSSupportPrincipalService>();
@@ -104,27 +99,19 @@ namespace MyCMS.Web.DependencyResolution
             For<IViewConvertor>().Use<ViewConvertor>();
 
             For<IPropertyGroupService>().Use<PropertyGroupService>();
-            For<IPropertyGroupService>().Use<PropertyGroupService>();
 
-            For<IPropertyService>().Use<PropertyService>();
             For<IPropertyService>().Use<PropertyService>();
 
             For<ITimeFrameService>().Use<TimeFrameService>();
-            For<ITimeFrameService>().Use<TimeFrameService>();
 
-            For<IProductPropertyService>().Use<ProductPropertyService>();
             For<IProductPropertyService>().Use<ProductPropertyService>();
 
             For<IProductService>().Use<ProductService>();
-            For<IProductService>().Use<ProductService>();
 
-            For<IProductTypeGroupService>().Use<ProductTypeGroupService>();
             For<IProductTypeGroupService>().Use<ProductTypeGroupService>();
 
             For<IProductTypeGroupTimeFrameService>().Use<ProductTypeGroupTimeFrameService>();
-            For<IProductTypeGroupTimeFrameService>().Use<ProductTypeGroupTimeFrameService>();
 
-            For<IProductTypeService>().Use<ProductTypeService>();
             For<IProductTypeService>().Use<ProductTypeService>();
             #endregion RegisterDynamicProxy
         }

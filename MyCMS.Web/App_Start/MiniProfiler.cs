@@ -79,16 +79,16 @@ namespace MyCMS.Web.App_Start
     {
         public void Init(HttpApplication context)
         {
-            context.BeginRequest += (sender, e) =>
-            {
-                HttpRequest request = ((HttpApplication)sender).Request;
-                //TODO: By default only local requests are profiled, optionally you can set it up
-                //  so authenticated users are always profiled
-                if (request.IsLocal)
-                {
-                    MiniProfiler.Start();
-                }
-            };
+            //context.BeginRequest += (sender, e) =>
+            //{
+            //    HttpRequest request = ((HttpApplication)sender).Request;
+            //    //TODO: By default only local requests are profiled, optionally you can set it up
+            //    //  so authenticated users are always profiled
+            //    if (request.IsLocal)
+            //    {
+            //        MiniProfiler.Start();
+            //    }
+            //};
 
 
             // TODO: You can control who sees the profiling information
@@ -102,7 +102,7 @@ namespace MyCMS.Web.App_Start
             };
             */
 
-            context.EndRequest += (sender, e) => { MiniProfiler.Stop(); };
+            //context.EndRequest += (sender, e) => { MiniProfiler.Stop(); };
         }
 
         public void Dispose()

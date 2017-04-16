@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MyCMS.DomainClasses.Entities
 {
@@ -17,9 +18,13 @@ namespace MyCMS.DomainClasses.Entities
 		public int MoneyBackDay { get;set; }
 		public bool IsCancelable { get;set; }
 
-        //public int ProductTypeGroupID { get; set; }
+        [ForeignKey("ProductTypeGroupId")]
         public virtual ProductTypeGroup ProductTypeGroup { get; set; }
+        public int? ProductTypeGroupId { get; set; }
+
         public virtual ICollection<Product> Products { get; set; }
+        public virtual ICollection<Service> Services { get; set; }
+        public virtual ICollection<UserOrderDetail> OrderDetails { get; set; }
 
         public virtual byte[] RowVersion { get; set; }
     }

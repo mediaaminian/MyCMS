@@ -9,7 +9,8 @@ namespace MyCMS.DomainClasses.EntityConfiguration
         {
             //one-to-one
             //this.HasOptional(x => x.Book).WithRequired(x => x.Currency).WillCascadeOnDelete();
-           
+            HasOptional(x => x.User).WithMany(x => x.Currencies).HasForeignKey(x => x.UserId).WillCascadeOnDelete(false);
+
             Property(x => x.Priority).IsRequired();
             Property(x => x.Price).IsRequired();
             Property(x => x.Icon).IsRequired();

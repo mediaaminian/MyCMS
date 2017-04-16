@@ -9,7 +9,7 @@ namespace MyCMS.DomainClasses.EntityConfiguration
         {
 
             HasKey(t => t.Id);
-            HasOptional(t => t.ProductTypeGroup);
+            HasOptional(x => x.ProductTypeGroup).WithMany(x=>x.PropertyGroups).HasForeignKey(x => x.ProductTypeGroupId).WillCascadeOnDelete(false);
             Property(t => t.Name).IsRequired().HasMaxLength(200);
             Property(x => x.RowVersion).IsRowVersion();
         }

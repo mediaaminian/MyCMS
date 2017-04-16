@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MyCMS.DomainClasses.Entities
 {
@@ -19,15 +20,39 @@ namespace MyCMS.DomainClasses.Entities
 		public int TempActivationCount { get;set; }
 		public Nullable<System.DateTime> TempExpireTime { get;set; }
         public byte Status { get;set; }
+
+        [ForeignKey("ProductId")]
         public virtual Product Product { get; set; }
-        public virtual UserOrderDetail OrderDetail { get; set; }
+        public int? ProductId { get; set; }
+
+        [ForeignKey("UserOrderDetailId")]
+        public virtual UserOrderDetail UserOrderDetail { get; set; }
+        public int? UserOrderDetailId { get; set; }
+
         public virtual ICollection<Service> Services { get; set; }
+        public virtual ICollection<UserOrderDetail> OrderDetails { get; set; }
+
+        [ForeignKey("ProductTypeId")]
         public virtual ProductType ProductType { get; set; }
+        public int? ProductTypeId { get; set; }
+
+        [ForeignKey("ProductTypeGroupId")]
         public virtual ProductTypeGroup ProductTypeGroup { get; set; }
+        public int? ProductTypeGroupId { get; set; }
+
         public DateTime CreatedDate { get; set; }
         public DateTime? ModifiedDate { get; set; }
+
+
+        [ForeignKey("UserId")]
         public virtual User User { get; set; }
-        public virtual User EditedByUser { get; set; }
+        public int? UserId { get; set; }
+
+
+        //[ForeignKey("EditedByUserId")]
+        //public virtual User EditedByUser { get; set; }
+        //public int EditedByUserId { get; set; }
+
         public virtual byte[] RowVersion { get; set; }
     }
 }

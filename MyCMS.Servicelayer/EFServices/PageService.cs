@@ -8,16 +8,21 @@ using MyCMS.Model.AdminModel;
 using MyCMS.Servicelayer.EFServices.Enums;
 using MyCMS.Servicelayer.Interfaces;
 using MyCMS.Utilities.Caching;
+using AutoMapper;
 
 namespace MyCMS.Servicelayer.EFServices
 {
     public class PageService : IPageService
     {
+        private readonly IMappingEngine _mappingEngine;
+        private readonly IUnitOfWork _unitOfWork;
         private readonly IDbSet<Page> _pages;
 
-        public PageService(IUnitOfWork uow)
+        public PageService(IUnitOfWork uow, IMappingEngine mappingEngine)
         {
+            _unitOfWork = uow;
             _pages = uow.Set<Page>();
+            _mappingEngine = mappingEngine;
         }
 
         public void Add(Page page)
@@ -55,7 +60,6 @@ namespace MyCMS.Servicelayer.EFServices
             return _pages.AsNoTracking().Where(page => page.Id != id)
                 .Select(page => new PageDropDownList { Id = page.Id, Title = page.Title }).ToList();
         }
-
         public IList<PageDataTableModel> GetDataTable(string term, int page, int count,
             Order order, PageOrderBy orderBy, PageSearchBy searchBy)
         {
