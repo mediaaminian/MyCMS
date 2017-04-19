@@ -91,6 +91,7 @@ namespace MyCMS.Web.Areas.Admin.Controllers
         public class ActionNamesClass
         {
             public readonly string Index = "Index";
+            public readonly string GetDataTypeDropDown = "GetDataTypeDropDown";
             public readonly string GetDataTable = "GetDataTable";
             public readonly string Create = "Create";
             public readonly string Update = "Update";
@@ -101,6 +102,7 @@ namespace MyCMS.Web.Areas.Admin.Controllers
         public class ActionNameConstants
         {
             public const string Index = "Index";
+            public const string GetDataTypeDropDown = "GetDataTypeDropDown";
             public const string GetDataTable = "GetDataTable";
             public const string Create = "Create";
             public const string Update = "Update";
@@ -170,6 +172,17 @@ namespace MyCMS.Web.Areas.Admin.Controllers
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Index);
             IndexOverride(callInfo);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void GetDataTypeDropDownOverride(T4MVC_System_Web_Mvc_JsonResult callInfo);
+
+        [NonAction]
+        public override System.Web.Mvc.JsonResult GetDataTypeDropDown()
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_JsonResult(Area, Name, ActionNames.GetDataTypeDropDown);
+            GetDataTypeDropDownOverride(callInfo);
             return callInfo;
         }
 

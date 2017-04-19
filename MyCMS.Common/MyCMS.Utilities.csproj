@@ -91,6 +91,7 @@
     <Compile Include="Data\ExcelStatus.cs" />
     <Compile Include="DateAndTime\DateAndTime.cs" />
     <Compile Include="Dynamic.cs" />
+    <Compile Include="enumDescription.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="Exceptions\BaseException.cs" />
     <Compile Include="Exceptions\BussinessEventException.cs" />
