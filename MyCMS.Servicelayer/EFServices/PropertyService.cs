@@ -9,7 +9,7 @@ using MyCMS.Servicelayer.EFServices.Enums;
 using MyCMS.Servicelayer.Interfaces;
 using MyCMS.Utilities.Caching;
 using AutoMapper;
-
+using MyCMS.Utilities;
 
 namespace MyCMS.Servicelayer.EFServices
 {
@@ -73,5 +73,10 @@ namespace MyCMS.Servicelayer.EFServices
             _Property.Remove(_Property.Find(PropertyID));
         }
 
+        public IEnumerable<enumDescription> GetAllDataType()
+        {
+           return Enum.GetValues(typeof(enumDataType)).OfType<enumDataType>().Select(
+            val => new enumDescription() { Description = val.GetEnumDescription(), Value = (int)val });
+        }
     }
 }
