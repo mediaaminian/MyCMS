@@ -29,11 +29,5 @@ namespace MyCMS.DomainClasses.Entities
         public virtual ICollection<Comment> LikedComments { get; set; }
         public virtual ICollection<ForgottenPassword> ForgottenPasswords { get; set; }
         public virtual ICollection<Message> Messages { get; set; }
-        public virtual ICollection<Invoice> Invoices { get; set; }
-        public virtual ICollection<Product> Products { get; set; }
-        public virtual ICollection<Service> Services { get; set; }
-        public virtual ICollection<UserOrderDetail> UserOrderDetails { get; set; }
-        public virtual ICollection<Currency> Currencies { get; set; }
-        public virtual ICollection<Slider> Sliders { get; set; }
     }
 }

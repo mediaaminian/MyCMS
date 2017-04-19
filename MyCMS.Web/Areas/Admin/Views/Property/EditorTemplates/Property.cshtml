@@ -16,19 +16,16 @@
     @(Html.Kendo().DropDownListFor(q => q.PropertyGroupID)
         .DataTextField("Name")                                          
         .DataValueField("ID")
-        .DataSource(ds => ds.Read("GetDropDown", "PropertyGroup")))
+        .DataSource(ds => ds.Read("GetDropDown", "PropertyGroup"))
 
+    )
     @Html.ValidationMessageFor(model => model.PropertyGroupID)
 </div>
 <div class="editor-label">
     @Html.LabelFor(model => model.DataType)
 </div>
 <div class="editor-field">
-@(Html.Kendo().DropDownListFor(q => q.DataType)
-        .DataTextField("Description")
-        .DataValueField("Value")
-        .DataSource(ds => ds.Read("GetDataTypeDropDown", "Property")))
-    
+    @Html.EditorFor(model => model.DataType)
     @Html.ValidationMessageFor(model => model.DataType)
 </div>
 

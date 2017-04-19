@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MyCMS.DomainClasses.Entities
 {
@@ -8,16 +7,11 @@ namespace MyCMS.DomainClasses.Entities
     {
         public int Id { get; set; }
 		public byte Status { get; set; }
-
-        [ForeignKey("ProductTypeGroupId")]
+        public int ProductTypeGroupID { get; set; }
         public virtual ProductTypeGroup ProductTypeGroup { get; set; }
-        public int? ProductTypeGroupId { get; set; }
+        public int TimeFrameID { get; set; }
 
-
-        [ForeignKey("TimeFrameId")]
         public virtual TimeFrame TimeFrame { get; set; }
-        public int? TimeFrameId { get; set; }
-
         public virtual byte[] RowVersion { get; set; }
     }
 }

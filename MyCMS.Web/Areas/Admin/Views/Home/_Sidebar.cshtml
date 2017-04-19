@@ -21,17 +21,9 @@
                     <span class="arrow"></span>
                 </a>
             </li>
-            <li class="nav-item active open ">
-                <a href="javascript:;" class="nav-link nav-toggle">
-                    <i class="icon-briefcase"></i>
-                    <span class="title">مدیریت محصولات</span>
-                    <span class="selected"></span>
-                    <span class="arrow open"></span>
-                </a>
-                <ul class="sub-menu">
 
-                    <li class="nav-item">
-                        @Ajax.RawActionLink(string.Format("<i class='fa fa-newspaper-o'></i><span class='title'>{0}</span><span class='selected'></span><span class='arrow open'></span>", "گروه ویژگی ها"),
+            <li class="nav-item">
+                @Ajax.RawActionLink(string.Format("<i class='fa fa-newspaper-o'></i><span class='title'>{0}</span><span class='selected'></span><span class='arrow open'></span>", "گروه ویژگی ها"),
                MVC.Admin.PropertyGroup.ActionNames.Index,
                MVC.Admin.PropertyGroup.Name,
                null,
@@ -45,10 +37,10 @@
                    OnBegin = "showLoading"
                },
                new { @class = "nav-link nav-toggle" })
-                    </li>
+            </li>
 
-                    <li class="nav-item">
-                        @Ajax.RawActionLink(string.Format("<i class='fa fa-newspaper-o'></i><span class='title'>{0}</span><span class='selected'></span><span class='arrow open'></span>", "ویژگی ها"),
+            <li class="nav-item">
+                @Ajax.RawActionLink(string.Format("<i class='fa fa-newspaper-o'></i><span class='title'>{0}</span><span class='selected'></span><span class='arrow open'></span>", "ویژگی ها"),
                MVC.Admin.Property.ActionNames.Index,
                MVC.Admin.Property.Name,
                null,
@@ -62,10 +54,10 @@
                    OnBegin = "showLoading"
                },
                new { @class = "nav-link nav-toggle" })
-                    </li>
+            </li>
 
-                    <li class="nav-item">
-                        @Ajax.RawActionLink(string.Format("<i class='fa fa-newspaper-o'></i><span class='title'>{0}</span><span class='selected'></span><span class='arrow open'></span>", "تایم فریم ها"),
+            <li class="nav-item">
+                @Ajax.RawActionLink(string.Format("<i class='fa fa-newspaper-o'></i><span class='title'>{0}</span><span class='selected'></span><span class='arrow open'></span>", "تایم فریم ها"),
                MVC.Admin.TimeFrame.ActionNames.Index,
                MVC.Admin.TimeFrame.Name,
                null,
@@ -79,11 +71,11 @@
                    OnBegin = "showLoading"
                },
                new { @class = "nav-link nav-toggle" })
-                    </li>
+            </li>
 
 
-                    <li class="nav-item">
-                        @Ajax.RawActionLink(string.Format("<i class='fa fa-newspaper-o'></i><span class='title'>{0}</span><span class='selected'></span><span class='arrow open'></span>", "گروه نوع محصول"),
+            <li class="nav-item">
+                @Ajax.RawActionLink(string.Format("<i class='fa fa-newspaper-o'></i><span class='title'>{0}</span><span class='selected'></span><span class='arrow open'></span>", "گروه نوع محصول"),
                MVC.Admin.ProductTypeGroup.ActionNames.Index,
                MVC.Admin.ProductTypeGroup.Name,
                null,
@@ -97,10 +89,10 @@
                    OnBegin = "showLoading"
                },
                new { @class = "nav-link nav-toggle" })
-                    </li>
+            </li>
 
-                    <li class="nav-item">
-                        @Ajax.RawActionLink(string.Format("<i class='fa fa-newspaper-o'></i><span class='title'>{0}</span><span class='selected'></span><span class='arrow open'></span>", "انواع محصول"),
+            <li class="nav-item">
+                @Ajax.RawActionLink(string.Format("<i class='fa fa-newspaper-o'></i><span class='title'>{0}</span><span class='selected'></span><span class='arrow open'></span>", "انواع محصول"),
                MVC.Admin.ProductType.ActionNames.Index,
                MVC.Admin.ProductType.Name,
                null,
@@ -114,11 +106,11 @@
                    OnBegin = "showLoading"
                },
                new { @class = "nav-link nav-toggle" })
-                    </li>
+            </li>
 
 
-                    <li class="nav-item">
-                        @Ajax.RawActionLink(string.Format("<i class='fa fa-newspaper-o'></i><span class='title'>{0}</span><span class='selected'></span><span class='arrow open'></span>", "فریم گروه نوع محصول"),
+            <li class="nav-item">
+                @Ajax.RawActionLink(string.Format("<i class='fa fa-newspaper-o'></i><span class='title'>{0}</span><span class='selected'></span><span class='arrow open'></span>", "فریم گروه نوع محصول"),
                MVC.Admin.ProductTypeGroupTimeFrame.ActionNames.Index,
                MVC.Admin.ProductTypeGroupTimeFrame.Name,
                null,
@@ -132,9 +124,9 @@
                    OnBegin = "showLoading"
                },
                new { @class = "nav-link nav-toggle" })
-                    </li>
-                    <li class="nav-item">
-                        @Ajax.RawActionLink(string.Format("<i class='fa fa-newspaper-o'></i><span class='title'>{0}</span><span class='selected'></span><span class='arrow open'></span>", "محصول"),
+            </li>
+            <li class="nav-item">
+                @Ajax.RawActionLink(string.Format("<i class='fa fa-newspaper-o'></i><span class='title'>{0}</span><span class='selected'></span><span class='arrow open'></span>", "محصول"),
                MVC.Admin.Product.ActionNames.Index,
                MVC.Admin.Product.Name,
                null,
@@ -148,11 +140,9 @@
                    OnBegin = "showLoading"
                },
                new { @class = "nav-link nav-toggle" })
-                    </li>
-                </ul>
             </li>
 
-            <li class="nav-item">
+            @*<li class="nav-item">
                 @Ajax.RawActionLink(string.Format("<i class='icon-user'></i><span class='title'>{0}</span><span class='selected'></span><span class='arrow open'></span>", "کاربران"),
                MVC.Admin.User.ActionNames.Index,
                MVC.Admin.User.Name,
@@ -283,7 +273,6 @@
                },
                new { @class = "nav-link nav-toggle" })
             </li>
-            
             <li class="nav-item">
                 @Ajax.RawActionLink(string.Format("<i class='icon-pencil'></i><span class='title'>{0}</span><span class='selected'></span><span class='arrow open'></span>", "ویرایش شناسه من"),
                MVC.Admin.User.ActionNames.Index,
@@ -299,7 +288,7 @@
                    OnBegin = "showLoading"
                },
                new { @class = "nav-link nav-toggle" })
-            </li>           
+            </li>*@           
         </ul>
         <!-- END SIDEBAR MENU -->
     </div>

@@ -10,23 +10,18 @@ using MyCMS.Model.RSSModel;
 using MyCMS.Servicelayer.EFServices.Enums;
 using MyCMS.Servicelayer.Interfaces;
 using MyCMS.Utilities.Caching;
-using AutoMapper;
 
 namespace MyCMS.Servicelayer.EFServices
 {
     public class PostService : IPostService
     {
         private readonly IDbSet<Post> _posts;
-        private readonly IMappingEngine _mappingEngine;
-        private readonly IUnitOfWork _unitOfWork;
 
-        public PostService(IUnitOfWork uow,IMappingEngine mappingEngine)
+        public PostService(IUnitOfWork uow)
         {
-            _unitOfWork = uow;
-            _mappingEngine = mappingEngine;
             _posts = uow.Set<Post>();
         }
-        
+
         public void AddPost(Post post)
         {
             post.Like = 0;

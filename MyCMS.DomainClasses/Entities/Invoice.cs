@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MyCMS.DomainClasses.Entities
 {
@@ -11,20 +10,7 @@ namespace MyCMS.DomainClasses.Entities
         public bool Paid { get; set; }
         public string Description { get; set; }
         public byte Status { get;set; }
-
-        [ForeignKey("UserOrderId")]
-        public virtual UserOrder UserOrder { get; set; }
-        public int? UserOrderId { get; set; }
-
-        [ForeignKey("UserId")]
-        public virtual User User { get; set; }
-        public int? UserId { get; set; }
-
-
-        //[ForeignKey("EditedByUserId")]
-        //public virtual User EditedByUser { get; set; }
-        //public int? EditedByUserId { get; set; }
-
+        public virtual UserOrder Order { get; set; }
         public virtual byte[] RowVersion { get; set; }
     }
 }

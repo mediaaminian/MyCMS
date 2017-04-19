@@ -9,7 +9,7 @@ using MyCMS.Servicelayer.EFServices.Enums;
 using MyCMS.Servicelayer.Interfaces;
 using MyCMS.Utilities.Caching;
 using AutoMapper;
-using MyCMS.Utilities;
+
 
 namespace MyCMS.Servicelayer.EFServices
 {
@@ -17,13 +17,9 @@ namespace MyCMS.Servicelayer.EFServices
     {
 
         private readonly IDbSet<Property> _Property;
-        private readonly IMappingEngine _mappingEngine;
-        private readonly IUnitOfWork _unitOfWork;
 
-        public PropertyService(IUnitOfWork uow, IMappingEngine mappingEngine)
+        public PropertyService(IUnitOfWork uow)
         {
-            _unitOfWork = uow;
-            _mappingEngine = mappingEngine;
             _Property = uow.Set<Property>();
         }
         public void AddProperty(PropertyModel PropertyModel)
@@ -73,10 +69,5 @@ namespace MyCMS.Servicelayer.EFServices
             _Property.Remove(_Property.Find(PropertyID));
         }
 
-        public IEnumerable<enumDescription> GetAllDataType()
-        {
-           return Enum.GetValues(typeof(enumDataType)).OfType<enumDataType>().Select(
-            val => new enumDescription() { Description = val.GetEnumDescription(), Value = (int)val });
-        }
     }
 }

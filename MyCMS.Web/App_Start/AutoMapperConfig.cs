@@ -53,7 +53,7 @@ namespace MyCMS.Web
                         where typeof(IHaveCustomMappings).IsAssignableFrom(t) && !t.IsAbstract && !t.IsInterface
                         select (IHaveCustomMappings)Activator.CreateInstance(t)).ToArray();
 
-            foreach (var map in maps)
+            foreach (IHaveCustomMappings map in maps)
             {
                 map.CreateMappings();
 

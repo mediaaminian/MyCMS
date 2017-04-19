@@ -92,7 +92,6 @@
     <Compile Include="EntityConfiguration\AnonymousUserConfig.cs" />
     <Compile Include="EntityConfiguration\ArticleConfig.cs" />
     <Compile Include="EntityConfiguration\InvoiceConfig.cs" />
-    <Compile Include="EntityConfiguration\ProductPropertyConfig.cs" />
     <Compile Include="EntityConfiguration\ProductConfig.cs" />
     <Compile Include="EntityConfiguration\ProductTypeConfig.cs" />
     <Compile Include="EntityConfiguration\ProductTypeGroupTimeFrameConfig.cs" />

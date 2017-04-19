@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MyCMS.DomainClasses.Entities
 {
@@ -16,16 +15,15 @@ namespace MyCMS.DomainClasses.Entities
 		public string Brief { get;set; }
         public string Description { get; set; }
 
-        [ForeignKey("TimeFrameId")]
-        public virtual TimeFrame TimeFrame { get; set; }
-        public int? TimeFrameId { get; set; }
+        //تست سعید
 
-        public virtual ICollection<Service> Services { get; set; }
+        //[System.ComponentModel.DataAnnotations.Schema.ForeignKey("TimeFrameID")]
+        public virtual TimeFrame TimeFrame { get; set; }
+        //public int  TimeFrameID { get; set; }
         public virtual ICollection<Product> Products { get; set; }
         public virtual ICollection<ProductType> ProductTypes { get; set; }
         public virtual ICollection<ProductTypeGroupTimeFrame> ProductTypeGroupTimeFrames { get; set; }
         public virtual ICollection<PropertyGroup> PropertyGroups { get; set; }
-        public virtual ICollection<UserOrderDetail> OrderDetails { get; set; }
         public virtual byte[] RowVersion { get; set; }
     }
 }

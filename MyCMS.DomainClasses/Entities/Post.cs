@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MyCMS.DomainClasses.Entities
 {
@@ -27,15 +26,8 @@ namespace MyCMS.DomainClasses.Entities
         public int VisitedNumber { get; set; }
         public int Like { get; set; }
         //public virtual Book Book { get; set; }
-
-        [ForeignKey("UserId")]
         public virtual User User { get; set; }
-        public int UserId { get; set; }
-
-        [ForeignKey("EditedByUserId")]
         public virtual User EditedByUser { get; set; }
-        public int EditedByUserId { get; set; }
-
         //public virtual ICollection<Comment> Comments { get; set; }
         public virtual ICollection<Label> Labels { get; set; }
         //public virtual ICollection<DownloadLink> DownloadLinks { get; set; }
