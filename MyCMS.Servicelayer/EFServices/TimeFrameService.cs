@@ -17,9 +17,13 @@ namespace MyCMS.Servicelayer.EFServices
     {
 
         private readonly IDbSet<TimeFrame> _TimeFrame;
+        private readonly IMappingEngine _mappingEngine;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public TimeFrameService(IUnitOfWork uow)
+        public TimeFrameService(IUnitOfWork uow, IMappingEngine mappingEngine)
         {
+            _unitOfWork = uow;
+            _mappingEngine = mappingEngine;
             _TimeFrame = uow.Set<TimeFrame>();
         }
         public void AddTimeFrame(TimeFrameModel TimeFrameModel)

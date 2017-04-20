@@ -534,7 +534,7 @@ margin: 0 -16px 0 6px !important;
 margin: 0 3px 0 3px !important;
 }
 
-input[type=text].k-textbox, input[type=password].k-textbox {
+input[type=text].k-textbox, input[type=password].k-textbox , input[type=number].text-box {
 background-color:#ffffff !important;
 border:1px #e5e5e5 solid !important;
 height:32px !important;
@@ -724,9 +724,9 @@ right: 3px !important;
 top: 3px !important;
 }
 
-input:disabled:-webkit-any([type=checkbox],[type=radio]) {
+/*input:disabled:-webkit-any([type=checkbox],[type=radio]) {
 opacity: .75 !important;
-}
+}*/
 input[type=checkbox]:disabled, [type=radio]:disabled {
 opacity: .75 !important;
 }
@@ -1088,14 +1088,14 @@ div.k-multiselect:focus {
 }
 
 
-.k-rtl .k-multiselect-wrap li {
+/*.k-rtl .k-multiselect-wrap li {
 padding-left: .15em !important;
 padding-right: .4em !important;
 float: right !important;
 padding-bottom:0px !important;
 padding-top:0px !important;
 margin-bottom:2px !important;
-}
+}*/
 
 
 
@@ -2175,6 +2175,7 @@ background-color:transparent !important;
 div.k-window-content {
 padding: 11px !important;
 overflow:  visible !important;
+min-width:650px;
 }
 
 
@@ -2382,3 +2383,13 @@ float: left;
 .cke_combopanel {
 z-index: 10004 !important;
 }
+.k-edit-label, .k-edit-form-container .editor-label {
+    float: right;
+    width:48%;
+}
+.k-edit-field, .k-edit-form-container .editor-field {
+    float: left;
+    clear: left;
+    width:48%;
+}
+.k-edit-form-container {width:100%}

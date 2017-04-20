@@ -29,6 +29,14 @@ namespace MyCMS.Web.Areas.Admin.Controllers
         {
             return PartialView(MVC.Admin.Property.Views._Index);
         }
+
+        public virtual JsonResult GetDataTypeDropDown()
+        {
+            var list = _PropertyService.GetAllDataType();
+
+
+            return Json(list, JsonRequestBehavior.AllowGet);
+        }
         public virtual ActionResult GetDataTable()
         {
             var list = _PropertyService.GetAllProperties();

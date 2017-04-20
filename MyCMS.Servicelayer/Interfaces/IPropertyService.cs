@@ -5,6 +5,7 @@ using MyCMS.Model;
 using MyCMS.Model.AdminModel;
 using MyCMS.Model.RSSModel;
 using MyCMS.Servicelayer.EFServices.Enums;
+using MyCMS.Utilities;
 
 namespace MyCMS.Servicelayer.Interfaces
 {
@@ -19,6 +20,6 @@ namespace MyCMS.Servicelayer.Interfaces
 
        
         PropertyModel GetPropertyById(int PropertyID);
-
+        IEnumerable<enumDescription> GetAllDataType();
     }
 }

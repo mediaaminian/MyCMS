@@ -43,6 +43,9 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.4.1.1\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.dll</HintPath>
@@ -71,14 +74,23 @@
   <ItemGroup>
     <Compile Include="AddAnonymousCommentModel.cs" />
     <Compile Include="AddUserCommentModel.cs" />
+    <Compile Include="AdminModelValidation\InvoiceViewModelValidator.cs" />
+    <Compile Include="AdminModelValidation\ProductPropertyViewModellValidator.cs" />
     <Compile Include="AdminModelValidation\ProductTypeGroupValidation.cs" />
     <Compile Include="AdminModelValidation\ProductTypeGroupTimeFrameValidation.cs" />
+    <Compile Include="AdminModelValidation\ProductTypeGroupViewModellValidator.cs" />
     <Compile Include="AdminModelValidation\ProductTypeValidation.cs" />
+    <Compile Include="AdminModelValidation\ProductTypeViewModellValidator.cs" />
+    <Compile Include="AdminModelValidation\ProductViewModellValidator.cs" />
+    <Compile Include="AdminModelValidation\PropertyGroupViewModellValidator.cs" />
+    <Compile Include="AdminModelValidation\PropertyViewModellValidator.cs" />
+    <Compile Include="AdminModelValidation\ServiceViewModelValidator.cs" />
     <Compile Include="AdminModelValidation\TimeFrameValidation.cs" />
     <Compile Include="AdminModelValidation\PropertyValidation.cs" />
     <Compile Include="AdminModelValidation\ProductPropertyValidation.cs" />
     <Compile Include="AdminModelValidation\ProductValidation.cs" />
     <Compile Include="AdminModelValidation\PropertyGroupValidation.cs" />
+    <Compile Include="AdminModelValidation\TimeFrameViewModelValidator.cs" />
     <Compile Include="AdminModel\AddSliderModel.cs" />
     <Compile Include="AdminModel\AddLabelModel.cs" />
     <Compile Include="AdminModel\AddPageModel.cs" />
@@ -89,9 +101,19 @@
     <Compile Include="AdminModel\AddUserModel.cs" />
     <Compile Include="AdminModel\CategoryDataTableModel.cs" />
     <Compile Include="AdminModel\CommentDataTableModel.cs" />
+    <Compile Include="AdminModel\DataGridViewModel.cs" />
     <Compile Include="AdminModel\EditSliderModel.cs" />
+    <Compile Include="AdminModel\InvoiceViewModel.cs" />
+    <Compile Include="AdminModel\ProductDataGridViewModel.cs" />
     <Compile Include="AdminModel\ProductModel.cs" />
+    <Compile Include="AdminModel\ProductPropertyViewModel.cs" />
     <Compile Include="AdminModel\ProductTypeGroupTimeFrameModel.cs" />
+    <Compile Include="AdminModel\ProductTypeGroupViewModel.cs" />
+    <Compile Include="AdminModel\ProductTypeViewModel.cs" />
+    <Compile Include="AdminModel\ProductViewModel.cs" />
+    <Compile Include="AdminModel\PropertyGroupViewModel.cs" />
+    <Compile Include="AdminModel\PropertyViewModel.cs" />
+    <Compile Include="AdminModel\ServiceViewModel.cs" />
     <Compile Include="AdminModel\TimeFrameModel.cs" />
     <Compile Include="AdminModel\ProductTypeModel.cs" />
     <Compile Include="AdminModel\PropertyGroupModel.cs" />
@@ -110,14 +132,40 @@
     <Compile Include="AdminModel\CurrencyDataTableModel.cs" />
     <Compile Include="AdminModel\PostDataTableModel.cs" />
     <Compile Include="AdminModel\SendingMailModel.cs" />
+    <Compile Include="AdminModel\TimeFrameViewModel.cs" />
     <Compile Include="AdminModel\UserDataTableModel.cs" />
     <Compile Include="AdminModel\UserDetailModel.cs" />
+    <Compile Include="AdminModel\UserOrderDetailViewModel.cs" />
+    <Compile Include="AdminModel\UserOrderViewModel.cs" />
     <Compile Include="ArticleCommentDetailModel.cs" />
     <Compile Include="BooksListModel.cs" />
     <Compile Include="CommentDetailModelBase.cs" />
     <Compile Include="ContactUsModel.cs" />
     <Compile Include="LuceneModel\LucenePageModel.cs" />
     <Compile Include="LuceneModel\LucenePostModel.cs" />
+    <Compile Include="Mappers\AutoMapperConvertor.cs" />
+    <Compile Include="Mappers\InvoiceMapper.cs" />
+    <Compile Include="Mappers\ProductMapper.cs" />
+    <Compile Include="Mappers\ProductPropertyMapper.cs" />
+    <Compile Include="Mappers\ProductTypeGroupMapper.cs" />
+    <Compile Include="Mappers\ProductTypeMapper.cs" />
+    <Compile Include="Mappers\PropertyGroupMapper.cs" />
+    <Compile Include="Mappers\PropertyMapper.cs" />
+    <Compile Include="Mappers\ServiceMapper.cs" />
+    <Compile Include="Mappers\TimeFrameMapper.cs" />
+    <Compile Include="Mappers\UserOrderDetailMapper.cs" />
+    <Compile Include="Mappers\UserOrderMapper.cs" />
+    <Compile Include="Profiles\InvoiceProfile.cs" />
+    <Compile Include="Profiles\ProductProfile.cs" />
+    <Compile Include="Profiles\ProductPropertyProfile.cs" />
+    <Compile Include="Profiles\ProductTypeGroupProfile.cs" />
+    <Compile Include="Profiles\ProductTypeProfile.cs" />
+    <Compile Include="Profiles\PropertyGroupProfile.cs" />
+    <Compile Include="Profiles\PropertyProfile.cs" />
+    <Compile Include="Profiles\ServiceProfile.cs" />
+    <Compile Include="Profiles\TimeFrameProfile.cs" />
+    <Compile Include="Profiles\UserOrderDetailProfile.cs" />
+    <Compile Include="Profiles\UserOrderProfile.cs" />
     <Compile Include="SliderModel.cs" />
     <Compile Include="CurrencyModel.cs" />
     <Compile Include="EmailModel\CommentReplyNotificationModel.cs" />
@@ -148,8 +196,21 @@
     <Compile Include="SiteMapModel.cs" />
     <Compile Include="SliderImagesModel.cs" />
     <Compile Include="AdminModel\UpdateOptionModel.cs" />
+    <Compile Include="ValidationResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ValidationResource.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MyCMS.Abstraction\MyCMS.Abstraction.csproj">
+      <Project>{4b881f92-648a-496b-a00f-bb73986544a8}</Project>
+      <Name>MyCMS.Abstraction</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyCMS.Common\MyCMS.Utilities.csproj">
+      <Project>{d02df4da-245d-43bf-aabc-e0a600da92da}</Project>
+      <Name>MyCMS.Utilities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MyCMS.DomainClasses\MyCMS.DomainClasses.csproj">
       <Project>{81dcf4c3-677e-4598-afc2-4893d840171c}</Project>
       <Name>MyCMS.DomainClasses</Name>
@@ -161,7 +222,12 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="ValidationResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ValidationResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

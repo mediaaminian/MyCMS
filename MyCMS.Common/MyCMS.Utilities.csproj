@@ -91,6 +91,7 @@
     <Compile Include="Data\ExcelStatus.cs" />
     <Compile Include="DateAndTime\DateAndTime.cs" />
     <Compile Include="Dynamic.cs" />
+    <Compile Include="enumDescription.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="Exceptions\BaseException.cs" />
     <Compile Include="Exceptions\BussinessEventException.cs" />
@@ -111,6 +112,7 @@
     <Compile Include="Mail\EMail.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReadableInteger.cs" />
+    <Compile Include="ReflectionHelper.cs" />
     <Compile Include="Security\Encryption.cs" />
     <Compile Include="SerializableDictionary.cs" />
     <Compile Include="UserImpersonation.cs" />

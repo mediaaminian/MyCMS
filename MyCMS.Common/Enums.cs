@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,7 +25,7 @@ public enum SessionNames { Order };
 public enum CookieNames { UserID };
 
 [Flags]
-public enum ERPRole { Admin, Operator, Support, GoldClient, SilverClient, BronzeClient };
+public enum FrameworkRole { Admin, Agent, Operator, Support, GoldClient, SilverClient, BronzeClient };
 
 [Flags]
 public enum OrderStatus { InBasket = 0, Expired, CompleteByUser, InToDoList };
@@ -65,9 +66,9 @@ public enum EventVariableKeyEnum
     ProductTypeGroupId = 1020,
     IsExtra = 1021,
     Fee = 1022,
-    Username=1023,
+    Username = 1023,
     StartDate = 1024,
-   Product = 1025
+    Product = 1025
 }
 [Flags]
 public enum TypeOperatorEnum
@@ -108,7 +109,7 @@ public enum OperatorEnum
 }
 
 
-namespace ERP.UI.Web
+namespace Framework.UI.Web
 {
     public enum UsesDiscountEnum
     {
@@ -120,13 +121,44 @@ namespace ERP.UI.Web
     }
 }
 
-[Flags]
-public enum ErpDataType
+/// <summary>
+/// <asp:DropDownList ID="myDDL"
+///    DataTextField="Description"
+///                  DataValueField="Value" />
+
+///myDDL.DataSource = Enum.GetValues(typeof(MyEnum)).OfType<MyEnum>().Select(
+///    val => new { Description = val.GetDescription(), Value = val.ToString() });
+
+///myDDL.DataBind();
+/// </summary>
+/// <param name="value"></param>
+/// <returns></returns>
+public enum enumDataType
 {
+    [Description("عددی")]
     Int = 1,
+    [Description("متنی")]
     String = 2,
+    [Description("عددی اعشاری")]
     Float = 3,
-    Boolean = 4
+    [Description("بلی/خیر")]
+    Boolean = 4,
+    [Description("نرخ")]
+    Currency = 5,
+    [Description("تصویر")]
+    Image = 6,
+    [Description("لینک")]
+    Hyperlink = 7,
+    [Description("لیست تک انتخابی")]
+    SingleChoice = 8,
+    [Description("لیست چند انتخابی")]
+    MultipleChoice = 9,
+    [Description("سال شمسی")]
+    ShamsiYear = 10,
+    [Description("سال میلادی")]
+    GregorianYear = 11,
+    [Description("محصول دیگر")]
+    RelatedProduct = 12,
 }
 
 [Flags]
@@ -321,9 +353,9 @@ public enum TemplateType
 public enum EnumOrderDetailOperationType : byte
 {
     RegisterDomain = 0,
-    TransferDomain= 1,
+    TransferDomain = 1,
     RenewDomain = 2,
-    ChangeDns= 3
+    ChangeDns = 3
 }
 public enum enumToDoList : byte
 {
@@ -381,7 +413,7 @@ public enum enumModules
     FaxModule = 12,
     WebSitePanel = 13,
     Helm = 14,
-    TestNicModule=15
+    TestNicModule = 15
 }
 
 public enum enumMailStatus

@@ -17,9 +17,13 @@ namespace MyCMS.Servicelayer.EFServices
     {
 
         private readonly IDbSet<PropertyGroup> _PropertyGroup;
+        private readonly IMappingEngine _mappingEngine;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public PropertyGroupService(IUnitOfWork uow)
+        public PropertyGroupService(IUnitOfWork uow, IMappingEngine mappingEngine)
         {
+            _unitOfWork = uow;
+            _mappingEngine = mappingEngine;
             _PropertyGroup = uow.Set<PropertyGroup>();
         }
         public void AddPropertyGroup(PropertyGroupModel PropertyGroupModel)

@@ -50,19 +50,34 @@ namespace MyCMS.Web.Areas.Admin.Controllers
         //
         public virtual ActionResult uploadFile(HttpPostedFileBase PictureFile)
         {
+                string tempFileName = "";
             try
             {
                 var webPath = Server.MapPath("/Content/TimeFramePicture");
 
                 var fileName = Path.GetFileName(PictureFile.FileName);
-               
-                PictureFile.SaveAs(Path.Combine(webPath, fileName));
-                return Json(  new { text= fileName }, "text/plain" );
+                var files = Directory.GetFiles(webPath).Select(Path.GetFileName);
+                int count = 1;
+                    tempFileName = fileName;
+                foreach (var item in files)
+                {
+
+                    if (item == tempFileName)
+                    {
+                        var sd = item.Split('.');
+                        tempFileName = sd[0] + "_" + count.ToString()+"."+sd[1];
+                        count++;
+                    }
+
+                }
+
+                PictureFile.SaveAs(Path.Combine(webPath, tempFileName));
+                return Json(  new { text=tempFileName}, "text/plain" );
             }
             catch 
             {
 
-                return JavaScript("");
+                return JavaScript(tempFileName);
             }
 
         }

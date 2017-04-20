@@ -22,6 +22,8 @@ using MyCMS.Web.Searching;
 using MyCMS.Web.ViewEngine;
 using FluentValidation.Mvc;
 using StructureMap.Web.Pipeline;
+using MyCMS.Datalayer;
+using System.Data.Entity.Infrastructure.Interception;
 
 namespace MyCMS.Web
 {
@@ -34,14 +36,15 @@ namespace MyCMS.Web
         protected void Application_Start()
         {
 
+            //MiniProfilerEF.InitializeEF42();
             FluentValidationModelValidatorProvider.Configure();
-            ModelBinders.Binders.DefaultBinder = new CustomModelBinder();
+                System.Web.Mvc.ModelBinders.Binders.Add(typeof(decimal?), new DecimalBinder());
             ModelBinders.Binders.Add(typeof(DateTime?), new PersianDateModelBinder());
+            ModelBinders.Binders.DefaultBinder = new CustomModelBinder();
 
             //Database.SetInitializer<MyCMSDbContext>(null);
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<MyCMSDbContext, Configuration>());
 
-            //MiniProfilerEF.InitializeEF42();
 
             XmlSiteMapController.RegisterRoutes(RouteTable.Routes); // <-- register sitemap.xml, add this line of code
 
@@ -51,6 +54,9 @@ namespace MyCMS.Web
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            AutoMapperConfig.Config();
+
+            DbInterception.Add(new YeKeInterceptor());
             // Remove Extra ViewEngins
             ViewEngines.Engines.Clear();
             ViewEngines.Engines.Add(new RazorViewEngine());
@@ -64,11 +70,14 @@ namespace MyCMS.Web
 
         protected void Application_AuthenticateRequest(Object sender, EventArgs e)
         {
+            //try
+            //{
             var context = DependencyResolver.Current.GetService<HttpContextBase>();
 
-            var principalService = ObjectFactory.GetInstance<IPrincipalService>(); //DependencyResolver.Current.GetService<IPrincipalService>();
 
-            var formsAuthenticationService = ObjectFactory.GetInstance<IFormsAuthenticationService>();
+            var principalService = DependencyResolver.Current.GetService<IPrincipalService>(); // ObjectFactory.GetInstance<IPrincipalService>(); 
+
+            var formsAuthenticationService = DependencyResolver.Current.GetService<IFormsAuthenticationService>();
 
             // Set the HttpContext's User to our IPrincipal
             context.User = principalService.GetCurrent();
@@ -76,18 +85,24 @@ namespace MyCMS.Web
             if (!context.User.Identity.IsAuthenticated)
                 return;
 
-            var userService = ObjectFactory.GetInstance<IUserService>();
+            var userService = DependencyResolver.Current.GetService<IUserService>();
 
             UserStatus userStatus = userService.GetStatus(Context.User.Identity.Name);
 
             if (userStatus.IsBaned || !context.User.IsInRole(userStatus.Role))
                 formsAuthenticationService.SignOut();
 
-            var dbContext = ObjectFactory.GetInstance<IUnitOfWork>();
+            var dbContext = DependencyResolver.Current.GetService<IUnitOfWork>();
 
             userService.UpdateUserLastActivity(User.Identity.Name, DateAndTime.GetDateTime());
 
             dbContext.SaveChanges();
+            //}
+            //catch
+            //{
+            //    HttpRuntime.UnloadAppDomain(); // سبب ری استارت برنامه و آغاز مجدد آن با درخواست بعدی می‌شود
+            //    throw;
+            //}
         }
 
         protected void Application_PreSendRequestHeaders(object sender, EventArgs e)
