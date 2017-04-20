@@ -15,8 +15,12 @@ namespace MyCMS.Model
         }
         protected override void Configure()
         {
-            Mapper.CreateMap<UserOrder, UserOrderViewModel>();
-            Mapper.CreateMap<UserOrderViewModel, UserOrder>();
+            Mapper.CreateMap<UserOrder, UserOrderViewModel>()
+                .ForSourceMember(q => q.Invoices, q => q.Ignore())
+            .ForSourceMember(q => q.OrderDetails, q => q.Ignore())
+            .ForSourceMember(q => q.User, q => q.Ignore());
+            Mapper.CreateMap<UserOrderViewModel, UserOrder>()
+                ;
         }
     }
 }

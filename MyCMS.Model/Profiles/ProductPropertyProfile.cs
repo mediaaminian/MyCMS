@@ -20,9 +20,18 @@ namespace MyCMS.Model
         {
             Mapper.CreateMap<ProductProperty, ProductPropertyViewModel>()
                 .ForMember(q => q.PropertyTitle, q => q.MapFrom(w => w.Property.Name))
+                .ForMember(q => q.PropertyId, q => q.MapFrom(w => w.Property.Id))
+                .ForMember(q => q.ProductId, q => q.MapFrom(w => w.Product.Id))
                 .ForMember(q => q.DefaultValue, q => q.MapFrom(w => w.Property.DefaultValue));
 
-            Mapper.CreateMap<ProductPropertyViewModel, ProductProperty>();
+
+            Mapper.CreateMap<ProductPropertyViewModel, ProductProperty>()
+                //.ForMember(dest => dest.Product,
+                //opt => opt.MapFrom(
+                //src => Mapper.Map<ProductViewModel,Product>(src.ProductId)));
+                //Igonre if not needed properties
+                .ForMember(q => q.Product, q => q.Ignore())
+                .ForMember(q => q.Property, q => q.Ignore());
         }
     }
 }

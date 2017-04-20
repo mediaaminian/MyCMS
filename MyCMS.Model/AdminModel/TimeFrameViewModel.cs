@@ -20,16 +20,10 @@ namespace MyCMS.Model
         }
 
         #region [ Prperties ]
-
-        [Localized("TimeFrame.Datestamp")]
-        public System.DateTime? Datestamp { get; set; }
-
+        
         [Localized("TimeFrame.Id")]
         public System.Int32 Id { get; set; }
-
-        [Localized("TimeFrame.Months")]
-        public System.Byte Months { get; set; }
-
+                
         [Localized("TimeFrame.Priority")]
         public System.Int32 Priority { get; set; }
 
@@ -52,25 +46,39 @@ namespace MyCMS.Model
                 }
             }
         }
-        [Localized("TimeFrame.IsNew")]
-        public bool IsNew { get; set; }
+        public byte[] RowVersion { get; set; }
 
-        public string Name
-        {
-            get
-            {
-                return this.Months.ToInt().CalculateMonthName();
-            }
-        }
-        public string TimeFrameTitle { get; set; }
+        //[Localized("TimeFrame.IsNew")]
+        //public bool IsNew { get; set; }
 
+        //public string Name
+        //{
+        //    get
+        //    {
+        //        return this.Months.ToInt().CalculateMonthName();
+        //    }
+        //}
+        [Localized("TimeFrame.Name")]
+
+        public string Title { get; set; }
+        [Localized("TimeFrame.Days")]
+
+        public byte Days { get; set; }
+        [Localized("TimeFrame.Picture")]
+
+        public string Picture { get; set; }
+        [Localized("TimeFrame.Link")]
+
+        public string Link { get; set; }
         #endregion        
 
         public void CreateMappings()
         {
             //TimeFrameMapper.Config();
             Mapper.Initialize(cfg => cfg.CreateMap<TimeFrame, TimeFrameViewModel>());
-            Mapper.Initialize(cfg => cfg.CreateMap<TimeFrameViewModel, TimeFrame>());
+            Mapper.Initialize(cfg => cfg.CreateMap<TimeFrameViewModel, TimeFrame>()
+
+            );
         }
 
         public  TimeFrame GetDomain(TimeFrameViewModel viewmodel)

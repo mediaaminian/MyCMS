@@ -73,21 +73,27 @@ namespace MyCMS.Model
         [Localized("ProductTypeGroup.Status")]
         public System.Byte Status { get; set; }
 
-        public Dictionary<ProductTypeViewModel, IEnumerable<ProductViewModel>> ProductList { get; set; }
 
-        [Localized("ProductTypeGroup.TimeFrameId")]
+        [Localized("ProductTypeGroup.fk_TimeFrameId")]
         public System.Int32 TimeFrameId { get; set; }
-
+        [Localized("ProductTypeGroup.fk_TimeFrameId")]
+        public string TimeFrameTitle { get; set; }
         public IEnumerable<ProductTypeViewModel> ProductTypeList { get; set; }
 
+        public byte[] RowVersion { get; set; }
 
         #endregion
 
         public void CreateMappings()
         {
             //ProductTypeGroupMapper.Config();
-            Mapper.Initialize(cfg => cfg.CreateMap<ProductTypeGroup, ProductTypeGroupViewModel>());
-            Mapper.Initialize(cfg => cfg.CreateMap<ProductTypeGroupViewModel, ProductTypeGroup>());
+            Mapper.Initialize(cfg => cfg.CreateMap<ProductTypeGroup, ProductTypeGroupViewModel>()
+            .ForMember(q=>q.TimeFrameTitle,q=>q.MapFrom(e=>e.TimeFrame.Title))
+            
+            );
+            Mapper.Initialize(cfg => cfg.CreateMap<ProductTypeGroupViewModel, ProductTypeGroup>()
+
+            );
         }
 
         public ProductTypeGroup GetDomain(ProductTypeGroupViewModel viewmodel)

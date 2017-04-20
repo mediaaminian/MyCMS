@@ -22,7 +22,9 @@ namespace MyCMS.Model
                 .ForMember(q=>q.DataType, q=>q.MapFrom(w=> w.DataType))
                 .ForMember(q => q.ProductTypeGroupId, q=>q.MapFrom(w=>w.PropertyGroup.ProductTypeGroupId));
 
-            Mapper.CreateMap<PropertyViewModel, Property>();
+            Mapper.CreateMap<PropertyViewModel, Property>()
+                .ForMember(q => q.ProductProperties, q => q.Ignore())
+            .ForMember(q => q.PropertyGroup, q => q.Ignore());
         }        
     }
 }

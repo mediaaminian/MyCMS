@@ -15,6 +15,7 @@ namespace MyCMS.DomainClasses.Entities
         public string Picture { get; set; }
 		public string Brief { get;set; }
         public string Description { get; set; }
+        public System.Byte Status { get; set; }
 
         [ForeignKey("TimeFrameId")]
         public virtual TimeFrame TimeFrame { get; set; }

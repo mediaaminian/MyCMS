@@ -3,7 +3,7 @@ using System.Linq;
 using System.Web.Mvc;
 using MyCMS.Datalayer.Context;
 using MyCMS.DomainClasses.Entities;
-using MyCMS.Model.AdminModel;
+using MyCMS.Model;
 using MyCMS.Model.LuceneModel;
 using MyCMS.Servicelayer.EFServices.Enums;
 using MyCMS.Servicelayer.Interfaces;
@@ -81,21 +81,21 @@ namespace MyCMS.Web.Areas.Admin.Controllers
             }
 
         }
-        public virtual ActionResult Create(TimeFrameModel model)
+        public virtual ActionResult Create(TimeFrameViewModel model)
         {
             _TimeFrameService.AddTimeFrame(model);
             var sd = _uow.SaveChanges();
             return null;
 
         }
-        public virtual ActionResult Update(TimeFrameModel model)
+        public virtual ActionResult Update(TimeFrameViewModel model)
         {
             _TimeFrameService.UpdateTimeFrame(model);
             var sd = _uow.SaveChanges();
             return null;
 
         }
-        public virtual ActionResult Delete(TimeFrameModel model)
+        public virtual ActionResult Delete(TimeFrameViewModel model)
         {
             _TimeFrameService.DeleteTimeFrame(model.Id);
             var sd = _uow.SaveChanges();

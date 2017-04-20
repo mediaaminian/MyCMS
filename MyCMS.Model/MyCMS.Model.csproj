@@ -76,7 +76,6 @@
     <Compile Include="AddUserCommentModel.cs" />
     <Compile Include="AdminModelValidation\InvoiceViewModelValidator.cs" />
     <Compile Include="AdminModelValidation\ProductPropertyViewModellValidator.cs" />
-    <Compile Include="AdminModelValidation\ProductTypeGroupValidation.cs" />
     <Compile Include="AdminModelValidation\ProductTypeGroupTimeFrameValidation.cs" />
     <Compile Include="AdminModelValidation\ProductTypeGroupViewModellValidator.cs" />
     <Compile Include="AdminModelValidation\ProductTypeValidation.cs" />
@@ -85,7 +84,6 @@
     <Compile Include="AdminModelValidation\PropertyGroupViewModellValidator.cs" />
     <Compile Include="AdminModelValidation\PropertyViewModellValidator.cs" />
     <Compile Include="AdminModelValidation\ServiceViewModelValidator.cs" />
-    <Compile Include="AdminModelValidation\TimeFrameValidation.cs" />
     <Compile Include="AdminModelValidation\PropertyValidation.cs" />
     <Compile Include="AdminModelValidation\ProductPropertyValidation.cs" />
     <Compile Include="AdminModelValidation\ProductValidation.cs" />
@@ -114,12 +112,10 @@
     <Compile Include="AdminModel\PropertyGroupViewModel.cs" />
     <Compile Include="AdminModel\PropertyViewModel.cs" />
     <Compile Include="AdminModel\ServiceViewModel.cs" />
-    <Compile Include="AdminModel\TimeFrameModel.cs" />
     <Compile Include="AdminModel\ProductTypeModel.cs" />
     <Compile Include="AdminModel\PropertyGroupModel.cs" />
     <Compile Include="AdminModel\ProductPropertyModel.cs" />
     <Compile Include="AdminModel\PropertyModel.cs" />
-    <Compile Include="AdminModel\ProductTypeGroupModel.cs" />
     <Compile Include="AdminModel\SliderDataTableModel.cs" />
     <Compile Include="AdminModel\EditCommentModel.cs" />
     <Compile Include="AdminModel\EditLabelModel.cs" />

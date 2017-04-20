@@ -13,10 +13,10 @@ namespace MyCMS.Model
         public TimeFrameViewModelValidator()
         {
 
-            RuleFor(q => q.Months.ToInt())
+            RuleFor(q => q.Days.ToInt())
                             .GreaterThan(0)
                             .WithMessage(ValidationResource.greaterthan_error)
-                            .WithName(LocalizedResource.TimeFrame_Months);
+                            .WithName(LocalizedResource.TimeFrame_Days);
 
             RuleFor(q => q.Priority)
                             .NotEmpty()

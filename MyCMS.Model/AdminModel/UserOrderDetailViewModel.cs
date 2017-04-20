@@ -16,6 +16,7 @@ namespace MyCMS.Model
 
         [Localized("OrderDetail.Id")]
         public long Id { get; set; }
+        public string Title { get; set; }
 
         [Localized("OrderDetail.Status")]
         public System.Byte Status { get; set; }
@@ -51,8 +52,7 @@ namespace MyCMS.Model
         [Localized("OrderDetail.TimeFrameID")]
         public Int32 TimeFrameId { get; set; }
 
-        [Localized("OrderDetail.SetupFee")]
-        public float SetupFee { get; set; }
+
 
         [Localized("OrderDetail.Fees")]
         public double Fee { get; set; }
@@ -77,13 +77,31 @@ namespace MyCMS.Model
 
         [Localized("OrderDetail.OperationType")]
         public int OperationType { get; set; }
-        
+        public int? ProductTypeId { get; set; }
+
+        public int? ProductTypeGroupId { get; set; }
+        public DateTime CreatedDate { get; set; }
+        public DateTime? ModifiedDate { get; set; }
+        public int? UserId { get; set; }
+        public int? EditedByUserId { get; set; }
+        public byte[] RowVersion { get; set; }
         #endregion
 
         public void CreateMappings()
         {
             Mapper.Initialize(cfg => cfg.CreateMap<UserOrderDetail, UserOrderDetailViewModel>());
-            Mapper.Initialize(cfg => cfg.CreateMap<UserOrderDetailViewModel, UserOrderDetail>());
+            Mapper.Initialize(cfg => cfg.CreateMap<UserOrderDetailViewModel, UserOrderDetail>()
+            .ForMember(q=>q.UserOrder, q=>q.Ignore())
+            .ForMember(q=>q.OrderDetails, q=>q.Ignore())
+            .ForMember(q=>q.Services, q=>q.Ignore())
+            .ForMember(q => q.Product, q=>q.Ignore())
+            .ForMember(q => q.ProductType, q=>q.Ignore())
+            .ForMember(q => q.ProductTypeGroup, q=>q.Ignore())
+            .ForMember(q => q.TimeFrame, q=>q.Ignore())
+            .ForMember(q => q.Service, q=>q.Ignore())
+            .ForMember(q => q.User, q=>q.Ignore())
+            .ForMember(q => q.EditedByUser, q=>q.Ignore())
+            );
         }
 
         public UserOrderDetail GetDomain(UserOrderDetailViewModel viewmodel)

@@ -19,6 +19,7 @@ namespace MyCMS.DomainClasses.Entities
         [ForeignKey("UserOrderId")]
         public virtual UserOrder UserOrder { get; set; }
         public int? UserOrderId { get; set; }
+        public System.Byte Status { get; set; }
 
         public virtual ICollection<UserOrderDetail> OrderDetails { get; set; }
         public virtual ICollection<Service> Services { get; set; }

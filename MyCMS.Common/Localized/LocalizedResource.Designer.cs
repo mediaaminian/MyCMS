@@ -7271,20 +7271,11 @@ namespace MyCMS.Utilities.Localized {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to هشدار قبل از حذف.
+        ///   Looks up a localized string similar to تعداد روز ها.
         /// </summary>
-        public static string TimeFrame_DeleteDays {
+        public static string TimeFrame_Days {
             get {
-                return ResourceManager.GetString("TimeFrame.DeleteDays", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to هشدار قبل از انقضا.
-        /// </summary>
-        public static string TimeFrame_ExpireAlertDays {
-            get {
-                return ResourceManager.GetString("TimeFrame.ExpireAlertDays", resourceCulture);
+                return ResourceManager.GetString("TimeFrame.Days", resourceCulture);
             }
         }
         
@@ -7298,11 +7289,11 @@ namespace MyCMS.Utilities.Localized {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to تعداد ماه ها.
+        ///   Looks up a localized string similar to لینک.
         /// </summary>
-        public static string TimeFrame_Months {
+        public static string TimeFrame_Link {
             get {
-                return ResourceManager.GetString("TimeFrame.Months", resourceCulture);
+                return ResourceManager.GetString("TimeFrame.Link", resourceCulture);
             }
         }
         
@@ -7312,6 +7303,15 @@ namespace MyCMS.Utilities.Localized {
         public static string TimeFrame_Name {
             get {
                 return ResourceManager.GetString("TimeFrame.Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to تصویر.
+        /// </summary>
+        public static string TimeFrame_Picture {
+            get {
+                return ResourceManager.GetString("TimeFrame.Picture", resourceCulture);
             }
         }
         

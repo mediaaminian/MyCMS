@@ -187,10 +187,10 @@ namespace MyCMS.Web.Areas.Admin.Controllers
         }
 
         [NonAction]
-        partial void CreateOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, MyCMS.Model.AdminModel.ProductTypeGroupModel model);
+        partial void CreateOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, MyCMS.Model.ProductTypeGroupViewModel model);
 
         [NonAction]
-        public override System.Web.Mvc.ActionResult Create(MyCMS.Model.AdminModel.ProductTypeGroupModel model)
+        public override System.Web.Mvc.ActionResult Create(MyCMS.Model.ProductTypeGroupViewModel model)
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Create);
             ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "model", model);
@@ -199,10 +199,10 @@ namespace MyCMS.Web.Areas.Admin.Controllers
         }
 
         [NonAction]
-        partial void UpdateOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, MyCMS.Model.AdminModel.ProductTypeGroupModel model);
+        partial void UpdateOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, MyCMS.Model.ProductTypeGroupViewModel model);
 
         [NonAction]
-        public override System.Web.Mvc.ActionResult Update(MyCMS.Model.AdminModel.ProductTypeGroupModel model)
+        public override System.Web.Mvc.ActionResult Update(MyCMS.Model.ProductTypeGroupViewModel model)
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Update);
             ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "model", model);
@@ -211,10 +211,10 @@ namespace MyCMS.Web.Areas.Admin.Controllers
         }
 
         [NonAction]
-        partial void DeleteOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, MyCMS.Model.AdminModel.ProductTypeGroupModel model);
+        partial void DeleteOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, MyCMS.Model.ProductTypeGroupViewModel model);
 
         [NonAction]
-        public override System.Web.Mvc.ActionResult Delete(MyCMS.Model.AdminModel.ProductTypeGroupModel model)
+        public override System.Web.Mvc.ActionResult Delete(MyCMS.Model.ProductTypeGroupViewModel model)
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Delete);
             ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "model", model);

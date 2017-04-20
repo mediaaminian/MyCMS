@@ -40,11 +40,11 @@ namespace MyCMS.Model.AdminModel
         public string Description { get; set; }
         [Display(Name = "تایم فریم پیش فرض")]
 
-        public int DefaultTimeFrameID { get; set; }
+        public int TimeFrameId { get; set; }
 
         [Display(Name = "تایم فریم پیش فرض")]
 
-        public string DefaultTimeFrameName { get; set; }
+        public string TimeFrameName { get; set; }
     }
 }
 

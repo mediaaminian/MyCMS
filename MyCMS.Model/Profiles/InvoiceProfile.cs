@@ -15,7 +15,8 @@ namespace MyCMS.Model
         protected override void Configure()
         {
             Mapper.CreateMap<Invoice, InvoiceViewModel>();
-            Mapper.CreateMap<InvoiceViewModel, Invoice>();
+            Mapper.CreateMap<InvoiceViewModel, Invoice>()
+                .ForMember(q => q.User, q => q.Ignore());
         }
     }
 }

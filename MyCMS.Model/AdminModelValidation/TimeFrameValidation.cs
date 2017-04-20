@@ -8,7 +8,7 @@ using MyCMS.Model.AdminModel;
 
 namespace MyCMS.Model.Validation
 {
-    public class TimeFrameValidation : AbstractValidator<TimeFrameModel>
+    public class TimeFrameValidation : AbstractValidator<TimeFrameViewModel>
     {
         public TimeFrameValidation()
         {

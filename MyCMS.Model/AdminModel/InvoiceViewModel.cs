@@ -37,8 +37,6 @@ namespace MyCMS.Model
 
         public UserOrderViewModel UserOrder { get; set; }
 
-        [Localized("Factor.FactorOwner")]
-        public string FactorOwner { get; set; }
 
         [Localized("Factor.Paid")]
         public bool Paid { get; set; }
@@ -84,13 +82,17 @@ namespace MyCMS.Model
                 }
             }
         }
+        public byte[] RowVersion { get; set; }
+
+
         #endregion
 
         public void CreateMappings()
         {
            //InvoiceMapper.Config();
             Mapper.Initialize(cfg => cfg.CreateMap<Invoice, InvoiceViewModel>());
-            Mapper.Initialize(cfg => cfg.CreateMap<InvoiceViewModel, Invoice>());
+            Mapper.Initialize(cfg => cfg.CreateMap<InvoiceViewModel, Invoice>()
+            .ForMember(q=>q.User,q=>q.Ignore()));
         }
 
         public  Invoice GetDomain(InvoiceViewModel viewmodel)

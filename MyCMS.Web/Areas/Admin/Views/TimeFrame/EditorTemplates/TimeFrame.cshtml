@@ -1,5 +1,5 @@
 ﻿
-@model MyCMS.Model.AdminModel.TimeFrameModel
+@model MyCMS.Model.TimeFrameViewModel
           <script>
               function OnSuccess(e) {
                   var filename = e.response.text;
@@ -9,6 +9,7 @@
                   $("#Picture").focus();
               }
           </script>
+
 
 
 <div class="editor-label">
@@ -25,21 +26,7 @@
     @Html.EditorFor(model => model.Days)
     @Html.ValidationMessageFor(model => model.Days)
 </div>
-<div class="editor-label">
-    @Html.LabelFor(model => model.Picture)
-</div>
-<div class="editor-field">
-@(Html.Kendo().Upload()
-            .Name("PictureFile")
-            .Events(e=>e.Success("OnSuccess"))
-            .Async(a => a
-                .AutoUpload(true)
-                .Save("uploadFile", "TimeFrame")
-            )
-            
-)
-    @Html.HiddenFor(model => model.Picture)
-</div>
+
 
 <div class="editor-label">
     @Html.LabelFor(model => model.Link)
@@ -66,4 +53,21 @@
     )
     @Html.ValidationMessageFor(model => model.Status)
 </div>
+<div class="editor-label">
+    @Html.LabelFor(model => model.Picture)
+</div>
+<div class="editor-field">
+    @(Html.Kendo().Upload()
+            .Name("PictureFile")
+            .Events(e => e.Success("OnSuccess"))
+            .Async(a => a
+                .AutoUpload(true)
+                .Save("uploadFile", "TimeFrame")
+            )
+
+    )
+    @Html.HiddenFor(model => model.Picture)
+</div>
+
+
 

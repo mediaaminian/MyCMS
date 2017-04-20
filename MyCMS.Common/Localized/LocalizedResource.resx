@@ -624,17 +624,17 @@
   <data name="Tax.TaxPercent" xml:space="preserve">
     <value>درصد مالیات</value>
   </data>
-  <data name="TimeFrame.DeleteDays" xml:space="preserve">
-    <value>هشدار قبل از حذف</value>
+  <data name="TimeFrame.Link" xml:space="preserve">
+    <value>لینک</value>
   </data>
-  <data name="TimeFrame.ExpireAlertDays" xml:space="preserve">
-    <value>هشدار قبل از انقضا</value>
+  <data name="TimeFrame.Picture" xml:space="preserve">
+    <value>تصویر</value>
   </data>
   <data name="TimeFrame.Id" xml:space="preserve">
     <value>کد</value>
   </data>
-  <data name="TimeFrame.Months" xml:space="preserve">
-    <value>تعداد ماه ها</value>
+  <data name="TimeFrame.Days" xml:space="preserve">
+    <value>تعداد روز ها</value>
   </data>
   <data name="TimeFrame.Name" xml:space="preserve">
     <value>نام</value>

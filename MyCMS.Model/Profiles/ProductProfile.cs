@@ -18,7 +18,13 @@ namespace MyCMS.Model
         {
             Mapper.CreateMap<Product, ProductViewModel>()
                 .ForMember(q => q.ProductTypeName, q => q.MapFrom(w => w.ProductType.Name));
-            Mapper.CreateMap<ProductViewModel, Product>();
+            Mapper.CreateMap<ProductViewModel, Product>()
+                            .ForMember(q => q.OrderDetails, q => q.Ignore())
+            .ForMember(q => q.ProductProperties, q => q.Ignore())
+            .ForMember(q => q.Services, q => q.Ignore())
+            .ForMember(q => q.ProductType, q => q.Ignore())
+            .ForMember(q => q.ProductTypeGroup, q => q.Ignore())
+            .ForMember(q => q.User, q => q.Ignore());
         }
 
     }

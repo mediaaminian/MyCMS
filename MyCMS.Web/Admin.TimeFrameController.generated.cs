@@ -226,10 +226,10 @@ namespace MyCMS.Web.Areas.Admin.Controllers
         }
 
         [NonAction]
-        partial void CreateOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, MyCMS.Model.AdminModel.TimeFrameModel model);
+        partial void CreateOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, MyCMS.Model.TimeFrameViewModel model);
 
         [NonAction]
-        public override System.Web.Mvc.ActionResult Create(MyCMS.Model.AdminModel.TimeFrameModel model)
+        public override System.Web.Mvc.ActionResult Create(MyCMS.Model.TimeFrameViewModel model)
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Create);
             ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "model", model);
@@ -238,10 +238,10 @@ namespace MyCMS.Web.Areas.Admin.Controllers
         }
 
         [NonAction]
-        partial void UpdateOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, MyCMS.Model.AdminModel.TimeFrameModel model);
+        partial void UpdateOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, MyCMS.Model.TimeFrameViewModel model);
 
         [NonAction]
-        public override System.Web.Mvc.ActionResult Update(MyCMS.Model.AdminModel.TimeFrameModel model)
+        public override System.Web.Mvc.ActionResult Update(MyCMS.Model.TimeFrameViewModel model)
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Update);
             ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "model", model);
@@ -250,10 +250,10 @@ namespace MyCMS.Web.Areas.Admin.Controllers
         }
 
         [NonAction]
-        partial void DeleteOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, MyCMS.Model.AdminModel.TimeFrameModel model);
+        partial void DeleteOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, MyCMS.Model.TimeFrameViewModel model);
 
         [NonAction]
-        public override System.Web.Mvc.ActionResult Delete(MyCMS.Model.AdminModel.TimeFrameModel model)
+        public override System.Web.Mvc.ActionResult Delete(MyCMS.Model.TimeFrameViewModel model)
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Delete);
             ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "model", model);

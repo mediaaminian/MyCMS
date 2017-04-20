@@ -49,149 +49,30 @@ namespace MyCMS.Model
 
         public string DefaultValue { get; set; }
 
-        public int? IntValue
-        {
-            get
-            {
-                if (Value!=null)
-                    return int.Parse(Value);
-                else if (string.IsNullOrWhiteSpace(DefaultValue))
-                    return int.Parse(DefaultValue);
-                else
-                    return 0;
-                /*
-                try
-                {
-                    return int.Parse(Value);
+  
 
-                }
-                catch {
-                    try
-                    {
-                        return int.Parse(DefaultValue);
-                    }
-                    catch (Exception)
-                    {
 
-                        return 0;
-                    }
-
-                }*/
-                
-            }
-            set
-            {
-                Value = value.ToString();
-            }
-        }
-
-        public string StringValue
-        {
-            get
-            {
-
-                try
-                {
-                    return Value;
-
-                }
-                catch 
-                {
-
-                    try
-                    {
-                        return DefaultValue;
-                    }
-                    catch (Exception)
-                    {
-
-                        return "";
-                    }
-                }
-            }
-            set
-            {
-                Value = value;
-            }
-        }
-
-        public bool? BoolValue
-        {
-            get
-            {
-                return Value!=null && Boolean.Parse(Value);
-                
-                /*
-                try
-                {
-                    return Boolean.Parse(Value);
-
-                }
-                catch 
-                {
-                    try
-                    {
-
-                    
-                    return Boolean.Parse(DefaultValue);
-                    }
-                    catch (Exception)
-                    {
-
-                        return false;
-                    }
-                }*/
-            }
-            set
-            {
-                Value = value.ToString();
-            }
-        }
-
-        public float? FloatValue
-        {
-            get
-            {
-                try
-                {
-                    return float.Parse(Value);
-                }
-                catch 
-                {
-                    try
-                    {
-                        return float.Parse(DefaultValue);
-                    }
-                    catch (Exception)
-                    {
-
-                        return 0;
-                    }
-                    
-                }
-            }
-            set
-            {
-                Value = value.ToString();
-            }
-        }
 
         public bool UseDefaultValue { get; set; }
 
         [Localized("ProductProperty.FkPropertyName")]
         public string PropertyTitle { get; set; }
+        public int PropertyId { get; set; }
+        public byte[] RowVersion { get; set; }
 
-
-        [Localized("ProductProperty.DataType")]
-        public enumDataType DataType { get; set; }
 
         #endregion
-
+        /// <summary>
+        /// اینا دیگه استفاده نمیشه
+        /// </summary>
         public void CreateMappings()
         {
             //ProductPropertyMapper.Config();
             Mapper.Initialize(cfg => cfg.CreateMap<ProductProperty, ProductPropertyViewModel>());
-            Mapper.Initialize(cfg => cfg.CreateMap<ProductPropertyViewModel, ProductProperty>());
+            Mapper.Initialize(cfg => cfg.CreateMap<ProductPropertyViewModel, ProductProperty>()
+            .ForMember(q=>q.Product,q=>q.Ignore())
+            .ForMember(q => q.Property, q=>q.Ignore())
+            );
         }
 
         public ProductProperty GetDomain(ProductPropertyViewModel viewmodel)
