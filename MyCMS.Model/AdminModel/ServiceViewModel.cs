@@ -58,7 +58,7 @@ namespace MyCMS.Model
         public System.Int32 TempActivationCount { get; set; }
 
         [Localized("Service.TempExpireTime")]
-        public System.Int32 TempExpireTime { get; set; }
+        public DateTime TempExpireTime { get; set; }
 
         [Localized("Service.Status")]
         public System.Byte Status { get; set; }

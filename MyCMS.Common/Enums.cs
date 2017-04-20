@@ -133,7 +133,7 @@ namespace Framework.UI.Web
 /// </summary>
 /// <param name="value"></param>
 /// <returns></returns>
-public enum enumDataType
+public enum enumDataType : byte
 {
     [Description("عددی")]
     Int = 1,

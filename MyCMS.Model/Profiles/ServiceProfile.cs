@@ -23,7 +23,7 @@ namespace MyCMS.Model
                 .ForMember(q => q.ProductTypeGroupTitle, q => q.MapFrom(w => w.Product.ProductTypeGroup.Name));
 
             Mapper.CreateMap<ServiceViewModel, MyCMS.DomainClasses.Entities.Service>()
-                            .ForMember(q => q.Product, q => q.Ignore())
+            .ForMember(q => q.Product, q => q.Ignore())
             .ForMember(q => q.UserOrderDetail, q => q.Ignore())
             .ForMember(q => q.Services, q => q.Ignore())
             .ForMember(q => q.OrderDetails, q => q.Ignore())
