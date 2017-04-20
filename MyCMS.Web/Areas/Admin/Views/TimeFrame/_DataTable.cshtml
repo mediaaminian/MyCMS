@@ -1,4 +1,4 @@
-﻿@model IEnumerable<MyCMS.Model.AdminModel.TimeFrameModel>
+﻿@model IEnumerable<MyCMS.Model.TimeFrameViewModel>
 <h2>فریم زمانی</h2>
 
 <div id="user-table" class="table-responsive">
@@ -25,7 +25,6 @@
    .Editable(editable => editable.TemplateName("TimeFrame").Mode(GridEditMode.PopUp).DisplayDeleteConfirmation(true))
    .Filterable()
    .Selectable(selectable => selectable.Mode(GridSelectionMode.Multiple)).Sortable().Pageable()
-   //.Events(ev=>ev.DataBound("GridDataBound"))
    .DataSource(dataSource =>
        dataSource.Ajax()
            .PageSize(10)

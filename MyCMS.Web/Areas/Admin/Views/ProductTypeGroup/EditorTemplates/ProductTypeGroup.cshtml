@@ -1,6 +1,6 @@
 ﻿
 
-@model MyCMS.Model.AdminModel.ProductTypeGroupModel
+@model MyCMS.Model.ProductTypeGroupViewModel
 
 
 <div class="editor-label">
@@ -29,10 +29,10 @@
 
 
 <div class="editor-label">
-    @Html.LabelFor(model => model.DefaultTimeFrameID)
+    @Html.LabelFor(model => model.TimeFrameId)
 </div>
 <div class="editor-field">
-    @(Html.Kendo().DropDownListFor(q => q.DefaultTimeFrameID)
+    @(Html.Kendo().DropDownListFor(q => q.TimeFrameId)
         .OptionLabel("فریم زمانی ...")
         .DataTextField("Title")
         .DataValueField("Id")

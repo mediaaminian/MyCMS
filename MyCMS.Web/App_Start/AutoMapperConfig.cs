@@ -25,7 +25,7 @@ namespace MyCMS.Web
 
             LoadStandardMappings(types);
 
-            LoadCustomMappings(types);
+            //LoadCustomMappings(types);
 
         }
 

@@ -4,7 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using MyCMS.Datalayer.Context;
 using MyCMS.DomainClasses.Entities;
-using MyCMS.Model.AdminModel;
+using MyCMS.Model;
 using MyCMS.Servicelayer.EFServices.Enums;
 using MyCMS.Servicelayer.Interfaces;
 using MyCMS.Utilities.Caching;
@@ -25,10 +25,10 @@ namespace MyCMS.Servicelayer.EFServices
             _mappingEngine = mappingEngine;
             _ProductTypeGroup = uow.Set<ProductTypeGroup>();
         }
-        public void AddProductTypeGroup(ProductTypeGroupModel ProductTypeGroupModel)
+        public void AddProductTypeGroup(ProductTypeGroupViewModel ProductTypeGroupModel)
         {
             Mapper.Initialize(cfg =>
-        cfg.CreateMap<ProductTypeGroupModel, ProductTypeGroup>()
+        cfg.CreateMap<ProductTypeGroupViewModel, ProductTypeGroup>()
             //.ForMember(er => er.DefaultTimeFrame, er => er.MapFrom(t => new TimeFrame() { Id= t.DefaultTimeFrameID}))
             );
 
@@ -37,32 +37,29 @@ namespace MyCMS.Servicelayer.EFServices
         }
         [CacheMethod]
 
-        public IList<ProductTypeGroupModel> GetAllProductTypeGroups()
+        public IList<ProductTypeGroupViewModel> GetAllProductTypeGroups()
         {
-            var List = _ProductTypeGroup.AsNoTracking().OrderByDescending(c => c.Id).ToList();
-            Mapper.Initialize(cfg =>
-            cfg.CreateMap<ProductTypeGroup, ProductTypeGroupModel>()
-            //.ForMember(er => er.DefaultTimeFrameName, er => er.MapFrom(t => t.DefaultTimeFrame.Title))
-            );
-            var ModelList = Mapper.Map<IEnumerable<ProductTypeGroupModel>>(List);
-            return ModelList.ToList();
+            var List = _ProductTypeGroup.ToList();
 
+            var ModelList = new List<ProductTypeGroupViewModel>();
+            _mappingEngine.Map(source: List, destination: ModelList);
+            return ModelList;
         }
 
 
-        public IList<ProductTypeGroupModel> GetProductTypeGroup(int page, int count, Order order = Order.Asscending)
+        public IList<ProductTypeGroupViewModel> GetProductTypeGroup(int page, int count, Order order = Order.Asscending)
         {
             throw new NotImplementedException();
         }
 
-        public ProductTypeGroupModel GetProductTypeGroupById(int ProductTypeGroupID)
+        public ProductTypeGroupViewModel GetProductTypeGroupById(int ProductTypeGroupID)
         {
             throw new NotImplementedException();
         }
 
-        public void UpdateProductTypeGroup(ProductTypeGroupModel ProductTypeGroupModel)
+        public void UpdateProductTypeGroup(ProductTypeGroupViewModel ProductTypeGroupModel)
         {
-            Mapper.Initialize(cfg => cfg.CreateMap<ProductTypeGroupModel, ProductTypeGroup>());
+            Mapper.Initialize(cfg => cfg.CreateMap<ProductTypeGroupViewModel, ProductTypeGroup>());
 
             var ProductTypeGroupItem = Mapper.Map<ProductTypeGroup>(ProductTypeGroupModel);
 

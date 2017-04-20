@@ -21,6 +21,7 @@ namespace MyCMS.DomainClasses.Entities
         [ForeignKey("ProductTypeGroupId")]
         public virtual ProductTypeGroup ProductTypeGroup { get; set; }
         public int? ProductTypeGroupId { get; set; }
+        public System.Byte Status { get; set; }
 
         public virtual ICollection<Product> Products { get; set; }
         public virtual ICollection<Service> Services { get; set; }

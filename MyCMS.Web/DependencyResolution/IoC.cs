@@ -34,6 +34,7 @@ using StructureMap.Graph;
 using System;
 using System.Threading;
 using StructureMap.Configuration.DSL;
+using MyCMS.Model;
 
 namespace MyCMS.Web.DependencyResolution
 {
@@ -54,7 +55,8 @@ namespace MyCMS.Web.DependencyResolution
                 c.Scan(scan =>
                 {
                     scan.TheCallingAssembly();
-                    //scan.AssemblyContainingType<SomeType>(); // for other asms, if any.
+                    scan.AssemblyContainingType<TimeFrameProfile>(); // for other asms, if any.
+                    scan.AssemblyContainingType<UserOrderProfile>(); // for other asms, if any.
                     scan.WithDefaultConventions();
                     scan.AddAllTypesOf<Profile>().NameBy(item => item.FullName);
                 });

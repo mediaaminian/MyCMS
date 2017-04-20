@@ -24,7 +24,13 @@ namespace MyCMS.Model
 
 
 
-            Mapper.CreateMap<ProductTypeGroupViewModel, ProductTypeGroup>()
+            Mapper.CreateMap<ProductTypeGroupViewModel, ProductTypeGroup>().ForMember(q => q.TimeFrame, q => q.Ignore())
+            .ForMember(q => q.Services, q => q.Ignore())
+            .ForMember(q => q.Products, q => q.Ignore())
+            .ForMember(q => q.ProductTypes, q => q.Ignore())
+            .ForMember(q => q.ProductTypeGroupTimeFrames, q => q.Ignore())
+            .ForMember(q => q.PropertyGroups, q => q.Ignore())
+            .ForMember(q => q.OrderDetails, q => q.Ignore())
                 .ForMember(q=>q.AppKey, q=>q.MapFrom(w=> DataDictionary.AppKeyItems.Where(e=>e.Key.ToString() == w.AppKey).Select(e=>e.Value.ToString()).FirstOrDefault()));
         }
     }

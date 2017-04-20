@@ -51,14 +51,22 @@ namespace MyCMS.Model
         [Localized("Factor.TotalAmount")]
         public double? TotalAmount { get; set; }
 
-        public string UserName { get; set; }
+        public DateTime CreatedDate { get; set; }
+        public DateTime? ModifiedDate { get; set; }
+        public byte[] RowVersion { get; set; }
 
         #endregion
 
         public void CreateMappings()
         {            
-            Mapper.Initialize(cfg => cfg.CreateMap<UserOrder, UserOrderViewModel>());
-            Mapper.Initialize(cfg => cfg.CreateMap<UserOrderViewModel, UserOrder>());
+            Mapper.Initialize(cfg => cfg.CreateMap<UserOrder, UserOrderViewModel>()
+
+            );
+            Mapper.Initialize(cfg => cfg.CreateMap<UserOrderViewModel, UserOrder>()
+
+
+
+            );
         }
 
         public UserOrder GetDomain(UserOrderViewModel viewmodel)

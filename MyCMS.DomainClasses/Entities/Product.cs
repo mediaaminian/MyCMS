@@ -16,6 +16,8 @@ namespace MyCMS.DomainClasses.Entities
 		public bool IsExtra { get;set; }
         public bool IsSpecial { get; set; }
         public byte Status { get;set; }
+        public DateTime CreatedDate { get; set; }
+        public DateTime? ModifiedDate { get; set; }
         public virtual ICollection<UserOrderDetail> OrderDetails { get; set; }
         public virtual ICollection<ProductProperty> ProductProperties { get; set; }
         public virtual ICollection<Service> Services { get; set; }
@@ -28,8 +30,6 @@ namespace MyCMS.DomainClasses.Entities
         public virtual ProductTypeGroup ProductTypeGroup { get; set; }
         public int? ProductTypeGroupId { get; set; }
 
-        public DateTime CreatedDate { get; set; }
-        public DateTime? ModifiedDate { get; set; }
 
         [ForeignKey("UserId")]
         public virtual User User { get; set; }

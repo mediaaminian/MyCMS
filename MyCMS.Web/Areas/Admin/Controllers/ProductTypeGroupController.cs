@@ -3,7 +3,7 @@ using System.Linq;
 using System.Web.Mvc;
 using MyCMS.Datalayer.Context;
 using MyCMS.DomainClasses.Entities;
-using MyCMS.Model.AdminModel;
+using MyCMS.Model;
 using MyCMS.Model.LuceneModel;
 using MyCMS.Servicelayer.EFServices.Enums;
 using MyCMS.Servicelayer.Interfaces;
@@ -36,21 +36,21 @@ namespace MyCMS.Web.Areas.Admin.Controllers
 
             return PartialView(MVC.Admin.ProductTypeGroup.Views._DataTable, list);
         }
-        public virtual ActionResult Create(ProductTypeGroupModel model)
+        public virtual ActionResult Create(ProductTypeGroupViewModel model)
         {
             _ProductTypeGroupService.AddProductTypeGroup(model);
             var sd = _uow.SaveChanges();
             return null;
 
         }
-        public virtual ActionResult Update(ProductTypeGroupModel model)
+        public virtual ActionResult Update(ProductTypeGroupViewModel model)
         {
             _ProductTypeGroupService.UpdateProductTypeGroup(model);
             var sd = _uow.SaveChanges();
             return null;
 
         }
-        public virtual ActionResult Delete(ProductTypeGroupModel model)
+        public virtual ActionResult Delete(ProductTypeGroupViewModel model)
         {
             _ProductTypeGroupService.DeleteProductTypeGroup(model.Id);
             var sd = _uow.SaveChanges();

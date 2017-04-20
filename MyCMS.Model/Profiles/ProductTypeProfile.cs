@@ -19,9 +19,16 @@ namespace MyCMS.Model
         protected override void Configure()
         {
             Mapper.CreateMap<ProductType, ProductTypeViewModel>()
+                .ForMember(q => q.ProductTypeGroupId, q => q.MapFrom(w => w.ProductTypeGroup.Id))
                 .ForMember(q => q.ProductTypeGroupTitle, q=>q.MapFrom(w=>w.ProductTypeGroup.Name));
 
-            Mapper.CreateMap<ProductTypeViewModel, ProductType>();
+            Mapper.CreateMap<ProductTypeViewModel, ProductType>()
+                .ForMember(q => q.Products, q => q.Ignore())
+                .ForMember(q => q.ProductTypeGroup, q => q.Ignore())
+                .ForMember(q => q.Services, q => q.Ignore())
+                .ForMember(q => q.OrderDetails, q => q.Ignore());
+
+            
         }
     }
 }

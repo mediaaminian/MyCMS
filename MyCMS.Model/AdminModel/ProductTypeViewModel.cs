@@ -92,6 +92,7 @@ namespace MyCMS.Model
         [Localized("ProductType.ProductTypeGroup")]
         public string ProductTypeGroupTitle { get; set; }
 
+        public byte[] RowVersion { get; set; }
 
         #endregion
 
@@ -99,7 +100,12 @@ namespace MyCMS.Model
         {
             //ProductTypeMapper.Config();
             Mapper.Initialize(cfg => cfg.CreateMap<ProductType, ProductTypeViewModel>());
-            Mapper.Initialize(cfg => cfg.CreateMap<ProductTypeViewModel, ProductType>());
+            Mapper.Initialize(cfg => cfg.CreateMap<ProductTypeViewModel, ProductType>()
+            .ForMember(q=>q.ProductTypeGroup,q=>q.Ignore())
+            .ForMember(q=>q.Products, q=>q.Ignore())
+            .ForMember(q=>q.Services, q=>q.Ignore())
+            .ForMember(q=>q.OrderDetails, q=>q.Ignore())
+            );
         }
 
         public ProductType GetDomain(ProductTypeViewModel viewmodel)

@@ -81,8 +81,6 @@ namespace MyCMS.Model
             }
         }
 
-        [Localized("Service.IsNew")]
-        public bool IsNew { get; set; }
 
         [Localized("Service.ProductTypeTitle")]
         public string ProductTypeTitle { get; set; }
@@ -111,14 +109,21 @@ namespace MyCMS.Model
                 }
             }
         }
-
+        public DateTime CreatedDate { get; set; }
+        public DateTime? ModifiedDate { get; set; }
+        public int? ProductTypeId { get; set; }
+        public int? ProductTypeGroupId { get; set; }
+        public int? UserId { get; set; }
+        public byte[] RowVersion { get; set; }
 
         #endregion
         public void CreateMappings()
         {
             //ServiceMapper.Config();
             Mapper.Initialize(cfg => cfg.CreateMap<Service, ServiceViewModel>());
-            Mapper.Initialize(cfg => cfg.CreateMap<ServiceViewModel, Service>());
+            Mapper.Initialize(cfg => cfg.CreateMap<ServiceViewModel, Service>()
+
+            );
         }
 
         public Service GetDomain(ServiceViewModel viewmodel)

@@ -21,8 +21,7 @@ namespace MyCMS.Model
         [Localized("Product.Brief")]
         public System.String Brief { get; set; }
 
-        [Localized("Product.Datestamp")]
-        public System.DateTime? Datestamp { get; set; }
+
 
         [Localized("Product.Description")]
         public System.String Description { get; set; }
@@ -103,9 +102,12 @@ namespace MyCMS.Model
                     return "نمی باشد";
             }
         }
-        
 
+        public int? UserId { get; set; }
+        public  byte[] RowVersion { get; set; }
 
+        public DateTime CreatedDate { get; set; }
+        public DateTime? ModifiedDate { get; set; }
         public int ProductTypeGroupId { get; set; }
 
         #endregion
@@ -113,8 +115,12 @@ namespace MyCMS.Model
         public void CreateMappings()
         {
             //ProductMapper.Config();
-            Mapper.Initialize(cfg => cfg.CreateMap<Product, ProductViewModel>());
-            Mapper.Initialize(cfg => cfg.CreateMap<ProductViewModel, Product>());
+            Mapper.Initialize(cfg => cfg.CreateMap<Product, ProductViewModel>()
+
+            );
+            Mapper.Initialize(cfg => cfg.CreateMap<ProductViewModel, Product>()
+
+            );
         }
 
         public Product GetDomain(ProductViewModel viewmodel)

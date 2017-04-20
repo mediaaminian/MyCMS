@@ -40,14 +40,13 @@ namespace MyCMS.DomainClasses.Entities
         public virtual ProductTypeGroup ProductTypeGroup { get; set; }
         public int? ProductTypeGroupId { get; set; }
 
-        public DateTime CreatedDate { get; set; }
-        public DateTime? ModifiedDate { get; set; }
 
 
         [ForeignKey("UserId")]
         public virtual User User { get; set; }
         public int? UserId { get; set; }
-
+        public DateTime CreatedDate { get; set; }
+        public DateTime? ModifiedDate { get; set; }
 
         //[ForeignKey("EditedByUserId")]
         //public virtual User EditedByUser { get; set; }
