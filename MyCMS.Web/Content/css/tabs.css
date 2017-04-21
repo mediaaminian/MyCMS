@@ -174,7 +174,8 @@
             color: #fff !important;
             line-height: 1;
         }
-        h1.titr {
+
+h1.titr {
     color: #fff !important;
 }
 /* Fallback */
@@ -382,17 +383,26 @@ DEMO 1
 .grid {
     direction: rtl;
 }
+
 .postcontent, .sidebar, .col_full, .col_half, .col_one_third, .col_two_third, .col_three_fourth, .col_one_fourth, .col_one_fifth, .col_two_fifth, .col_three_fifth, .col_four_fifth, .col_one_sixth, .col_five_sixth {
     margin-left: 2%;
     margin-right: 0;
     float: right;
 }
+
 input.sm-form-control {
     width: calc(50% - 10px);
     float: right;
     margin: 0px 0px 0px 10px;
 }
+
 .content-wrap section p {
     position: absolute;
     top: -40px;
+}
+
+.ui-tabs .ui-tabs-nav li a {
+    -webkit-border-radius: 0 0 4px 4px !important;
+    -moz-border-radius: 0 0 4px 4px !important;
+    border-radius: 0 0 4px 4px !important;
 }
