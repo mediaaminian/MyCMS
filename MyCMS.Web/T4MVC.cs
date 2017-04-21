@@ -146,6 +146,7 @@ namespace Links
         public static readonly string bootstrap_transition_rtl_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/bootstrap-transition-rtl.min.js") ? Url("bootstrap-transition-rtl.min.js") : Url("bootstrap-transition-rtl.js");
         public static readonly string bootstrap_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/bootstrap.min.js") ? Url("bootstrap.min.js") : Url("bootstrap.js");
         public static readonly string bootstrap_min_js = Url("bootstrap.min.js");
+        public static readonly string cbpFWTabs_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/cbpFWTabs.min.js") ? Url("cbpFWTabs.min.js") : Url("cbpFWTabs.js");
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public static class chosen {
             public const string UrlPath = "~/Scripts/chosen";
@@ -3479,6 +3480,8 @@ namespace Links
             public static readonly string responsive_css = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/responsive.min.css") ? Url("responsive.min.css") : Url("responsive.css");
             public static readonly string style_rtl_css = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/style-rtl.min.css") ? Url("style-rtl.min.css") : Url("style-rtl.css");
             public static readonly string style_css = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/style.min.css") ? Url("style.min.css") : Url("style.css");
+            public static readonly string tabs_css = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/tabs.min.css") ? Url("tabs.min.css") : Url("tabs.css");
+            public static readonly string tabstyles_css = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/tabstyles.min.css") ? Url("tabstyles.min.css") : Url("tabstyles.css");
         }
     
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
@@ -3786,6 +3789,9 @@ namespace Links
                 public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
                 public static readonly string _88b9j9lc_png = Url("88b9j9lc.png");
                 public static readonly string _8w5djnsk_png = Url("8w5djnsk.png");
+                public static readonly string Car_Black_png = Url("Car-Black.png");
+                public static readonly string Car_Orange_png = Url("Car-Orange.png");
+                public static readonly string Car_White_png = Url("Car-White.png");
                 public static readonly string down_png = Url("down.png");
                 public static readonly string facebook_png = Url("facebook.png");
                 public static readonly string fb_icon_jpg = Url("fb-icon.jpg");
@@ -3797,10 +3803,16 @@ namespace Links
                 public static readonly string lqmedyej_png = Url("lqmedyej.png");
                 public static readonly string mainsubmenu_png = Url("mainsubmenu.png");
                 public static readonly string mainsubmenuh_png = Url("mainsubmenuh.png");
+                public static readonly string Motor_Black_png = Url("Motor-Black.png");
+                public static readonly string Motor_Orange_png = Url("Motor-Orange.png");
+                public static readonly string Motor_White_png = Url("Motor-White.png");
                 public static readonly string RSS_png = Url("RSS.png");
                 public static readonly string social_icons_png = Url("social-icons.png");
                 public static readonly string submenu_dark_rtl_png = Url("submenu-dark-rtl.png");
                 public static readonly string submenu_rtl_png = Url("submenu-rtl.png");
+                public static readonly string Truck_Black_png = Url("Truck-Black.png");
+                public static readonly string Truck_Orange_png = Url("Truck-Orange.png");
+                public static readonly string Truck_White_png = Url("Truck-White.png");
                 public static readonly string twit_icon_jpg = Url("twit-icon.jpg");
                 public static readonly string twitter_png = Url("twitter.png");
                 public static readonly string up_png = Url("up.png");
@@ -7303,6 +7315,7 @@ namespace Links
                 public const string bootstrap_transition_rtl_js = "~/Scripts/bootstrap-transition-rtl.js"; 
                 public const string bootstrap_js = "~/Scripts/bootstrap.js"; 
                 public const string bootstrap_min_js = "~/Scripts/bootstrap.min.js"; 
+                public const string cbpFWTabs_js = "~/Scripts/cbpFWTabs.js"; 
                 public const string froala_editor_min_js = "~/Scripts/froala_editor.min.js"; 
                 public const string froala_editor_pkgd_min_js = "~/Scripts/froala_editor.pkgd.min.js"; 
                 public const string froala_editor_ie8_min_js = "~/Scripts/froala_editor_ie8.min.js"; 
@@ -8017,6 +8030,8 @@ namespace Links
                     public const string responsive_css = "~/Content/css/responsive.css";
                     public const string style_rtl_css = "~/Content/css/style-rtl.css";
                     public const string style_css = "~/Content/css/style.css";
+                    public const string tabs_css = "~/Content/css/tabs.css";
+                    public const string tabstyles_css = "~/Content/css/tabstyles.css";
                 }
             }
             public static partial class DistortedButtonEffects 

@@ -879,6 +879,8 @@
     <Content Include="Content\css\responsive.css" />
     <Content Include="Content\css\style-rtl.css" />
     <Content Include="Content\css\style.css" />
+    <Content Include="Content\css\tabs.css" />
+    <Content Include="Content\css\tabstyles.css" />
     <Content Include="Content\DistortedButtonEffects\.gitignore" />
     <Content Include="Content\DistortedButtonEffects\css\main.css" />
     <Content Include="Content\DistortedButtonEffects\css\normalize.css" />
@@ -943,6 +945,9 @@
     <Content Include="Content\Images\header.png" />
     <Content Include="Content\Images\icons\88b9j9lc.png" />
     <Content Include="Content\Images\icons\8w5djnsk.png" />
+    <Content Include="Content\Images\icons\Car-Black.png" />
+    <Content Include="Content\Images\icons\Car-Orange.png" />
+    <Content Include="Content\Images\icons\Car-White.png" />
     <Content Include="Content\Images\icons\down.png" />
     <Content Include="Content\Images\icons\facebook.png" />
     <Content Include="Content\Images\icons\fb-icon.jpg" />
@@ -954,10 +959,16 @@
     <Content Include="Content\Images\icons\lqmedyej.png" />
     <Content Include="Content\Images\icons\mainsubmenu.png" />
     <Content Include="Content\Images\icons\mainsubmenuh.png" />
+    <Content Include="Content\Images\icons\Motor-Black.png" />
+    <Content Include="Content\Images\icons\Motor-Orange.png" />
+    <Content Include="Content\Images\icons\Motor-White.png" />
     <Content Include="Content\Images\icons\RSS.png" />
     <Content Include="Content\Images\icons\social-icons.png" />
     <Content Include="Content\Images\icons\submenu-dark-rtl.png" />
     <Content Include="Content\Images\icons\submenu-rtl.png" />
+    <Content Include="Content\Images\icons\Truck-Black.png" />
+    <Content Include="Content\Images\icons\Truck-Orange.png" />
+    <Content Include="Content\Images\icons\Truck-White.png" />
     <Content Include="Content\Images\icons\twit-icon.jpg" />
     <Content Include="Content\Images\icons\twitter.png" />
     <Content Include="Content\Images\icons\up.png" />
@@ -2812,6 +2823,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Properties\PublishProfiles\MyCMS.pubxml" />
+    <Content Include="Scripts\cbpFWTabs.js" />
     <Content Include="Scripts\jqGrid\bower.json" />
     <Content Include="Scripts\jqGrid\build.gradle" />
     <Content Include="Scripts\jqGrid\build.properties" />
