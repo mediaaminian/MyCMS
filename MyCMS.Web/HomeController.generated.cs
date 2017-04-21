@@ -77,6 +77,7 @@ namespace MyCMS.Web.Controllers
             public readonly string Standalone = "Standalone";
             public readonly string BooksList = "BooksList";
             public readonly string Breadcrumb = "Breadcrumb";
+            public readonly string AdvancedSearch = "AdvancedSearch";
             public readonly string Slider = "Slider";
             public readonly string Telegram = "Telegram";
             public readonly string FooterContactInfo = "FooterContactInfo";
@@ -95,6 +96,7 @@ namespace MyCMS.Web.Controllers
             public const string Standalone = "Standalone";
             public const string BooksList = "BooksList";
             public const string Breadcrumb = "Breadcrumb";
+            public const string AdvancedSearch = "AdvancedSearch";
             public const string Slider = "Slider";
             public const string Telegram = "Telegram";
             public const string FooterContactInfo = "FooterContactInfo";
@@ -125,6 +127,7 @@ namespace MyCMS.Web.Controllers
             public _ViewNamesClass ViewNames { get { return s_ViewNames; } }
             public class _ViewNamesClass
             {
+                public readonly string _AdvancedSearch = "_AdvancedSearch";
                 public readonly string _Announce = "_Announce";
                 public readonly string _BooksList = "_BooksList";
                 public readonly string _Breadcrumb = "_Breadcrumb";
@@ -139,6 +142,7 @@ namespace MyCMS.Web.Controllers
                 public readonly string IndexPHP = "IndexPHP";
                 public readonly string Standalone = "Standalone";
             }
+            public readonly string _AdvancedSearch = "~/Views/Home/_AdvancedSearch.cshtml";
             public readonly string _Announce = "~/Views/Home/_Announce.cshtml";
             public readonly string _BooksList = "~/Views/Home/_BooksList.cshtml";
             public readonly string _Breadcrumb = "~/Views/Home/_Breadcrumb.cshtml";
@@ -214,6 +218,17 @@ namespace MyCMS.Web.Controllers
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Breadcrumb);
             BreadcrumbOverride(callInfo);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void AdvancedSearchOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult AdvancedSearch()
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.AdvancedSearch);
+            AdvancedSearchOverride(callInfo);
             return callInfo;
         }
 

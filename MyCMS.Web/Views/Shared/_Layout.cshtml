@@ -52,7 +52,7 @@
         @Scripts.Render("~/bundles/AngularJs")
 
 </head>
-<body class="stretched device-lg" data-loader="14" ng-app="app">
+<body class="stretched device-lg" data-loader="14" ng-app="app" >
     @if (User.Identity.IsAuthenticated)
     {
         @Html.Action(MVC.Admin.Home.ActionNames.RenderDashBoard, MVC.Admin.Home.Name, new { area = "Admin" })
@@ -124,7 +124,7 @@
 
                             @Html.Action(MVC.Home.ActionNames.NavBar, MVC.Home.Name)
 
-                        <!-- #primary-menu end -->
+                        <!-- #primary-menu end -->                      
 
                     </div>
 
@@ -146,7 +146,9 @@
                         
                         @*@Html.Action(MVC.Home.ActionNames.Slider, MVC.Home.Name)*@
                         @RenderSection("Slider", required: false)
-                        
+
+                        @RenderSection("AdvancedSearch", required: false)
+
                     </div>
                     <!-- end slider div -->
                     <div class="row-fluid" id="content" style="width:100%">

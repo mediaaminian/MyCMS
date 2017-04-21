@@ -31,7 +31,11 @@ namespace MyCMS.Web
 
             bundles.Add(new ScriptBundle("~/bundles/AngularJs").Include(
                 "~/Content/js/Angularjs/angular.min.js",
-                "~/Content/js/Controller/serviceBaseAngular.js"));
+                "~/Content/js/Angularjs/angular-animate.min.js",
+                "~/Scripts/loading-bar.js",
+                "~/Content/js/Controller/LoadingController.js",
+                "~/Content/js/Controller/serviceBaseAngular.js"
+                ));
 
             bundles.Add(new ScriptBundle("~/bundles/functions").Include(
                 "~/Content/js/functions.js"));
@@ -51,6 +55,7 @@ namespace MyCMS.Web
                 "~/Scripts/jquery-validator-combined.js"
                 ));
             bundles.Add(new ScriptBundle("~/bundles/sitejs").Include(
+                "~/Scripts/TweenMax.min.js",
                 "~/Scripts/myscript.js"
                 ));
             bundles.Add(new ScriptBundle("~/bundles/jqueryform").Include(
@@ -140,7 +145,9 @@ namespace MyCMS.Web
                 "~/Content/css/magnific-popup.css",
                 "~/Content/css/responsive.css",
                 "~/Content/css/responsive-rtl.css",
-                "~/Content/css/fonts/persian/persian.css"
+                "~/Content/css/loading-bar.css",
+                "~/Content/css/fonts/persian/persian.css",
+                "~/Content/DistortedButtonEffects/css/main.css"
                 ));
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're

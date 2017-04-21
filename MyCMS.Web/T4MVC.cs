@@ -1818,6 +1818,7 @@ namespace Links
         }
     
         public static readonly string load_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/load.min.js") ? Url("load.min.js") : Url("load.js");
+        public static readonly string loading_bar_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/loading-bar.min.js") ? Url("loading-bar.min.js") : Url("loading-bar.js");
         public static readonly string modernizr_2_6_2_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/modernizr-2.6.2.min.js") ? Url("modernizr-2.6.2.min.js") : Url("modernizr-2.6.2.js");
         public static readonly string modernizr_2_8_3_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/modernizr-2.8.3.min.js") ? Url("modernizr-2.8.3.min.js") : Url("modernizr-2.8.3.js");
         public static readonly string myscript_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/myscript.min.js") ? Url("myscript.min.js") : Url("myscript.js");
@@ -2509,6 +2510,7 @@ namespace Links
             public static readonly string tinymce_min_js = Url("tinymce.min.js");
         }
     
+        public static readonly string TweenMax_min_js = Url("TweenMax.min.js");
     }
 
     [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
@@ -3471,11 +3473,201 @@ namespace Links
                 public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
             }
         
+            public static readonly string loading_bar_css = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/loading-bar.min.css") ? Url("loading-bar.min.css") : Url("loading-bar.css");
             public static readonly string magnific_popup_css = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/magnific-popup.min.css") ? Url("magnific-popup.min.css") : Url("magnific-popup.css");
             public static readonly string responsive_rtl_css = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/responsive-rtl.min.css") ? Url("responsive-rtl.min.css") : Url("responsive-rtl.css");
             public static readonly string responsive_css = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/responsive.min.css") ? Url("responsive.min.css") : Url("responsive.css");
             public static readonly string style_rtl_css = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/style-rtl.min.css") ? Url("style-rtl.min.css") : Url("style-rtl.css");
             public static readonly string style_css = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/style.min.css") ? Url("style.min.css") : Url("style.css");
+        }
+    
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public static class DistortedButtonEffects {
+            public const string UrlPath = "~/Content/DistortedButtonEffects";
+            public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
+            public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
+            public static readonly string _gitignore = Url(".gitignore");
+            [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+            public static class css {
+                public const string UrlPath = "~/Content/DistortedButtonEffects/css";
+                public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
+                public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
+                [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+                public static class bourbon {
+                    public const string UrlPath = "~/Content/DistortedButtonEffects/css/bourbon";
+                    public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
+                    public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
+                    public static readonly string _bourbon_deprecated_upcoming_scss = Url("_bourbon-deprecated-upcoming.scss");
+                    public static readonly string _bourbon_scss = Url("_bourbon.scss");
+                    [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+                    public static class addons {
+                        public const string UrlPath = "~/Content/DistortedButtonEffects/css/bourbon/addons";
+                        public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
+                        public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
+                        public static readonly string _border_color_scss = Url("_border-color.scss");
+                        public static readonly string _border_radius_scss = Url("_border-radius.scss");
+                        public static readonly string _border_style_scss = Url("_border-style.scss");
+                        public static readonly string _border_width_scss = Url("_border-width.scss");
+                        public static readonly string _buttons_scss = Url("_buttons.scss");
+                        public static readonly string _clearfix_scss = Url("_clearfix.scss");
+                        public static readonly string _ellipsis_scss = Url("_ellipsis.scss");
+                        public static readonly string _font_stacks_scss = Url("_font-stacks.scss");
+                        public static readonly string _hide_text_scss = Url("_hide-text.scss");
+                        public static readonly string _margin_scss = Url("_margin.scss");
+                        public static readonly string _padding_scss = Url("_padding.scss");
+                        public static readonly string _position_scss = Url("_position.scss");
+                        public static readonly string _prefixer_scss = Url("_prefixer.scss");
+                        public static readonly string _retina_image_scss = Url("_retina-image.scss");
+                        public static readonly string _size_scss = Url("_size.scss");
+                        public static readonly string _text_inputs_scss = Url("_text-inputs.scss");
+                        public static readonly string _timing_functions_scss = Url("_timing-functions.scss");
+                        public static readonly string _triangle_scss = Url("_triangle.scss");
+                        public static readonly string _word_wrap_scss = Url("_word-wrap.scss");
+                    }
+                
+                    [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+                    public static class css3 {
+                        public const string UrlPath = "~/Content/DistortedButtonEffects/css/bourbon/css3";
+                        public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
+                        public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
+                        public static readonly string _animation_scss = Url("_animation.scss");
+                        public static readonly string _appearance_scss = Url("_appearance.scss");
+                        public static readonly string _backface_visibility_scss = Url("_backface-visibility.scss");
+                        public static readonly string _background_image_scss = Url("_background-image.scss");
+                        public static readonly string _background_scss = Url("_background.scss");
+                        public static readonly string _border_image_scss = Url("_border-image.scss");
+                        public static readonly string _calc_scss = Url("_calc.scss");
+                        public static readonly string _columns_scss = Url("_columns.scss");
+                        public static readonly string _filter_scss = Url("_filter.scss");
+                        public static readonly string _flex_box_scss = Url("_flex-box.scss");
+                        public static readonly string _font_face_scss = Url("_font-face.scss");
+                        public static readonly string _font_feature_settings_scss = Url("_font-feature-settings.scss");
+                        public static readonly string _hidpi_media_query_scss = Url("_hidpi-media-query.scss");
+                        public static readonly string _hyphens_scss = Url("_hyphens.scss");
+                        public static readonly string _image_rendering_scss = Url("_image-rendering.scss");
+                        public static readonly string _keyframes_scss = Url("_keyframes.scss");
+                        public static readonly string _linear_gradient_scss = Url("_linear-gradient.scss");
+                        public static readonly string _perspective_scss = Url("_perspective.scss");
+                        public static readonly string _placeholder_scss = Url("_placeholder.scss");
+                        public static readonly string _radial_gradient_scss = Url("_radial-gradient.scss");
+                        public static readonly string _selection_scss = Url("_selection.scss");
+                        public static readonly string _text_decoration_scss = Url("_text-decoration.scss");
+                        public static readonly string _transform_scss = Url("_transform.scss");
+                        public static readonly string _transition_scss = Url("_transition.scss");
+                        public static readonly string _user_select_scss = Url("_user-select.scss");
+                    }
+                
+                    [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+                    public static class functions {
+                        public const string UrlPath = "~/Content/DistortedButtonEffects/css/bourbon/functions";
+                        public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
+                        public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
+                        public static readonly string _assign_inputs_scss = Url("_assign-inputs.scss");
+                        public static readonly string _contains_falsy_scss = Url("_contains-falsy.scss");
+                        public static readonly string _contains_scss = Url("_contains.scss");
+                        public static readonly string _is_length_scss = Url("_is-length.scss");
+                        public static readonly string _is_light_scss = Url("_is-light.scss");
+                        public static readonly string _is_number_scss = Url("_is-number.scss");
+                        public static readonly string _is_size_scss = Url("_is-size.scss");
+                        public static readonly string _modular_scale_scss = Url("_modular-scale.scss");
+                        public static readonly string _px_to_em_scss = Url("_px-to-em.scss");
+                        public static readonly string _px_to_rem_scss = Url("_px-to-rem.scss");
+                        public static readonly string _shade_scss = Url("_shade.scss");
+                        public static readonly string _strip_units_scss = Url("_strip-units.scss");
+                        public static readonly string _tint_scss = Url("_tint.scss");
+                        public static readonly string _transition_property_name_scss = Url("_transition-property-name.scss");
+                        public static readonly string _unpack_scss = Url("_unpack.scss");
+                    }
+                
+                    [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+                    public static class helpers {
+                        public const string UrlPath = "~/Content/DistortedButtonEffects/css/bourbon/helpers";
+                        public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
+                        public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
+                        public static readonly string _convert_units_scss = Url("_convert-units.scss");
+                        public static readonly string _directional_values_scss = Url("_directional-values.scss");
+                        public static readonly string _font_source_declaration_scss = Url("_font-source-declaration.scss");
+                        public static readonly string _gradient_positions_parser_scss = Url("_gradient-positions-parser.scss");
+                        public static readonly string _linear_angle_parser_scss = Url("_linear-angle-parser.scss");
+                        public static readonly string _linear_gradient_parser_scss = Url("_linear-gradient-parser.scss");
+                        public static readonly string _linear_positions_parser_scss = Url("_linear-positions-parser.scss");
+                        public static readonly string _linear_side_corner_parser_scss = Url("_linear-side-corner-parser.scss");
+                        public static readonly string _radial_arg_parser_scss = Url("_radial-arg-parser.scss");
+                        public static readonly string _radial_gradient_parser_scss = Url("_radial-gradient-parser.scss");
+                        public static readonly string _radial_positions_parser_scss = Url("_radial-positions-parser.scss");
+                        public static readonly string _render_gradients_scss = Url("_render-gradients.scss");
+                        public static readonly string _shape_size_stripper_scss = Url("_shape-size-stripper.scss");
+                        public static readonly string _str_to_num_scss = Url("_str-to-num.scss");
+                    }
+                
+                    [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+                    public static class settings {
+                        public const string UrlPath = "~/Content/DistortedButtonEffects/css/bourbon/settings";
+                        public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
+                        public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
+                        public static readonly string _asset_pipeline_scss = Url("_asset-pipeline.scss");
+                        public static readonly string _prefixer_scss = Url("_prefixer.scss");
+                        public static readonly string _px_to_em_scss = Url("_px-to-em.scss");
+                    }
+                
+                }
+            
+                public static readonly string component_scss = Url("component.scss");
+                public static readonly string demo_scss = Url("demo.scss");
+                public static readonly string main_css = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/main.min.css") ? Url("main.min.css") : Url("main.css");
+                public static readonly string main_css_map = Url("main.css.map");
+                public static readonly string main_scss = Url("main.scss");
+                public static readonly string normalize_css = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/normalize.min.css") ? Url("normalize.min.css") : Url("normalize.css");
+            }
+        
+            public static readonly string favicon_ico = Url("favicon.ico");
+            [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+            public static class fonts {
+                public const string UrlPath = "~/Content/DistortedButtonEffects/fonts";
+                public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
+                public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
+                [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+                public static class codropsicons {
+                    public const string UrlPath = "~/Content/DistortedButtonEffects/fonts/codropsicons";
+                    public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
+                    public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
+                    public static readonly string codropsicons_eot = Url("codropsicons.eot");
+                    public static readonly string codropsicons_svg = Url("codropsicons.svg");
+                    public static readonly string codropsicons_ttf = Url("codropsicons.ttf");
+                    public static readonly string codropsicons_woff = Url("codropsicons.woff");
+                    public static readonly string license_txt = Url("license.txt");
+                }
+            
+            }
+        
+            [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+            public static class img {
+                public const string UrlPath = "~/Content/DistortedButtonEffects/img";
+                public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
+                public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
+                [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+                public static class related {
+                    public const string UrlPath = "~/Content/DistortedButtonEffects/img/related";
+                    public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
+                    public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
+                    public static readonly string ButtonStylesInspiration_png = Url("ButtonStylesInspiration.png");
+                    public static readonly string ProgressButtonStyles_png = Url("ProgressButtonStyles.png");
+                }
+            
+                public static readonly string ripple_png = Url("ripple.png");
+            }
+        
+            public static readonly string index_html = Url("index.html");
+            [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+            public static class js {
+                public const string UrlPath = "~/Content/DistortedButtonEffects/js";
+                public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
+                public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
+                public static readonly string main_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/main.min.js") ? Url("main.min.js") : Url("main.js");
+                public static readonly string TweenMax_min_js = Url("TweenMax.min.js");
+            }
+        
+            public static readonly string README_md = Url("README.md");
         }
     
         public static readonly string font_awesome_css = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/font-awesome.min.css") ? Url("font-awesome.min.css") : Url("font-awesome.css");
@@ -3562,6 +3754,7 @@ namespace Links
                 public static readonly string y_png = Url("y.png");
             }
         
+            public static readonly string dark_promo_background32_png = Url("dark-promo-background32.png");
             public static readonly string down_png = Url("down.png");
             public static readonly string download_png = Url("download.png");
             public static readonly string facebook_png = Url("facebook.png");
@@ -3642,6 +3835,7 @@ namespace Links
             
             }
         
+            public static readonly string light_promo_background32_png = Url("light-promo-background32.png");
             public static readonly string like_loading_gif = Url("like-loading.gif");
             public static readonly string loading_gif = Url("loading.gif");
             public static readonly string loading1_gif = Url("loading1.gif");
@@ -4553,6 +4747,7 @@ namespace Links
                 public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
                 public static readonly string DuctyCurrencyCalculatorController_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/DuctyCurrencyCalculatorController.min.js") ? Url("DuctyCurrencyCalculatorController.min.js") : Url("DuctyCurrencyCalculatorController.js");
                 public static readonly string ExchangeController_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/ExchangeController.min.js") ? Url("ExchangeController.min.js") : Url("ExchangeController.js");
+                public static readonly string LoadingController_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/LoadingController.min.js") ? Url("LoadingController.min.js") : Url("LoadingController.js");
                 public static readonly string serviceBaseAngular_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/serviceBaseAngular.min.js") ? Url("serviceBaseAngular.min.js") : Url("serviceBaseAngular.js");
             }
         
@@ -7140,6 +7335,7 @@ namespace Links
                 public const string knockout_2_2_1_debug_js = "~/Scripts/knockout-2.2.1.debug.js"; 
                 public const string knockout_2_2_1_js = "~/Scripts/knockout-2.2.1.js"; 
                 public const string load_js = "~/Scripts/load.js"; 
+                public const string loading_bar_js = "~/Scripts/loading-bar.js"; 
                 public const string modernizr_2_6_2_js = "~/Scripts/modernizr-2.6.2.js"; 
                 public const string modernizr_2_8_3_js = "~/Scripts/modernizr-2.8.3.js"; 
                 public const string myscript_js = "~/Scripts/myscript.js"; 
@@ -7148,6 +7344,7 @@ namespace Links
                 public const string respond_matchmedia_addListener_js = "~/Scripts/respond.matchmedia.addListener.js"; 
                 public const string respond_matchmedia_addListener_min_js = "~/Scripts/respond.matchmedia.addListener.min.js"; 
                 public const string respond_min_js = "~/Scripts/respond.min.js"; 
+                public const string TweenMax_min_js = "~/Scripts/TweenMax.min.js"; 
             }
         }
         public static partial class Content 
@@ -7814,11 +8011,94 @@ namespace Links
                     public const string dark_css = "~/Content/css/dark.css";
                     public const string font_icons_rtl_css = "~/Content/css/font-icons-rtl.css";
                     public const string font_icons_css = "~/Content/css/font-icons.css";
+                    public const string loading_bar_css = "~/Content/css/loading-bar.css";
                     public const string magnific_popup_css = "~/Content/css/magnific-popup.css";
                     public const string responsive_rtl_css = "~/Content/css/responsive-rtl.css";
                     public const string responsive_css = "~/Content/css/responsive.css";
                     public const string style_rtl_css = "~/Content/css/style-rtl.css";
                     public const string style_css = "~/Content/css/style.css";
+                }
+            }
+            public static partial class DistortedButtonEffects 
+            {
+                public static partial class css 
+                {
+                    public static partial class bourbon 
+                    {
+                        public static partial class addons 
+                        {
+                            public static class Assets
+                            {
+                            }
+                        }
+                        public static partial class css3 
+                        {
+                            public static class Assets
+                            {
+                            }
+                        }
+                        public static partial class functions 
+                        {
+                            public static class Assets
+                            {
+                            }
+                        }
+                        public static partial class helpers 
+                        {
+                            public static class Assets
+                            {
+                            }
+                        }
+                        public static partial class settings 
+                        {
+                            public static class Assets
+                            {
+                            }
+                        }
+                        public static class Assets
+                        {
+                        }
+                    }
+                    public static class Assets
+                    {
+                        public const string main_css = "~/Content/DistortedButtonEffects/css/main.css";
+                        public const string normalize_css = "~/Content/DistortedButtonEffects/css/normalize.css";
+                    }
+                }
+                public static partial class fonts 
+                {
+                    public static partial class codropsicons 
+                    {
+                        public static class Assets
+                        {
+                        }
+                    }
+                    public static class Assets
+                    {
+                    }
+                }
+                public static partial class img 
+                {
+                    public static partial class related 
+                    {
+                        public static class Assets
+                        {
+                        }
+                    }
+                    public static class Assets
+                    {
+                    }
+                }
+                public static partial class js 
+                {
+                    public static class Assets
+                    {
+                        public const string main_js = "~/Content/DistortedButtonEffects/js/main.js"; 
+                        public const string TweenMax_min_js = "~/Content/DistortedButtonEffects/js/TweenMax.min.js"; 
+                    }
+                }
+                public static class Assets
+                {
                 }
             }
             public static partial class fonts 
@@ -8696,6 +8976,7 @@ namespace Links
                     {
                         public const string DuctyCurrencyCalculatorController_js = "~/Content/js/Controller/DuctyCurrencyCalculatorController.js"; 
                         public const string ExchangeController_js = "~/Content/js/Controller/ExchangeController.js"; 
+                        public const string LoadingController_js = "~/Content/js/Controller/LoadingController.js"; 
                         public const string serviceBaseAngular_js = "~/Content/js/Controller/serviceBaseAngular.js"; 
                     }
                 }

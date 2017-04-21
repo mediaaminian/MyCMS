@@ -190,7 +190,7 @@ public static class Extention
                         .Replace("%BIDT%", MyCMS.Component.KendoUI.Resources.Messages.Upload_Select)
                         .Replace("%PreviewImage%", fieldname + "_preview_image")
                         .Replace("#URL#", t);
-   
+
 
         return new HtmlString(html);
     }
@@ -603,6 +603,11 @@ public static class Extention
     {
         return (T)Enum.Parse(typeof(T), value, true);
     }
+    public static T ToEnum<T>(this string enumString)
+    {
+        return (T)Enum.Parse(typeof(T), enumString, true);
+    }
+
 
     public static string GetFileNameSubstring(this string filename, int length)
     {

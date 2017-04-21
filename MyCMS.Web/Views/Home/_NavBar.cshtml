@@ -18,7 +18,23 @@
                             @Ajax.ActionLink("ورود / ثبت نام", MVC.User.ActionNames.LogOn, MVC.User.Name, new { area = "", returnUrl = Html.ReturnUrl(Context, Url) }, new AjaxOptions { HttpMethod = "GET", InsertionMode = InsertionMode.Replace, UpdateTargetId = "logOnModal", LoadingElementDuration = 300, LoadingElementId = "loadingMessage", OnSuccess = "LogOnForm.onSuccess" }, new { role = "button", data_toggle = "modal", data_i_logon_link = "true", rel = "nofollow" })
                         </li>*@
         }
+        
     </ul>
+    <div id="divAdsBtn">
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="svg-filters">
+        <defs>
+            <filter id="filter-goo-2">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="7" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                <feComposite in="SourceGraphic" in2="goo" />
+            </filter>
+        </defs>
+    </svg>
+    <button id="component-2" class="button specialButton button--2" style="filter: url('#filter-goo-2')">
+        درج آگهی رایگان
+        <span class="button__bg"></span>
+    </button>
+</div>
     <!-- Top Search
     ============================================= -->
     <div id="top-search">

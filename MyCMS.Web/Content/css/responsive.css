@@ -650,7 +650,11 @@
 		top: 5px;
 		left: 0;
 	}
-
+    #divAdsBtn {
+    width: 100% !important;
+    margin: 0px auto 8px auto;
+    text-align: center;
+    }
 	#primary-menu > ul,
 	#primary-menu > div > ul {
 		display: none;
@@ -1399,7 +1403,11 @@
 		position: relative;
 		margin: 0 -38px -40px 0;
 	}
-
+       #divAdsBtn {
+    width: 100% !important;
+    margin: 0px auto 8px auto;
+    text-align: center;
+    }
 	.sidebar-widgets-wrap .widget {
 		display: inline-block;
 		vertical-align: top;
