@@ -1,0 +1,398 @@
+@charset "UTF-8";
+
+/* Default tab style */
+
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'stroke7pixeden';
+    src: url('../fonts/stroke7pixeden/stroke7pixeden.eot?u58ytb');
+    src: url('../fonts/stroke7pixeden/stroke7pixeden.eot?#iefixu58ytb') format('embedded-opentype'), url('../fonts/stroke7pixeden/stroke7pixeden.woff?u58ytb') format('woff'), url('../fonts/stroke7pixeden/stroke7pixeden.ttf?u58ytb') format('truetype'), url('../fonts/stroke7pixeden/stroke7pixeden.svg?u58ytb#stroke7pixeden') format('svg');
+}
+
+.tabs {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 100%;
+    font-weight: 300;
+    font-size: 1.25em;
+}
+
+    /* Nav */
+    .tabs nav {
+        text-align: center;
+    }
+
+        .tabs nav ul {
+            position: relative;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: flex;
+            margin: 0 auto;
+            padding: 0;
+            max-width: 1200px;
+            list-style: none;
+            -ms-box-orient: horizontal;
+            -ms-box-pack: center;
+            -webkit-flex-flow: row wrap;
+            -moz-flex-flow: row wrap;
+            -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+            -webkit-justify-content: center;
+            -moz-justify-content: center;
+            -ms-justify-content: center;
+            justify-content: center;
+        }
+
+            .tabs nav ul li {
+                position: relative;
+                z-index: 1;
+                display: block;
+                margin: 0;
+                text-align: center;
+                -webkit-flex: 1;
+                -moz-flex: 1;
+                -ms-flex: 1;
+                flex: 1;
+            }
+
+        .tabs nav a {
+            position: relative;
+            display: block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            line-height: 2.5;
+        }
+
+            .tabs nav a span {
+                vertical-align: middle;
+                font-size: 0.75em;
+            }
+
+        .tabs nav li.tab-current a {
+            color: #74777b;
+        }
+
+        .tabs nav a:focus {
+            outline: none;
+        }
+
+/* Icons */
+.icon::before {
+    z-index: 10;
+    display: inline-block;
+    margin: 0 0.4em 0 0;
+    vertical-align: middle;
+    text-transform: none;
+    font-weight: normal;
+    font-variant: normal;
+    font-size: 1.3em;
+    font-family: 'stroke7pixeden';
+    line-height: 1;
+    speak: none;
+    -webkit-backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-upload::before {
+    content: "\e68a";
+}
+
+.icon-tools::before {
+    content: "\e60a";
+}
+
+.icon-plane::before {
+    content: "\e625";
+}
+
+.icon-joy::before {
+    content: "\e6a4";
+}
+
+.icon-plug::before {
+    content: "\e69a";
+}
+
+.icon-home::before {
+    content: "\e648";
+}
+
+.icon-gift::before {
+    content: "\e652";
+}
+
+.icon-display::before {
+    content: "\e65e";
+}
+
+.icon-date::before {
+    content: "\e660";
+}
+
+.icon-config::before {
+    content: "\e666";
+}
+
+.icon-coffee::before {
+    content: "\e669";
+}
+
+.icon-camera::before {
+    content: "\e66f";
+}
+
+.icon-box::before {
+    content: "\e674";
+}
+
+/* Content */
+.content-wrap {
+    position: relative;
+}
+
+    .content-wrap section {
+        display: none;
+        margin: 0 auto;
+        padding: 1em;
+        max-width: 1200px;
+        text-align: center;
+    }
+
+        .content-wrap section.content-current {
+            display: block;
+        }
+
+        .content-wrap section p {
+            margin: 0;
+            padding: 0.75em 0;
+            color: #fff !important;
+            line-height: 1;
+        }
+        h1.titr {
+    color: #fff !important;
+}
+/* Fallback */
+.no-js .content-wrap section {
+    display: block;
+    padding-bottom: 2em;
+    border-bottom: 1px solid rgba(255,255,255,0.6);
+}
+
+.no-flexbox nav ul {
+    display: block;
+}
+
+    .no-flexbox nav ul li {
+        min-width: 15%;
+        display: inline-block;
+    }
+
+@media screen and (max-width: 58em) {
+    .tabs nav a.icon span {
+        display: none;
+    }
+
+    .tabs nav a:before {
+        margin-right: 0;
+    }
+}
+
+/****************************CSSButtonsPseudoElements*********************************/
+/* CSS Document */
+
+/*
+DEMO 5
+*/
+.ui-tabs .ui-tabs-nav li.ui-tabs-active, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a, .ui-widget-content, .ui-tabs .ui-tabs-nav li:hover {
+    background: transparent;
+    border: none;
+}
+
+.ui-tabs .ui-tabs-nav, .content-wrap {
+    border: none !important;
+    background: none !important;
+}
+
+    .ui-tabs .ui-tabs-nav li, .ui-tabs-nav li.ui-tabs-active {
+        filter: none;
+        background-color: #fff !important;
+        /*background-image: url(../images/icons/Car-Orange.png) !important;*/
+        background-size: 100px 60px !important;
+        background-repeat: no-repeat !important;
+        background-position: center 16px !important;
+        content: "" !important;
+        width: 100% !important;
+        height: 150px !important;
+        top: 0px !important;
+        left: 0px !important;
+        -webkit-border-top-left-radius: 5px !important;
+        -webkit-border-top-right-radius: 5px !important;
+        -moz-border-radius-topleft: 5px !important;
+        -moz-border-radius-topright: 5px !important;
+        border-top-left-radius: 5px !important;
+        border-top-right-radius: 5px !important;
+        margin: -6px 1px;
+    }
+
+.a_demo_five {
+    background-color: #3bb3e0 !important;
+    width: 100% !important;
+    display: inline-block !important;
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 12px !important;
+    text-decoration: none !important;
+    color: #fff !important;
+    position: relative !important;
+    margin-top: 95px !important;
+    padding-bottom: 10px !important;
+    padding-top: 10px !important;
+    background-image: linear-gradient(bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%) !important;
+    background-image: -o-linear-gradient(bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%) !important;
+    background-image: -moz-linear-gradient(bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%) !important;
+    background-image: -webkit-linear-gradient(bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%) !important;
+    background-image: -ms-linear-gradient(bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%) !important;
+    background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(44,160,202)), color-stop(1, rgb(62,184,229)) ) !important;
+    -webkit-border-bottom-right-radius: 5px !important;
+    -webkit-border-bottom-left-radius: 5px !important;
+    -moz-border-radius-bottomright: 5px !important;
+    -moz-border-radius-bottomleft: 5px !important;
+    border-bottom-right-radius: 5px !important;
+    border-bottom-left-radius: 5px !important;
+    -webkit-box-shadow: inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #156785, 0px 10px 5px #999 !important;
+    -moz-box-shadow: inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #156785, 0px 10px 5px #999 !important;
+    -o-box-shadow: inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #156785, 0px 10px 5px #999 !important;
+    box-shadow: inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #156785, 0px 10px 5px #999 !important;
+}
+
+    .a_demo_five:active {
+        top: 0px !important;
+        background-image: linear-gradient(bottom, rgb(62,184,229) 0%, rgb(44,160,202) 100%) !important;
+        background-image: -o-linear-gradient(bottom, rgb(62,184,229) 0%, rgb(44,160,202) 100%) !important;
+        background-image: -moz-linear-gradient(bottom, rgb(62,184,229) 0%, rgb(44,160,202) 100%) !important;
+        background-image: -webkit-linear-gradient(bottom, rgb(62,184,229) 0%, rgb(44,160,202) 100%) !important;
+        background-image: -ms-linear-gradient(bottom, rgb(62,184,229) 0%, rgb(44,160,202) 100%) !important;
+        background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(62,184,229)), color-stop(1, rgb(44,160,202)) ) !important;
+        -webkit-box-shadow: inset 0px 4px 1px #0b698b, 0px 2px 0px 0px #156785, 0px 5px 3px #999 !important;
+        -moz-box-shadow: 0px 2px 0px 1px #156785, 0px 5px 3px #999 !important;
+        -o-box-shadow: 0px 2px 0px 1px #156785, 0px 5px 3px #999 !important;
+        box-shadow: inset 0px 4px 1px #0b698b, 0px 2px 0px 0px #156785, 0px 5px 3px #999 !important;
+    }
+
+    .a_demo_five::before {
+        background-color: #fff !important;
+        background-image: url(../images/icons/Car-Orange.png) !important;
+        background-repeat: no-repeat !important;
+        background-position: center center !important;
+        content: "" !important;
+        width: 100% !important;
+        height: 60px !important;
+        position: absolute !important;
+        top: -50px !important;
+        left: 0px !important;
+        margin-top: -11px !important;
+        z-index: -1 !important;
+        -webkit-border-top-left-radius: 5px !important;
+        -webkit-border-top-right-radius: 5px !important;
+        -moz-border-radius-topleft: 5px !important;
+        -moz-border-radius-topright: 5px !important;
+        border-top-left-radius: 5px !important;
+        border-top-right-radius: 5px !important;
+    }
+
+    .a_demo_five:active::before {
+        top: -30px !important;
+        -webkit-box-shadow: 0px 3px 0px #ccc !important;
+        -moz-box-shadow: 0px 3px 0px #ccc !important;
+        -o-box-shadow: 0px 3px 0px #ccc !important;
+        box-shadow: 0px 3px 0px #ccc !important;
+    }
+/****************************CSSButtonsPseudoElements*********************************/
+@charset "UTF-8";
+/* CSS Document */
+
+/*
+DEMO 1
+*/
+.a_demo_one {
+    width: 166px !important;
+    display: inline-block;
+    background-color: #3bb3e0 !important;
+    padding: 10px !important;
+    position: relative !important;
+    font-size: 12px !important;
+    text-decoration: none !important;
+    color: #fff !important;
+    border: solid 1px #186f8f !important;
+    background-image: linear-gradient(bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%) !important;
+    background-image: -o-linear-gradient(bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%) !important;
+    background-image: -moz-linear-gradient(bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%) !important;
+    background-image: -webkit-linear-gradient(bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%) !important;
+    background-image: -ms-linear-gradient(bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%) !important;
+    background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(44,160,202)), color-stop(1, rgb(62,184,229)) ) !important;
+    -webkit-box-shadow: inset 0px 1px 0px #7fd2f1, 0px 1px 0px #fff !important;
+    -moz-box-shadow: inset 0px 1px 0px #7fd2f1, 0px 1px 0px #fff !important;
+    box-shadow: inset 0px 1px 0px #7fd2f1, 0px 1px 0px #fff !important;
+    -webkit-border-radius: 5px !important;
+    -moz-border-radius: 5px !important;
+    -o-border-radius: 5px !important;
+    border-radius: 5px !important;
+}
+
+    .a_demo_one::before {
+        background-color: #ccd0d5 !important;
+        content: "" !important;
+        display: block !important;
+        position: absolute !important;
+        width: 180px !important;
+        height: 57px !important;
+        padding: 8px !important;
+        left: -8px !important;
+        top: -8px !important;
+        z-index: -1 !important;
+        -webkit-border-radius: 5px !important;
+        -moz-border-radius: 5px !important;
+        -o-border-radius: 5px !important;
+        border-radius: 5px !important;
+        -webkit-box-shadow: inset 0px 1px 1px #909193, 0px 1px 0px #fff !important;
+        -moz-box-shadow: inset 0px 1px 1px #909193, 0px 1px 0px #fff !important;
+        -o-box-shadow: inset 0px 1px 1px #909193, 0px 1px 0px #fff !important;
+        box-shadow: inset 0px 1px 1px #909193, 0px 1px 0px #fff !important;
+    }
+
+    .a_demo_one:active {
+        padding-bottom: 9px !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        padding-top: 11px !important;
+        top: 1px !important;
+        background-image: linear-gradient(bottom, rgb(62,184,229) 0%, rgb(44,160,202) 100%) !important;
+        background-image: -o-linear-gradient(bottom, rgb(62,184,229) 0%, rgb(44,160,202) 100%) !important;
+        background-image: -moz-linear-gradient(bottom, rgb(62,184,229) 0%, rgb(44,160,202) 100%) !important;
+        background-image: -webkit-linear-gradient(bottom, rgb(62,184,229) 0%, rgb(44,160,202) 100%) !important;
+        background-image: -ms-linear-gradient(bottom, rgb(62,184,229) 0%, rgb(44,160,202) 100%) !important;
+        background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(62,184,229)), color-stop(1, rgb(44,160,202)) ) !important;
+    }
+
+.grid {
+    direction: rtl;
+}
+.postcontent, .sidebar, .col_full, .col_half, .col_one_third, .col_two_third, .col_three_fourth, .col_one_fourth, .col_one_fifth, .col_two_fifth, .col_three_fifth, .col_four_fifth, .col_one_sixth, .col_five_sixth {
+    margin-left: 2%;
+    margin-right: 0;
+    float: right;
+}
+input.sm-form-control {
+    width: calc(50% - 10px);
+    float: right;
+    margin: 0px 0px 0px 10px;
+}
+.content-wrap section p {
+    position: absolute;
+    top: -40px;
+}

@@ -1806,7 +1806,7 @@
 	#top-search form input { padding-right: 60px; }
 
 	.swiper_wrapper:not(.force-full-screen),
-	.swiper_wrapper:not(.force-full-screen):not(.canvas-slider-grid) .swiper-slide { height: 300px !important; }
+	.swiper_wrapper:not(.force-full-screen):not(.canvas-slider-grid) .swiper-slide { min-height: 300px !important; }
 
 	.swiper_wrapper .slider-caption h2 { font-size: 36px; }
 

@@ -164,7 +164,7 @@
   .button--2:hover {
     background-color: transparent; }
     .button--2:hover:before, .button--2:hover span {
-      background-color: #2CD892; }
+      background-color: #f48320; }
 
 .button--4 {
   position: relative;

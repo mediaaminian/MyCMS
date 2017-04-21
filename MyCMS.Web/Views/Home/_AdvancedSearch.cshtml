@@ -1,13 +1,758 @@
 ﻿@model IEnumerable<MyCMS.DomainClasses.Entities.Slider>
 
-<section id="AdvancedSearch" class="swiper_wrapper full-screen clearfix" > 
-
-    <div class="swiper-container swiper-parent divAdvancedSearchBack" >
+<link href="~/Content/css/tabs.css" rel="stylesheet" />
+<link href="~/Content/css/tabstyles.css" rel="stylesheet" />
+<section id="AdvancedSearch" class="swiper_wrapper full-screen clearfix">
+    <div class="swiper-container swiper-parent divAdvancedSearchBack">
         <div class="swiper-wrapper">
 
-                    <div class="container clearfix">
-                    </div>
-            
+            <div class="container clearfix">
+
+
+                <div class="tabs tabs-style-flip">
+                    <nav>
+                        <ul>
+                            <li style="background-image:url('/Content/Images/icons/Truck-Orange.png')">
+                                <a class="a_demo_five" href="#section-flip-3">
+                                    خودرو سنگین
+                                </a>
+                            </li>
+                            <li style="background-image:url('/Content/Images/icons/Motor-Orange.png')">
+                                <a class="a_demo_five" href="#section-flip-2">
+                                    موتور سواری
+                                </a>
+                            </li>
+                            <li style="background-image:url('/Content/Images/icons/Car-Orange.png')">
+                                <a class="a_demo_five" href="#section-flip-1">
+                                    خودرو سواری
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="content-wrap">
+
+                        <section id="section-flip-1">
+                            <div class="aid-tab-content active">
+                                <div class="grid">
+                                    <div class="cell cell--12-col" style="margin:0">
+                                        <div class="search-options-box" style="min-height:160px;">
+                                            <h1 class="titr">خرید و فروش خودروی سواری صفر و کارکرده ، اقساطی و دست دوم</h1>
+                                            <div class="grid grid--no-spacing">
+                                                <div class="cell col_half">
+                                                    <select class="sm-form-control selectBrands">
+                                                        <option value="0">همه برند خودروها</option>
+                                                        <option value="2295">آریا</option>
+                                                        <option value="52">آریسان</option>
+                                                        <option value="2238">آستین</option>
+                                                        <option value="1">آلفارومئو</option>
+                                                        <option value="2">آئودی</option>
+                                                        <option value="36">اپل</option>
+                                                        <option value="2349">استودبیکر</option>
+                                                        <option value="2293">اسکودا</option>
+                                                        <option value="46">اسمارت</option>
+                                                        <option value="2035">الدزمبیل</option>
+                                                        <option value="30">ام جی</option>
+                                                        <option value="33">ام وی ام</option>
+                                                        <option value="2311">اویکو</option>
+                                                        <option value="2239">ایسوزو</option>
+                                                        <option value="2294">اینترنشنال</option>
+                                                        <option value="2255">اینفینیتی</option>
+                                                        <option value="7">ب ام و</option>
+                                                        <option value="3">بایک</option>
+                                                        <option value="5">برلیانس</option>
+                                                        <option value="6">بسترن</option>
+                                                        <option value="2240">بنتلی</option>
+                                                        <option value="2296">بوگاتی</option>
+                                                        <option value="8">بی وای دی</option>
+                                                        <option value="2241">بیوک</option>
+                                                        <option value="37">پاژن</option>
+                                                        <option value="41">پراید</option>
+                                                        <option value="39">پروتون</option>
+                                                        <option value="38">پژو</option>
+                                                        <option value="2297">پلیموت</option>
+                                                        <option value="40">پورشه</option>
+                                                        <option value="2242">پونتیاک</option>
+                                                        <option value="2243">پیکان</option>
+                                                        <option value="2298">تریومف</option>
+                                                        <option value="51">تویوتا</option>
+                                                        <option value="50">تیبا</option>
+                                                        <option value="2299">جان وی</option>
+                                                        <option value="19">جک</option>
+                                                        <option value="2244">جگوار</option>
+                                                        <option value="2245">جی ام سی</option>
+                                                        <option value="2029">جیپ</option>
+                                                        <option value="14">جیلی</option>
+                                                        <option value="2300">جین بی</option>
+                                                        <option value="2306">چانگ</option>
+                                                        <option value="9">چانگان</option>
+                                                        <option value="34">چری </option>
+                                                        <option value="2254">داتسون</option>
+                                                        <option value="2023">دانگ فنگ</option>
+                                                        <option value="2301">دسوتو</option>
+                                                        <option value="11">دنا</option>
+                                                        <option value="2246">دوج</option>
+                                                        <option value="2033">دوو</option>
+                                                        <option value="2024">دی اس</option>
+                                                        <option value="2257">رامبلر</option>
+                                                        <option value="43">رانا</option>
+                                                        <option value="2218">راین</option>
+                                                        <option value="42">رنو</option>
+                                                        <option value="2247">رولزرویس</option>
+                                                        <option value="2248">روور</option>
+                                                        <option value="56">زامیاد</option>
+                                                        <option value="57">زوتی</option>
+                                                        <option value="2302">ساب</option>
+                                                        <option value="48">سانگ یانگ</option>
+                                                        <option value="2389">سایپا</option>
+                                                        <option value="2030">ساینا</option>
+                                                        <option value="44">سمند</option>
+                                                        <option value="47">سوبارو</option>
+                                                        <option value="49">سوزوکی</option>
+                                                        <option value="10">سیتروئن</option>
+                                                        <option value="2264">سیمرغ</option>
+                                                        <option value="2250">سیناد</option>
+                                                        <option value="45">سئات</option>
+                                                        <option value="2031">شورولت</option>
+                                                        <option value="2312">فاو</option>
+                                                        <option value="2249">فراری</option>
+                                                        <option value="13">فوتون </option>
+                                                        <option value="2034">فورد</option>
+                                                        <option value="55">فولکس واگن</option>
+                                                        <option value="12">فیات</option>
+                                                        <option value="20">کاپرا</option>
+                                                        <option value="2037">کادیلاک</option>
+                                                        <option value="2234">کارا</option>
+                                                        <option value="2305">کاکی</option>
+                                                        <option value="2041">کرایسلر</option>
+                                                        <option value="2342">کویر موتور</option>
+                                                        <option value="21">کیا</option>
+                                                        <option value="15">گریت وال</option>
+                                                        <option value="2265">گک گونو</option>
+                                                        <option value="22">لادا</option>
+                                                        <option value="2097">لامبورگینی</option>
+                                                        <option value="2348">لانچیا</option>
+                                                        <option value="24">لکسوس</option>
+                                                        <option value="2027">لندروور</option>
+                                                        <option value="23">لندمارک</option>
+                                                        <option value="27">لوتوس</option>
+                                                        <option value="25">لیفان</option>
+                                                        <option value="2251">لینکلن</option>
+                                                        <option value="28">مازراتی</option>
+                                                        <option value="4">مرسدس بنز</option>
+                                                        <option value="29">مزدا</option>
+                                                        <option value="2252">مکلارن</option>
+                                                        <option value="2303">مورگان</option>
+                                                        <option value="32">میتسوبیشی</option>
+                                                        <option value="31">مینی</option>
+                                                        <option value="35">نیسان</option>
+                                                        <option value="2304">واکسهال</option>
+                                                        <option value="53">وانت پیکان</option>
+                                                        <option value="2266">وست فیلد</option>
+                                                        <option value="54">ولوو</option>
+                                                        <option value="2268">ون</option>
+                                                        <option value="26">هافی</option>
+                                                        <option value="2028">هامر</option>
+                                                        <option value="16">هایما</option>
+                                                        <option value="2307">هولدن</option>
+                                                        <option value="17">هوندا</option>
+                                                        <option value="2269">هیلمن</option>
+                                                        <option value="18">هیوندای</option>
+                                                    </select>
+                                                </div>
+                                                <div class="cell col_half">
+                                                    <select class="sm-form-control selectModel" disabled="true">
+                                                        <option value="0">همه مدل ها</option>
+                                                    </select>
+                                                    <div class="loaderSidenav" style="margin-top: -16px; display: none;">
+                                                        <div class="loader">
+                                                            <div class="fill"></div>
+                                                            <div class="fade"></div>
+                                                            <div class="fill"></div>
+                                                            <div class="fade"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="cell col_half">
+                                                    <select class="sm-form-control selectProvince">
+                                                        <option value="0">همه استان ها</option>
+                                                        <option value="1">آذربايجان شرقی</option>
+                                                        <option value="2">آذربايجان غربی</option>
+                                                        <option value="3">اردبيل</option>
+                                                        <option value="4">اصفهان</option>
+                                                        <option value="5">البرز</option>
+                                                        <option value="6">ايلام</option>
+                                                        <option value="7">بوشهر</option>
+                                                        <option value="8">تهران</option>
+                                                        <option value="9">چهارمحال و بختياری</option>
+                                                        <option value="10">خراسان جنوبی</option>
+                                                        <option value="11">خراسان رضوی</option>
+                                                        <option value="12">خراسان شمالی</option>
+                                                        <option value="13">خوزستان</option>
+                                                        <option value="14">زنجان</option>
+                                                        <option value="15">سمنان</option>
+                                                        <option value="16">سيستان و بلوچستان</option>
+                                                        <option value="17">فارس</option>
+                                                        <option value="18">قزوين</option>
+                                                        <option value="19">قم</option>
+                                                        <option value="20">كردستان</option>
+                                                        <option value="21">كرمان</option>
+                                                        <option value="22">كرمانشاه</option>
+                                                        <option value="23">كهگيلويه و بويراحمد</option>
+                                                        <option value="24">گلستان</option>
+                                                        <option value="25">گيلان</option>
+                                                        <option value="26">لرستان</option>
+                                                        <option value="27">مازندران</option>
+                                                        <option value="28">مركزی</option>
+                                                        <option value="29">هرمزگان</option>
+                                                        <option value="30">همدان</option>
+                                                        <option value="31">يزد</option>
+                                                    </select>
+                                                </div>
+                                                <div class="cell col_half">
+                                                    <select class="sm-form-control selectUsageStatus">
+                                                        <option value="0">صفر و کارکرده</option>
+                                                        <option value="1">کارکرده</option>
+                                                        <option value="2">صفر</option>
+                                                        <option value="3">حواله</option>
+                                                    </select>
+                                                </div>
+                                                <div class="cell col_half">
+                                                    <select class="sm-form-control selectPricing">
+                                                        <option value="0">نقدی و اقساطی</option>
+                                                        <option value="1">نقدی</option>
+                                                        <option value="2">اقساطی</option>
+                                                    </select>
+                                                </div>
+                                                <div class="cell col_half divPrice">
+                                                    <p>قیمت به تومان</p>
+                                                    <input class="sm-form-control inputPriceFrom" placeholder="از" maxlength="13"><input class="sm-form-control inputPriceTo" placeholder="تا" maxlength="13">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="a_demo_one">
+                                جستجو
+                            </a>
+                        </section>
+                        <section id="section-flip-2">
+                            <div class="aid-tab-content">
+                                <div class="grid">
+                                    <div class="cell cell--12-col" style="margin:0">
+                                        <h1 class="titr">خرید و فروش موتورسیکلت صفر ، کارکرده و دست دوم</h1>
+                                        <div class="search-options-box" style="min-height:160px;">
+                                            <div class="grid grid--no-spacing">
+                                                <div class="cell col_half">
+                                                    <select class="sm-form-control selectBodyType">
+                                                        <option value="0">همه کلاس ها</option>
+                                                        <option value="9">شهری</option>
+                                                        <option value="10">مسابقه ای</option>
+                                                        <option value="11">کراس</option>
+                                                        <option value="179">سوپر اسپرت</option>
+                                                        <option value="180">اسپرت</option>
+                                                        <option value="181">اسکوتر</option>
+                                                        <option value="182">تریل</option>
+                                                        <option value="183">سه چرخ</option>
+                                                        <option value="184">چهار چرخ</option>
+                                                        <option value="185">کروز</option>
+                                                        <option value="186">مسافرتی</option>
+                                                        <option value="213">مینی</option>
+                                                    </select>
+                                                </div>
+                                                <div class="cell col_half">
+                                                    <select class="sm-form-control selectBrands">
+                                                        <option value="0">همه برند موتورسیکلت ها</option>
+                                                        <option value="2062">آپاچی</option>
+                                                        <option value="2063">آپرلیا</option>
+                                                        <option value="2061">آمیکو</option>
+                                                        <option value="2350">ال ام ال</option>
+                                                        <option value="2079">ام وی آگوستا</option>
+                                                        <option value="2376">انرژی موتور</option>
+                                                        <option value="2351">اورال</option>
+                                                        <option value="2284">ایران دوچرخ</option>
+                                                        <option value="2352">ایژ روستا</option>
+                                                        <option value="2065">ب ام و</option>
+                                                        <option value="2064">باجاج</option>
+                                                        <option value="2360">برقی متفرقه</option>
+                                                        <option value="2278">بنلی</option>
+                                                        <option value="2353">بی اس آ</option>
+                                                        <option value="2343">پاسارگاد سیکلت فارس</option>
+                                                        <option value="2081">پیاجیو</option>
+                                                        <option value="2083">پیشتاز موتور توس</option>
+                                                        <option value="2082">پیشرو</option>
+                                                        <option value="2354">تارا کیمیا سمنان</option>
+                                                        <option value="2355">تائوتائو</option>
+                                                        <option value="2356">تریومف</option>
+                                                        <option value="2383">تک ناب</option>
+                                                        <option value="2088">تکتاز موتور</option>
+                                                        <option value="2357">تکروسیکلت</option>
+                                                        <option value="2089">تلاش</option>
+                                                        <option value="2358">تندرشهاب</option>
+                                                        <option value="2090">تی جی بی</option>
+                                                        <option value="2271">تی وی اس</option>
+                                                        <option value="2384">تیز پر توس</option>
+                                                        <option value="2286">تیزرو</option>
+                                                        <option value="2287">ثامن سیکلت</option>
+                                                        <option value="2291">جت رو</option>
+                                                        <option value="2273">جهان رو</option>
+                                                        <option value="2359">جهان همتا سیکلت</option>
+                                                        <option value="2315">چهار چرخ</option>
+                                                        <option value="2361">خیابانی متفرقه</option>
+                                                        <option value="2362">د کا و</option>
+                                                        <option value="2288">دایچی</option>
+                                                        <option value="2066">دایلیم</option>
+                                                        <option value="2067">دربی</option>
+                                                        <option value="2280">دز</option>
+                                                        <option value="2363">دنیپرو</option>
+                                                        <option value="2068">دوکاتی</option>
+                                                        <option value="2085">رگال رپتور</option>
+                                                        <option value="2084">روان سیکلت</option>
+                                                        <option value="2364">زونتس</option>
+                                                        <option value="2092">زیگما</option>
+                                                        <option value="2365">سابین موتور</option>
+                                                        <option value="2344">سالار گستر آسیا</option>
+                                                        <option value="2263">سوزوکی</option>
+                                                        <option value="2274">سی اف موتو</option>
+                                                        <option value="2366">سی جی متفرقه</option>
+                                                        <option value="2087">شاهین موتور</option>
+                                                        <option value="2367">شباب</option>
+                                                        <option value="2368">شرکو</option>
+                                                        <option value="2086">شهاب</option>
+                                                        <option value="2387">شیرکوه</option>
+                                                        <option value="2385">شیرو</option>
+                                                        <option value="2369">صحرا</option>
+                                                        <option value="2370">طرح ویو</option>
+                                                        <option value="2371">فیتون</option>
+                                                        <option value="2074">کاوازاکی</option>
+                                                        <option value="2285">کبیر</option>
+                                                        <option value="2072">کثیر</option>
+                                                        <option value="2372">کروز متفرقه</option>
+                                                        <option value="2373">کن ام</option>
+                                                        <option value="2073">کویر موتور</option>
+                                                        <option value="2075">کی تی ام</option>
+                                                        <option value="2374">کی ووی</option>
+                                                        <option value="2281">کیان</option>
+                                                        <option value="2375">کیمکو</option>
+                                                        <option value="2289">گالکسی</option>
+                                                        <option value="2377">گس گس</option>
+                                                        <option value="2275">گووس</option>
+                                                        <option value="2345">ماهیندرا</option>
+                                                        <option value="2379">مایکو</option>
+                                                        <option value="2076">متین خودرو</option>
+                                                        <option value="2282">مدناس</option>
+                                                        <option value="2077">مگلی</option>
+                                                        <option value="2078">موتور هیسپانیا</option>
+                                                        <option value="2380">مینی متفرقه</option>
+                                                        <option value="2080">نیرو محرکه</option>
+                                                        <option value="2283">نیرو موتور شیراز</option>
+                                                        <option value="2386">نیکتاز</option>
+                                                        <option value="2388">نیکتاز</option>
+                                                        <option value="2091">وسپا</option>
+                                                        <option value="2277">ولتا موتوربایک</option>
+                                                        <option value="2276">وی موتو</option>
+                                                        <option value="2272">هارت فورد</option>
+                                                        <option value="2308">هارلی دیویدسون</option>
+                                                        <option value="2346">هسکاوارنا</option>
+                                                        <option value="2341">همتا سیکلت</option>
+                                                        <option value="2070">هوندا</option>
+                                                        <option value="2279">هیرو</option>
+                                                        <option value="2069">هیلدا</option>
+                                                        <option value="2071">هیوسانگ</option>
+                                                        <option value="2347">یامارکس</option>
+                                                        <option value="2270">یاماها</option>
+                                                    </select>
+                                                    <div class="loaderSidenavBrand" style="margin-top: -16px; display: none;">
+                                                        <div class="loader">
+                                                            <div class="fill"></div>
+                                                            <div class="fade"></div>
+                                                            <div class="fill"></div>
+                                                            <div class="fade"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="cell col_half">
+                                                    <select class="sm-form-control selectModel" disabled="true">
+                                                        <option value="0">همه مدل ها</option>
+                                                    </select>
+                                                    <div class="loaderSidenav" style="margin-top: -16px; display: none;">
+                                                        <div class="loader">
+                                                            <div class="fill"></div>
+                                                            <div class="fade"></div>
+                                                            <div class="fill"></div>
+                                                            <div class="fade"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="cell col_half">
+                                                    <select class="sm-form-control selectProvince">
+                                                        <option value="0">همه استان ها</option>
+                                                        <option value="1">آذربايجان شرقی</option>
+                                                        <option value="2">آذربايجان غربی</option>
+                                                        <option value="3">اردبيل</option>
+                                                        <option value="4">اصفهان</option>
+                                                        <option value="5">البرز</option>
+                                                        <option value="6">ايلام</option>
+                                                        <option value="7">بوشهر</option>
+                                                        <option value="8">تهران</option>
+                                                        <option value="9">چهارمحال و بختياری</option>
+                                                        <option value="10">خراسان جنوبی</option>
+                                                        <option value="11">خراسان رضوی</option>
+                                                        <option value="12">خراسان شمالی</option>
+                                                        <option value="13">خوزستان</option>
+                                                        <option value="14">زنجان</option>
+                                                        <option value="15">سمنان</option>
+                                                        <option value="16">سيستان و بلوچستان</option>
+                                                        <option value="17">فارس</option>
+                                                        <option value="18">قزوين</option>
+                                                        <option value="19">قم</option>
+                                                        <option value="20">كردستان</option>
+                                                        <option value="21">كرمان</option>
+                                                        <option value="22">كرمانشاه</option>
+                                                        <option value="23">كهگيلويه و بويراحمد</option>
+                                                        <option value="24">گلستان</option>
+                                                        <option value="25">گيلان</option>
+                                                        <option value="26">لرستان</option>
+                                                        <option value="27">مازندران</option>
+                                                        <option value="28">مركزی</option>
+                                                        <option value="29">هرمزگان</option>
+                                                        <option value="30">همدان</option>
+                                                        <option value="31">يزد</option>
+                                                    </select>
+                                                </div>
+                                                <div class="cell col_half">
+                                                    <select class="sm-form-control selectPricing">
+                                                        <option value="0">نقدی و اقساطی</option>
+                                                        <option value="1">نقدی</option>
+                                                        <option value="2">اقساطی</option>
+                                                    </select>
+                                                </div>
+                                                <div class="cell col_half divPrice">
+                                                    <p>قیمت به تومان</p>
+                                                    <input class="sm-form-control inputPriceFrom" placeholder="از" maxlength="13"><input class="sm-form-control inputPriceTo" placeholder="تا" maxlength="13">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="a_demo_one">
+                                جستجو
+                            </a>
+                        </section>
+                        <section id="section-flip-3">
+                            <div class="aid-tab-content">
+                                <div class="grid">
+                                    <div class="cell cell--12-col" style="margin:0">
+                                        <h1 class="titr">خرید و فروش خودروی سنگین صفر و کارکرده ، اقساطی و دست دوم</h1>
+                                        <div class="search-options-box" style="min-height:160px;">
+                                            <div class="grid grid--no-spacing">
+                                                <div class="cell col_half">
+                                                    <select class="sm-form-control selectBodyType">
+                                                        <option value="0">همه نوع ها</option>
+                                                        <option value="12">آسفالت بر</option>
+                                                        <option value="13">اتوبوس</option>
+                                                        <option value="14">استاکر</option>
+                                                        <option value="15">اسکریپر</option>
+                                                        <option value="197">اسیلاتور</option>
+                                                        <option value="192">اتومیکسر</option>
+                                                        <option value="17">باکت</option>
+                                                        <option value="204">باری</option>
+                                                        <option value="18">بالابر</option>
+                                                        <option value="20">بکهو لودر</option>
+                                                        <option value="21">بلدوزر</option>
+                                                        <option value="22">بوژی</option>
+                                                        <option value="23">بیل بکهو</option>
+                                                        <option value="24">بیل مکانیکی</option>
+                                                        <option value="209">بتن پاش</option>
+                                                        <option value="25">پالت تراک</option>
+                                                        <option value="26">پمپ بتن زمینی</option>
+                                                        <option value="189">پمپ بتن هوایی</option>
+                                                        <option value="27">تاور کرین</option>
+                                                        <option value="28">تراک میکسر</option>
+                                                        <option value="29">ترنچر</option>
+                                                        <option value="30">تریلر</option>
+                                                        <option value="206">تانکر</option>
+                                                        <option value="31">جرثقیل</option>
+                                                        <option value="32">جک پالت</option>
+                                                        <option value="187">جامبو دریل</option>
+                                                        <option value="33">چالزن</option>
+                                                        <option value="195">چکش (پیکور)</option>
+                                                        <option value="39">خاور</option>
+                                                        <option value="40">دامپ تراک</option>
+                                                        <option value="41">درام کاتر</option>
+                                                        <option value="188">دریل واگن</option>
+                                                        <option value="43">ریچ تراک</option>
+                                                        <option value="198">سرند</option>
+                                                        <option value="45">سنگ شکن</option>
+                                                        <option value="47">شاول</option>
+                                                        <option value="205">شاسی</option>
+                                                        <option value="207">شات کریت</option>
+                                                        <option value="49">غلطک</option>
+                                                        <option value="50">فورک لیفت</option>
+                                                        <option value="51">فینیشر</option>
+                                                        <option value="196">قیرپاش</option>
+                                                        <option value="52">کاتر</option>
+                                                        <option value="53">کارخانه آسفالت</option>
+                                                        <option value="54">کارواش</option>
+                                                        <option value="55">کامیون</option>
+                                                        <option value="56">کامیونت</option>
+                                                        <option value="57">کانتینر</option>
+                                                        <option value="59">کشنده</option>
+                                                        <option value="60">کمپرسور</option>
+                                                        <option value="61">کمپرسی</option>
+                                                        <option value="62">کمرشکن</option>
+                                                        <option value="63">گریدر</option>
+                                                        <option value="64">لودر</option>
+                                                        <option value="65">لوله گذار</option>
+                                                        <option value="66">لیفتراک</option>
+                                                        <option value="68">میکسر</option>
+                                                        <option value="191">ماشین درزگیر</option>
+                                                        <option value="190">ماشین خط کشی</option>
+                                                        <option value="200">ماشین بلوک زن</option>
+                                                        <option value="208">ماشین مخلوط کن</option>
+                                                        <option value="201">ماشین بازیافت آسفالت</option>
+                                                        <option value="69">مینی بوس</option>
+                                                        <option value="70">مینی لودر</option>
+                                                        <option value="71">مینی بیل</option>
+                                                        <option value="72">یدک کش</option>
+                                                        <option value="194">ونتیلاتور (تهویه)</option>
+                                                        <option value="199">وینچ</option>
+                                                    </select>
+                                                </div>
+                                                <div class="cell col_half">
+                                                    <select class="sm-form-control selectBrands">
+                                                        <option value="0">همه برندهای ماشین‌آلات سنگین</option>
+                                                        <option value="2214">آبوس</option>
+                                                        <option value="2392">آریا دیزل</option>
+                                                        <option value="2336">آسیا ماسه ساز</option>
+                                                        <option value="2226">آمیکو</option>
+                                                        <option value="2137">اس دی ال جی</option>
+                                                        <option value="2139">اس یی ام</option>
+                                                        <option value="2054">اسکانیا</option>
+                                                        <option value="2189">اسکید استیر</option>
+                                                        <option value="2141">اطلس کوپکو</option>
+                                                        <option value="2333">ام اس بی</option>
+                                                        <option value="2151">ان اچ ال</option>
+                                                        <option value="2203">اولما</option>
+                                                        <option value="2382">ایران خودرو دیزل</option>
+                                                        <option value="2258">ایرمن</option>
+                                                        <option value="2095">ایسوزو</option>
+                                                        <option value="2130">ایکس جی ام ای</option>
+                                                        <option value="2129">ایکس سی ام جی</option>
+                                                        <option value="2152">اینگرسولرند</option>
+                                                        <option value="2310">ایویکو</option>
+                                                        <option value="2185">بابکت</option>
+                                                        <option value="2180">باربار گرین</option>
+                                                        <option value="2150">بارفورد</option>
+                                                        <option value="2197">بازتاب راه نوین</option>
+                                                        <option value="2212">باور</option>
+                                                        <option value="2328">باوو</option>
+                                                        <option value="2182">بلو ناکس</option>
+                                                        <option value="2055">بنز</option>
+                                                        <option value="2177">بوماگ</option>
+                                                        <option value="2324">بهلر</option>
+                                                        <option value="2227">بهمن</option>
+                                                        <option value="2225">بی ام سی</option>
+                                                        <option value="2338">پارسیان بالابر</option>
+                                                        <option value="2339">پاور اسکرین</option>
+                                                        <option value="2259">پتن</option>
+                                                        <option value="2163">پرکینز</option>
+                                                        <option value="2191">پکلن</option>
+                                                        <option value="2195">پوتس مایتسر</option>
+                                                        <option value="2316">پیشرو دیزل</option>
+                                                        <option value="2142">تادانو</option>
+                                                        <option value="2155">تام راک</option>
+                                                        <option value="2169">تراکتورسازی ایران</option>
+                                                        <option value="2149">ترکس</option>
+                                                        <option value="2215">تسلا</option>
+                                                        <option value="2206">توزین الکتریک</option>
+                                                        <option value="2187">توماس</option>
+                                                        <option value="2164">تویوتا</option>
+                                                        <option value="2332">تی اند اچ</option>
+                                                        <option value="2204">تیراژ دیزل</option>
+                                                        <option value="2125">تیراژه ماشین</option>
+                                                        <option value="2318">جک</option>
+                                                        <option value="2317">جی ام سی</option>
+                                                        <option value="2313">جی بی سی</option>
+                                                        <option value="2145">جی سی ام</option>
+                                                        <option value="2156">جی کی</option>
+                                                        <option value="2322">جین بی</option>
+                                                        <option value="2123">چانگلین</option>
+                                                        <option value="2229">چکوروا</option>
+                                                        <option value="2140">چنگ گانگ</option>
+                                                        <option value="2262">داف</option>
+                                                        <option value="2221">دانگ فنگ</option>
+                                                        <option value="2184">دایناپک</option>
+                                                        <option value="2186">دراج</option>
+                                                        <option value="2335">درام کاترز</option>
+                                                        <option value="2210">درامکاترز</option>
+                                                        <option value="2393">دلتا راه ماشین</option>
+                                                        <option value="2183">دماگ</option>
+                                                        <option value="2127">دوسان</option>
+                                                        <option value="2207">دونونت</option>
+                                                        <option value="2321">رنو تراکس</option>
+                                                        <option value="2144">زوم لایون</option>
+                                                        <option value="2188">ژل</option>
+                                                        <option value="2326">سان کی یو</option>
+                                                        <option value="2190">سانوارد</option>
+                                                        <option value="2196">سانی</option>
+                                                        <option value="2228">سایپا دیزل</option>
+                                                        <option value="2126">سپاهان ماشین رهیار</option>
+                                                        <option value="2162">سل ایر</option>
+                                                        <option value="2325">سندویک</option>
+                                                        <option value="2175">سنگان نیرو</option>
+                                                        <option value="2171">سوسان</option>
+                                                        <option value="2174">سومیتومو</option>
+                                                        <option value="2166">سهند</option>
+                                                        <option value="2340">سی اند سی</option>
+                                                        <option value="2181">سیدراپید</option>
+                                                        <option value="2193">سیفا</option>
+                                                        <option value="2124">شانتویی</option>
+                                                        <option value="2194">شوئینگ</option>
+                                                        <option value="2327">فارس ریگ</option>
+                                                        <option value="2314">فاو</option>
+                                                        <option value="2132">فوتون</option>
+                                                        <option value="2135">فوروکاوا</option>
+                                                        <option value="2178">فوگل</option>
+                                                        <option value="2136">فیات الیس</option>
+                                                        <option value="2118">کاترپیلار</option>
+                                                        <option value="2170">کاتو</option>
+                                                        <option value="2391">کادیا</option>
+                                                        <option value="2148">کارتر</option>
+                                                        <option value="2320">کاریزان خودرو</option>
+                                                        <option value="2160">کاساگراند</option>
+                                                        <option value="2323">کاماز</option>
+                                                        <option value="2120">کاوازاکی</option>
+                                                        <option value="2394">کایون بائولی</option>
+                                                        <option value="2205">کوا</option>
+                                                        <option value="2147">کوبلکو</option>
+                                                        <option value="2094">کوماتسو</option>
+                                                        <option value="2157">کوماچیو</option>
+                                                        <option value="2143">کیس</option>
+                                                        <option value="2208">گروه صنعتی کسری</option>
+                                                        <option value="2260">گوییک</option>
+                                                        <option value="2146">لیبهر</option>
+                                                        <option value="2172">لینک بلت</option>
+                                                        <option value="2133">لیوگانگ</option>
+                                                        <option value="2230">ماز</option>
+                                                        <option value="2337">ماشین سازی میرک</option>
+                                                        <option value="2390">ماک</option>
+                                                        <option value="2309">مان</option>
+                                                        <option value="2329">مرلو</option>
+                                                        <option value="2176">منتواک</option>
+                                                        <option value="2138">میشیگان</option>
+                                                        <option value="2331">نوید صنعت بتن</option>
+                                                        <option value="2213">نیروکام صنعت</option>
+                                                        <option value="2122">نیوهلند</option>
+                                                        <option value="2161">واهاتسو</option>
+                                                        <option value="2209">وبستر</option>
+                                                        <option value="2057">ولوو</option>
+                                                        <option value="2192">ویرتگن</option>
+                                                        <option value="2159">ویرث</option>
+                                                        <option value="2134">هپکو</option>
+                                                        <option value="2165">هلی</option>
+                                                        <option value="2319">هوو</option>
+                                                        <option value="2128">هیتاچی</option>
+                                                        <option value="2121">هیوندای</option>
+                                                        <option value="2330">یاشا صنعت تبریز</option>
+                                                        <option value="2173">یونیک</option>
+                                                        <option value="2158">یونیمیت</option>
+                                                        <option value="2334">یی اس پی</option>
+                                                    </select>
+                                                    <div class="loaderSidenavBrand" style="margin-top: -16px; display: none;">
+                                                        <div class="loader">
+                                                            <div class="fill"></div>
+                                                            <div class="fade"></div>
+                                                            <div class="fill"></div>
+                                                            <div class="fade"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="cell col_half">
+                                                    <select class="sm-form-control selectModel" disabled="true">
+                                                        <option value="0">همه مدل ها</option>
+                                                    </select>
+                                                    <div class="loaderSidenav" style="margin-top: -16px; display: none;">
+                                                        <div class="loader">
+                                                            <div class="fill"></div>
+                                                            <div class="fade"></div>
+                                                            <div class="fill"></div>
+                                                            <div class="fade"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="cell col_half">
+                                                    <select class="sm-form-control selectProvince">
+                                                        <option value="0">همه استان ها</option>
+                                                        <option value="1">آذربايجان شرقی</option>
+                                                        <option value="2">آذربايجان غربی</option>
+                                                        <option value="3">اردبيل</option>
+                                                        <option value="4">اصفهان</option>
+                                                        <option value="5">البرز</option>
+                                                        <option value="6">ايلام</option>
+                                                        <option value="7">بوشهر</option>
+                                                        <option value="8">تهران</option>
+                                                        <option value="9">چهارمحال و بختياری</option>
+                                                        <option value="10">خراسان جنوبی</option>
+                                                        <option value="11">خراسان رضوی</option>
+                                                        <option value="12">خراسان شمالی</option>
+                                                        <option value="13">خوزستان</option>
+                                                        <option value="14">زنجان</option>
+                                                        <option value="15">سمنان</option>
+                                                        <option value="16">سيستان و بلوچستان</option>
+                                                        <option value="17">فارس</option>
+                                                        <option value="18">قزوين</option>
+                                                        <option value="19">قم</option>
+                                                        <option value="20">كردستان</option>
+                                                        <option value="21">كرمان</option>
+                                                        <option value="22">كرمانشاه</option>
+                                                        <option value="23">كهگيلويه و بويراحمد</option>
+                                                        <option value="24">گلستان</option>
+                                                        <option value="25">گيلان</option>
+                                                        <option value="26">لرستان</option>
+                                                        <option value="27">مازندران</option>
+                                                        <option value="28">مركزی</option>
+                                                        <option value="29">هرمزگان</option>
+                                                        <option value="30">همدان</option>
+                                                        <option value="31">يزد</option>
+                                                    </select>
+                                                </div>
+                                                <div class="cell col_half">
+                                                    <select class="sm-form-control selectPricing">
+                                                        <option value="0">نقدی و اقساطی</option>
+                                                        <option value="1">نقدی</option>
+                                                        <option value="2">اقساطی</option>
+                                                    </select>
+                                                </div>
+                                                <div class="cell col_half divPrice">
+                                                    <p>قیمت به تومان</p>
+                                                    <input class="sm-form-control inputPriceFrom" placeholder="از" maxlength="13"><input class="sm-form-control inputPriceTo" placeholder="تا" maxlength="13">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="a_demo_one">
+                                جستجو
+                            </a>
+                        </section>
+                    </div><!-- /content -->
+                </div><!-- /tabs -->
+
+            </div>
+
         </div>
     </div>
 </section>
+<script src="~/Scripts/cbpFWTabs.js"></script>
+<script type="text/javascript">
+    (function () {
+
+        [].slice.call(document.querySelectorAll('.tabs')).forEach(function (el) {
+            new CBPFWTabs(el);
+        });
+
+    })();
+</script>
