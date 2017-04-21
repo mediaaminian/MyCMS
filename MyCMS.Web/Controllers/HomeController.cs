@@ -65,9 +65,16 @@ namespace MyCMS.Web.Controllers
             return PartialView(MVC.Home.Views._Breadcrumb);
         }
         [OutputCache(Duration = 1200)]
+        public virtual ActionResult AdvancedSearch()
+        {
+            var model = _sliderService.GetAllSliders();
+            return PartialView(MVC.Home.Views._AdvancedSearch, model);
+        }
+        [OutputCache(Duration = 1200)]
         public virtual ActionResult Slider()
         {
             var model = _sliderService.GetAllSliders();
+            ViewBag.displaySlider = model.Any() ? "" : "display:none ";
             return PartialView(MVC.Home.Views._Slider, model);
         }
         [OutputCache(Duration = 1200)]

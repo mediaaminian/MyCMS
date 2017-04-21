@@ -89,7 +89,7 @@ namespace MyCMS.Web
                 );
 
 
-            routes.MapRouteLowercase("PageKeywordRoute", "{keyword}.tt", new
+            routes.MapRouteLowercase("PageKeywordRoute", "{keyword}.mvc", new
             {
                 area = "",
                 controller = "Page",

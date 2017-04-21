@@ -1,9 +1,11 @@
 ﻿@model IEnumerable<MyCMS.Model.BooksListModel>
 @section Slider{
-    @Html.Action(MVC.Home.ActionNames.Slider, MVC.Home.Name)
+@Html.Action(MVC.Home.ActionNames.Slider, MVC.Home.Name)
 }
 
-
+@section AdvancedSearch{
+    @Html.Action(MVC.Home.ActionNames.AdvancedSearch, MVC.Home.Name)
+}
 
 <div class="container clearfix">
     <div class="row clearfix">
